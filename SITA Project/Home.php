@@ -78,9 +78,9 @@
 					<div id="article">
 						<h3>MENU ADMIN</h3>
 						<p>
-							<br>ADD DATA<br>
-							<br>UPDATE DATA<br>
-							<br>DELETE DATA<br>
+							<br>> ADD DATA<br>
+							<br>> UPDATE DATA<br>
+							<br>> DELETE DATA<br>
 						</p>
 					</div>
 					

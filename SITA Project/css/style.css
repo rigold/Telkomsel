@@ -142,7 +142,7 @@ p a{
 	height: 20px;
 	font-family: arial;
 	font-size: 20 px;
-	color: #ffff00;
+	color: #ff6000;
 	text-decoration: none;
 	display: block;
 	//padding: 0 50px 0 0;
@@ -159,7 +159,7 @@ p a{
     height: 90px;
     //line-height: 21px;
     //margin: 0;
-    padding: 0 0 0 0;
+    padding: 0 0 0 10px;
     text-align: center;
     //width: 180px;
 	color: #ffffff;
@@ -186,7 +186,7 @@ p a{
 	height: 20px;
 	font-family: arial;
 	font-size: 20px;
-	color: #ffff00;
+	color: #ff6000;
 	text-decoration: none;
 	display: block;
 	padding: 0 0 0 0;
@@ -200,8 +200,8 @@ p a{
 	font-family: arial;
     font-size: 14px;
     height: 90px;
-    padding: 0 0 0 0;
-    text-align: center;
+    padding: 0 0 0 40px;
+    text-align: left;
 	color: #ffffff;
 	font-weight: bold;
 }
@@ -309,10 +309,10 @@ p a{
 	cursor: pointer;
 }
 .sidebar p{
-	color: #000000;
+	color: #1d1c1d;
 	font-size: 12px;
 	font-family: arial;
-	padding: 56px 0 236px;
+	padding: 40px 0 236px;
 	margin: 0;
 	text-align: center;
 }
