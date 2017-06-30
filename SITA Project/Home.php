@@ -12,39 +12,66 @@
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
-				<li><a href="default.asp">Home</a></li>
+				<li><a href="Home.php">Home</a></li>
 
 				<li class="dropdown">
 					<a href="default.asp" class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
-	      				<a href="#">Contoh 1</a>
-					    <a href="#">Contoh 2</a>
-					    <a href="#">Contoh 3</a>
-					    <a href="#">Contoh 4</a>
-					    <a href="#">Contoh 5</a>
-					    <a href="#">Contoh 6</a>
-					    <a href="#">Contoh 7</a>
-					    <a href="#">Contoh 8</a>
-					    <a href="#">Contoh 9</a>
+	      				<a href="#"> Bangkalan </a> 
+						<a href="#"> Banyuwangi </a> 
+						<a href="#"> Batu </a> 
+						<a href="#"> Blitar Kab. </a> 
+						<a href="#"> Blitar Kota </a> 
+						<a href="#"> Bojonegoro </a> 
+						<a href="#"> Bondowoso </a> 
+						<a href="#"> Gresik </a> 
+						<a href="#"> Jember </a> 
+						<a href="#"> Jombang </a> 
+						<a href="#"> Kediri Kab. </a> 
+						<a href="#"> Kediri Kota </a> 
+						<a href="#"> Lamongan </a> 
+						<a href="#"> Lumajang </a> 
+						<a href="#"> Madiun Kab. </a> 
+						<a href="#"> Madiun Kota </a> 
+						<a href="#"> Magetan </a> 
+						<a href="#"> Malang Kab. </a> 
+						<a href="#"> Malang Kota </a> 
+						<a href="#"> Mojokerto Kab. </a> 
+						<a href="#"> Mojokerto Kota </a> 
+						<a href="#"> Nganjuk </a> 
+						<a href="#"> Ngawi </a> 
+						<a href="#"> Pacitan </a> 
+						<a href="#"> Pamekasan </a> 
+						<a href="#"> Pasuruan Kab. </a> 
+						<a href="#"> Pasuruan Kota </a> 
+						<a href="#"> Ponorogo </a> 
+						<a href="#"> Probolinggo Kab. </a> 
+						<a href="#"> Probolinggo Kota </a> 
+						<a href="#"> Sampang </a> 
+						<a href="#"> Sidoarjo </a> 
+						<a href="#"> Situbondo </a> 
+						<a href="#"> Sumenep </a> 
+						<a href="#"> Surabaya </a> 
+						<a href="#"> Trenggalek </a> 
+						<a href="#"> Tuban </a> 
+						<a href="#"> Tulungagung </a> 
+
 				    </div>
 				</li>
 
 				<li class="dropdown">
 					<a href="default.asp" class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
-	      				<a href="#">Contoh 1</a>
-					    <a href="#">Contoh 2</a>
-					    <a href="#">Contoh 3</a>
-					    <a href="#">Contoh 4</a>
-					    <a href="#">Contoh 5</a>
-					    <a href="#">Contoh 6</a>
-					    <a href="#">Contoh 7</a>
-					    <a href="#">Contoh 8</a>
-					    <a href="#">Contoh 9</a>
+	      				<a href="#">Perpanjangan Sewa</a>
+					    <a href="#">Perizinan</a>
+					    <a href="#">PBB</a>
+					    <a href="#">SKRD</a>
+					    <a href="#">Comcase</a>
+
 				    </div>
 				</li>
 				<li><a href="about.asp">About</a></li>
-				<li><a href="about.asp">Log out</a></li>
+				<li><a href="Index.php">Log out</a></li>
 
 				<form action="" id="search">
 					<input type="text"/>
@@ -95,7 +122,7 @@
 					<ul class="navigation">
 						<li><a href="blog.php">Berita</a></li>
 						<li><a href="accessories.php">RAB PBB</a></li>
-						<li><a href="tutorials.php">RAB SKRD</a></li>
+						<li><a href="tutorials.php">RAB RPM</a></li>
 						<li><a href="guide.php">Perizinan</a></li>
 						<li><a href="gallery.php">Perpanjangan</a></li>
 					</ul>
