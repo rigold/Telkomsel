@@ -148,9 +148,9 @@ body{
 ::-moz-input-placeholder{
    color: rgba(255,255,255,0.6);
 }
-    </style>
+</style>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  
 
 </head>
 
@@ -166,7 +166,7 @@ body{
 				<input type="password" placeholder="password" name="password"><br>
 				<input  type="button" onclick="location.href='Home.php';" value="Login" >
 		</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  
 
   
 </body>
