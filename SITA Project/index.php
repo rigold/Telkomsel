@@ -13,7 +13,16 @@
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="default.asp">Home</a></li>
-				<li><a href="news.asp">Data Site</a></li>
+
+				<li class="dropdown">
+					<a href="default.asp" class="dropbtn">Data Site</a>
+					<div class="dropdown-content">
+	      				<a href="#">Link 1</a>
+					    <a href="#">Link 2</a>
+					    <a href="#">Link 3</a>
+				    </div>
+				</li>
+
 				<li><a href="contact.asp">Administrasi</a></li>
 				<li><a href="about.asp">About</a></li>
 

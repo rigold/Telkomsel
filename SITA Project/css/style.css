@@ -361,6 +361,47 @@ p a{
 	margin: 0 0 0 3px;
 }
 
+.dropdown-content {
+	height: 200px;
+   	overflow: auto;
+    display: none;
+    position: absolute;
+    background-color: #b10d0f;
+    min-width: 900px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.body form#search{
+	float: right;
+	margin: 15px 0 0 0;
+}
+.body form#search input{
+	background: url(../images/interface.gif) no-repeat 0 -230px;
+	border: 0;
+	padding: 4px 5px 6px;
+	color: #5A5A6B;
+	float: left;
+	width: 110px;
+	margin: 0;
+}
+.body form#search input#submit{
+	color: #7d7d7d;
+	font-family: arial;
+	font-size: 14px;
+	font-style: italic;
+	padding: 0;
+	height: 24px;
+	margin: 0;
+	cursor: pointer; 
+	width: 55px;
+	background: url(../images/interface.gif) no-repeat 0 -186px;
+}
+
 
 .body h1{
 	font-family: helvetica, arial;
