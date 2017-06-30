@@ -13,8 +13,8 @@
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="default.asp">Home</a></li>
-				<li><a href="news.asp">News</a></li>
-				<li><a href="contact.asp">Contact</a></li>
+				<li><a href="news.asp">Data Site</a></li>
+				<li><a href="contact.asp">Administrasi</a></li>
 				<li><a href="about.asp">About</a></li>
 
 				<form action="" id="search">
