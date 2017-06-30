@@ -17,14 +17,34 @@
 				<li class="dropdown">
 					<a href="default.asp" class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
-	      				<a href="#">Link 1</a>
-					    <a href="#">Link 2</a>
-					    <a href="#">Link 3</a>
+	      				<a href="#">Contoh 1</a>
+					    <a href="#">Contoh 2</a>
+					    <a href="#">Contoh 3</a>
+					    <a href="#">Contoh 4</a>
+					    <a href="#">Contoh 5</a>
+					    <a href="#">Contoh 6</a>
+					    <a href="#">Contoh 7</a>
+					    <a href="#">Contoh 8</a>
+					    <a href="#">Contoh 9</a>
 				    </div>
 				</li>
 
-				<li><a href="contact.asp">Administrasi</a></li>
+				<li class="dropdown">
+					<a href="default.asp" class="dropbtn">Administrasi</a>
+					<div class="dropdown-content">
+	      				<a href="#">Contoh 1</a>
+					    <a href="#">Contoh 2</a>
+					    <a href="#">Contoh 3</a>
+					    <a href="#">Contoh 4</a>
+					    <a href="#">Contoh 5</a>
+					    <a href="#">Contoh 6</a>
+					    <a href="#">Contoh 7</a>
+					    <a href="#">Contoh 8</a>
+					    <a href="#">Contoh 9</a>
+				    </div>
+				</li>
 				<li><a href="about.asp">About</a></li>
+				<li><a href="about.asp">Log out</a></li>
 
 				<form action="" id="search">
 					<input type="text"/>
