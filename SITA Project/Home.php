@@ -15,7 +15,7 @@
 				<li><a href="Home.php">Home</a></li>
 
 				<li class="dropdown">
-					<a href="default.asp" class="dropbtn">Data Site</a>
+					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
 	      				<a href="#"> Bangkalan </a> 
 						<a href="#"> Banyuwangi </a> 
@@ -60,27 +60,26 @@
 				</li>
 
 				<li class="dropdown">
-					<a href="default.asp" class="dropbtn">Administrasi</a>
+					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
 	      				<a href="#">Perpanjangan Sewa</a>
-					    <a href="#">Perizinan</a>
-					    <a href="#">PBB</a>
-					    <a href="#">SKRD</a>
-					    <a href="#">Comcase</a>
+					    <a href="Izin.php">Perizinan</a>
+					    <a href="PBB.php">PBB</a>
+					    <a href="RPM.php">RPM</a>
+					    <a href="Comcase.php">Comcase</a>
 
 				    </div>
 				</li>
-				<li><a href="about.asp">About</a></li>
+				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
 
-				<form action="" id="search">
+				<form action="Search.php" id="search">
 					<input type="text"/>
-					<input type="submit" value="" id="submit"/>
+					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
 				</form>
-			</ul>
-
-			
+			</ul>	
 		</div>
+
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
 
@@ -105,26 +104,28 @@
 					<div id="article">
 						<h3>MENU ADMIN</h3>
 						<p>
-							<br>> ADD DATA<br>
-							<br>> UPDATE DATA<br>
-							<br>> DELETE DATA<br>
+							<a href="Add_User.php">> ADD USER<br></a>
+							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
+							<a href="Edit_User.php"><br>> EDIT USER<br></a>
+							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
 						</p>
 					</div>
 					
-					<p>&#169; Copyright 2017. Created by Tomson Pangaribuan</p>
+					<p><br><br>&#169; Copyright 2017. Created by Tomson Pangaribuan</p>
 				</div>
-				<div class="body">
-				<img src="images/bg2.png" alt="ab2s-img" class="
-				abs2-img" />
 
-					<h1><a href="index.php">Selamat Datang Di SITA Project</a></h1>
+				<div class="body">
+					<img src="images/bg2.png" alt="ab2s-img" class="
+					abs2-img" />
+
+					<h1><a href="About.php">Selamat Datang Di SITA Project</a></h1>
 
 					<ul class="navigation">
-						<li><a href="blog.php">Berita</a></li>
-						<li><a href="accessories.php">RAB PBB</a></li>
-						<li><a href="tutorials.php">RAB RPM</a></li>
-						<li><a href="guide.php">Perizinan</a></li>
-						<li><a href="gallery.php">Perpanjangan</a></li>
+						<li><a href="Warning.php">Berita</a></li>
+						<li><a href="PBB.php">RAB PBB</a></li>
+						<li><a href="RPM.php">RAB RPM</a></li>
+						<li><a href="Izin.php">Perizinan</a></li>
+						<li><a href="List_Panjang.php">Perpanjangan</a></li>
 					</ul>
 
 					<div id="featured">
@@ -152,10 +153,7 @@
 							<br>4.Web ini menolong sekali dan bertampilan bagus, apa yang dapat saya berikan?
 							<br>Tolong Saya dikasih Nilai A . :)
 						</div>
-	
 					</div>
-				
-					
 				</div>
 			</div>
 		</div>

@@ -44,10 +44,8 @@ body{
     z-index: -1;
     margin: 730px 0 0 790px;
 }
-p a{
-	text-decoration: underline;
-	color: #868593;
-} /* Paragraph link color */
+
+/* Paragraph link color */
 	
 /*------------------------- Sidebar ------------------------*/ 
 .sidebar{
@@ -178,7 +176,7 @@ p a{
 	color: #5A5A6B;
 }
 .sidebar div#article{
-	margin: 50px 0 0 0;
+	margin: 30px 0 0 0;
 }
 .sidebar div#article h3{
 	//background: url(../images/icons.gif) no-repeat 100px -35px;
@@ -200,11 +198,22 @@ p a{
 	font-family: arial;
     font-size: 14px;
     height: 90px;
-    padding: 0 0 0 40px;
+    padding: 10px 0 0 40px;
     text-align: left;
 	color: #ffffff;
 	font-weight: bold;
 }
+
+.sidebar div#article p a{
+	color: #ffffff;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 14px;
+    height: 90px;
+    text-align: left;
+    font-weight: bold;
+}
+
 .sidebar div#article ul li p{
 	font-family: arial;
     font-size: 14px;
