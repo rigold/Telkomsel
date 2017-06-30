@@ -49,10 +49,10 @@
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
-							<br>Nama User : Mr.Incredible
+							<br>Nama User : Immanuel Rio
 							<br>NIK : 19574
-							<br>Jabatan : Staff Manajemen WEB
-							<br>Akun : User / Admin
+							<br>Jabatan : Staff Manajemen Site
+							<br>Akun : Admin
 						</p>
 					</div>
 					<div id="article">
