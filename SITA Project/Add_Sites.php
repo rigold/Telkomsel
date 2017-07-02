@@ -108,19 +108,61 @@
 							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
 							<a href="Edit_User.php"><br>> EDIT USER<br></a>
 							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
+							<a href="List_User.php"><br>> LIST USER<br></a>
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
 					
-					<p><br><br>&#169; Copyright 2017. Created by Tomson Pangaribuan</p>
+					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
 				</div>
 
 				<div class="body">
 					<img src="images/bg2.png" alt="ab2s-img" class="
 					abs2-img" />
 
-					<h1>Form Input Site</h1>
+					<h1>Formulir Input Site</h1>
 
+					<form action="List_Site.php" method="post" enctype="multipart/form-data">
+						<div id="site">
+							<h3>Informasi Site</h3>
+							<p>
+							<label for="a">Nama Site:</label> <input type="text" name="NamaSite" size="50">
+							</p>
+							<p>
+							<label for="b">Site ID:</label> <input type="text" name="SiteID" size="50">
+							</p>
+							<p>
+							<label for="c">Status:</label> <input type="text" name="Status" size="50">
+							</p>
+							<p>
+							<label for="d">Alamat:</label> <input type="text" name="Alamat" size="50">
+							</p>
+							<p>
+							<label for="e">Luas Lahan:</label> <input type="text" name="Luas" size="50">
+							</p>
+							<p>
+							<label for="f">Durasi Sewa:</label> <input type="text" name="Durasi" size="50">
+							</p>
+							<p>
+							<label for="g">Gambar Site:</label>
+							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+							</p>
+							<h3>Identitas Pemilik Lahan</h3>
+							<p>
+							<label for="e">No KTP:</label> <input type="text" name="KTP" size="50">
+							</p>
+							<p>
+							<label for="e">Nama Pemilik:</label> <input type="text" name="NamaMilik" size="50">
+							</p>
+							<p>
+							<label for="e">Alamat:</label> <input type="text" name="AlamatMilik" size="50">
+							</p>
+							<p>
+							<label for="e">No Telefon:</label> <input type="text" name="HP" size="50">
+							</p>
+    						<input type="submit" value="Submit" name="submit">
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

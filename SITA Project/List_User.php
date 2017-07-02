@@ -109,6 +109,7 @@
 							<a href="Edit_User.php"><br>> EDIT USER<br></a>
 							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
 							<a href="List_User.php"><br>> LIST USER<br></a>
+							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
 					
@@ -123,7 +124,7 @@
 								<table>
 									<tr>
 										<th>
-											PICTURE
+											Picture
 										</th>
 										<th>
 											Nama User

@@ -449,6 +449,22 @@ body{
 .body form #tulis input{
 	display: table-cell;
 }
+.body form #site{
+	color: black;
+	font-family: arial;
+	line-height: 25px;
+	margin-left: 20px;
+	text-align: justify;
+}
+.body form #site p{
+	display: table-row;
+}
+.body form #site label{
+	display: table-cell;
+}
+.body form #site input{
+	display: table-cell;
+}
 
 .body table{
 	color: black;
@@ -457,6 +473,9 @@ body{
 	border-collapse: collapse;
     width: 100%;
     margin: 75px 0 0 0;
+}
+.body table ul{
+	text-align: left;
 }
 .body table, th, td{
 	border: 2px solid black;

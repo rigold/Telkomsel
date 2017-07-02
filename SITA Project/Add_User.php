@@ -136,7 +136,10 @@
 							<p>
 							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" size="50">
 							</p>
+							<p>
+							<label for="e">Profile Picture:</label>
 							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+							</p>
     						<input type="submit" value="Submit" name="submit">
 						</div>
 					</form>
