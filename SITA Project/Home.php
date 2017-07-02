@@ -134,7 +134,7 @@
 							<h3>Pengenalan Terhadap Web ini :
 								<p>
 									Web ini adalah tempat penampungan dan pengolahan data site untuk kemudian data dapat dipilah sesuai dengan kebutuhan pengguna, web ini juga menyediakan fitur untuk melakukan print tabel kedalam bentuk dokumen.
-									<br>Ada dua hak akses pada web ini : 
+									<br>Ada dua hak akses pada web ini :<br> 
 									<br>1. Admin (Hampir dapat melakukan semua perubahan pada web / God-like)
 									<br>2. User (Pengguna akhir yang hanya dapat melakukan fungsi view, search dan print).
 									
