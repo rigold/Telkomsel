@@ -435,6 +435,23 @@ body{
 	text-decoration: none;
 	
 }
+
+.body h2 {
+    font-family: helvetica, arial;
+    color: #c3e8ec;
+    font-size: 33px;
+    clear: both;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 0 0;
+    text-align: center;
+}
+.body h2 a{
+	color: #4a14f8;
+	text-decoration: none;
+	
+}
+
 .body ul.navigation{
 	height: 45px;
 	list-style: none;
