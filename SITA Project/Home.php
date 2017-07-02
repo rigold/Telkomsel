@@ -142,6 +142,7 @@
 									Bila ada pertanyaan yang ingin diajukan, segera hubungi kami melalui link berikut ini. 
 									<a href="About.php">Hubungi kami !</a>
 								</p>
+							</h3>
 							<h3>Q & A (Pertanyaan Umum):
 								<p>
 									1.Saya Lupa Pasword / User Name saya, Apa yang dapat saya lakukan?
@@ -156,6 +157,7 @@
 									<br>4.Web ini menolong sekali dan bertampilan bagus, apa yang dapat saya berikan?
 									<br>Tolong Kami dikasih Nilai A . :)
 								</p>
+							</h3>
 						</div>
 					</div>
 				</div>
