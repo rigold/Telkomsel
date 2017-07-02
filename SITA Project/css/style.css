@@ -393,10 +393,7 @@ body{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.body form#search{
-	float: right;
-	margin: 15px 0 0 0;
-}
+
 .body form#search input{
 	background: url(../images/interface.gif) no-repeat 0 -230px;
 	border: 0;
@@ -507,7 +504,7 @@ body{
 
 .body div#featured div{
 	float: left;
-	width: auto;
+	width: 100%;
 	//_width: 600px;
 	//margin: 0 0 0 38px;
 	//padding: 0 0 17px;
@@ -569,6 +566,18 @@ body{
     margin: 20px 0 0 0 ;
     text-align: center;
     width: 100%;
+}
+
+.body div#featured div h5{
+	color: #b10d0f;
+    float: left;
+    font-family: calibri;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
 }
 
 .body div#featured div span{
@@ -1082,4 +1091,63 @@ body{
 /* Change the link color to #111 (black) on hover */
 .navi li a:hover {
     background-color: #111;
+}
+
+/*----------------tabel--------------*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*---------------gris pembatas-------------*/
+.line-separator{ 
+	height:1px;
+	background:#717171;
+	border-bottom:1px solid #313030;
+}
+
+.body  form#search{
+	float: left;
+	margin: 0 0 20px 0;
+	//padding: 35px 20px 0 20px;
+}
+/*-------------------pagination---------------*/
+.pagination {
+    display: inline-block;
+    float: right;
+    padding-right: 10px
+
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination div#featured div{
+	float: left;
+	//width: 100%;
+	//_width: 600px;
+	//margin: 0 0 0 38px;
+	//padding: 0 0 17px;
 }
