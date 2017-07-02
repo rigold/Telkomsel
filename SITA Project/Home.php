@@ -62,12 +62,11 @@
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
-	      				<a href="#">Perpanjangan Sewa</a>
-					    <a href="Izin.php">Perizinan</a>
+	      				<a href="List_Panjang.php">List Perpanjangan</a>
+	      				<a href="Monitoring.php">Monitoring</a>
 					    <a href="PBB.php">PBB</a>
 					    <a href="RPM.php">RPM</a>
 					    <a href="Comcase.php">Comcase</a>
-
 				    </div>
 				</li>
 				<li><a href="About.php">About</a></li>
