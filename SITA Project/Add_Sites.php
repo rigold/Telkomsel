@@ -122,7 +122,7 @@
 
 					<h1>Formulir Input Site</h1>
 
-					<form action="List_Site.php" method="post" enctype="multipart/form-data">
+					<form action="List_Sites.php" method="post" enctype="multipart/form-data">
 						<div id="site">
 							<h3>Informasi Site</h3>
 							<p>
