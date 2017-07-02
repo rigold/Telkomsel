@@ -18,31 +18,37 @@ body{
 }
 .abs-img{
 	height:100%;
-	_height: 1590px;
+	//_height: 1590px;
 	position:absolute;
-	width:20%;
+	left: 0px;
+	width:280px;
 	z-index:-1;
 }
 .abs2-img{
-	height: 25%;
+	height: 250px;
+	width: 300px;
     position: absolute;
-    width: 25%;
+    right: 0px;
     z-index: -1;
-    margin: 0 0 0 53%;
+    //margin: 0 0 0 53%;
 }
 .abs3-img{
-	    height: 15%;
-    width: 40%;
+	height: 120px;
+    width: 500px;
     position: absolute;
+    bottom: 0px;
+    left: 250px;
     z-index: -1;
-    margin: 778px 0 0 240px;
+    //margin: 778px 0 0 240px;
 }
 .abs4-img{
-	height: 15%;
-    width: 40%;
+	height: 120px;
+    width: 700px;
     position: absolute;
+    bottom: 0px;
+    right: 0px;
     z-index: -1;
-    margin: 778px 0 0 790px;
+    //margin: 778px 0 0 790px;
 }
 
 /* Paragraph link color */
