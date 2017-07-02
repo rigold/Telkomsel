@@ -532,7 +532,7 @@ body{
 	color: #131ccf;
 	text-decoration: none;
 }
-.body div#featured div p{
+.body div#featured div h3 p{
 	color: #000000;
     float: left;
     font-family: arial;
@@ -542,6 +542,35 @@ body{
     text-align: justify;
     width: 100%;
 }
+.body div#featured div h4{
+	color: #cf1315;
+    float: left;
+    font-family: calibri;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+.body div#featured div h4 a{
+	color: #131ccf;
+	text-decoration: none;
+	text-align: center;
+}
+
+.body div#featured div h4 p{
+	color: #000000;
+	font-weight: bold;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0 0 0 ;
+    text-align: center;
+    width: 100%;
+}
+
 .body div#featured div span{
 	color: #074679;
 	font-family: arial;
