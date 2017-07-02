@@ -112,7 +112,7 @@
 						</p>
 					</div>
 					
-					<p><br><br>&#169; Copyright 2017. Created by Tomson Pangaribuan</p>
+					<p><br><br>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 
 				<div class="body">
@@ -152,7 +152,7 @@
 							<br>Admin
 							<br>
 							<br>4.Web ini menolong sekali dan bertampilan bagus, apa yang dapat saya berikan?
-							<br>Tolong Saya dikasih Nilai A . :)
+							<br>Tolong Kami dikasih Nilai A . :)
 						</div>
 					</div>
 				</div>
