@@ -132,27 +132,30 @@
 					<div id="featured">
 						<div>
 							<h3>Pengenalan Terhadap Web ini :
-							<p>Web ini adalah tempat penampungan dan pengolahan data site untuk kemudian data dapat dipilah sesuai dengan kebutuhan pengguna, web ini juga menyediakan fitur untuk melakukan print tabel kedalam bentuk dokumen.
-							<br>Ada dua hak akses pada web ini : 
-							<br>1. Admin (Hampir dapat melakukan semua perubahan pada web / God-like)
-							<br>2. User (Pengguna akhir yang hanya dapat melakukan fungsi view, search dan print).
-							
-							<br><br>
-							Bila ada pertanyaan yang ingin diajukan, segera hubungi kami melalui link berikut ini. 
-							<a href="About.php">Hubungi kami !</a>.</p>
-
+								<p>
+									Web ini adalah tempat penampungan dan pengolahan data site untuk kemudian data dapat dipilah sesuai dengan kebutuhan pengguna, web ini juga menyediakan fitur untuk melakukan print tabel kedalam bentuk dokumen.
+									<br>Ada dua hak akses pada web ini : 
+									<br>1. Admin (Hampir dapat melakukan semua perubahan pada web / God-like)
+									<br>2. User (Pengguna akhir yang hanya dapat melakukan fungsi view, search dan print).
+									
+									<br><br>
+									Bila ada pertanyaan yang ingin diajukan, segera hubungi kami melalui link berikut ini. 
+									<a href="About.php">Hubungi kami !</a>
+								</p>
 							<h3>Q & A (Pertanyaan Umum):
-							<p>1.Saya Lupa Pasword / User Name saya, Apa yang dapat saya lakukan?
-							<br>Hubungi Admin secara langsung atau Klik Halaman "About" untuk melihat informasi kontak Admin.
-							<br>
-							<br>2.Saya ingin mengubah data diri saya
-							<br>Hubungi Admin secara langsung atau Klik Halaman "About" untuk melihat informasi kontak Admin.
-							<br>
-							<br>3.Siapa saja yang bisa melakukan insert / delete data site dan data lain pada web ini?
-							<br>Admin
-							<br>
-							<br>4.Web ini menolong sekali dan bertampilan bagus, apa yang dapat saya berikan?
-							<br>Tolong Kami dikasih Nilai A . :)
+								<p>
+									1.Saya Lupa Pasword / User Name saya, Apa yang dapat saya lakukan?
+									<br>Hubungi Admin secara langsung atau Klik Halaman "About" untuk melihat informasi kontak Admin.
+									<br>
+									<br>2.Saya ingin mengubah data diri saya
+									<br>Hubungi Admin secara langsung atau Klik Halaman "About" untuk melihat informasi kontak Admin.
+									<br>
+									<br>3.Siapa saja yang bisa melakukan insert / delete data site dan data lain pada web ini?
+									<br>Admin
+									<br>
+									<br>4.Web ini menolong sekali dan bertampilan bagus, apa yang dapat saya berikan?
+									<br>Tolong Kami dikasih Nilai A . :)
+								</p>
 						</div>
 					</div>
 				</div>
