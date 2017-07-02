@@ -108,6 +108,7 @@
 							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
 							<a href="Edit_User.php"><br>> EDIT USER<br></a>
 							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
+							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
 					
