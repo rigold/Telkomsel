@@ -550,6 +550,17 @@ body{
     width: 100%;
     font-weight: bold;
 }
+.body div#featured div h5{
+	color: RED;
+    float: left;
+    font-family: calibri;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
 .body div#featured div h4 a{
 	color: #131ccf;
 	text-decoration: none;
@@ -576,6 +587,16 @@ body{
     line-height: 30px;
     margin: 0 0 20px 0;
     text-align: left;
+    width: 100%;
+    font-weight: bold;
+}
+.body div#featured div h6{
+	color: darkred;
+    font-family: arial;
+    font-size: 200px;
+    line-height: 200px;
+    margin: 0 0 20px 0;
+    text-align: center;
     width: 100%;
     font-weight: bold;
 }
