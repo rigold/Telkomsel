@@ -1125,7 +1125,7 @@ table {
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -1178,6 +1178,16 @@ tr:nth-child(even) {
     .navi li a{
       display: none;
     }
+    .body {
+      margin: 0px;
+      padding-left: 22.5px;
+      width: 92.5%;
+      float: center;
+     }
+    .body h1{
+      margin: 0px;
+      padding: 0px;
+     }
     .sidebar {
       display: none;
     }
