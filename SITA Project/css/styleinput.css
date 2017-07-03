@@ -492,6 +492,7 @@ body{
 }
 .body table td{
 	font-weight: normal;
+	width: 100px;
 }
 
 
