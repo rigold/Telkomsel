@@ -487,13 +487,18 @@ body{
 .body table ul{
 	text-align: left;
 }
-.body table, th, td{
+.body table #sites th td{
 	border: 2px solid black;
 }
 .body table td{
 	font-weight: normal;
 }
-
+.body table #sites th{
+	width: 250px;
+}
+.body table th{
+	width: auto;
+}
 
 
 /*-------------------------navbar-------------------------*/
@@ -584,13 +589,22 @@ table {
     margin-bottom: 20px;
 }
 
+#sites td, th {
+    text-align: left;
+    padding: 8px;
+}
 td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
+    text-align: left;
     padding: 8px;
 }
 
-tr:nth-child(even) {
+a td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#sites tr:nth-child(even) {
     background-color: #dddddd;
 }
 

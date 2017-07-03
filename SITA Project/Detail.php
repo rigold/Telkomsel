@@ -22,7 +22,7 @@
 						<a href="Site_Daerah.php"> Batu </a> 
 						<a href="Site_Daerah.php"> Blitar Kab. </a> 
 						<a href="Site_Daerah.php"> Blitar Kota </a> 
-						<a href="Site_Daerah.php#"> Bojonegoro </a> 
+						<a href="Site_Daerah.php"> Bojonegoro </a> 
 						<a href="Site_Daerah.php"> Bondowoso </a> 
 						<a href="Site_Daerah.php"> Gresik </a> 
 						<a href="Site_Daerah.php"> Jember </a> 
@@ -122,104 +122,140 @@
 					<h1>List Site</h1>
 					<br>
 					<div class="line-separator"></div>
-								<table id="sites">
-									<tr>
-										<td>
-											Site ID :
-										</td>
-										<td>	
-											K212Surabaya
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Nama Site :
-										</td>
-										<td>	
-											Keputih 212
-										</td>
-									</tr>									
-									<tr>
-										<td>
-											Status Lahan :
-										</td>
-										<td>	
-											Beli
-										</td>	
-									</tr>
-									<tr>
-										<td>
-											Status Beli/Pinjam :
-										</td>
-										<td>	
-											Beli
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Pemilik Tower :
-										</td>
-										<td>	
-											Telkomsel
-										</td>
-									</tr>									
-									<tr>
-										<td>
-											Alamat Site :
-										</td>
-										<td>	
-											Keputih Gang Makam Blok A no 10
-										</td>	
-									</tr>
-									asasasasas
-									<tr>
-										<td>
-											Kota/Kabupaten :
-										</td>
-										<td>	
-											Surabaya
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Kontraktor Utama :
-										</td>
-										<td>	
-											PT. Suka Senang
-										</td>
-									</tr>									
-									<tr>
-										<td>
-											Penyedia Menara :
-										</td>
-										<td>	
-											PT. Sedih Menangis
-										</td>	
-									</tr>
-									<tr>
-										<td>
-											Branch :
-										</td>
-										<td>	
-											Surabaya
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Tower Height :
-										</td>
-										<td>	
-											100 m
-										</td>
-									</tr>									
-									<tr>
-										<td>
-											Luas Lahan :
-										</td>
-										<td>	
-											Keputih Gang Makam Blok A no 10
-										</td>	
-									</tr>
+						<h2>
+							Informasi Sites
+						</h2>
+								<table border="0">
+									<a id="detail">
+										<tr>
+											<th>
+												Site ID
+											</th>
+											<td>	
+												: K212Surabaya
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Nama Site
+											</th>
+											<td>	
+												: Keputih 212
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Status Lahan
+											</th>
+											<td>	
+												: Beli
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Status Beli/Pinjam
+											</th>
+											<td>	
+												: Beli
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Pemilik Tower
+											</th>
+											<td>	
+												: Telkomsel
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Alamat Site
+											</th>
+											<td>	
+												: Keputih Gang Makam Blok A no 10
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Kota/Kabupaten
+											</th>
+											<td>	
+												: Surabaya
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Kontraktor Utama
+											</th>
+											<td>	
+												: PT. Suka Senang
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Penyedia Menara
+											</th>
+											<td>	
+												: PT. Sedih Menangis
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Branch
+											</th>
+											<td>	
+												: Surabaya
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Tower Height
+											</th>
+											<td>	
+												: 100 m
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Luas Lahan
+											</th>
+											<td>	
+												: 350 m2
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Durasi Sewas
+											</th>
+											<td>	
+												: 10 Tahun
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Tanggal Mulai Sewa
+											</th>
+											<td>	
+												: 17/08/2010
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Tanggal Akhir Sewa
+											</th>
+											<td>	
+												: 17/08/2020
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Remark
+											</th>
+											<td>	
+												: Baik baik saja
+											</td>	
+										</tr>
+									</a>
 								</table>
 
 				</div>
