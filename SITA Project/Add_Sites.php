@@ -125,26 +125,22 @@
 						<div id="site">
 							<h3>Informasi Site</h3>
 							<p>
-							<label for="a">Nama Site:</label> <input type="text" name="NamaSite" size="50">
+							<label for="a">Nama Site :</label> <input type="text" name="NamaSite" size="50">
 							</p>
 							<p>
-							<label for="b">Site ID:</label> <input type="text" name="SiteID" size="50">
+							<label for="b">Site ID :</label> <input type="text" name="SiteID" size="50">
 							</p>
 							<p>
-							<label for="c">Status:</label> <input type="text" name="Status" size="50">
+							<label for="c">Status :</label> <input type="text" name="Status" size="50">
 							</p>
 							<p>
-							<label for="d">Alamat:</label> <input type="text" name="Alamat" size="50">
+							<label for="d">Alamat :</label> <input type="text" name="Alamat" size="50">
 							</p>
 							<p>
-							<label for="e">Luas Lahan:</label> <input type="text" name="Luas" size="50">
+							<label for="e">Luas Lahan :</label> <input type="text" name="Luas" size="50">
 							</p>
 							<p>
-							<label for="f">Durasi Sewa:</label> <input type="text" name="Durasi" size="50">
-							</p>
-							<p>
-							<label for="g">Gambar Site:</label>
-							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+							<label for="f">Durasi Sewa :</label> <input type="text" name="Durasi" size="50">
 							</p>
 							<h3>Identitas Pemilik Lahan</h3>
 							<p>

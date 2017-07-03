@@ -125,9 +125,6 @@
 								<table id="sites">
 									<tr>
 										<th>
-											Gambar
-										</th>
-										<th>
 											Informasi Site
 										</th>
 										<th>
@@ -139,9 +136,6 @@
 									</tr>
 
 									<tr>
-										<td>
-											<img src="images/tower.jpg" alt="gambar tower" class="image"  width="250" height="250" />
-										</td>
 										<td>
 											<ul>
 												<li>
@@ -170,57 +164,37 @@
 											<button type="button" onclick="location.href='Detail.php';">Detail</button>
 										</td>
 									</tr>
-
 									<tr>
 										<td>
-											<?php
-											$target_dir = "images/";
-											$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-											$uploadOk = 1;
-											$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-											// Check if image file is a actual image or fake image
-											if(isset($_POST["submit"])) {
-											    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-											    if($check !== false) {
-											        $uploadOk = 1;
-											    } else {
-											        echo "File bukan image.";
-											        $uploadOk = 0;
-											    }
-											}
-											// Check if file already exists
-											if (file_exists($target_file)) {
-											    echo "Maaf, ada file yang sama.";
-											    $uploadOk = 0;
-											}
-											// Check file size
-											if ($_FILES["fileToUpload"]["size"] > 500000000) {
-											    echo "Maaf, file terlalu besar.";
-											    $uploadOk = 0;
-											}
-											// Allow certain file formats
-											if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-											&& $imageFileType != "gif" ) {
-											    echo "Maaf, hanya JPG, JPEG, PNG & GIF yang diperbolehkan.";
-											    $uploadOk = 0;
-											}
-											// Check if $uploadOk is set to 0 by an error
-											if ($uploadOk == 0) {
-											    echo "Maaf, file tidak dapat di upload.";
-											// if everything is ok, try to upload file
-											} else {
-											    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-											    } else {
-											        echo "Maaf, ada error dalam mengupload file.";
-											    }
-											}
-											/* Displaying Image*/
-											$image=$_FILES["fileToUpload"]["name"]; 
-										    $img="images/".$image;
-										    echo '<img src= "'.$img.'" width="250" height="250" />';
-										    echo '<br>';
-											?>
+											<ul>
+												<li>
+													Nama Site : Kejawan 119
+												</li>
+												<li>
+													Site ID : K119Surabaya
+												</li>
+												<li>
+													Alamat : Kejawan no 15
+												</li>
+											</ul>
 										</td>
+										<td>	
+											<ul>
+												<li>
+													Nama : Gideon Siburian
+												</li>
+												<li>
+													Alamat : Keputih Gang Pasar no 17
+												</li>
+											</ul>
+										</td>
+										<td>
+											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+											<button type="button" onclick="location.href='Detail.php';">Detail</button>
+										</td>
+									</tr>									
+
+									<tr>
 										<td>
 											<ul>
 												<li>

@@ -125,26 +125,22 @@
 						<div id="site">
 							<h3>Informasi Site</h3>
 							<p>
-							<label for="a">Nama Site:</label> <input type="text" name="NamaSite" size="50" placeholder="Keputih 007">
+							<label for="a">Nama Site :</label> <input type="text" name="NamaSite" size="50" placeholder="Keputih 007">
 							</p>
 							<p>
-							<label for="b">Site ID:</label> <input type="text" name="SiteID" size="50" placeholder="007006005004">
+							<label for="b">Site ID :</label> <input type="text" name="SiteID" size="50" placeholder="007006005004">
 							</p>
 							<p>
-							<label for="c">Status:</label> <input type="text" name="Status" size="50" placeholder="Beli">
+							<label for="c">Status :</label> <input type="text" name="Status" size="50" placeholder="Beli">
 							</p>
 							<p>
-							<label for="d">Alamat:</label> <input type="text" name="Alamat" size="50" placeholder="Keputih Gang Makam Blok E no 23">
+							<label for="d">Alamat :</label> <input type="text" name="Alamat" size="50" placeholder="Keputih Gang Makam Blok E no 23">
 							</p>
 							<p>
-							<label for="e">Luas Lahan:</label> <input type="text" name="Luas" size="50" placeholder="350 m2">
+							<label for="e">Luas Lahan :</label> <input type="text" name="Luas" size="50" placeholder="350 m2">
 							</p>
 							<p>
-							<label for="f">Durasi Sewa:</label> <input type="text" name="Durasi" size="50" placeholder="10 Tahun">
-							</p>
-							<p>
-							<label for="g">Gambar Site:</label>
-							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+							<label for="f">Durasi Sewa :</label> <input type="text" name="Durasi" size="50" placeholder="10 Tahun">
 							</p>
 							<h3>Identitas Pemilik Lahan</h3>
 							<p>
