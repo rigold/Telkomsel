@@ -71,7 +71,12 @@
 				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
 				
-					
+					<h1>
+					<?php
+					echo " " . date("Y/m/d") ;
+					?>
+					</h1>
+				
 				
 				<form action="Search.php" id="search">
 					<input type="text"/>
@@ -147,14 +152,14 @@
 							    <td>Surabaya</td>
 							    <td>SBY123</td>
 							    <td>Surabaya X</td>
-							    <td></td>
+							    <td><button type="button" onclick="location.href='Detail.php';">Detail</button></td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
 							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
-							    <td></td>
+							    <td>-</td>
 							  </tr>
 							  <tr>
 							    <td>3</td>

@@ -1084,7 +1084,7 @@ body{
 
 .navi ul form#search{
 	float: right;
-	margin-top: 25px;
+	//margin-top: 25px;
 	padding: 0 20px 0 0 ;
 }
 
@@ -1207,7 +1207,23 @@ tr:nth-child(even) {
 
 }
 @page {
-    size:  auto;   /* auto is the initial value */
+    size:  landscape;   /* auto is the initial value */
     margin: 0mm;
 
+}
+
+.navi h1 {
+    font-weight: bold;
+    font-family: arial;
+    font-size: 14px;
+    display: block;
+    color: yellow;
+    text-align: right;
+    padding-right: 25px;
+    text-decoration: none;
+}
+
+.body form button {
+    float: right;
+    margin-top: 15px;
 }
