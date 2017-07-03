@@ -122,10 +122,16 @@
 					<h1>List Site</h1>
 					<br>
 					<div class="line-separator"></div>
-						<h2>
-							Informasi Sites
-						</h2>
-								<table border="0">
+							
+					<div class="tab">
+						<button class="tablinks" onclick="openTabs(event, 'Sites')">Informasi Sites</button>
+						<button class="tablinks" onclick="openTabs(event, 'Pemilik')">Identitas Pemilik Lahan</button>
+						<button class="tablinks" onclick="openTabs(event, 'PBB')">Informasi Pajak Bumi bangunan</button>
+						<button class="tablinks" onclick="openTabs(event, 'SKRD')">SKRD/RPM</button>
+					</div>
+
+					<div id="Sites" class="tabcontent">
+						<table border="0">
 									<a id="detail">
 										<tr>
 											<th>
@@ -256,10 +262,232 @@
 											</td>	
 										</tr>
 									</a>
-								</table>
+						</table>
+					</div>
+
+					<div id="Pemilik" class="tabcontent">
+						<table border="0">
+									<a id="detail">
+										<tr>
+											<th>
+												No. KTP
+											</th>
+											<td>	
+												: 31-73-02-15-07-91-0004
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Kartu Keluarga
+											</th>
+											<td>	
+												: 3203041711053312
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Pemilik Lahan
+											</th>
+											<td>	
+												: Tagor Ba
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Alamat Pemilik
+											</th>
+											<td>	
+												: Keputih Gang Makam Blok A no 09
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Pemilik Tower
+											</th>
+											<td>	
+												: Telkomsel
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												No. Handphone
+											</th>
+											<td>	
+												: 0812641648
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												E-Mail
+											</th>
+											<td>	
+												: TagorBa@gmail.com
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Surat Persetujuan Keluarga
+											</th>
+											<td>	
+												: Ada
+											</td>
+										</tr>									
+									</a>
+						</table>
+					</div>
+					<div id="PBB" class="tabcontent">
+						<table border="0">
+									<a id="detail">
+										<tr>
+											<th>
+												Nomor Objek Pajak
+											</th>
+											<td>	
+												: 36.75.742.010.022-0116.0
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Nilai PBB
+											</th>
+											<td>	
+												: 3.000.000 Rupiah
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												Tanggal Mulai
+											</th>
+											<td>	
+												: 17/08/2010
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Tanggal Jatuh Tempo
+											</th>
+											<td>	
+												: 17/08/2020
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Status
+											</th>
+											<td>	
+												: Baik baik saja
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												NJOP Tanah
+											</th>
+											<td>	
+												: 3.000.000 Rupiah
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												NJOP Bangunan
+											</th>
+											<td>	
+												: 3.000.000 Rupiah
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Surat PBB
+											</th>
+											<td>	
+												<img src="images/cute.jpg" alt="abs-img" width="200" height="200" />
+											</td>
+										</tr>									
+									</a>
+						</table>
+					</div>
+					<div id="SKRD" class="tabcontent">
+						<table border="0">
+									<a id="detail">
+										<tr>
+											<th>
+												Nomor SKRD
+											</th>
+											<td>	
+												: 36.75.742.010.022-0116.0
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Harga SKRD
+											</th>
+											<td>	
+												: 3.000.000 Rupiah
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Tanggal Jatuh Tempo
+											</th>
+											<td>	
+												: 17/08/2020
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Koefisien SKRD
+											</th>
+											<td>	
+												: 1,1
+											</td>
+										</tr>									
+										<tr>
+											<th>
+												NJOP Tanah
+											</th>
+											<td>	
+												: 3.000.000 Rupiah
+											</td>	
+										</tr>
+										<tr>
+											<th>
+												Status
+											</th>
+											<td>	
+												: ???
+											</td>
+										</tr>
+										<tr>
+											<th>
+												Surat SKRD
+											</th>
+											<td>	
+												<img src="images/cute2.jpg" alt="abs-img" width="200" height="200" />
+											</td>
+										</tr>									
+									</a>
+						</table>
+					</div>
+
 
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
+
+/*-------------------JavaScript---------------*/
+<script>
+function openTabs(evt, TabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(TabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
