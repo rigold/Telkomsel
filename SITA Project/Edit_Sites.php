@@ -160,6 +160,9 @@
 							<label for="e">No Telefon:</label> <input type="text" name="HP" size="50" placeholder="081362827722">
 							</p>
     						<input type="submit" value="Submit" name="submit">
+    						<a href='List_Sites.php'>
+    							<button type="button" onclick="alert('Delete Success!');" "location.href='List_Sites.php';">Delete</button>
+    						</a>
 						</div>
 					</form>
 				</div>

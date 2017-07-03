@@ -133,6 +133,9 @@
 										<th>
 											Informasi Pemilik
 										</th>
+										<th>
+											Action
+										</th>
 									</tr>
 
 									<tr>
@@ -224,6 +227,9 @@
 													No Telefon :<?php echo $_POST["HP"]; ?>
 												</li>
 											</ul>
+										</td>
+										<td>
+											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
 										</td>	
 									</tr>
 								</table>
