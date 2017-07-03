@@ -140,6 +140,39 @@
 
 									<tr>
 										<td>
+											<img src="images/tower.jpg" alt="gambar tower" class="image"  width="250" height="250" />
+										</td>
+										<td>
+											<ul>
+												<li>
+													Nama Site : Keputih 212
+												</li>
+												<li>
+													Site ID : K212Surabaya
+												</li>
+												<li>
+													Alamat : Keputih Gang Makam Blok A no 10
+												</li>
+											</ul>
+										</td>
+										<td>	
+											<ul>
+												<li>
+													Nama : Tomson Pangaribuan
+												</li>
+												<li>
+													Alamat : Perumdos ITS blok T no 93
+												</li>
+											</ul>
+										</td>
+										<td>
+											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+											<button type="button" onclick="location.href='Detail.php';">Detail</button>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
 											<?php
 											$target_dir = "images/";
 											$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -230,6 +263,7 @@
 										</td>
 										<td>
 											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+											<button type="button" onclick="location.href='Detail.php';">Detail</button>
 										</td>	
 									</tr>
 								</table>
