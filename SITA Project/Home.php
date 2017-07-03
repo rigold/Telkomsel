@@ -91,7 +91,11 @@
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
-
+					<h1>
+					<?php
+					echo " " . date("Y/m/d") ;
+					?>
+					</h1>
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
