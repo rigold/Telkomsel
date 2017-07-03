@@ -439,6 +439,10 @@ body{
 	padding: 25px 30px 60px 20px;
 	border-radius: 20px;
 }
+.body form button{
+	float: right;
+	margin-top: 15px;
+}
 .body form #tulis{
 	color: black;
 	font-family: arial;

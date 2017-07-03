@@ -137,6 +137,9 @@
 							</p>
 							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
     						<input type="submit" value="Submit" name="submit">
+    						<a href='List_User.php'>
+    							<button type="button" onclick="alert('Delete Success!');" "location.href='List_User.php';">Delete</button>
+    						</a>
 						</div>
 					</form>
 				</div>

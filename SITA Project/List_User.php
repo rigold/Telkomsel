@@ -139,6 +139,9 @@
 										<th>
 											Jabatan
 										</th>
+										<th>
+											Action
+										</th>
 									</tr>
 
 									<tr>
@@ -202,6 +205,9 @@
 										</td>	
 										<td>	
 											<?php echo $_POST["Jabatan"]; ?><br>
+										</td>
+										<td>
+											<button type="button" onclick="location.href='Edit_User.php';">Edit</button>
 										</td>
 									</tr>
 								</table>
