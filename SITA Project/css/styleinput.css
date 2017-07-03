@@ -430,9 +430,9 @@ body{
 }
 
 .body form{
-	border-style: double;
-	border-width: 15px;
-	color: #ff6000;
+	border-style: solid;
+	border-width: 7px;
+	color: #B40E10;
 	background-color: lightgrey;
 	display: table;
 	margin: 50px 200px 0 200px;
