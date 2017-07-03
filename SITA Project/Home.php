@@ -72,7 +72,11 @@
 				</li>
 				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
-
+				<h1>
+					<?php
+					echo " " . date("Y/m/d") ;
+					?>
+				</h1>
 				<form action="Search.php" id="search">
 					<input type="text"/>
 					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
@@ -92,6 +96,7 @@
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
 
+					</h1>
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
