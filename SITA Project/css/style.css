@@ -1084,8 +1084,8 @@ body{
 
 .navi ul form#search{
 	float: right;
-	margin: 0 0 0 0;
-	padding: 35px 20px 0 20px;
+	margin-top: 25px;
+	padding: 0 20px 0 0 ;
 }
 
 .navi form#search input{
@@ -1171,4 +1171,43 @@ tr:nth-child(even) {
 	//_width: 600px;
 	//margin: 0 0 0 38px;
 	//padding: 0 0 17px;
+}
+
+/*-----------------print page--------------*/
+@media print {
+    .navi li a{
+      display: none;
+    }
+    .sidebar {
+      display: none;
+    }
+    .abs-img {
+      display: none;
+    }
+    .abs3-img {
+      display: none;
+    }
+    .abs4-img {
+      display: none;
+    }
+    .body div#featured div h5 {
+      display: none;
+    }
+    .pagination {
+      display: none;
+    }
+    .abs2-img
+    {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    
+
+}
+@page {
+    size:  auto;   /* auto is the initial value */
+    margin: 0mm;
+
 }

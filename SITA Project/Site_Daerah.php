@@ -70,7 +70,9 @@
 				</li>
 				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
-
+				
+					
+				
 				<form action="Search.php" id="search">
 					<input type="text"/>
 					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
@@ -211,10 +213,14 @@
 							    <td></td>
 							  </tr>
 							</table>
-							
 						</div>
-						
 					</div>
+					<button onclick="myFunction() ">Print Halaman</button>
+						<script>
+							function myFunction() {
+						    window.print();
+						}
+						</script>
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>
