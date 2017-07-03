@@ -136,31 +136,28 @@
 							<table>
 							  <tr>
 							  	<th>No.</th>
-							  	<th>Site ID</th>
-								<th>Site Name</th>
-								<th>Alamat</th>
-								<th>Kab.Kota</th>
-								<th>Pagu</th>
-								<th>Harga Rata Rata</th>
-								<th>Awal Kontrak</th>
-								<th>Akhir Kontrak</th>
+							  	<th>Kabupaten/Kota</th>
+								<th>Jumlah Sites</th>
+								<th>Jumlah Tagihan SKRD</th>
+								<th>Total Nilai SKRD</th>
+								<th>Koef SKRD</th>
+								<th>Tanggal Jatuh Tempo</th>
 								<th>Status</th>
+								<th>Action</th>
 							  </tr>
 							  <tr>
 							    <td>1</td>
-							    <td>SBY123</td>
-							    <td>Surabaya X</td>
 							    <td>Surabaya</td>
-							    <td>Surabaya</td>
-							    <td>50.000.000</td>
-							    <td>45.000.000</td>
-							    <td>1/01/2007</td>
-							    <td>1/01/2017</td>
-							    <td>Habis</td>
+							    <td>786</td>
+							    <td>456</td>
+							    <td>589.000.000</td>
+							    <td>0,1</td>
+							    <td>1/12/2017</td>
+							    <td>Belum Lunas</td>
+							    <td>Bayar</td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
-							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
@@ -180,11 +177,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>4</td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -204,11 +199,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>6</td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -228,11 +221,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>8</td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -252,11 +243,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>10</td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -274,9 +263,9 @@
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>
-						  <a href="#">2</a>
-						  <a href="#">3</a>
-						  <a href="#">&raquo;</a>
+						  <a href="Not_Found.php">2</a>
+						  <a href="Not_Found.php">3</a>
+						  <a href="Not_Found.php">&raquo;</a>
 					</div>
 				</div>
 			</div>
