@@ -121,6 +121,8 @@
 					abs2-img" />
 
 					<h1>List User</h1>
+					<br>
+					<div class="line-separator"></div>
 								<table>
 									<tr>
 										<th>

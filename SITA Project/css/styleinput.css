@@ -18,31 +18,37 @@ body{
 }
 .abs-img{
 	height:100%;
-	_height: 1590px;
+	//_height: 1590px;
 	position:absolute;
-	width:20%;
+	left: 0px;
+	width:280px;
 	z-index:-1;
 }
 .abs2-img{
-	height: 25%;
+	height: 250px;
+	width: 300px;
     position: absolute;
-    width: 25%;
+    right: 0px;
     z-index: -1;
-    margin: 0 0 0 53%;
+    //margin: 0 0 0 53%;
 }
 .abs3-img{
-	    height: 15%;
-    width: 40%;
+	height: 120px;
+    width: 500px;
     position: absolute;
+    bottom: 0px;
+    left: 250px;
     z-index: -1;
-    margin: 730px 0 0 240px;
+    //margin: 778px 0 0 240px;
 }
 .abs4-img{
-	height: 15%;
-    width: 40%;
+	height: 120px;
+    width: 700px;
     position: absolute;
+    bottom: 0px;
+    right: 0px;
     z-index: -1;
-    margin: 730px 0 0 790px;
+    //margin: 778px 0 0 790px;
 }
 
 /* Paragraph link color */
@@ -472,7 +478,7 @@ body{
 	text-align: center;
 	border-collapse: collapse;
     width: 100%;
-    margin: 75px 0 0 0;
+    margin: 50px 0 0 0;
 }
 .body table ul{
 	text-align: left;
@@ -563,4 +569,63 @@ body{
 /* Change the link color to #111 (black) on hover */
 .navi li a:hover {
     background-color: #111;
+}
+
+/*----------------tabel--------------*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*---------------gris pembatas-------------*/
+.line-separator{ 
+	height:1px;
+	background:#717171;
+	border-bottom:1px solid #313030;
+}
+
+.body  form#search{
+	float: left;
+	margin: 0 0 20px 0;
+	//padding: 35px 20px 0 20px;
+}
+/*-------------------pagination---------------*/
+.pagination {
+    display: inline-block;
+    float: right;
+    padding-right: 10px
+
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination div#featured div{
+	float: left;
+	//width: 100%;
+	//_width: 600px;
+	//margin: 0 0 0 38px;
+	//padding: 0 0 17px;
 }

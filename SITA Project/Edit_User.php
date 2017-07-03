@@ -125,16 +125,16 @@
 					<form action="List_User.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
-							<label for="a">Nama User:</label> <input type="text" name="Nama" size="50">
+							<label for="a">Nama User:</label> <input type="text" name="Nama" size="50" placeholder="Rigold">
 							</p>
 							<p>
-							<label for="b">NIK(ID):</label> <input type="text" name="NIK" size="50">
+							<label for="b">NIK(ID):</label> <input type="text" name="NIK" size="50" placeholder="1234567">
 							</p>
 							<p>
-							<label for="c">Password:</label> <input type="text" name="Password" size="50">
+							<label for="c">Password:</label> <input type="text" name="Password" size="50" placeholder="rigold4120">
 							</p>
 							<p>
-							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" size="50">
+							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" size="50" placeholder="General Manager">
 							</p>
 							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
     						<input type="submit" value="Submit" name="submit">

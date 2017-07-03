@@ -122,26 +122,26 @@
 
 					<h1>Formulir Edit Site</h1>
 
-					<form action="List_Site.php" method="post" enctype="multipart/form-data">
+					<form action="List_Sites.php" method="post" enctype="multipart/form-data">
 						<div id="site">
 							<h3>Informasi Site</h3>
 							<p>
-							<label for="a">Nama Site:</label> <input type="text" name="NamaSite" size="50">
+							<label for="a">Nama Site:</label> <input type="text" name="NamaSite" size="50" placeholder="Keputih 007">
 							</p>
 							<p>
-							<label for="b">Site ID:</label> <input type="text" name="SiteID" size="50">
+							<label for="b">Site ID:</label> <input type="text" name="SiteID" size="50" placeholder="007006005004">
 							</p>
 							<p>
-							<label for="c">Status:</label> <input type="text" name="Status" size="50">
+							<label for="c">Status:</label> <input type="text" name="Status" size="50" placeholder="Beli">
 							</p>
 							<p>
-							<label for="d">Alamat:</label> <input type="text" name="Alamat" size="50">
+							<label for="d">Alamat:</label> <input type="text" name="Alamat" size="50" placeholder="Keputih Gang Makam Blok E no 23">
 							</p>
 							<p>
-							<label for="e">Luas Lahan:</label> <input type="text" name="Luas" size="50">
+							<label for="e">Luas Lahan:</label> <input type="text" name="Luas" size="50" placeholder="350 m2">
 							</p>
 							<p>
-							<label for="f">Durasi Sewa:</label> <input type="text" name="Durasi" size="50">
+							<label for="f">Durasi Sewa:</label> <input type="text" name="Durasi" size="50" placeholder="10 Tahun">
 							</p>
 							<p>
 							<label for="g">Gambar Site:</label>
@@ -149,16 +149,16 @@
 							</p>
 							<h3>Identitas Pemilik Lahan</h3>
 							<p>
-							<label for="e">No KTP:</label> <input type="text" name="KTP" size="50">
+							<label for="e">No KTP:</label> <input type="text" name="KTP" size="50" placeholder="0910812710827">
 							</p>
 							<p>
-							<label for="e">Nama Pemilik:</label> <input type="text" name="NamaMilik" size="50">
+							<label for="e">Nama Pemilik:</label> <input type="text" name="NamaMilik" size="50" placeholder="Rigold">
 							</p>
 							<p>
-							<label for="e">Alamat:</label> <input type="text" name="AlamatMilik" size="50">
+							<label for="e">Alamat:</label> <input type="text" name="AlamatMilik" size="50" placeholder="Keputih Gang Makam Blok E no 23">
 							</p>
 							<p>
-							<label for="e">No Telefon:</label> <input type="text" name="HP" size="50">
+							<label for="e">No Telefon:</label> <input type="text" name="HP" size="50" placeholder="081362827722">
 							</p>
     						<input type="submit" value="Submit" name="submit">
 						</div>

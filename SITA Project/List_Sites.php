@@ -121,6 +121,8 @@
 					abs2-img" />
 
 					<h1>List Site</h1>
+					<br>
+					<div class="line-separator"></div>
 								<table id="sites">
 									<tr>
 										<th>
