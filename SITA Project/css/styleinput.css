@@ -498,6 +498,11 @@ body{
 .body #sites th{
 	width: auto;
 }
+.body .wrap{
+	text-align: center;
+}
+
+
 /* Style the tab */
 div.tab {
     overflow: hidden;

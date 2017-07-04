@@ -126,7 +126,7 @@
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'Sites')">Informasi Sites</button>
 						<button class="tablinks" onclick="openTabs(event, 'Pemilik')">Identitas Pemilik Lahan</button>
-						<button class="tablinks" onclick="openTabs(event, 'PBB')">Informasi Pajak Bumi bangunan</button>
+						<button class="tablinks" onclick="openTabs(event, 'PBB')">Informasi PBB</button>
 						<button class="tablinks" onclick="openTabs(event, 'SKRD')">SKRD/RPM</button>
 					</div>
 
@@ -467,15 +467,17 @@
 									</a>
 						</table>
 					</div>
-
-
+					<div class="wrap">
+						<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+					</div>
+					
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
 
-/*-------------------JavaScript---------------*/
+<!-- - - - - - - - - - JavaScript - - - - - - - - - -->
 <script>
 function openTabs(evt, TabName) {
     var i, tabcontent, tablinks;

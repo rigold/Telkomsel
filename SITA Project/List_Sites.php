@@ -204,16 +204,7 @@
 													Site ID :<?php echo $_POST["SiteID"]; ?>
 												</li>
 												<li>
-													Status :<?php echo $_POST["Status"]; ?>
-												</li>
-												<li>
 													Alamat :<?php echo $_POST["Alamat"]; ?>
-												</li>
-												<li>
-													Luas Lahan :<?php echo $_POST["Luas"]; ?>
-												</li>
-												<li>
-													Durasi :<?php echo $_POST["Durasi"]; ?>
 												</li>
 											</ul>
 											
@@ -221,17 +212,11 @@
 										<td>	
 											<ul>
 												<li>
-													No KTP :<?php echo $_POST["KTP"]; ?>
-												</li>
-												<li>
 													Nama :<?php echo $_POST["NamaMilik"]; ?>
 												</li>
 
 												<li>
 													Alamat :<?php echo $_POST["AlamatMilik"]; ?>
-												</li>
-												<li>
-													No Telefon :<?php echo $_POST["HP"]; ?>
 												</li>
 											</ul>
 										</td>
