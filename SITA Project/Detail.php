@@ -467,9 +467,9 @@
 									</a>
 						</table>
 					</div>
-					<div class="wrap">
+					<!--<div class="wrap">
 						<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
-					</div>
+					</div> -->
 					
 				</div>
 			</div>
