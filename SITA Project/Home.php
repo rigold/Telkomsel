@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>SITA Project</title>
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
@@ -88,8 +89,6 @@
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
 
 			<div class="page">
-				<img src="images/bg3.png" alt="abs3-img" class="abs3-img" />
-				<img src="images/bg4.png" alt="abs4-img" class="abs4-img" />
 				<div class="sidebar">
 
 					<div class="featured">						
@@ -122,8 +121,7 @@
 				</div>
 
 				<div class="body">
-					<img src="images/bg2.png" alt="ab2s-img" class="
-					abs2-img" />
+					
 
 					<h1><a href="About.php">Selamat Datang Di SITA Project</a></h1>
 
@@ -166,8 +164,13 @@
 							</h3>
 						</div>
 					</div>
+					
+					
 				</div>
+				
 			</div>
+
+			
 		</div>
 	</body>
 </html>

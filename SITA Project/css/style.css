@@ -1,28 +1,34 @@
 /* Website template by freewebsitetemplates.com */
 /*------------------------- Layout styles ------------------------*/ 
+html {
+  height: 100%;
+}
+
 body{
 	background-color:#eeeeee;
 	margin: 0;
+	height: 100%
 }
 #background{
-	position:relative;
+	position: inherit;
+    top: 0px;
+    bottom: 0px;
+    height: 100%
+    /* margin: 99px 0 0 0; */
 }
 .page{
-	//background:url(../images/container-bg.jpg) repeat-y;
-	//height:auto;
-	margin:0 0 0 30px;
-	//width:940px;
-	overflow: hidden;
-	position: relative;
-	//paddiung: 0 5px;
+	margin: 0 0 0 30px;
+    //overflow: auto;
+    position: inherit;
+    height: 100%;
 }
 .abs-img{
-	height:100%;
-	//_height: 1590px;
-	position:absolute;
-	left: 0px;
-	width:280px;
-	z-index:-1;
+	height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 280px;
+    z-index: -1;
 }
 .abs2-img{
 	height: 250px;
@@ -59,6 +65,7 @@ body{
     //margin: 0 9px 0 0;
     //_margin: 0 3px 0 0;
     width: 200px;
+    height: 100%
 }
 .sidebar .featured{
 	width: 218px;
@@ -334,11 +341,13 @@ body{
 
 /*------------------------- Body ------------------------*/
 .body{
-	float: left;
-    padding: 0 0 0 100px;
-    //padding: 0 0 60px 109px;
-    width: 75%;
-	//_width: 609px;
+    float: left;
+    margin: 0 50px 0 340px;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    position: absolute;
+    //overflow: auto;
 }
 .body ul#navigation{
 	padding: 0;
@@ -450,13 +459,17 @@ body{
 }
 
 .body ul.navigation{
-	height: 45px;
-	list-style: none;
-	margin: 40px 0 30px 0;
-	padding: 0;
-	background-color: #ffffff;
-	text-align: justify;
-	font-weight: bold;
+	//height: 45px;
+    list-style: none;
+    margin: 40px 0 30px 0;
+    background-color: #ffffff;
+    text-align: justify;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
 
 }	
 .body ul.navigation li{
@@ -464,10 +477,10 @@ body{
 	//	border-style: solid none;
 	//  border-color: #373646;
 	float: left;
-	height: 58px;
+	height: 50px;
 	text-align: center;
 	margin: 0 ;
-	padding: 0 40px 0 39px;
+	//padding: 0 40px 0 39px;
 }
 .body ul.navigation li.selected{
 	float: left;
@@ -1063,7 +1076,8 @@ body{
 
 .navi li {
     float: left;
-    
+    margin-right: 2%;
+    margin-top: 2.5%;
 }
 
 .navi li a {
@@ -1073,7 +1087,7 @@ body{
     display: block;
     color: white;
     text-align: left;
-    padding: 35px 20px 20px 20px;
+    //padding: 35px 20px 20px 20px;
     text-decoration: none;
 }
 .navi li div a {
@@ -1110,7 +1124,7 @@ body{
 	background: url(../images/interface.gif) no-repeat 0 -186px;
 }
 /* Change the link color to #111 (black) on hover */
-.navi li a:hover {
+//.navi li a:hover {
     background-color: #111;
 }
 
@@ -1167,10 +1181,6 @@ tr:nth-child(even) {
 .pagination a:hover:not(.active) {background-color: #ddd;}
 .pagination div#featured div{
 	float: left;
-	//width: 100%;
-	//_width: 600px;
-	//margin: 0 0 0 38px;
-	//padding: 0 0 17px;
 }
 
 /*-----------------print page--------------*/
@@ -1179,10 +1189,9 @@ tr:nth-child(even) {
       display: none;
     }
     .body {
-      margin: 0px;
-      padding-left: 22.5px;
-      width: 92.5%;
-      float: center;
+    	margin: 0 50px 0 50px;
+    	padding-right: 0px;
+     	float: center;
      }
     .body h1{
       margin: 0px;

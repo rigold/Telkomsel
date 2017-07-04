@@ -13,7 +13,6 @@
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -86,14 +85,10 @@
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
 
 			<div class="page">
-				<img src="images/bg3.png" alt="abs3-img" class="abs3-img" />
-				<img src="images/bg4.png" alt="abs4-img" class="abs4-img" />
 				<div class="sidebar">
-
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
-
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
@@ -117,11 +112,7 @@
 					
 					<p><br><br>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
-
 				<div class="body">
-					<img src="images/bg2.png" alt="ab2s-img" class="
-					abs2-img" />
-
 					<h1><a href="Home.php">PAJAK BUMI BANGUNAN</a></h1>
 					<br>
 					<div class="line-separator"></div>
