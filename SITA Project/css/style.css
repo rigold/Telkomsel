@@ -334,11 +334,15 @@ body{
 
 /*------------------------- Body ------------------------*/
 .body{
-	float: left;
-    padding: 0 0 0 100px;
-    //padding: 0 0 60px 109px;
-    width: 75%;
-	//_width: 609px;
+    float: left;
+    /* width: 75%; */
+    padding-right: 40px;
+    margin-left: 300px;
+    /* top: 0px; */
+    right: 0px;
+    left: 0px;
+    position: absolute;
+    overflow: hidden;
 }
 .body ul#navigation{
 	padding: 0;
