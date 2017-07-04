@@ -231,7 +231,7 @@
 										</tr>
 										<tr>
 											<th>
-												Durasi Sewas
+												Durasi Sewa
 											</th>
 											<td>	
 												: 10 Tahun
@@ -479,6 +479,7 @@
 
 <!-- - - - - - - - - - JavaScript - - - - - - - - - -->
 <script>
+document.getElementsByClassName('tablinks')[0].click()
 function openTabs(evt, TabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");

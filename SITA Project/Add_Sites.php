@@ -121,45 +121,417 @@
 
 					<h1>Formulir Input Site</h1>
 
-					<form action="List_Sites.php" method="post" enctype="multipart/form-data">
+					<div class="tab">
+						<button class="tablinks" onclick="openTabs(event, 'Sites')">I</button>
+						<button class="tablinks" onclick="openTabs(event, 'SuratLain')">II</button>
+						<button class="tablinks" onclick="openTabs(event, 'Perpanjangan')">III</button>
+						<button class="tablinks" onclick="openTabs(event, 'BAK')">IV</button>
+						<button class="tablinks" onclick="openTabs(event, 'THO')">V</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPL')">VI</button>
+						<button class="tablinks" onclick="openTabs(event, 'SP')">VII</button>
+						<button class="tablinks" onclick="openTabs(event, 'Akta')">VIII</button>
+						<button class="tablinks" onclick="openTabs(event, 'IjinLain')">IX</button>
+						<button class="tablinks" onclick="openTabs(event, 'SKet')">X</button>
+						<button class="tablinks" onclick="openTabs(event, 'SK')">XI</button>
+						<button class="tablinks" onclick="openTabs(event, 'PBB')">XII</button>
+						<button class="tablinks" onclick="openTabs(event, 'SKRD')">XIII</button>
+						<button class="tablinks" onclick="openTabs(event, 'IMB')">XIV</button>
+						<button class="tablinks" onclick="openTabs(event, 'IMTU')">XV</button>
+						<button class="tablinks" onclick="openTabs(event, 'IjinDep')">XVI</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPTT')">XVII</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPB')">XVIII</button>
+						<button class="tablinks" onclick="openTabs(event, 'IIP')">XIX</button>
+						<button class="tablinks" onclick="openTabs(event, 'Genset')">XX</button>
+						<button class="tablinks" onclick="openTabs(event, 'Comcase')">XXI</button>
+					</div>
+
+					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
 						<div id="site">
-							<h3>Informasi Site</h3>
-							<p>
-							<label for="a">Nama Site :</label> <input type="text" name="NamaSite" size="50">
-							</p>
-							<p>
-							<label for="b">Site ID :</label> <input type="text" name="SiteID" size="50">
-							</p>
-							<p>
-							<label for="c">Status :</label> <input type="text" name="Status" size="50">
-							</p>
-							<p>
-							<label for="d">Alamat :</label> <input type="text" name="Alamat" size="50">
-							</p>
-							<p>
-							<label for="e">Luas Lahan :</label> <input type="text" name="Luas" size="50">
-							</p>
-							<p>
-							<label for="f">Durasi Sewa :</label> <input type="text" name="Durasi" size="50">
-							</p>
-							<h3>Identitas Pemilik Lahan</h3>
-							<p>
-							<label for="e">No KTP:</label> <input type="text" name="KTP" size="50">
-							</p>
-							<p>
-							<label for="e">Nama Pemilik:</label> <input type="text" name="NamaMilik" size="50">
-							</p>
-							<p>
-							<label for="e">Alamat:</label> <input type="text" name="AlamatMilik" size="50">
-							</p>
-							<p>
-							<label for="e">No Telefon:</label> <input type="text" name="HP" size="50">
-							</p>
-    						<input type="submit" value="Submit" name="submit">
+							<div id="Sites" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Informasi Sites</h2>
+										<p>
+											<label for="a">Site ID :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Nama Site :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status Lahan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status Tower :</label>   
+											<select name="cars">
+											    <option value="volvo">Beli	</option>
+											    <option value="saab">Pinjam</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Pemilik Tower :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Alamat Site :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Kota/Kabupaten :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Kontraktor Utama :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Penyedia Menara :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Branch :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Longitude :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Latitude :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">On Air Date :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Colocated Site :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">BTS Type :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Site Type :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tower Height :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tower Type :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Shelter Type :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Shelter Size :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Luas Lahan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Luas Jalan Akses :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi Sewa :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Denah Tanah :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Peta Radius Tower :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Sketsa Batas Lahan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Mulai Sewa :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir Sewa :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Ijin PKS :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Harga/Tahun :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Remark :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<br><input type="submit" value="Submit" name="submit">			
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="SuratLain" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Surat Lain</h2>
+										<p>
+											<label for="a">Status Jaminan Hukum :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Ijin Bekerja :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="Perpanjangan" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Perpanjangan</h2>
+										<p>
+											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">PIC :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">SPPH :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Vendor List :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Invoice :</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="Perpanjangan" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Perpanjangan</h2>
+										<p>
+											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">PIC :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">SPPH :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Vendor List :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Invoice :</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="BAK" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Berita Acara Kesepakatan</h2>
+										<p>
+											<label for="a">No BAK :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal BAK :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Harga BAK :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="THO" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Tabel HO</h2>
+										<p>
+											<label for="a">No HO :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status HO :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Start Tahun HO :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Daftar Ulang HO :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Start HO :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Finish HO :</label> <input type="date" id="myDate" value="">
+										</p>
+										
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IPL" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Identitas Pemilik Lahan</h2>
+										<p>
+											<label for="a">KTP Pemilik :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Kartu Keluarga Pemilik :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Pemilik Lahan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Orang yang dikuasakan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Alamat Pemilik :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Telefon :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">No. HP :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">E-Mail :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Surat Persetujuan Keluarga :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="SP" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Surat Pernyataan</h2>
+										<p>
+											<label for="a">Status Jaminan Hukum :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Ijin Bekerja :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Status Jaminan Hukum :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Ijin Bekerja :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Status Jaminan Hukum :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Ijin Bekerja :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Status Jaminan Hukum :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Ijin Bekerja :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<select name="cars">
+											    <option value="volvo">Ada</option>
+											    <option value="saab">Tidak</option>
+											</select>
+										</p>
+									</a>
+								</table>
+							</div>
 						</div>
 					</form>
+
+
+
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
+<!-- - - - - - - - - - JavaScript - - - - - - - - - -->
+<script>
+document.getElementsByClassName('tablinks')[0].click()
+function openTabs(evt, TabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(TabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>

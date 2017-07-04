@@ -442,6 +442,12 @@ body{
 	padding: 25px 30px 60px 20px;
 	border-radius: 20px;
 }
+.body form#satu{
+	margin: 0 0 0 0;
+	width: 925px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
 .body form button{
 	float: right;
 	margin-top: 15px;
@@ -459,6 +465,9 @@ body{
 .body form #tulis label{
 	display: table-cell;
 }
+.body form #side label{
+	display: table-cell;
+}
 .body form #tulis input{
 	display: table-cell;
 }
@@ -468,6 +477,12 @@ body{
 	line-height: 25px;
 	margin-left: 20px;
 	text-align: justify;
+}
+body form div #site{
+	width: 700px;
+}
+body form div#site .tabcontent{
+	width: 700px;
 }
 .body form #site p{
 	display: table-row;
@@ -536,8 +551,9 @@ div.tab button.active {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
     border-top: none;
+    width: 550px;
 }
 
 /*-------------------------navbar-------------------------*/
