@@ -422,93 +422,308 @@
 									<a id="detail">
 										<h2>Surat Pernyataan</h2>
 										<p>
-											<label for="a">Status Jaminan Hukum :</label>   
+											<label for="a">Surat Pernyataan :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Ijin Bekerja :</label>   
+											<label for="a">Surat Pernyataan Ahli Waris :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<label for="a">Surat Pernyataan Janda:</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Status Jaminan Hukum :</label>   
+											<label for="a">Surat Pernyataan Kepemilikan Tanah :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Ijin Bekerja :</label>   
+											<label for="a">Surat Pernyataan Pelepasan Hak :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<label for="a">Surat Pernyataan Pembayaran:</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Status Jaminan Hukum :</label>   
+											<label for="a">Surat Pernyataan Penguasaan Fisik Tanah:</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Ijin Bekerja :</label>   
+											<label for="a">Surat Pernyataan Peralihan Atas Pekarangan :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<label for="a">Surat Pernyataan Persetujuan Kepala Desa :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Status Jaminan Hukum :</label>   
+											<label for="a">Surat Pernyataan Tanah Pemohon :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Ijin Bekerja :</label>   
+											<label for="a">Surat Pernyataan Tidak Keberatan Jalan Pribadi :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
+											<label for="a">Surat Pernyataan Tidak Keberatan Jalan Umum :</label>   
 											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 									</a>
 								</table>
 							</div>
 						</div>
+						<div id="site">
+							<div id="Akta" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Akta</h2>
+										<p>
+											<label for="a">Akta Hibah :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Akta Jual Beli Sewa :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Akta Hak Bersama :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Akta Warisan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Akta Pemisahan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Akta Nikah :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IjinLain" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Ijin Lain</h2>
+										<p>
+											<label for="a">Ijin Perubahan Pengguna Tanah :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Ijin IPPT :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Ijin Warga :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Ijin UKL UPL :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Ijin Sertifikat Tanah :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="SKet" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Surat Keterangan</h2>
+										<p>
+											<label for="a">Surat Keterangan Akses Lahan Jalan :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Asal Tanah :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Beda Luas Tanah :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Beda Nama :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Fatwa Waris :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Kematian :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Penduduk :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Permohonan IMB, HO, dan IP :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Persetujuan Sewa Lahan :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Riwayat Tanah :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Suami Istri :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Tanah :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Tidak Sengketa :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Keterangan Tidak Keberatan Didirikan :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="SK" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Surat Kuasa</h2>
+										<p>
+											<label for="a">Surat Kuasa :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Kuasa Pengambilan Jaminan Asli :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="PBB" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Informasi Pajak Bumi dan Bangunan</h2>
+										<p>
+											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Nilai PBB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Mulai :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">NJOP Tanah :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">NJOP Bangunan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Surat PBB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+
 					</form>
 
 
