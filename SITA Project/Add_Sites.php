@@ -182,6 +182,7 @@
 										<p>
 											<label for="a">Penyedia Menara :</label> <input type="text" name="NamaSite" size="50">
 										</p>
+
 										<p>
 											<label for="a">Branch :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -723,6 +724,67 @@
 								</table>
 							</div>
 						</div>
+						<div id="site">
+							<div id="SKRD" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>SKRD dan RPM</h2>
+										<p>
+											<label for="a">Nomor SKRD :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Nilai SKRD :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Koefisien SKRD :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Surat SKRD :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IMB" class="tabcontent">
+								<table border="0">
+									<a id="detail">
+										<h2>Informasi Ijin Mendirikan Bangunan</h2>
+										<p>
+											<label for="a">Nomor IMB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status IMB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi IMB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Daftar Ulang IMB :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Awal Mulai IMB :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir IMB :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Status Kepengurusan IMB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Mitra Pengurusa IMB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+
 
 					</form>
 
