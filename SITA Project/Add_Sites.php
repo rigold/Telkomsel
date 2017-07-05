@@ -22,7 +22,7 @@
 						<a href="Site_Daerah.php"> Batu </a> 
 						<a href="Site_Daerah.php"> Blitar Kab. </a> 
 						<a href="Site_Daerah.php"> Blitar Kota </a> 
-						<a href="Site_Daerah.php#"> Bojonegoro </a> 
+						<a href="Site_Daerah.php"> Bojonegoro </a> 
 						<a href="Site_Daerah.php"> Bondowoso </a> 
 						<a href="Site_Daerah.php"> Gresik </a> 
 						<a href="Site_Daerah.php"> Jember </a> 
