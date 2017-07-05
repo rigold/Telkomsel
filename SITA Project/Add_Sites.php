@@ -136,6 +136,7 @@
 						<button class="tablinks" onclick="openTabs(event, 'IIP')">XIX</button>
 						<button class="tablinks" onclick="openTabs(event, 'Genset')">XX</button>
 						<button class="tablinks" onclick="openTabs(event, 'Comcase')">XXI</button>
+						<button class="tablinks" onclick="openTabs(event, 'Submit')">Submit</button>
 					</div>
 
 					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
@@ -243,7 +244,6 @@
 										<p>
 											<label for="a">Remark :</label> <input type="text" name="NamaSite" size="50">
 										</p>
-										<br><input type="submit" value="Submit" name="submit">			
 									</a>
 								</table>
 							</div>
@@ -936,12 +936,24 @@
 								</table>
 							</div>
 						</div>
-
-
+						<div id="site">
+							<div id="Submit" class="tabcontent">
+								<table border="0">
+									<h2 id="check">Submit</h2>
+									<a id="detail">
+									<h3>
+										Apakah anda yakin data yang anda masukkan sudah benar?
+									</h3>
+									<h3>
+										Jika Ya, klik Submit
+									</h3>
+									<br><input id="final" type="submit" value="Submit" name="submit">
+									</a>
+								</table>
+							</div>
+						</div>
+						
 					</form>
-
-
-
 				</div>
 			</div>
 		</div>

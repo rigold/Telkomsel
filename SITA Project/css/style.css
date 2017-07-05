@@ -452,6 +452,9 @@ body{
     //padding: 20px 0 0;
     text-align: left;
 }
+.body h2#check{
+	text-align: center;
+}
 .body h2 a{
 	color: #4a14f8;
 	text-decoration: none;
@@ -1277,8 +1280,13 @@ tr:nth-child(even) {
 
 .body form #site p {
     display: table-row;
+    color: black;
 }
-
+.body form #site #detail h3 {
+    color: red;
+    text-align: center;
+    line-height: 55px;
+}
 .body form #site label {
     display: table-cell;
     color: black;
@@ -1291,16 +1299,20 @@ tr:nth-child(even) {
     display: table-cell;
     margin-left: 70px;
 }
+.body form #site input#final{
+    margin-left: 47%;
+}
+
 
 .body form div#site .tabcontent {
-    width: 700px;
+    //width: 700px;
 }
 
 .tabcontent {
     display: none;
     padding: 6px 12px;
     border-top: none;
-    width: 550px;
+    //width: 550px;
 }
 
 .body div {
