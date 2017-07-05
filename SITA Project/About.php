@@ -62,6 +62,7 @@
 					<div class="dropdown-content">
 	      				<a href="List_Panjang.php">List Perpanjangan</a>
 	      				<a href="Monitoring.php">Monitoring</a>
+	      				<a href="Izin.php">Perizinan</a>
 					    <a href="PBB.php">PBB</a>
 					    <a href="RPM.php">RPM</a>
 					    <a href="Comcase.php">Comcase</a>
