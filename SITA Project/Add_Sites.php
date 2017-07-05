@@ -225,13 +225,13 @@
 											<label for="a">Durasi Sewa :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Denah Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Denah Tanah :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Peta Radius Tower :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Peta Radius Tower :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Sketsa Batas Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Sketsa Batas Lahan :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai Sewa :</label> <input type="date" id="myDate" value="">
@@ -718,7 +718,7 @@
 											<label for="a">NJOP Bangunan :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Surat PBB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Surat PBB :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 									</a>
 								</table>
@@ -745,7 +745,7 @@
 											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Surat SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Surat SKRD :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>	
 										</p>
 									</a>
 								</table>
@@ -931,7 +931,7 @@
 											<label for="a">Comcase Solusi :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase File :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Comcase File :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 										<p>
 											<label for="a">Comcase Mitra :</label> <input type="text" name="NamaSite" size="50">

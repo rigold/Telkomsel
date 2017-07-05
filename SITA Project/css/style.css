@@ -1301,6 +1301,7 @@ tr:nth-child(even) {
     color: red;
     text-align: center;
     line-height: 55px;
+    font-family: helvetica;
 }
 .body form #site label {
     display: table-cell;
