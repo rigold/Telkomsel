@@ -403,7 +403,7 @@ body{
     display: block;
 }
 
-.body form#search input{
+.body form1#search input{
 	background: url(../images/interface.gif) no-repeat 0 -230px;
 	border: 0;
 	padding: 4px 5px 6px;
@@ -412,7 +412,7 @@ body{
 	width: 110px;
 	margin: 0;
 }
-.body form#search input#submit{
+.body form1#search input#submit{
 	color: #7d7d7d;
 	font-family: arial;
 	font-size: 14px;
@@ -1138,7 +1138,7 @@ tr:nth-child(even) {
 	border-bottom:1px solid #313030;
 }
 
-.body  form#search{
+.body  form1#search{
 	float: left;
 	margin: 0 0 20px 0;
 	//padding: 35px 20px 0 20px;
