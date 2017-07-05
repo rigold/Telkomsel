@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>SITA Project</title>
-		<link rel="stylesheet" href="css/styleinput.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
 	
@@ -83,10 +83,7 @@
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
 
 			<div class="page">
-				<img src="images/bg3.png" alt="abs3-img" class="abs3-img" />
-				<img src="images/bg4.png" alt="abs4-img" class="abs4-img" />
 				<div class="sidebar">
-
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
@@ -116,11 +113,7 @@
 				</div>
 
 				<div class="body">
-					<img src="images/bg2.png" alt="ab2s-img" class="
-					abs2-img" />
-
 					<h1>Formulir Input Site</h1>
-
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'Sites')">I</button>
 						<button class="tablinks" onclick="openTabs(event, 'SuratLain')">II</button>

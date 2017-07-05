@@ -428,7 +428,7 @@ body{
 
 .body h1{
 	font-family: helvetica, arial;
-	color: #c3e8ec;
+	color: #4a14f8;
 	font-size: 33px;
 	clear: both;
 	text-transform: uppercase;
@@ -444,13 +444,13 @@ body{
 
 .body h2 {
     font-family: helvetica, arial;
-    color: #c3e8ec;
-    font-size: 33px;
+    color: black;
+    font-size: 25px;
     clear: both;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 20px 0 0;
-    text-align: center;
+    //padding: 20px 0 0;
+    text-align: left;
 }
 .body h2 a{
 	color: #4a14f8;
@@ -1231,6 +1231,7 @@ tr:nth-child(even) {
 
 }
 
+/*---------------------jam--------------------*/
 .navi h1 {
     font-weight: bold;
     font-family: arial;
@@ -1245,4 +1246,124 @@ tr:nth-child(even) {
 .body form button {
     float: right;
     margin-top: 15px;
+}
+
+/*----------------tabel admin---------------*/
+.body form {
+    border-style: solid;
+    border-width: 7px;
+    color: #B40E10;
+    background-color: lightgrey;
+    display: table;
+    margin: 50px 200px 0 200px;
+    padding: 25px 30px 60px 20px;
+    //border-radius: 20px;
+}
+
+.body form#satu {
+    margin: 0 0 0 0;
+    width: 895px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.body form#site {
+    color: black;
+    font-family: arial;
+    line-height: 25px;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.body form #site p {
+    display: table-row;
+}
+
+.body form #site label {
+    display: table-cell;
+    color: black;
+    font-family: arial;
+    line-height: 25px;
+    padding-left: 70px;
+}
+
+.body form #site input, select {
+    display: table-cell;
+    margin-left: 70px;
+}
+
+.body form div#site .tabcontent {
+    width: 700px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    width: 550px;
+}
+
+.body div {
+    display: block;
+}
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+div.tab button.active {
+    background-color: #ccc;
+}
+
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.body p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.body label {
+    cursor: default;
+}
+
+.body form #tulis{
+	color: black;
+	font-family: arial;
+	line-height: 50px;
+	margin-left: 20px;
+	text-align: justify;
+}
+
+.body form #tulis p{
+	display: table-row;
+}
+.body form #tulis label{
+	display: table-cell;
+}
+.body form #side label{
+	display: table-cell;
+}
+.body form #tulis input{
+	display: table-cell;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
 }
