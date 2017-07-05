@@ -386,7 +386,7 @@ body{
 }
 
 .dropdown-content {
-	height: 180px;
+	height: 220px;
    	overflow: auto;
     display: none;
     position: absolute;

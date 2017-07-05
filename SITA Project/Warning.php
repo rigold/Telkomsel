@@ -83,12 +83,8 @@
 
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
-				<img src="images/bg3.png" alt="abs3-img" class="abs3-img" />
-				<img src="images/bg4.png" alt="abs4-img" class="abs4-img" />
 				<div class="sidebar">
-
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
@@ -118,9 +114,6 @@
 				</div>
 
 				<div class="body">
-					<img src="images/bg2.png" alt="ab2s-img" class="
-					abs2-img" />
-
 					<h1><a href="Home.php">Berita - Peringatan</a></h1>
 					<br>
 					<div class="line-separator"></div>
@@ -131,10 +124,10 @@
 							</h5>
 						</div>
 						<div>
-							<form action="Search.php" id="search">
+							<form1 action="Search.php" id="search">
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form>
+							</form1>
 							<table>
 							  <tr>
 							  	<th>No.</th>
@@ -259,10 +252,14 @@
 							    <td></td>
 							  </tr>
 							</table>
-							
 						</div>
-						
 					</div>
+					<button onclick="myFunction() ">Print Halaman</button>
+					<script>
+						function myFunction() {
+					    window.print();
+						}
+					</script>
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>

@@ -209,11 +209,11 @@
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
-						<script>
-							function myFunction() {
-						    window.print();
-							}
-						</script>
+					<script>
+						function myFunction() {
+					    window.print();
+						}
+					</script>
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>
