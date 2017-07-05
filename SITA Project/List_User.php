@@ -22,7 +22,7 @@
 						<a href="Site_Daerah.php"> Batu </a> 
 						<a href="Site_Daerah.php"> Blitar Kab. </a> 
 						<a href="Site_Daerah.php"> Blitar Kota </a> 
-						<a href="Site_Daerah.php#"> Bojonegoro </a> 
+						<a href="Site_Daerah.php"> Bojonegoro </a> 
 						<a href="Site_Daerah.php"> Bondowoso </a> 
 						<a href="Site_Daerah.php"> Gresik </a> 
 						<a href="Site_Daerah.php"> Jember </a> 
@@ -71,7 +71,11 @@
 				</li>
 				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
-
+				<h1>
+					<?php
+					echo " " . date("Y/m/d") ;
+					?>
+				</h1>
 				<form action="Search.php" id="search">
 					<input type="text"/>
 					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
