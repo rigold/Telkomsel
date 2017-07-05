@@ -112,7 +112,7 @@
 					<p><br><br>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
-					<h1><a href="Home.php">LIST PERPANJANGAN</a></h1>
+					<h1><a href="Home.php">IZIN PERPANJANGAN</a></h1>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
@@ -132,29 +132,24 @@
 							  	<th>Site ID</th>
 								<th>Site Name</th>
 								<th>Alamat</th>
-								<th>Kab.Kota</th>
-								<th>Pagu</th>
-								<th>Harga Rata Rata</th>
-								<th>Awal Kontrak</th>
-								<th>Akhir Kontrak</th>
-								<th>Status</th>
+								<th>Status IMB</th>
+								<th>Nomor IMB</th>
+								<th>Masa Berlaku</th>
+								<th>Action</th>
+
 							  </tr>
 							  <tr>
 							    <td>1</td>
 							    <td>SBY123</td>
 							    <td>Surabaya X</td>
 							    <td>Surabaya</td>
-							    <td>Surabaya</td>
-							    <td>50.000.000</td>
-							    <td>45.000.000</td>
-							    <td>1/01/2007</td>
-							    <td>1/01/2017</td>
-							    <td>Habis</td>
+							    <td>Hampir Habis</td>
+							    <td>NO xx/pp/zz</td>
+							    <td>5 Bulan</td>
+							    <td>Segera Perbaharui IMB</td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
@@ -172,13 +167,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>4</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -196,13 +187,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>6</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -220,13 +207,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>8</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -244,13 +227,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>10</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
