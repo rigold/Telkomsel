@@ -1,4 +1,4 @@
-# Telkom
+# Telkomsel
 SITA Project, Kerja Praktik
 
 Developer : Tomson Pangaribuan  5113100048
