@@ -123,10 +123,10 @@
 							</h5>
 						</div>
 						<div>
-							<form action="Search.php" id="search">
+							<form1 action="Search.php" id="search">
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form>
+							</form1>
 							<table>
 							  <tr>
 							  	<th>No.</th>

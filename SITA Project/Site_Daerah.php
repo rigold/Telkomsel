@@ -12,7 +12,6 @@
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -56,7 +55,6 @@
 						<a href="Site_Daerah.php">Tulungagung</a> 
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -125,10 +123,10 @@
 							</h5>
 						</div>
 						<div>
-							<form action="Search.php" id="search">
+							<form1 action="Search.php" id="search">
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form>
+							</form1>
 							<table>
 							  <tr>
 							  	<th>No.</th>
