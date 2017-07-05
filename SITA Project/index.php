@@ -30,7 +30,7 @@ body{
 	width: auto;
 	height: auto;
 	background-image: url(images/bg.jpg);
-	background-size: cover;
+	background-size: contain;
 	-webkit-filter: blur(5px);
 	z-index: 0;
 }
