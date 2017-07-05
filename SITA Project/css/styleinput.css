@@ -428,6 +428,11 @@ body{
 	padding: 20px 0 0;
 	text-align: center;
 }
+.body #Sites h2{
+	margin-bottom: 25px;
+	margin-left: 20px;
+	font-family: calibri;
+}
 .body h2{
 	margin-bottom: 5px;
 }
@@ -440,7 +445,7 @@ body{
 	display: table;
 	margin: 50px 200px 0 200px;
 	padding: 25px 30px 60px 20px;
-	border-radius: 20px;
+	//border-radius: 20px;
 }
 .body form#satu{
 	margin: 0 0 0 0;
@@ -471,27 +476,29 @@ body{
 .body form #tulis input{
 	display: table-cell;
 }
-.body form #site{
+.body form #site #detail{
 	color: black;
 	font-family: arial;
 	line-height: 25px;
-	margin-left: 20px;
+	margin-left: 70px;
 	text-align: justify;
 }
-body form div #site{
+.body form div #site{
 	width: 700px;
 }
-body form div#site .tabcontent{
+.body form div#site .tabcontent{
 	width: 700px;
 }
 .body form #site p{
 	display: table-row;
+	margin-left: 70px;
 }
 .body form #site label{
 	display: table-cell;
 }
-.body form #site input{
+.body form #site input,select{
 	display: table-cell;
+	margin-left: 70px;
 }
 .body #sites{
 	color: black;

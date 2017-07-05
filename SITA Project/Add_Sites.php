@@ -149,8 +149,9 @@
 						<div id="site">
 							<div id="Sites" class="tabcontent">
 								<table border="0">
+									<h2>Informasi Sites</h2>
 									<a id="detail">
-										<h2>Informasi Sites</h2>
+										
 										<p>
 											<label for="a">Site ID :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -257,8 +258,9 @@
 						<div id="site">
 							<div id="SuratLain" class="tabcontent">
 								<table border="0">
+									<h2>Surat Lain</h2>
 									<a id="detail">
-										<h2>Surat Lain</h2>
+										
 										<p>
 											<label for="a">Status Jaminan Hukum :</label>   
 											<select name="cars">
@@ -287,8 +289,9 @@
 						<div id="site">
 							<div id="Perpanjangan" class="tabcontent">
 								<table border="0">
+									<h2>Perpanjangan</h2>
 									<a id="detail">
-										<h2>Perpanjangan</h2>
+										
 										<p>
 											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -311,8 +314,8 @@
 						<div id="site">
 							<div id="Perpanjangan" class="tabcontent">
 								<table border="0">
+									<h2>Perpanjangan</h2>
 									<a id="detail">
-										<h2>Perpanjangan</h2>
 										<p>
 											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -335,8 +338,8 @@
 						<div id="site">
 							<div id="BAK" class="tabcontent">
 								<table border="0">
+									<h2>Berita Acara Kesepakatan</h2>
 									<a id="detail">
-										<h2>Berita Acara Kesepakatan</h2>
 										<p>
 											<label for="a">No BAK :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -356,8 +359,8 @@
 						<div id="site">
 							<div id="THO" class="tabcontent">
 								<table border="0">
+									<h2>Tabel HO</h2>
 									<a id="detail">
-										<h2>Tabel HO</h2>
 										<p>
 											<label for="a">No HO :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -384,8 +387,8 @@
 						<div id="site">
 							<div id="IPL" class="tabcontent">
 								<table border="0">
+									<h2>Identitas Pemilik Lahan</h2>
 									<a id="detail">
-										<h2>Identitas Pemilik Lahan</h2>
 										<p>
 											<label for="a">KTP Pemilik :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -420,8 +423,8 @@
 						<div id="site">
 							<div id="SP" class="tabcontent">
 								<table border="0">
+									<h2>Surat Pernyataan</h2>
 									<a id="detail">
-										<h2>Surat Pernyataan</h2>
 										<p>
 											<label for="a">Surat Pernyataan :</label>   
 											<select name="cars">
@@ -513,8 +516,8 @@
 						<div id="site">
 							<div id="Akta" class="tabcontent">
 								<table border="0">
+									<h2>Akta</h2>
 									<a id="detail">
-										<h2>Akta</h2>
 										<p>
 											<label for="a">Akta Hibah :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -540,8 +543,8 @@
 						<div id="site">
 							<div id="IjinLain" class="tabcontent">
 								<table border="0">
+									<h2>Ijin Lain</h2>
 									<a id="detail">
-										<h2>Ijin Lain</h2>
 										<p>
 											<label for="a">Ijin Perubahan Pengguna Tanah :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -564,8 +567,8 @@
 						<div id="site">
 							<div id="SKet" class="tabcontent">
 								<table border="0">
+									<h2>Surat Keterangan</h2>
 									<a id="detail">
-										<h2>Surat Keterangan</h2>
 										<p>
 											<label for="a">Surat Keterangan Akses Lahan Jalan :</label>   
 											<select name="cars">
@@ -671,8 +674,8 @@
 						<div id="site">
 							<div id="SK" class="tabcontent">
 								<table border="0">
+									<h2>Surat Kuasa</h2>
 									<a id="detail">
-										<h2>Surat Kuasa</h2>
 										<p>
 											<label for="a">Surat Kuasa :</label>   
 											<select name="cars">
@@ -694,8 +697,8 @@
 						<div id="site">
 							<div id="PBB" class="tabcontent">
 								<table border="0">
+									<h2>Informasi Pajak Bumi dan Bangunan</h2>
 									<a id="detail">
-										<h2>Informasi Pajak Bumi dan Bangunan</h2>
 										<p>
 											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -727,8 +730,8 @@
 						<div id="site">
 							<div id="SKRD" class="tabcontent">
 								<table border="0">
+									<h2>SKRD dan RPM</h2>
 									<a id="detail">
-										<h2>SKRD dan RPM</h2>
 										<p>
 											<label for="a">Nomor SKRD :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -754,8 +757,8 @@
 						<div id="site">
 							<div id="IMB" class="tabcontent">
 								<table border="0">
-									<a id="detail">
-										<h2>Informasi Ijin Mendirikan Bangunan</h2>
+									<h2>Informasi Ijin Mendirikan Bangunan</h2>
+									<a id="detail">										
 										<p>
 											<label for="a">Nomor IMB :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -779,6 +782,162 @@
 										</p>
 										<p>
 											<label for="a">Mitra Pengurusa IMB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IMTU" class="tabcontent">
+								<table border="0">
+									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi Ijin :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IjinDep" class="tabcontent">
+								<table border="0">
+									<h2>Informasi Ijin Departemen DepHub/Kominfo</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi Ijin :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Mulai Ijin :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IPTT" class="tabcontent">
+								<table border="0">
+									<h2>Informasi Ijin Pendirian Tower Telkomsel</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi Ijin Pendirian :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IPB" class="tabcontent">
+								<table border="0">
+								<h2>Informasi Ijin Penggunaan Bangunan</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Nomor IPB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi IPB :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir IPB :</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="IIP" class="tabcontent">
+								<table border="0">
+									<h2>Informasi Ijin Prinsip</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Durasi Ijin Prinsip :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="Genset" class="tabcontent">
+								<table border="0">
+									<h2>Informasi Ijin Genset</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Nomor :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Start Tahun :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Tanggal Start :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Tanggal Finish :</label> <input type="date" id="myDate" value="">
+										</p>
+									</a>
+								</table>
+							</div>
+						</div>
+						<div id="site">
+							<div id="Comcase" class="tabcontent">
+								<table border="0">
+									<h2>Comcase</h2>
+									<a id="detail">
+										<p>
+											<label for="a">Comcase Tanggal :</label> <input type="date" id="myDate" value="">
+										</p>
+										<p>
+											<label for="a">Comcase Keterangan :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Comcase Status :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Comcase Solusi :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Comcase File :</label> <input type="text" name="NamaSite" size="50">
+										</p>
+										<p>
+											<label for="a">Comcase Mitra :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 									</a>
 								</table>
