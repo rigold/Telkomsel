@@ -1314,7 +1314,11 @@ tr:nth-child(even) {
     margin-left: 70px;
 }
 .body form #site input#final{
-    margin-left: 47%;
+    margin-left: 42%;
+    width: 150px;
+    height: 70px;
+    font-size: 30px;
+    font-family: sans-serif;
 }
 
 

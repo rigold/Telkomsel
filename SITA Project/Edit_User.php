@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>SITA Project</title>
-		<link rel="stylesheet" href="css/styleinput.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
 	
@@ -71,7 +71,11 @@
 				</li>
 				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
-
+				<h1>
+					<?php
+					echo " " . date("Y/m/d") ;
+					?>
+				</h1>
 				<form action="Search.php" id="search">
 					<input type="text"/>
 					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
@@ -113,26 +117,25 @@
 
 				<div class="body">
 					<h1>Formulir Edit User</h1>
-
 					<form action="List_User.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
-							<label for="a">Nama User:</label> <input type="text" name="Nama" size="50" placeholder="Rigold">
+							<label for="a">Nama User:</label> <input type="text" name="Nama" size="50">
 							</p>
 							<p>
-							<label for="b">NIK(ID):</label> <input type="text" name="NIK" size="50" placeholder="1234567">
+							<label for="b">NIK(ID):</label> <input type="text" name="NIK" size="50">
 							</p>
 							<p>
-							<label for="c">Password:</label> <input type="text" name="Password" size="50" placeholder="rigold4120">
+							<label for="c">Password:</label> <input type="text" name="Password" size="50">
 							</p>
 							<p>
-							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" size="50" placeholder="General Manager">
+							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" size="50">
 							</p>
+							<p>
+							<label for="e">Picture:</label>
 							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+							</p>
     						<input type="submit" value="Submit" name="submit">
-    						<a href='List_User.php'>
-    							<button type="button" onclick="alert('Delete Success!');" "location.href='List_User.php';">Delete</button>
-    						</a>
 						</div>
 					</form>
 				</div>
