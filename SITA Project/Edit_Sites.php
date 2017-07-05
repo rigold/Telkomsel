@@ -22,7 +22,7 @@
 						<a href="Site_Daerah.php"> Batu </a> 
 						<a href="Site_Daerah.php"> Blitar Kab. </a> 
 						<a href="Site_Daerah.php"> Blitar Kota </a> 
-						<a href="Site_Daerah.php#"> Bojonegoro </a> 
+						<a href="Site_Daerah.php"> Bojonegoro </a> 
 						<a href="Site_Daerah.php"> Bondowoso </a> 
 						<a href="Site_Daerah.php"> Gresik </a> 
 						<a href="Site_Daerah.php"> Jember </a> 
@@ -120,28 +120,27 @@
 				<div class="body">
 					<h1>Formulir Edit Site</h1>
 					<div class="tab">
-						<button class="tablinks" onclick="openTabs(event, 'Sites')">I</button>
-						<button class="tablinks" onclick="openTabs(event, 'SuratLain')">II</button>
-						<button class="tablinks" onclick="openTabs(event, 'Perpanjangan')">III</button>
-						<button class="tablinks" onclick="openTabs(event, 'BAK')">IV</button>
-						<button class="tablinks" onclick="openTabs(event, 'THO')">V</button>
-						<button class="tablinks" onclick="openTabs(event, 'IPL')">VI</button>
-						<button class="tablinks" onclick="openTabs(event, 'SP')">VII</button>
-						<button class="tablinks" onclick="openTabs(event, 'Akta')">VIII</button>
-						<button class="tablinks" onclick="openTabs(event, 'IjinLain')">IX</button>
-						<button class="tablinks" onclick="openTabs(event, 'SKet')">X</button>
-						<button class="tablinks" onclick="openTabs(event, 'SK')">XI</button>
-						<button class="tablinks" onclick="openTabs(event, 'PBB')">XII</button>
-						<button class="tablinks" onclick="openTabs(event, 'SKRD')">XIII</button>
-						<button class="tablinks" onclick="openTabs(event, 'IMB')">XIV</button>
-						<button class="tablinks" onclick="openTabs(event, 'IMTU')">XV</button>
-						<button class="tablinks" onclick="openTabs(event, 'IjinDep')">XVI</button>
-						<button class="tablinks" onclick="openTabs(event, 'IPTT')">XVII</button>
-						<button class="tablinks" onclick="openTabs(event, 'IPB')">XVIII</button>
-						<button class="tablinks" onclick="openTabs(event, 'IIP')">XIX</button>
-						<button class="tablinks" onclick="openTabs(event, 'Genset')">XX</button>
-						<button class="tablinks" onclick="openTabs(event, 'Comcase')">XXI</button>
-						<button class="tablinks" onclick="openTabs(event, 'Submit')">Submit</button>
+						<button class="tablinks" onclick="openTabs(event, 'Sites')">INFORMASI SITES</button>
+						<button class="tablinks" onclick="openTabs(event, 'Perpanjangan')">PERPANJANGAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'BAK')">BAK</button>
+						<button class="tablinks" onclick="openTabs(event, 'THO')">HO</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPL')">ID PEMILIK LAHAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'SP')">SURAT PERNYATAAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'Akta')">AKTA</button>
+						<button class="tablinks" onclick="openTabs(event, 'IjinLain')">IJIN LAIN</button>
+						<button class="tablinks" onclick="openTabs(event, 'SKet')">SURAT KETERANGAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'SK')">SURAT LAIN</button>
+						<button class="tablinks" onclick="openTabs(event, 'PBB')">PBB</button>
+						<button class="tablinks" onclick="openTabs(event, 'SKRD')">RPM</button>
+						<button class="tablinks" onclick="openTabs(event, 'IMB')">IMB</button>
+						<button class="tablinks" onclick="openTabs(event, 'IMTU')">IMTU</button>
+						<button class="tablinks" onclick="openTabs(event, 'IjinDep')">IJIN DEPHUB/KOMINFO</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPTT')">IPTT</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPB')">IPB</button>
+						<button class="tablinks" onclick="openTabs(event, 'IIP')">IJIN PRINSIP</button>
+						<button class="tablinks" onclick="openTabs(event, 'Genset')">IJIN GENSET</button>
+						<button class="tablinks" onclick="openTabs(event, 'Comcase')">COMCASE</button>
+						<button class="tablinks" onclick="openTabs(event, 'Submit')">SUBMIT</button>
 					</div>
 
 					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
@@ -223,9 +222,6 @@
 											<label for="a">Luas Jalan Akses :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Durasi Sewa :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Denah Tanah :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 										<p>
@@ -241,44 +237,10 @@
 											<label for="a">Tanggal Akhir Sewa :</label> <input type="date" id="myDate" value="">
 										</p>
 										<p>
-											<label for="a">Ijin PKS :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Harga/Tahun :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
 											<label for="a">Remark :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-									</a>
-								</table>
-							</div>
-						</div>
-						<div id="site">
-							<div id="SuratLain" class="tabcontent">
-								<table border="0">
-									<h2>Surat Lain</h2>
-									<a id="detail">
-										
-										<p>
-											<label for="a">Status Jaminan Hukum :</label>   
-											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Ijin Bekerja :</label>   
-											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
-											<select name="cars">
-											    <option value="volvo">Ada</option>
-											    <option value="saab">Tidak</option>
-											</select>
 										</p>
 									</a>
 								</table>
@@ -672,7 +634,7 @@
 						<div id="site">
 							<div id="SK" class="tabcontent">
 								<table border="0">
-									<h2>Surat Kuasa</h2>
+									<h2>Surat Lain</h2>
 									<a id="detail">
 										<p>
 											<label for="a">Surat Kuasa :</label>   
@@ -683,6 +645,27 @@
 										</p>
 										<p>
 											<label for="a">Surat Kuasa Pengambilan Jaminan Asli :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Kuasa Jaminan Hukum :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Ijin PKS :</label>   
+											<select name="cars">
+											    <option value="Ada">Ada</option>
+											    <option value="Tidak">Tidak</option>
+											</select>
+										</p>
+										<p>
+											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
 											<select name="cars">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
@@ -764,9 +747,6 @@
 											<label for="a">Status IMB :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Durasi IMB :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Daftar Ulang IMB :</label> <input type="date" id="myDate" value="">
 										</p>
 										<p>
@@ -794,9 +774,6 @@
 											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Durasi Ijin :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="myDate" value="">
 										</p>
 										<p>
@@ -813,9 +790,6 @@
 									<a id="detail">
 										<p>
 											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Durasi Ijin :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai Ijin :</label> <input type="date" id="myDate" value="">
@@ -836,9 +810,6 @@
 											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Durasi Ijin Pendirian :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="myDate" value="">
 										</p>
 										<p>
@@ -857,9 +828,6 @@
 											<label for="a">Nomor IPB :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Durasi IPB :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="myDate" value="">
 										</p>
 										<p>
@@ -876,9 +844,6 @@
 									<a id="detail">
 										<p>
 											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Durasi Ijin Prinsip :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="myDate" value="">
@@ -900,9 +865,6 @@
 										</p>
 										<p>
 											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Start Tahun :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
 											<label for="a">Tanggal Start :</label> <input type="date" id="myDate" value="">

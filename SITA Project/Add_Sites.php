@@ -222,9 +222,6 @@
 											<label for="a">Luas Jalan Akses :</label> <input type="text" name="NamaSite" size="50">
 										</p>
 										<p>
-											<label for="a">Durasi Sewa :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
 											<label for="a">Denah Tanah :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 										</p>
 										<p>
