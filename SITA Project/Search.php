@@ -127,32 +127,29 @@
 							<table>
 							  <tr>
 							  	<th>No.</th>
-							  	<th>Daerah</th>
 							  	<th>Site ID</th>
 								<th>Site Name</th>
-								<th>Kab.Kota</th>
-								<th>Pagu</th>
-								<th>Harga Rata Rata</th>
-								<th>Awal Kontrak</th>
-								<th>Akhir Kontrak</th>
-								<th>Status</th>
+								<th>Daerah</th>
+								<th>No.PBB</th>
+								<th>No.RPM</th>
+								<th>No.IMB</th>
+								<th>Action</th>
 							  </tr>
 							  <tr>
 							    <td>1</td>
-							    <td>Surabaya</td>
 							    <td>SBY123</td>
 							    <td>Surabaya X</td>
 							    <td>Surabaya</td>
-							    <td>50.000.000</td>
-							    <td>45.000.000</td>
-							    <td>1/01/2007</td>
-							    <td>1/01/2017</td>
-							    <td>Habis</td>
+							    <td>1/PBB/2015</td>
+							    <td>1/RPM/2015</td>
+							    <td>1/IMB/2015</td>
+							    <td>
+							    	<button type="button" onclick="location.href='Detail.php';">Detail
+									</button>
+								</td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
@@ -170,13 +167,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>4</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -194,13 +187,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>6</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -218,13 +207,9 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>8</td>
-							    <td></td>
-							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -242,8 +227,6 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>10</td>
@@ -254,14 +237,16 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
-							    <td></td>
-							    <td></td>
 							  </tr>
 							</table>
-							
 						</div>
-						
 					</div>
+					<button onclick="myFunction() ">Print Halaman</button>
+					<script>
+						function myFunction() {
+					    window.print();
+					}
+					</script>
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>

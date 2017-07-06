@@ -149,7 +149,8 @@
 							    <td>50.000.000</td>
 							    <td>1/12/2017</td>
 							    <td>Lunas</td>
-							    <td>-</td>
+							    <td><button type="button" onclick="location.href='Detail.php';">Detail
+									</button></td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
@@ -256,11 +257,11 @@
 						
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
-						<script>
-							function myFunction() {
-						    window.print();
-						}
-						</script>
+					<script>
+						function myFunction() {
+					    window.print();
+					}
+					</script>
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>

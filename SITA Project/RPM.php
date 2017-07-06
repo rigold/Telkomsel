@@ -146,7 +146,10 @@
 							    <td>0,1</td>
 							    <td>1/12/2017</td>
 							    <td>Belum Lunas</td>
-							    <td>Bayar</td>
+							    <td>
+							    	<button type="button" onclick="location.href='Detail.php';">Detail
+									</button>
+							    </td>
 							  </tr>
 							  <tr>
 							    <td>2</td>

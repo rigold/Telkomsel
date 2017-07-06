@@ -7,13 +7,11 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -58,7 +56,6 @@
 
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -83,16 +80,13 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
-
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
@@ -113,119 +107,115 @@
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
-					
 					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
 				</div>
-
 				<div class="body">
 					<h1>List Site</h1>
 					<br>
 					<div class="line-separator"></div>
-								<table id="sites">
-									<tr>
-										<th>
-											Informasi Site
-										</th>
-										<th>
-											Informasi Pemilik
-										</th>
-										<th>
-											Action
-										</th>
-									</tr>
+					<table id="sites">
+						<tr>
+							<th>
+								Informasi Site
+							</th>
+							<th>
+								Informasi Pemilik
+							</th>
+							<th>
+								Action
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										Nama Site : Keputih 212
+									</li>
+									<li>
+										Site ID : K212Surabaya
+									</li>
+									<li>
+										Alamat : Keputih Gang Makam Blok A no 10
+									</li>
+								</ul>
+							</td>
+							<td>	
+								<ul>
+									<li>
+										Nama : Tomson Pangaribuan
+									</li>
+									<li>
+										Alamat : Perumdos ITS blok T no 93
+									</li>
+								</ul>
+							</td>
+							<td>
+								<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+								<button type="button" onclick="location.href='Detail.php';">Detail
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										Nama Site : Kejawan 119
+									</li>
+									<li>
+										Site ID : K119Surabaya
+									</li>
+									<li>
+										Alamat : Kejawan no 15
+									</li>
+								</ul>
+							</td>
+							<td>	
+								<ul>
+									<li>
+										Nama : Gideon Siburian
+									</li>
+									<li>
+										Alamat : Keputih Gang Pasar no 17
+									</li>
+								</ul>
+							</td>
+							<td>
+								<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+								<button type="button" onclick="location.href='Detail.php';">Detail</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										Nama Site :<?php echo $_POST["NamaSite"]; ?>
+									</li>
+									<li>
+										Site ID :<?php echo $_POST["SiteID"]; ?>
+									</li>
+									<li>
+										Alamat :<?php echo $_POST["Alamat"]; ?>
+									</li>
+								</ul>
+								
+							</td>
+							<td>	
+								<ul>
+									<li>
+										Nama :<?php echo $_POST["NamaMilik"]; ?>
+									</li>
 
-									<tr>
-										<td>
-											<ul>
-												<li>
-													Nama Site : Keputih 212
-												</li>
-												<li>
-													Site ID : K212Surabaya
-												</li>
-												<li>
-													Alamat : Keputih Gang Makam Blok A no 10
-												</li>
-											</ul>
-										</td>
-										<td>	
-											<ul>
-												<li>
-													Nama : Tomson Pangaribuan
-												</li>
-												<li>
-													Alamat : Perumdos ITS blok T no 93
-												</li>
-											</ul>
-										</td>
-										<td>
-											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
-											<button type="button" onclick="location.href='Detail.php';">Detail</button>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<ul>
-												<li>
-													Nama Site : Kejawan 119
-												</li>
-												<li>
-													Site ID : K119Surabaya
-												</li>
-												<li>
-													Alamat : Kejawan no 15
-												</li>
-											</ul>
-										</td>
-										<td>	
-											<ul>
-												<li>
-													Nama : Gideon Siburian
-												</li>
-												<li>
-													Alamat : Keputih Gang Pasar no 17
-												</li>
-											</ul>
-										</td>
-										<td>
-											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
-											<button type="button" onclick="location.href='Detail.php';">Detail</button>
-										</td>
-									</tr>									
-
-									<tr>
-										<td>
-											<ul>
-												<li>
-													Nama Site :<?php echo $_POST["NamaSite"]; ?>
-												</li>
-												<li>
-													Site ID :<?php echo $_POST["SiteID"]; ?>
-												</li>
-												<li>
-													Alamat :<?php echo $_POST["Alamat"]; ?>
-												</li>
-											</ul>
-											
-										</td>
-										<td>	
-											<ul>
-												<li>
-													Nama :<?php echo $_POST["NamaMilik"]; ?>
-												</li>
-
-												<li>
-													Alamat :<?php echo $_POST["AlamatMilik"]; ?>
-												</li>
-											</ul>
-										</td>
-										<td>
-											<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
-											<button type="button" onclick="location.href='Detail.php';">Detail</button>
-										</td>	
-									</tr>
-								</table>
-
+									<li>
+										Alamat :<?php echo $_POST["AlamatMilik"]; ?>
+									</li>
+								</ul>
+							</td>
+							<td>
+								<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
+								<button type="button" onclick="location.href='Detail.php';">Detail</button>
+							</td>	
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>

@@ -132,9 +132,10 @@
 							  	<th>Site ID</th>
 								<th>Site Name</th>
 								<th>Alamat</th>
-								<th>Status IMB</th>
 								<th>Nomor IMB</th>
 								<th>Masa Berlaku</th>
+								<th>Tanggal Akhir</th>
+								<th>Status IMB</th>
 								<th>Action</th>
 
 							  </tr>
@@ -143,13 +144,17 @@
 							    <td>SBY123</td>
 							    <td>Surabaya X</td>
 							    <td>Surabaya</td>
-							    <td>Hampir Habis</td>
 							    <td>NO xx/pp/zz</td>
 							    <td>5 Bulan</td>
-							    <td>Segera Perbaharui IMB</td>
+							    <td>1/12/2017</td>
+							    <td>Hampir Habis</td>
+							    <td><button type="button" onclick="location.href='Detail.php';">Detail
+									</button>
+								</td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
+							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
@@ -167,9 +172,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>4</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -187,9 +194,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>6</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -207,9 +216,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>8</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -227,6 +238,7 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>10</td>
@@ -237,18 +249,17 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							</table>
-							
 						</div>
-						
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
-						<script>
-							function myFunction() {
-						    window.print();
-						}
-						</script>
+					<script>
+						function myFunction() {
+					    window.print();
+					}
+					</script>
 					<div class="pagination">
 						  <a href="#">&laquo;</a>
 						  <a class="active" href="#">1</a>

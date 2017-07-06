@@ -467,10 +467,12 @@
 									</a>
 						</table>
 					</div>
-					<!--<div class="wrap">
-						<button type="button" onclick="location.href='Edit_Sites.php';">Edit</button>
-					</div> -->
-					
+					<button onclick="myFunction() ">Print Halaman</button>
+					<script>
+						function myFunction() {
+					    window.print();
+					}
+					</script>
 				</div>
 			</div>
 		</div>
