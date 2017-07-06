@@ -118,7 +118,7 @@
 
 				<div class="body">
 					<h1>Formulir Input User</h1>
-					<form action="List_User.php" method="post" enctype="multipart/form-data">
+					<form action="Add_User_sql.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
 							<label for="a">Nama User:</label> <input type="text" name="Nama" size="50">
