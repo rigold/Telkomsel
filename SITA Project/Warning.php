@@ -140,6 +140,7 @@
 								<th>Jatuh Tempo Sewa Lahan</th>
 								<th>Sisa Waktu Sewa</th>
 								<th>Status Akhir</th>
+								<th>Action</th>
 
 							  </tr>
 							  <tr>
@@ -152,9 +153,13 @@
 							    <td>1/09/2017</td>
 							    <td>3 Bulan</td>
 							    <td>Bayar Sewa Segera</td>
+							    <td><button type="button" onclick="location.href='Detail.php';">Detail
+								</button>
+								</td>
 							  </tr>
 							  <tr>
 							    <td>2</td>
+							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
 							    <td>-</td>
@@ -174,9 +179,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>4</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -196,9 +203,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>6</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -218,9 +227,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>8</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
@@ -240,9 +251,11 @@
 							    <td></td>
 							    <td></td>
 							    <td></td>
+							    <td></td>
 							  </tr>
 							  <tr>
 							    <td>10</td>
+							    <td></td>
 							    <td></td>
 							    <td></td>
 							    <td></td>
