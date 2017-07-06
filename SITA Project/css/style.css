@@ -1190,8 +1190,18 @@ tr:nth-child(even) {
 
 /*-----------------print page--------------*/
 @media print {
+	.navi h1{
+		display: none;
+	}
     .navi li a{
       display: none;
+    }
+    .navi ul form#search{
+    	display: none;
+    }
+    .tabcontent  {
+    	display:block!important;
+    	margin: 50px;
     }
     .body {
     	margin: 0 50px 0 50px;
@@ -1232,7 +1242,7 @@ tr:nth-child(even) {
 }
 @page {
     size:  landscape;   /* auto is the initial value */
-    margin: 0mm;
+    margin: 10mm;
 
 }
 
