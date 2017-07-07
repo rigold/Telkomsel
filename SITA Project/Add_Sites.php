@@ -7,13 +7,11 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -83,10 +81,8 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
@@ -116,7 +112,6 @@
 					
 					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
 				</div>
-
 				<div class="body">
 					<h1>Formulir Input Site</h1>
 					<div class="tab">
@@ -142,7 +137,6 @@
 						<button class="tablinks" onclick="openTabs(event, 'Comcase')">COMCASE</button>
 						<button class="tablinks" onclick="openTabs(event, 'Submit')">SUBMIT</button>
 					</div>
-
 					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
 						<div id="site">
 							<div id="Sites" class="tabcontent">
