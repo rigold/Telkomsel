@@ -7,7 +7,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -83,10 +82,8 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 
@@ -117,361 +114,857 @@
 					
 					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
 				</div>
-
 				<div class="body">
 					<h1>DETAIL SITE</h1>
 					<br>
-					<div class="line-separator"></div>
-							
+					<div class="line-separator"></div>	
 					<div class="tab">
-						<button class="tablinks" onclick="openTabs(event, 'Sites')">Informasi Sites</button>
-						<button class="tablinks" onclick="openTabs(event, 'Pemilik')">Identitas Pemilik Lahan</button>
-						<button class="tablinks" onclick="openTabs(event, 'PBB')">Informasi PBB</button>
-						<button class="tablinks" onclick="openTabs(event, 'SKRD')">SKRD/RPM</button>
+						<button class="tablinks" onclick="openTabs(event, 'INFORMASI SITES')">INFORMASI SITES</button>
+						<button class="tablinks" onclick="openTabs(event, 'PERPANJANGAN')">PERPANJANGAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'BAK')">BAK</button>
+						<button class="tablinks" onclick="openTabs(event, 'HO')">HO</button>
+						<button class="tablinks" onclick="openTabs(event, 'ID PEMILIK LAHAN')">ID PEMILIK LAHAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'SURAT PERNYATAAN')">SURAT PERNYATAAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'AKTA')">AKTA</button>
+						<button class="tablinks" onclick="openTabs(event, 'IJIN LAIN')">IJIN LAIN</button>
+						<button class="tablinks" onclick="openTabs(event, 'SURAT KETERANGAN')">SURAT KETERANGAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'SURAT LAIN')">SURAT LAIN</button>
+						<button class="tablinks" onclick="openTabs(event, 'PBB')">PBB</button>
+						<button class="tablinks" onclick="openTabs(event, 'RPM')">RPM</button>
+						<button class="tablinks" onclick="openTabs(event, 'IMB')">IMB</button>
+						<button class="tablinks" onclick="openTabs(event, 'IMTU')">IMTU</button>
+						<button class="tablinks" onclick="openTabs(event, 'IJIN DEPHUB/KOMINFO')">IJIN DEPHUB/KOMINFO</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPPT')">IPPT</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPB')">IPB</button>
+						<button class="tablinks" onclick="openTabs(event, 'IJIN PRINSIP')">IJIN PRINSIP</button>
+						<button class="tablinks" onclick="openTabs(event, 'IJIN GENSET')">IJIN GENSET</button>
+						<button class="tablinks" onclick="openTabs(event, 'COMCASE')">COMCASE</button>	
 					</div>
-
-					<div id="Sites" class="tabcontent">
+					<div id="INFORMASI SITES" class="tabcontent">
 						<table border="0">
-									<a id="detail">
-										<tr>
-											<th>
-												Site ID
-											</th>
-											<td>	
-												: K212Surabaya
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Nama Site
-											</th>
-											<td>	
-												: Keputih 212
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Status Lahan
-											</th>
-											<td>	
-												: Beli
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Status Beli/Pinjam
-											</th>
-											<td>	
-												: Beli
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Pemilik Tower
-											</th>
-											<td>	
-												: Telkomsel
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Alamat Site
-											</th>
-											<td>	
-												: Keputih Gang Makam Blok A no 10
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Kota/Kabupaten
-											</th>
-											<td>	
-												: Surabaya
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Kontraktor Utama
-											</th>
-											<td>	
-												: PT. Suka Senang
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Penyedia Menara
-											</th>
-											<td>	
-												: PT. Sedih Menangis
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Branch
-											</th>
-											<td>	
-												: Surabaya
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Tower Height
-											</th>
-											<td>	
-												: 100 m
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Luas Lahan
-											</th>
-											<td>	
-												: 350 m2
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Durasi Sewa
-											</th>
-											<td>	
-												: 10 Tahun
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Tanggal Mulai Sewa
-											</th>
-											<td>	
-												: 17/08/2010
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Tanggal Akhir Sewa
-											</th>
-											<td>	
-												: 17/08/2020
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Remark
-											</th>
-											<td>	
-												: Baik baik saja
-											</td>	
-										</tr>
-									</a>
+							<a id="detail">
+								<tr>
+								<th>Site ID</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Nama Site</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status Lahan</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Satus Tower</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Pemilik Tower</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Alamat Site</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Kota / Kabupaten</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Kontraktor Utama</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Penyedia Menara</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Branch</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Longitude</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Latitude</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>On Air Date</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Colocated Site</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>BTS Type</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Site Type</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tower Height</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tower Type</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Shelter Type</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Shelter Size</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Luas Lahan</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Luas Jalan Akses</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Denah Tanah</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Peta Lokasi Radius Tower</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Sketsa Batas Lahan</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Mulai Sewa</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir Sewa</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Harga Per Tahun</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Remark</th>
+								<td>: No Database </td>
+								</tr> 
+							</a>
 						</table>
 					</div>
-
-					<div id="Pemilik" class="tabcontent">
+					<div id="PERPANJANGAN" class="tabcontent">
 						<table border="0">
-									<a id="detail">
-										<tr>
-											<th>
-												No. KTP
-											</th>
-											<td>	
-												: 31-73-02-15-07-91-0004
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Kartu Keluarga
-											</th>
-											<td>	
-												: 3203041711053312
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Pemilik Lahan
-											</th>
-											<td>	
-												: Tagor Ba
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Alamat Pemilik
-											</th>
-											<td>	
-												: Keputih Gang Makam Blok A no 09
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Pemilik Tower
-											</th>
-											<td>	
-												: Telkomsel
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												No. Handphone
-											</th>
-											<td>	
-												: 0812641648
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												E-Mail
-											</th>
-											<td>	
-												: TagorBa@gmail.com
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Surat Persetujuan Keluarga
-											</th>
-											<td>	
-												: Ada
-											</td>
-										</tr>									
-									</a>
+							<a id="detail">
+								<tr>
+								<th>Pagu</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>PIC</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>SPPH</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Vendor_List</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Invoice</th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="BAK" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor BAK</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal_BAK</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Harga_BAK</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status</th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="HO" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Start Tahun HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Daftar Ulang HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Start HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Finish HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+							</a>
+						</table>
+					</div>
+					<div id="ID PEMILIK LAHAN" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>KTP PemilikNomor HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Kartu Keluarga PemilikStart Tahun HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Pemilik LahanDaftar Ulang HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Orang Yang Di KuasakanTanggal Start HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Alamat PemilikTanggal Finish HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>TeleponStatus HO</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>HP</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>E-mail</th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Persetujuan Keluarga</th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="SURAT PERNYATAAN" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Surat Pernyataan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Ahli Waris</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Janda</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Kepemilikan Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Pelepasan Hak</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Pembayaran</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Penguasaan Fisik Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Peralihan Atas Pekarangan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Persetujuan Kepala Desa</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Tanah Pemohon</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Tidak Keberatan Jalan Pribadi</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Pernyataan Tidak Keberatan Jalan Umum</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="AKTA" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Akta Hibah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Akta Jual Beli Sewa</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Akta Hak Bersama</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Akta Warisan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Akta Pemisahan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Akta Nikah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+							</a>
+						</table>
+					</div>
+					<div id="IJIN LAIN" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Ijin Perubahan Pengguna Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Ijin Warga</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Ijin UKL UPL</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Ijin Sertifikat Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="SURAT KETERANGAN" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Surat Keterangan Akses Lahan Jalan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Asal Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Beda Luas Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Beda Nama</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Fatwa Waris</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Kematian</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Penduduk</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Permohonan IMB, HO, &IP</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Persetujuan Sewa Lahan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Riwayat Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Suami Istri</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Tidak Sengketa</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Keterangan Tidak Keberatan Didirikan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+							</a>
+						</table>
+					</div>
+					<div id="SURAT LAIN" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Surat Kuasa</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Kuasa Pengambilan Jaminan Asli</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Jaminan Hukum</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Ijin PKS</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat Perjanjian Sewa Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
 						</table>
 					</div>
 					<div id="PBB" class="tabcontent">
 						<table border="0">
-									<a id="detail">
-										<tr>
-											<th>
-												Nomor Objek Pajak
-											</th>
-											<td>	
-												: 36.75.742.010.022-0116.0
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Nilai PBB
-											</th>
-											<td>	
-												: 3.000.000 Rupiah
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												Tanggal Mulai
-											</th>
-											<td>	
-												: 17/08/2010
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Tanggal Jatuh Tempo
-											</th>
-											<td>	
-												: 17/08/2020
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Status
-											</th>
-											<td>	
-												: Baik baik saja
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												NJOP Tanah
-											</th>
-											<td>	
-												: 3.000.000 Rupiah
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												NJOP Bangunan
-											</th>
-											<td>	
-												: 3.000.000 Rupiah
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Surat PBB
-											</th>
-											<td>	
-												<img src="images/cute.jpg" alt="abs-img" width="200" height="200" />
-											</td>
-										</tr>									
-									</a>
+							<a id="detail">
+								<tr>
+								<th>Nomor Objek Pajak</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Nilai PBB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Mulai</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Jatuh Tempo</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>NJOP Tanah</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>NJOP Bangunan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat PBB</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
 						</table>
 					</div>
-					<div id="SKRD" class="tabcontent">
+					<div id="RPM" class="tabcontent">
 						<table border="0">
-									<a id="detail">
-										<tr>
-											<th>
-												Nomor SKRD
-											</th>
-											<td>	
-												: 36.75.742.010.022-0116.0
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Harga SKRD
-											</th>
-											<td>	
-												: 3.000.000 Rupiah
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Tanggal Jatuh Tempo
-											</th>
-											<td>	
-												: 17/08/2020
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Koefisien SKRD
-											</th>
-											<td>	
-												: 1,1
-											</td>
-										</tr>									
-										<tr>
-											<th>
-												NJOP Tanah
-											</th>
-											<td>	
-												: 3.000.000 Rupiah
-											</td>	
-										</tr>
-										<tr>
-											<th>
-												Status
-											</th>
-											<td>	
-												: ???
-											</td>
-										</tr>
-										<tr>
-											<th>
-												Surat SKRD
-											</th>
-											<td>	
-												<img src="images/cute2.jpg" alt="abs-img" width="200" height="200" />
-											</td>
-										</tr>									
-									</a>
+							<a id="detail">
+								<tr>
+								<th>No SKRD</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Harga SKRD</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Jatuh Tempo</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Koef SKRD</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Surat SKRD</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
 						</table>
 					</div>
-					<button onclick="myFunction() ">Print Halaman</button>
+					<div id="IMB" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Mitra Pengurus IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Daftar Ulang IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Awal IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status Kepengurusan IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status IMB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+							</a>
+						</table>
+					</div>
+					<div id="IMTU" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor Ijin</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Awal Ijin</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir Ijin</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="IJIN DEPHUB/KOMINFO" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor Ijin</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Mulai Ijin</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir Ijin</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+							</a>
+						</table>
+					</div>
+					<div id="IPPT" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor Ijin Pendirian</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Awal Ijin Pendirian</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir Ijin Pendirian</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="IPB" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor IPB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Awal IPB</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir IPB</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="IJIN PRINSIP" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor Ijin Prinsip</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Awal Ijin Prinsip</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Akhir Ijin Prinsip</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="IJIN GENSET" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Nomor</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Status</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Start</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Tanggal Finish</ th>
+								<td>: No Database </td>
+								</tr> 
+
+							</a>
+						</table>
+					</div>
+					<div id="COMCASE" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<tr>
+								<th>Comcase Tanggal</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Comcase Keterangan</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Comcase Status</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Comcase Solusi</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Comcase File</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+								<tr>
+								<th>Comcase Mitra</ th>
+								<td>: No Database </td>
+								</tr> 
+								 
+							</a>
+						</table>
+					</div>
+
+					<button onclick="myFunction()"  style="margin-bottom: 200px;">Print Halaman</button>
 					<script>
 						function myFunction() {
 					    window.print();
-					}
+						}
 					</script>
 				</div>
 			</div>
@@ -479,20 +972,20 @@
 	</body>
 </html>
 
-<!-- - - - - - - - - - JavaScript - - - - - - - - - -->
+<!-- - - - - - - - - - JavaScript untuk tab menu di class=page - - - - - - - - - -->
 <script>
-document.getElementsByClassName('tablinks')[0].click()
-function openTabs(evt, TabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(TabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+	document.getElementsByClassName('tablinks')[0].click()
+	function openTabs(evt, TabName) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablinks");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].className = tablinks[i].className.replace(" active", "");
+	    }
+	    document.getElementById(TabName).style.display = "block";
+	    evt.currentTarget.className += " active";
+	}
 </script>

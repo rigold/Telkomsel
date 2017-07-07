@@ -1338,7 +1338,7 @@ tr:nth-child(even) {
 
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    //padding: 6px 12px;
     border-top: none;
     //width: 550px;
 }
