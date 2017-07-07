@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -122,17 +135,6 @@
 					<br>
 					<div class="line-separator"></div>
 								<?php
-								$servername = "localhost";
-								$username = "root";
-								$password = "";
-								$dbname = "sita";
-
-								// Create connection
-								$conn = new mysqli($servername, $username, $password, $dbname);
-								// Check connection
-								if ($conn->connect_error) {
-								    die("Connection failed: " . $conn->connect_error);
-								} 
 
 								$sql = "SELECT link_profile_pic, nama_user, jabatan, nik, password FROM user";
 								$result = $conn->query($sql);
@@ -153,12 +155,10 @@
 									        <td>".$row["nama_user"]."</td>
 									        <td>".$row["jabatan"]."</td><td>".$row["nik"]."</td>
 									        <td>".$row["password"]."</td>
-									        <td><button onclick= \"location.href='Edit_User.php'\">Edit</button></td>
+									        <td><button onclick= \"location.href='Edit_User.php?nik=$row[nik]'\">Edit</button>
+									        	<button onclick= \"location.href='Delete_User.php?nik=$row[nik]'\">Delete</button>
 								        </tr>";
 								    } 
-
-								   // <td>echo '<img src= "'.$img.'" width="100" height="100" />';
-								    //	</td>
 
 								    echo "</table>";
 								}

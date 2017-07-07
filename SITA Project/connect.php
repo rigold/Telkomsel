@@ -12,6 +12,9 @@ if(!$conn) {
 }
 else {
 	echo "success";
+	header("Location: List_User.php");
+	
+	
 }
 
 

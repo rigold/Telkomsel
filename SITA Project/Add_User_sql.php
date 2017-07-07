@@ -1,5 +1,12 @@
 <?php 
-	include('connect.php');
+	//include('connect.php');
+
+	$servername ="localhost";
+	$username = "root";
+	$password = "";
+	$database = "sita";
+
+	$conn = mysqli_connect($servername, $username, $password, $database);
 
 	$target_dir = "upload/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -42,10 +49,20 @@
 	$Password=$_POST['Password'];
 	$Jabatan=$_POST['Jabatan'];
 	
-
-
 	mysqli_query($conn,
 		"INSERT INTO user (nama_user,nik,password,jabatan,link_profile_pic)
 		VALUES('$Nama','$NIK','$Password','$Jabatan','$image')");
 
+
+
+	if(!$conn) {
+		echo "failed";
+		die("Connection failed: " . mysqli_connect_error());	
+	}
+	else {
+		echo "success";
+		header("Location: List_User.php");
+		
+		
+	}
 ?>
