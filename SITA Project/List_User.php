@@ -121,95 +121,53 @@
 					<h1>List User</h1>
 					<br>
 					<div class="line-separator"></div>
-								<table>
-									<tr>
-										<th>
-											Picture
-										</th>
-										<th>
-											Nama User
-										</th>
-										<th>
-											NIK(ID)
-										</th>
-										<th>
-											Password
-										</th>
-										<th>
-											Jabatan
-										</th>
-										<th>
-											Action
-										</th>
-									</tr>
+								<?php
+								$servername = "localhost";
+								$username = "root";
+								$password = "";
+								$dbname = "sita";
 
-									<tr>
-										<td>
-											<?php
-											$target_dir = "images/";
-											$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-											$uploadOk = 1;
-											$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-											// Check if image file is a actual image or fake image
-											if(isset($_POST["submit"])) {
-											    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-											    if($check !== false) {
-											        $uploadOk = 1;
-											    } else {
-											        echo "File bukan image.";
-											        $uploadOk = 0;
-											    }
-											}
-											// Check if file already exists
-											if (file_exists($target_file)) {
-											    echo "Maaf, ada file yang sama.";
-											    $uploadOk = 0;
-											}
-											// Check file size
-											if ($_FILES["fileToUpload"]["size"] > 500000000) {
-											    echo "Maaf, file terlalu besar.";
-											    $uploadOk = 0;
-											}
-											// Allow certain file formats
-											if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-											&& $imageFileType != "gif" ) {
-											    echo "Maaf, hanya JPG, JPEG, PNG & GIF yang diperbolehkan.";
-											    $uploadOk = 0;
-											}
-											// Check if $uploadOk is set to 0 by an error
-											if ($uploadOk == 0) {
-											    echo "Maaf, file tidak dapat di upload.";
-											// if everything is ok, try to upload file
-											} else {
-											    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-											    } else {
-											        echo "Maaf, ada error dalam mengupload file.";
-											    }
-											}
-											/* Displaying Image*/
-											$image=$_FILES["fileToUpload"]["name"]; 
-										    $img="images/".$image;
-										    echo '<img src= "'.$img.'" width="100" height="100" />';
-										    echo '<br>';
-											?>
-										</td>
-										<td>
-											<?php echo $_POST["Nama"]; ?><br>
-										</td>
-										<td>
-											<?php echo $_POST["NIK"]; ?><br>
-										</td>
-										<td>	
-											<?php echo $_POST["Password"]; ?><br>
-										</td>	
-										<td>	
-											<?php echo $_POST["Jabatan"]; ?><br>
-										</td>
-										<td>
-											<button type="button" onclick="location.href='Edit_User.php';">Edit</button>
-										</td>
-									</tr>
-								</table>
+								// Create connection
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								// Check connection
+								if ($conn->connect_error) {
+								    die("Connection failed: " . $conn->connect_error);
+								} 
+
+								$sql = "SELECT link_profile_pic, nama_user, jabatan, nik, password FROM user";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) 
+								{
+								    echo "<table><tr><th>Profile Picture</th><th>Nama</th><th>Jabatan</th><th>NIK</th><th>Password</th><th>Action</th></tr>";
+								    // output data of each row
+								    while($row = $result->fetch_assoc())
+								    {
+								    	$image=$row["link_profile_pic"]; 
+										$img="upload/".$image;
+									    //echo '<img src= "'.$img.'" width="100" height="100" />';
+									    //echo '<br>';
+								        echo "
+								        <tr>
+								        	<td><img src= ".$img." width='100' height='100' /></td>
+									        <td>".$row["nama_user"]."</td>
+									        <td>".$row["jabatan"]."</td><td>".$row["nik"]."</td>
+									        <td>".$row["password"]."</td>
+									        <td><button onclick= \"location.href='Edit_User.php'\">Edit</button></td>
+								        </tr>";
+								    } 
+
+								   // <td>echo '<img src= "'.$img.'" width="100" height="100" />';
+								    //	</td>
+
+								    echo "</table>";
+								}
+								else 
+								{
+								    //echo "0 results";
+								}
+								$conn->close();
+								?>
 
 				</div>
 			</div>
