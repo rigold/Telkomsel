@@ -77,7 +77,7 @@
 				</h1>
 				<form action="Search.php" id="search">
 					<input type="text"/>
-					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
+					<input type="submit" onclick="location.href='Search.php';" value id="submit"/>
 				</form>
 			</ul>	
 		</div>
@@ -145,96 +145,96 @@
 									<a id="detail">
 										
 										<p>
-											<label for="a">Site ID :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Site ID :</label> <input type="text" name="Site_ID" size="50">
 										</p>
 										<p>
-											<label for="a">Nama Site :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nama Site :</label> <input type="text" name="Nama_Site" size="50">
 										</p>
 										<p>
-											<label for="a">Status Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status Lahan :</label> <input type="text" name="Status_Lahan" size="50">
 										</p>
 										<p>
 											<label for="a">Status Tower :</label>   
-											<select name="cars">
-											    <option value="volvo">Beli	</option>
-											    <option value="saab">Pinjam</option>
+											<select name="Satus_Tower">
+											    <option value="Beli">Beli	</option>
+											    <option value="Pinjam">Pinjam</option>
 											</select>
 										</p>
 										<p>
-											<label for="a">Pemilik Tower :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Pemilik Tower :</label> <input type="text" name="Pemilik_Tower" size="50">
 										</p>
 										<p>
-											<label for="a">Alamat Site :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Alamat Site :</label> <input type="text" name="Alamat_Site" size="50">
 										</p>
 										<p>
-											<label for="a">Kota/Kabupaten :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Kota/Kabupaten :</label> <input type="text" name="Kota_Kabupaten" size="50">
 										</p>
 										<p>
-											<label for="a">Kontraktor Utama :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Kontraktor Utama :</label> <input type="text" name="Kontraktor_Utama" size="50">
 										</p>
 										<p>
-											<label for="a">Penyedia Menara :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Penyedia Menara :</label> <input type="text" name="Penyedia_Menara" size="50">
 										</p>
 
 										<p>
-											<label for="a">Branch :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Branch :</label> <input type="text" name="Branch" size="50">
 										</p>
 										<p>
-											<label for="a">Longitude :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Longitude :</label> <input type="text" name="Longitude" size="50">
 										</p>
 										<p>
-											<label for="a">Latitude :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Latitude :</label> <input type="text" name="Latitude" size="50">
 										</p>
 										<p>
-											<label for="a">On Air Date :</label> <input type="date" id="myDate" value="">
+											<label for="a">On Air Date :</label> <input type="date" id="On_Air_Date" name="On_Air_Date">
 										</p>
 										<p>
-											<label for="a">Colocated Site :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Colocated Site :</label> <input type="text" name="Colocated_Site" size="50">
 										</p>
 										<p>
-											<label for="a">BTS Type :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">BTS Type :</label> <input type="text" name="BTS_Type" size="50">
 										</p>
 										<p>
-											<label for="a">Site Type :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Site Type :</label> <input type="text" name="Site_Type" size="50">
 										</p>
 										<p>
-											<label for="a">Tower Height :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Tower Height :</label> <input type="text" name="Tower_Height" size="50">
 										</p>
 										<p>
-											<label for="a">Tower Type :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Tower Type :</label> <input type="text" name="Tower_Type" size="50">
 										</p>
 										<p>
-											<label for="a">Shelter Type :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Shelter Type :</label> <input type="text" name="Shelter_Type" size="50">
 										</p>
 										<p>
-											<label for="a">Shelter Size :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Shelter Size :</label> <input type="text" name="Shelter_Size" size="50">
 										</p>
 										<p>
-											<label for="a">Luas Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Luas Lahan :</label> <input type="text" name="Luas_Lahan" size="50">
 										</p>
 										<p>
-											<label for="a">Luas Jalan Akses :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Luas Jalan Akses :</label> <input type="text" name="Luas_Jalan_Akses" size="50">
 										</p>
 										<p>
-											<label for="a">Denah Tanah :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label for="a">Denah Tanah :</label> <input type="file" name="Denah_Tanah" id="Denah_Tanah" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Peta Radius Tower :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label for="a">Peta Radius Tower :</label> <input type="file" name="Peta_Lokasi_Radius_Tower" id="Peta_Lokasi_Radius_Tower" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Sketsa Batas Lahan :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label for="a">Sketsa Batas Lahan :</label> <input type="file" name="Sketsa_Batas_Lahan" id="Sketsa_Batas_Lahan" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Sewa :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Mulai Sewa :</label> <input type="date" id="Tanggal_Mulai_Sewa" name="Tanggal_Mulai_Sewa" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Sewa :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir Sewa :</label> <input type="date" id="Tanggal_Akhir_Sewa" name="Tanggal_Akhir_Sewa" >
 										</p>
 										<p>
-											<label for="a">Harga/Tahun :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Harga/Tahun :</label> <input type="text" name="Harga_Per_Tahun" size="50">
 										</p>
 										<p>
-											<label for="a">Remark :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Remark :</label> <input type="text" name="Remark" size="50">
 										</p>
 									</a>
 								</table>
@@ -247,43 +247,19 @@
 									<a id="detail">
 										
 										<p>
-											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Pagu :</label> <input type="text" name="Pagu" size="50">
 										</p>
 										<p>
-											<label for="a">PIC :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">PIC :</label> <input type="text" name="PIC" size="50">
 										</p>
 										<p>
-											<label for="a">SPPH :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">SPPH :</label> <input type="text" name="SPPH" size="50">
 										</p>
 										<p>
-											<label for="a">Vendor List :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Vendor List :</label> <input type="text" name="Vendor_List" size="50">
 										</p>
 										<p>
-											<label for="a">Invoice :</label> <input type="date" id="myDate" value="">
-										</p>
-									</a>
-								</table>
-							</div>
-						</div>
-						<div id="site">
-							<div id="Perpanjangan" class="tabcontent">
-								<table border="0">
-									<h2>Perpanjangan</h2>
-									<a id="detail">
-										<p>
-											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">PIC :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">SPPH :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Vendor List :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Invoice :</label> <input type="date" id="myDate" value="">
+											<label for="a">Invoice :</label> <input type="date" id="Invoice" name="Invoice" >
 										</p>
 									</a>
 								</table>
@@ -295,16 +271,16 @@
 									<h2>Berita Acara Kesepakatan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">No BAK :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">No BAK :</label> <input type="text" name="Nomor_BAK" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal BAK :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal BAK :</label> <input type="date" id="Tanggal_BAK" name="Tanggal_BAK" >
 										</p>
 										<p>
-											<label for="a">Harga BAK :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Harga BAK :</label> <input type="text" name="Harga_BAK" name="Harga_BAK" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status" size="50">
 										</p>
 									</a>
 								</table>
@@ -316,24 +292,20 @@
 									<h2>Tabel HO</h2>
 									<a id="detail">
 										<p>
-											<label for="a">No HO :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">No HO :</label> <input type="text" name="Nomor_HO" size="50">
 										</p>
 										<p>
-											<label for="a">Status HO :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Daftar Ulang HO :</label> <input type="date" id="Daftar_Ulang_HO" name="Daftar_Ulang_HO" >
 										</p>
 										<p>
-											<label for="a">Start Tahun HO :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Tanggal Start HO :</label> <input type="date" id="Tanggal_Start_HO" name="Tanggal_Start_HO" >
 										</p>
 										<p>
-											<label for="a">Daftar Ulang HO :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Finish HO :</label> <input type="date" id="Tanggal_Finish_HO" name="Tanggal_Finish_HO" >
 										</p>
 										<p>
-											<label for="a">Tanggal Start HO :</label> <input type="date" id="myDate" value="">
+											<label for="a">Status HO :</label> <input type="text" name="Status_HO" size="50">
 										</p>
-										<p>
-											<label for="a">Tanggal Finish HO :</label> <input type="date" id="myDate" value="">
-										</p>
-										
 									</a>
 								</table>
 							</div>
@@ -344,31 +316,31 @@
 									<h2>Identitas Pemilik Lahan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">KTP Pemilik :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">KTP Pemilik :</label> <input type="text" name="KTP_Pemilik" size="50">
 										</p>
 										<p>
-											<label for="a">Kartu Keluarga Pemilik :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Kartu Keluarga Pemilik :</label> <input type="text" name="Kartu_Keluarga_Pemilik" size="50">
 										</p>
 										<p>
-											<label for="a">Pemilik Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Pemilik Lahan :</label> <input type="text" name="Pemilik_Lahan" size="50">
 										</p>
 										<p>
-											<label for="a">Orang yang dikuasakan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Orang yang dikuasakan :</label> <input type="text" name="Orang_Yang_Di_Kuasakan" size="50">
 										</p>
 										<p>
-											<label for="a">Alamat Pemilik :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Alamat Pemilik :</label> <input type="text" name="Alamat_Pemilik" size="50">
 										</p>
 										<p>
-											<label for="a">Telefon :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Telepon :</label> <input type="text" name="Telepon" size="50">
 										</p>
 										<p>
-											<label for="a">No. HP :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">No. HP :</label> <input type="text" name="HP" size="50">
 										</p>
 										<p>
-											<label for="a">E-Mail :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">E-Mail :</label> <input type="text" name="E_mail" size="50">
 										</p>
 										<p>
-											<label for="a">Surat Persetujuan Keluarga :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Surat Persetujuan Keluarga :</label> <input type="text" name="Surat_Persetujuan_Keluarga" size="50">
 										</p>
 									</a>
 								</table>
@@ -381,84 +353,84 @@
 									<a id="detail">
 										<p>
 											<label for="a">Surat Pernyataan :</label>   
-											<select name="cars">
+											<select name="SP">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Ahli Waris :</label>   
-											<select name="cars">
+											<select name="SP_Ahli_Waris">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Janda:</label>   
-											<select name="cars">
+											<select name="SP_Janda">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Kepemilikan Tanah :</label>   
-											<select name="cars">
+											<select name="SP_Kepemilikan_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Pelepasan Hak :</label>   
-											<select name="cars">
+											<select name="SP_Pelepasan_Hak">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Pembayaran:</label>   
-											<select name="cars">
+											<select name="SP_Pembayaran">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Penguasaan Fisik Tanah:</label>   
-											<select name="cars">
+											<select name="SP_Penguasaan_Fisik_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Peralihan Atas Pekarangan :</label>   
-											<select name="cars">
+											<select name="SP_Peralihan_Atas_Pekarangan">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Persetujuan Kepala Desa :</label>   
-											<select name="cars">
+											<select name="SP_Persetujuan_Kepala_Desa">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Tanah Pemohon :</label>   
-											<select name="cars">
+											<select name="SP_Tanah_Pemohon">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Tidak Keberatan Jalan Pribadi :</label>   
-											<select name="cars">
+											<select name="SP_Tidak_Keberatan_Jalan_Pribadi">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Pernyataan Tidak Keberatan Jalan Umum :</label>   
-											<select name="cars">
+											<select name="SP_Tidak_Keberatan_Jalan_Umum">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -473,22 +445,22 @@
 									<h2>Akta</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Akta Hibah :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Akta Hibah :</label> <input type="text" name="Akta_Hibah" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Jual Beli Sewa :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Akta Jual Beli Sewa :</label> <input type="text" name="Akta_Jual_Beli_Sewa" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Hak Bersama :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Akta Hak Bersama :</label> <input type="text" name="Akta_Hak_Bersama" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Warisan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Akta Warisan :</label> <input type="text" name="Akta_Warisan" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Pemisahan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Akta Pemisahan :</label> <input type="text" name="Akta_Pemisahan" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Nikah :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Akta Nikah :</label> <input type="text" name="Akta_Nikah" size="50">
 										</p>
 									</a>
 								</table>
@@ -500,19 +472,16 @@
 									<h2>Ijin Lain</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Ijin Perubahan Pengguna Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Ijin Perubahan Pengguna Tanah :</label> <input type="text" name="Ijin_Perubahan_Pengguna_Tanah" size="50">
 										</p>
 										<p>
-											<label for="a">Ijin IPPT :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Ijin Warga :</label> <input type="text" name="Ijin_Warga" size="50">
 										</p>
 										<p>
-											<label for="a">Ijin Warga :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Ijin UKL UPL :</label> <input type="text" name="Ijin_UKL_UPL" size="50">
 										</p>
 										<p>
-											<label for="a">Ijin UKL UPL :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Ijin Sertifikat Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Ijin Sertifikat Tanah :</label> <input type="text" name="Ijin_Sertifikat_Tanah" size="50">
 										</p>
 									</a>
 								</table>
@@ -525,98 +494,98 @@
 									<a id="detail">
 										<p>
 											<label for="a">Surat Keterangan Akses Lahan Jalan :</label>   
-											<select name="cars">
+											<select name="SK_Akses_Lahan_Jalan">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Asal Tanah :</label>   
-											<select name="cars">
+											<select name="SK_Asal_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Beda Luas Tanah :</label>   
-											<select name="cars">
+											<select name="SK_Beda_Luas_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Beda Nama :</label>   
-											<select name="cars">
+											<select name="SK_Beda_Nama">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Fatwa Waris :</label>   
-											<select name="cars">
+											<select name="SK_Fatwa_Waris">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Kematian :</label>   
-											<select name="cars">
+											<select name="SK_Kematian">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Penduduk :</label>   
-											<select name="cars">
+											<select name="SK_Penduduk">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Permohonan IMB, HO, dan IP :</label>   
-											<select name="cars">
+											<select name="SK_Permohonan_IMB_dll">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Persetujuan Sewa Lahan :</label>   
-											<select name="cars">
+											<select name="SK_Persetujuan_Sewa_Lahan">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Riwayat Tanah :</label>   
-											<select name="cars">
+											<select name="SK_Riwayat_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Suami Istri :</label>   
-											<select name="cars">
+											<select name="SK_Suami_Istri">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Tanah :</label>   
-											<select name="cars">
+											<select name="SK_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Tidak Sengketa :</label>   
-											<select name="cars">
+											<select name="SK_Tidak_Sengketa">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Keterangan Tidak Keberatan Didirikan :</label>   
-											<select name="cars">
+											<select name="SK_Tidak_Keberatan_Didirikan">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -632,35 +601,35 @@
 									<a id="detail">
 										<p>
 											<label for="a">Surat Kuasa :</label>   
-											<select name="cars">
+											<select name="Surat_Kuasa">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Kuasa Pengambilan Jaminan Asli :</label>   
-											<select name="cars">
+											<select name="Surat_Kuasa_Pengambilan_Jaminan_Asli">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Kuasa Jaminan Hukum :</label>   
-											<select name="cars">
+											<select name="Surat_Jaminan_Hukum">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Ijin PKS :</label>   
-											<select name="cars">
+											<select name="Surat_Ijin_PKS">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
 										</p>
 										<p>
 											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
-											<select name="cars">
+											<select name="Surat_Perjanjian_Sewa_Tanah">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -675,28 +644,28 @@
 									<h2>Informasi Pajak Bumi dan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="Nomor_Objek_Pajak" size="50">
 										</p>
 										<p>
-											<label for="a">Nilai PBB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nilai PBB :</label> <input type="text" name="Nilai_PBB" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai" name="Tanggal_Mulai" >
 										</p>
 										<p>
-											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status" size="50">
 										</p>
 										<p>
-											<label for="a">NJOP Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">NJOP Tanah :</label> <input type="text" name="NJOP_Tanah" size="50">
 										</p>
 										<p>
-											<label for="a">NJOP Bangunan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">NJOP Bangunan :</label> <input type="text" name="NJOP_Bangunan" size="50">
 										</p>
 										<p>
-											<label for="a">Surat PBB :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label for="a">Surat PBB :</label> <input type="file" name="Surat_PBB" id="Surat_PBB" size="50"><br>
 										</p>
 									</a>
 								</table>
@@ -708,22 +677,22 @@
 									<h2>SKRD dan RPM</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor SKRD :</label> <input type="text" name="No_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Nilai SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nilai SKRD :</label> <input type="text" name="Harga_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label for="a">Koefisien SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Koefisien SKRD :</label> <input type="text" name="Koef_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status" size="50">
 										</p>
 										<p>
-											<label for="a">Surat SKRD :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>	
+											<label for="a">Surat SKRD :</label> <input type="file" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
 										</p>
 									</a>
 								</table>
@@ -735,25 +704,25 @@
 									<h2>Informasi Ijin Mendirikan Bangunan</h2>
 									<a id="detail">										
 										<p>
-											<label for="a">Nomor IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor IMB :</label> <input type="text" name="Nomor_IMB" size="50">
 										</p>
 										<p>
-											<label for="a">Status IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Mitra Pengurusa IMB :</label> <input type="text" name="Mitra_Pengurus_IMB" size="50">
 										</p>
 										<p>
-											<label for="a">Daftar Ulang IMB :</label> <input type="date" id="myDate" value="">
+											<label for="a">Daftar Ulang IMB :</label> <input type="date" id="Daftar_Ulang_IMB" name="Daftar_Ulang_IMB" >
 										</p>
 										<p>
-											<label for="a">Tanggal Awal Mulai IMB :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Awal Mulai IMB :</label> <input type="date" id="Tanggal_Awal_IMB" name="Tanggal_Awal_IMB" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir IMB :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir IMB :</label> <input type="date" id="Tanggal_Akhir_IMB" name="Tanggal_Akhir_IMB" >
 										</p>
 										<p>
-											<label for="a">Status Kepengurusan IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status Kepengurusan IMB :</label> <input type="text" name="Status_Kepengurusan_IMB" size="50">
 										</p>
 										<p>
-											<label for="a">Mitra Pengurusa IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status IMB :</label> <input type="text" name="Status_IMB" size="50">
 										</p>
 									</a>
 								</table>
@@ -765,13 +734,13 @@
 									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin" name="Tanggal_Awal_Ijin" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin" name="Tanggal_Akhir_Ijin" >
 										</p>
 									</a>
 								</table>
@@ -783,13 +752,13 @@
 									<h2>Informasi Ijin Departemen DepHub/Kominfo</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Ijin :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Mulai Ijin :</label> <input type="date" id="Tanggal_Mulai_Ijin" name="Tanggal_Mulai_Ijin" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin" name="Tanggal_Akhir_Ijin" >
 										</p>
 									</a>
 								</table>
@@ -801,13 +770,13 @@
 									<h2>Informasi Ijin Pendirian Tower Telkomsel</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="Nomor_Ijin_Pendirian" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian" name="Tanggal_Awal_Ijin_Pendirian" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="Tanggal_Akhir_Ijin_Pendirian" name="Tanggal_Akhir_Ijin_Pendirian" >
 										</p>
 									</a>
 								</table>
@@ -819,13 +788,13 @@
 								<h2>Informasi Ijin Penggunaan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor IPB :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor IPB :</label> <input type="text" name="Nomor_Ijin_Pendirian" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian" name="Tanggal_Awal_Ijin_Pendirian" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir IPB :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir IPB :</label> <input type="date" id="Tanggal_Akhir_Ijin_Pendirian" name="Tanggal_Akhir_Ijin_Pendirian" >
 										</p>
 									</a>
 								</table>
@@ -837,13 +806,13 @@
 									<h2>Informasi Ijin Prinsip</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="Nomor_Ijin_Prinsip" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="Tanggal_Awal_Ijin_Prinsip" name="Tanggal_Awal_Ijin_Prinsip" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="Tanggal_Akhir_Ijin_Prinsip" name="Tanggal_Akhir_Ijin_Prinsip" >
 										</p>
 									</a>
 								</table>
@@ -855,16 +824,16 @@
 									<h2>Informasi Ijin Genset</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Nomor :</label> <input type="text" name="Nomor" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Start :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Start :</label> <input type="date" id="Tanggal_Start" name="Tanggal_Start" >
 										</p>
 										<p>
-											<label for="a">Tanggal Finish :</label> <input type="date" id="myDate" value="">
+											<label for="a">Tanggal Finish :</label> <input type="date" id="Tanggal_Finish" name="Tanggal_Finish" >
 										</p>
 									</a>
 								</table>
@@ -876,22 +845,22 @@
 									<h2>Comcase</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Comcase Tanggal :</label> <input type="date" id="myDate" value="">
+											<label for="a">Comcase Tanggal :</label> <input type="date" id="Comcase_Tanggal" name="Comcase_Tanggal" >
 										</p>
 										<p>
-											<label for="a">Comcase Keterangan :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Comcase Keterangan :</label> <input type="text" name="Comcase_Keterangan" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase Status :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Comcase Status :</label> <input type="text" name="Comcase_Status" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase Solusi :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Comcase Solusi :</label> <input type="text" name="Comcase_Solusi" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase File :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label for="a">Comcase File :</label> <input type="file" name="Comcase_File" id="Comcase_File" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Comcase Mitra :</label> <input type="text" name="NamaSite" size="50">
+											<label for="a">Comcase Mitra :</label> <input type="text" name="Comcase_Mitra" size="50">
 										</p>
 									</a>
 								</table>

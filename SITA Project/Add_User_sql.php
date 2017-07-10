@@ -8,8 +8,11 @@
 
 	$conn = mysqli_connect($servername, $username, $password, $database);
 
+	$temp = explode(".", $_FILES["file"]["name"]);
+	$newfilename = round(microtime(true)) . '.' . end($temp);
+
 	$target_dir = "upload/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $target_dir . $newfilename . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -38,8 +41,9 @@
 	        echo "Maaf, ada error dalam mengupload file.";
 	    }
 	}
+	
 	/* Displaying Image*/
-	$image=$_FILES["fileToUpload"]["name"]; 
+	$image=$newfilename . $_FILES["fileToUpload"]["name"]; 
     //$img="images/".$image;
     //echo '<img src= "'.$img.'" width="100" height="100" />';
     //echo '<br>';
