@@ -7,22 +7,9 @@
 	$conn = mysqli_connect($servername, $username, $password, $database);
 
 
-	$temp = explode(".", $_FILES["file"]["name"]);
-	$newfilename = round(microtime(true)) . '.' . end($temp);
-	$target_dir = "File/";
-	$target_file = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
-	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file);
-	$Denah_Tanah="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
-
-	$target_file = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
-	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file);
-	$Peta_Lokasi_Radius_Tower="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
-
-	$target_file = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
-	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file);
-	$Sketsa_Batas_Lahan="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
-
-
+	$Denah_Tanah="asd";
+	$Peta_Lokasi_Radius_Tower="asd";
+	$Sketsa_Batas_Lahan="asd";
 	$Surat_PBB="asd";
 	$Surat_SKRD="asd";
 	$Comcase_File="asd";
@@ -206,7 +193,7 @@
 //perintah post
 
 	mysqli_query($conn,"
-		INSERT INTO site (
+		INSERT INTO sitesz (
 		sites_id,
 		sites_nama,
 		sites_status_lahan,
@@ -234,8 +221,9 @@
 		sites_sketsa_bt,
 		sites_tanggal_start,
 		sites_tanggal_finish,
-		sites_harga_per_tahun,
-		sites_remark
+		sites_harga_tahun,
+		sites_remark,
+		
 		)
 		VALUES(
 		'$Site_ID',
@@ -266,8 +254,271 @@
 		'$Tanggal_Mulai_Sewa',
 		'$Tanggal_Akhir_Sewa',
 		'$Harga_Per_Tahun',
-		'$Remark'
+		'$Remark',
+		
+		);
+
+		INSERT INTO ho (
+		ho_nomor,
+		ho_daftar_ulang,
+		ho_start,
+		ho_finish,
+		ho_status
 		)
+		VALUES(
+		'$Nomor_HO',
+		'$Daftar_Ulang_HO',
+		'$Tanggal_Start_HO',
+		'$Tanggal_Finish_HO',
+		'$Status_HO' 
+		);
+
+		INSERT INTO identitas_pemilik (
+		identitas_pemilik_ktp,
+		identitas_pemilik_kk,
+		identitas_pemilik_lahan,
+		identitas_pemilik_kuasa,
+		identitas_pemilik_alamat,
+		identitas_pemilik_telepon,
+		identitas_pemilik_hp,
+		identitas_pemilik_email,
+		identitas_pemilik_sp_keluarga,
+		sp,
+		sp_ahli_waris,
+		sp_janda,
+		sp_kepemilikan_tanah,
+		sp_pelepasan_hak,
+		sp_pembayaran,
+		sp_penguasaan_fisik_tanah,
+		sp_peralihan_atas_pekarangan,
+		sp_persetujuan_kepala_desa,
+		sp_tanah_pemohon,
+		sp_tidak_keberatan_jalan_pribadi,
+		sp_tidak_keberatan_jalan_umum,
+		akta_hibah,
+		akta_jualbeli_sewa,
+		akta_hak_bersama,
+		akta_warisan,
+		akta_pemisahan,
+		akta_nikah,
+		ijin_perubahan_pengguna_tanah,
+		ijin_warga,
+		ijin_ukl_upl,
+		ijin_sertifikat_tanah,
+		sket_akses_lahan_jalan,
+		sket_asal_tanah,
+		sket_beda_luas_tanah,
+		sket_beda_nama,
+		sket_fatwa_waris,
+		sket_kematian,
+		sket_penduduk,
+		sket_permohonan_imb_ho_ip,
+		sket_persetujuan_sewa_lahan,
+		sket_riwayat_tanah,
+		sket_suami_istri,
+		sket_tanah,
+		sket_tidak_sengketa,
+		sket_keberatan,
+		sl_sk,
+		sl_sk_pengambilan_jaminan_asli,
+		sl_surat_jaminan_hukum,
+		sl_pks,
+		sl_surat_perjanjian_sewa_tanah
+		)
+		VALUES(
+		'$KTP_Pemilik',
+		'$Kartu_Keluarga_Pemilik',
+		'$Pemilik_Lahan',
+		'$Orang_Yang_Di_Kuasakan',
+		'$Alamat_Pemilik',
+		'$Telepon',
+		'$HP',
+		'$E_mail',
+		'$Surat_Persetujuan_Keluarga',
+		'$SP',
+		'$SP_Ahli_Waris',
+		'$SP_Janda',
+		'$SP_Kepemilikan_Tanah',
+		'$SP_Pelepasan_Hak',
+		'$SP_Pembayaran',
+		'$SP_Penguasaan_Fisik_Tanah',
+		'$SP_Peralihan_Atas_Pekarangan',
+		'$SP_Persetujuan_Kepala_Desa',
+		'$SP_Tanah_Pemohon',
+		'$SP_Tidak_Keberatan_Jalan_Pribadi',
+		'$SP_Tidak_Keberatan_Jalan_Umum',
+		'$Akta_Hibah',
+		'$Akta_Jual_Beli_Sewa',
+		'$Akta_Hak_Bersama',
+		'$Akta_Warisan',
+		'$Akta_Pemisahan',
+		'$Akta_Nikah',
+		'$Ijin_Perubahan_Pengguna_Tanah',
+		'$Ijin_Warga',
+		'$Ijin_UKL_UPL',
+		'$Ijin_Sertifikat_Tanah',
+		'$SK_Akses_Lahan_Jalan',
+		'$SK_Asal_Tanah',
+		'$SK_Beda_Luas_Tanah',
+		'$SK_Beda_Nama',
+		'$SK_Fatwa_Waris',
+		'$SK_Kematian',
+		'$SK_Penduduk',
+		'$SK_Permohonan_IMB_dll',
+		'$SK_Persetujuan_Sewa_Lahan',
+		'$SK_Riwayat_Tanah',
+		'$SK_Suami_Istri',
+		'$SK_Tanah',
+		'$SK_Tidak_Sengketa',
+		'$SK_Tidak_Keberatan_Didirikan',
+		'$Surat_Kuasa',
+		'$Surat_Kuasa_Pengambilan_Jaminan_Asli',
+		'$Surat_Jaminan_Hukum',
+		'$Surat_Ijin_PKS',
+		'$Surat_Perjanjian_Sewa_Tanah'
+		);
+
+		INSERT INTO pbb (
+		nop,
+		nilai_pbb_site,
+		tanggal_mulai,
+		tanggal_jatuh_tempo,
+		status,
+		njop_tanah,
+		njop_bangunan,
+		sket_pelunasan_pbb
+		)
+		VALUES(
+		'$Nomor_Objek_Pajak',
+		'$Nilai_PBB',
+		'$Tanggal_Mulai',
+		'$Tanggal_Jatuh_Tempo',
+		'$Status',
+		'$NJOP_Tanah',
+		'$NJOP_Bangunan',
+		'$Surat_PBB' 
+		);
+
+		INSERT INTO skrd_rpm (
+		no_skrd,
+		harga_skrd,
+		tanggal_jatuh_tempo,
+		koef_skrd,
+		status,
+		surat_skrd
+		)
+		VALUES(
+		'$No_SKRD',
+		'$Harga_SKRD',
+		'$Tanggal_Jatuh_Tempo',
+		'$Koef_SKRD',
+		'$Status',
+		'$Surat_SKRD' 
+		);
+
+		INSERT INTO imb (
+		imb_nomor,
+		imb_mitra_pengurus,
+		imb_daftar_ulang,
+		imb_start,
+		imb_finish,
+		imb_status_kepengurusan,
+		imb_status
+		)
+		VALUES(
+		'$Nomor_IMB',
+		'$Mitra_Pengurus_IMB',
+		'$Daftar_Ulang_IMB',
+		'$Tanggal_Awal_IMB',
+		'$Tanggal_Akhir_IMB',
+		'$Status_Kepengurusan_IMB',
+		'$Status_IMB'
+		);
+
+		INSERT INTO imtu (
+		ijin_imtu_nomor,
+		ijin_imtu_start,
+		ijin_imtu_finish
+		)
+		VALUES(
+		'$Nomor_Ijin',
+		'$Tanggal_Awal_Ijin',
+		'$Tanggal_Akhir_Ijin'
+		);
+
+		INSERT INTO ijin_dephub (
+		ijin_dephub_nomor,
+		ijin_dephub_start,
+		ijin_dephub_finish
+		)
+		VALUES(
+		'$Nomor_Ijin',
+		'$Tanggal_Mulai_Ijin',
+		'$Tanggal_Akhir_Ijin' 
+		);
+
+		INSERT INTO ijin_ppt (
+		ijin_ptt_nomor,
+		ijin_ptt_start,
+		ijin_ptt_finish
+		)
+		VALUES(
+		'$Nomor_Ijin_Pendirian',
+		'$Tanggal_Awal_Ijin_Pendirian', 
+		'$Tanggal_Akhir_Ijin_Pendirian'
+		);
+
+		INSERT INTO ipb (
+		Ijin_IPB_Nomor,
+		Ijin_IPB_Start,
+		Ijin_IPB_Finish
+		)
+		VALUES(
+		'$Ijin_IPB_Nomor',
+		'$Ijin_IPB_Start',
+		'$Ijin_IPB_Finish'
+		);
+
+		INSERT INTO ijin_prinsip (
+		ijin_prinsip_nomor,
+		ijin_prinsip_start,
+		ijin_prinsip_finish
+		)
+		VALUES(
+		'$Nomor_Ijin_Prinsip',
+		'$Tanggal_Awal_Ijin_Prinsip',
+		'$Tanggal_Akhir_Ijin_Prinsip'
+		);
+
+		INSERT INTO ijin_genset (
+		ijin_genset_nomor,
+		ijin_genset_status,
+		ijin_genset_start,
+		ijin_genset_finish
+		)
+		VALUES(
+		'$Nomor',
+		'$Status',
+		'$Tanggal_Start',
+		'$Tanggal_Finish'
+		);
+		
+		INSERT INTO comcase (
+		comcase_tanggal,
+		comcase_keterangan,
+		comcase_status,
+		comcase_solusi,
+		comcase_file,
+		comcase_mitra
+		)
+		VALUES(
+		'$Comcase_Tanggal',
+		'$Comcase_Keterangan',
+		'$Comcase_Status',
+		'$Comcase_Solusi',
+		'$Comcase_File',
+		'$Comcase_Mitra'
+		);
 		");
 
 	if(!$conn) {

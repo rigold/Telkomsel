@@ -245,7 +245,7 @@
 								<table border="0">
 									<h2>Perpanjangan</h2>
 									<a id="detail">
-										
+										zzzz
 										<p>
 											<label for="a">Pagu :</label> <input type="text" name="Pagu" size="50">
 										</p>

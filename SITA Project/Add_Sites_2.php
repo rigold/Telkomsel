@@ -113,25 +113,100 @@
 				</div>
 				<div class="body">
 					<h1>Formulir Input User</h1>
-					<form action="Add_User_sql.php" method="post" enctype="multipart/form-data">
+					<form action="Add_User_2_sql.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
+							<h2>Informasi Sites</h2>
 							<p>
-							<label>Nama User:</label> <input type="text" name="Nama" size="50">
+							<label for="a">Site ID :</label> <input type="text" name="Site_ID" size="50">
 							</p>
 							<p>
-							<label>NIK(ID):</label> <input type="text" name="NIK" size="50">
+							<label for="a">Nama Site :</label> <input type="text" name="Nama_Site" size="50">
 							</p>
 							<p>
-							<label>Password:</label> <input type="text" name="Password" size="50">
+							<label for="a">Status Lahan :</label> <input type="text" name="Status_Lahan" size="50">
 							</p>
 							<p>
-							<label>Jabatan:</label> <input type="text" name="Jabatan" size="50">
+							<label for="a">Status Tower :</label>   
+							<select name="Satus_Tower">
+							    <option value="Beli">Beli	</option>
+							    <option value="Pinjam">Pinjam</option>
+							</select>
 							</p>
 							<p>
-							<label>Picture:</label>
-							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+							<label for="a">Pemilik Tower :</label> <input type="text" name="Pemilik_Tower" size="50">
 							</p>
-    						<input type="submit" value="Submit" name="submit">
+							<p>
+							<label for="a">Alamat Site :</label> <input type="text" name="Alamat_Site" size="50">
+							</p>
+							<p>
+							<label for="a">Kota/Kabupaten :</label> <input type="text" name="Kota_Kabupaten" size="50">
+							</p>
+							<p>
+							<label for="a">Kontraktor Utama :</label> <input type="text" name="Kontraktor_Utama" size="50">
+							</p>
+							<p>
+							<label for="a">Penyedia Menara :</label> <input type="text" name="Penyedia_Menara" size="50">
+							</p>
+							<p>
+							<label for="a">Branch :</label> <input type="text" name="Branch" size="50">
+							</p>
+							<p>
+							<label for="a">Longitude :</label> <input type="text" name="Longitude" size="50">
+							</p>
+							<p>
+							<label for="a">Latitude :</label> <input type="text" name="Latitude" size="50">
+							</p>
+							<p>
+							<label for="a">On Air Date :</label> <input type="date" id="On_Air_Date" name="On_Air_Date">
+							</p>
+							<p>
+							<label for="a">Colocated Site :</label> <input type="text" name="Colocated_Site" size="50">
+							</p>
+							<p>
+							<label for="a">BTS Type :</label> <input type="text" name="BTS_Type" size="50">
+							</p>
+							<p>
+							<label for="a">Site Type :</label> <input type="text" name="Site_Type" size="50">
+							</p>
+							<p>
+							<label for="a">Tower Height :</label> <input type="text" name="Tower_Height" size="50">
+							</p>
+							<p>
+							<label for="a">Tower Type :</label> <input type="text" name="Tower_Type" size="50">
+							</p>
+							<p>
+							<label for="a">Shelter Type :</label> <input type="text" name="Shelter_Type" size="50">
+							</p>
+							<p>
+							<label for="a">Shelter Size :</label> <input type="text" name="Shelter_Size" size="50">
+							</p>
+							<p>
+							<label for="a">Luas Lahan :</label> <input type="text" name="Luas_Lahan" size="50">
+							</p>
+							<p>
+							<label for="a">Luas Jalan Akses :</label> <input type="text" name="Luas_Jalan_Akses" size="50">
+							</p>
+							<p>
+							<label for="a">Denah Tanah :</label> <input type="file" name="Denah_Tanah" id="Denah_Tanah" size="50"><br>
+							</p>
+							<p>
+							<label for="a">Peta Radius Tower :</label> <input type="file" name="Peta_Lokasi_Radius_Tower" id="Peta_Lokasi_Radius_Tower" size="50"><br>
+							</p>
+							<p>
+							<label for="a">Sketsa Batas Lahan :</label> <input type="file" name="Sketsa_Batas_Lahan" id="Sketsa_Batas_Lahan" size="50"><br>
+							</p>
+							<p>
+							<label for="a">Tanggal Mulai Sewa :</label> <input type="date" id="Tanggal_Mulai_Sewa" name="Tanggal_Mulai_Sewa" >
+							</p>
+							<p>
+							<label for="a">Tanggal Akhir Sewa :</label> <input type="date" id="Tanggal_Akhir_Sewa" name="Tanggal_Akhir_Sewa" >
+							</p>
+							<p>
+							<label for="a">Harga/Tahun :</label> <input type="text" name="Harga_Per_Tahun" size="50">
+							</p>
+							<p>
+							<label for="a">Remark :</label> <input type="text" name="Remark" size="50">
+							</p>
 						</div>
 					</form>
 				</div>
