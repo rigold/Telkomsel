@@ -5,7 +5,6 @@
 	$username = "root";
 	$password = "";
 	$database = "sita";
-
 	$conn = mysqli_connect($servername, $username, $password, $database);
 
 	$temp = explode(".", $_FILES["file"]["name"]);

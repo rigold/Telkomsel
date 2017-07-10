@@ -137,7 +137,7 @@
 						<button class="tablinks" onclick="openTabs(event, 'Comcase')">COMCASE</button>
 						<button class="tablinks" onclick="openTabs(event, 'Submit')">SUBMIT</button>
 					</div>
-					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
+					<form id="satu" action="Add_Sites_sql.php" method="post" enctype="multipart/form-data">
 						<div id="site">
 							<div id="Sites" class="tabcontent">
 								<table border="0">
@@ -788,13 +788,13 @@
 								<h2>Informasi Ijin Penggunaan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor IPB :</label> <input type="text" name="Nomor_Ijin_Pendirian" size="50">
+											<label for="a">Nomor IPB :</label> <input type="text" name="Nomor_IPB" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian" name="Tanggal_Awal_Ijin_Pendirian" >
+											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_IPB" name="Tanggal_Awal_IPB" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir IPB :</label> <input type="date" id="Tanggal_Akhir_Ijin_Pendirian" name="Tanggal_Akhir_Ijin_Pendirian" >
+											<label for="a">Tanggal Akhir IPB :</label> <input type="date" id="Tanggal_Akhir_IPB" name="Tanggal_Akhir_IPB" >
 										</p>
 									</a>
 								</table>

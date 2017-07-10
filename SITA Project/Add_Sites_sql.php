@@ -1,5 +1,18 @@
 <?php 
-	include('connect.php');
+
+	$servername ="localhost";
+	$username = "root";
+	$password = "";
+	$database = "sita";
+	$conn = mysqli_connect($servername, $username, $password, $database);
+
+
+	$Denah_Tanah="asd";
+	$Peta_Lokasi_Radius_Tower="asd";
+	$Sketsa_Batas_Lahan="asd";
+	$Surat_PBB="asd";
+	$Surat_SKRD="asd";
+	$Comcase_File="asd";
 
 //sites	
 	$Site_ID=$_POST['Site_ID']; 
@@ -24,9 +37,8 @@
 	$Shelter_Size=$_POST['Shelter_Size']; 
 	$Luas_Lahan=$_POST['Luas_Lahan']; 
 	$Luas_Jalan_Akses=$_POST['Luas_Jalan_Akses']; 
-	$Denah_Tanah=$_POST['Denah_Tanah']; 
-	$Peta_Lokasi_Radius_Tower=$_POST['Peta_Lokasi_Radius_Tower']; 
-	$Sketsa_Batas_Lahan=$_POST['Sketsa_Batas_Lahan']; 
+	 
+	
 	$Tanggal_Mulai_Sewa=$_POST['Tanggal_Mulai_Sewa']; 
 	$Tanggal_Akhir_Sewa=$_POST['Tanggal_Akhir_Sewa']; 
 	$Harga_Per_Tahun=$_POST['Harga_Per_Tahun']; 
@@ -122,16 +134,14 @@
 	$Status=$_POST['Status'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
 	$NJOP_Bangunan=$_POST['NJOP_Bangunan'];
-	$Surat_PBB=$_POST['Surat_PBB']; 
-
+	 
 //rpm
 	$No_SKRD=$_POST['No_SKRD']; 
 	$Harga_SKRD=$_POST['Harga_SKRD']; 
 	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo']; 
 	$Koef_SKRD=$_POST['Koef_SKRD']; 
 	$Status=$_POST['Status']; 
-	$Surat_SKRD=$_POST['Surat_SKRD']; 
-
+	 
 //imb
 	$Nomor_IMB=$_POST['Nomor_IMB'];
 	$Mitra_Pengurus_IMB=$_POST['Mitra_Pengurus_IMB'];
@@ -157,9 +167,9 @@
 	$Tanggal_Akhir_Ijin_Pendirian=$_POST['Tanggal_Akhir_Ijin_Pendirian']; 
 
 //ipb
-	$Nomor_Ijin_Pendirian=$_POST['Nomor_Ijin_Pendirian']; 
-	$Tanggal_Awal_Ijin_Pendirian=$_POST['Tanggal_Awal_Ijin_Pendirian']; 
-	$Tanggal_Akhir_Ijin_Pendirian=$_POST['Tanggal_Akhir_Ijin_Pendirian']; 
+	$Ijin_IPB_Nomor=$_POST['Nomor_IPB']; 
+	$Ijin_IPB_Start=$_POST['Tanggal_Awal_IPB']; 
+	$Ijin_IPB_Finish=$_POST['Tanggal_Akhir_IPB']; 
 
 //ijin_prinsip
 	$Nomor_Ijin_Prinsip=$_POST['Nomor_Ijin_Prinsip']; 
@@ -177,7 +187,7 @@
 	$Comcase_Keterangan=$_POST['Comcase_Keterangan']; 
 	$Comcase_Status=$_POST['Comcase_Status']; 
 	$Comcase_Solusi=$_POST['Comcase_Solusi']; 
-	$Comcase_File=$_POST['Comcase_File']; 
+	
 	$Comcase_Mitra=$_POST['Comcase_Mitra']; 
 
 //perintah post
@@ -276,7 +286,6 @@
 
 		INSERT INTO ho (
 		ho_nomor,
-		ho_start_tahun,
 		ho_daftar_ulang,
 		ho_start,
 		ho_finish,
@@ -284,7 +293,6 @@
 		)
 		VALUES(
 		'$Nomor_HO',
-		'$Start_Tahun_HO',
 		'$Daftar_Ulang_HO',
 		'$Tanggal_Start_HO',
 		'$Tanggal_Finish_HO',
@@ -353,18 +361,18 @@
 		'$HP',
 		'$E_mail',
 		'$Surat_Persetujuan_Keluarga',
-		'$Surat_Pernyataan',
-		'$Surat_Pernyataan_Ahli_Waris',
-		'$Surat_Pernyataan_Janda',
-		'$Surat_Pernyataan_Kepemilikan_Tanah',
-		'$Surat_Pernyataan_Pelepasan_Hak',
-		'$Surat_Pernyataan_Pembayaran',
-		'$Surat_Pernyataan_Penguasaan_Fisik_Tanah',
-		'$Surat_Pernyataan_Peralihan_Atas_Pekarangan',
-		'$Surat_Pernyataan_Persetujuan_Kepala_Desa',
-		'$Surat_Pernyataan_Tanah_Pemohon',
-		'$Surat_Pernyataan_Tidak_Keberatan_Jalan_Pribadi',
-		'$Surat_Pernyataan_Tidak_Keberatan_Jalan_Umum',
+		'$SP',
+		'$SP_Ahli_Waris',
+		'$SP_Janda',
+		'$SP_Kepemilikan_Tanah',
+		'$SP_Pelepasan_Hak',
+		'$SP_Pembayaran',
+		'$SP_Penguasaan_Fisik_Tanah',
+		'$SP_Peralihan_Atas_Pekarangan',
+		'$SP_Persetujuan_Kepala_Desa',
+		'$SP_Tanah_Pemohon',
+		'$SP_Tidak_Keberatan_Jalan_Pribadi',
+		'$SP_Tidak_Keberatan_Jalan_Umum',
 		'$Akta_Hibah',
 		'$Akta_Jual_Beli_Sewa',
 		'$Akta_Hak_Bersama',
@@ -375,20 +383,20 @@
 		'$Ijin_Warga',
 		'$Ijin_UKL_UPL',
 		'$Ijin_Sertifikat_Tanah',
-		'$Surat_Keterangan_Akses_Lahan_Jalan',
-		'$Surat_Keterangan_Asal_Tanah',
-		'$Surat_Keterangan_Beda_Luas_Tanah',
-		'$Surat_Keterangan_Beda_Nama',
-		'$Surat_Keterangan_Fatwa_Waris',
-		'$Surat_Keterangan_Kematian',
-		'$Surat_Keterangan_Penduduk',
-		'$Surat_Keterangan_Permohonan_IMB,_HO,_&IP',
-		'$Surat_Keterangan_Persetujuan_Sewa_Lahan',
-		'$Surat_Keterangan_Riwayat_Tanah',
-		'$Surat_Keterangan_Suami_Istri',
-		'$Surat_Keterangan_Tanah',
-		'$Surat_Keterangan_Tidak_Sengketa',
-		'$Surat_Keterangan_Tidak_Keberatan_Didirikan',
+		'$SK_Akses_Lahan_Jalan',
+		'$SK_Asal_Tanah',
+		'$SK_Beda_Luas_Tanah',
+		'$SK_Beda_Nama',
+		'$SK_Fatwa_Waris',
+		'$SK_Kematian',
+		'$SK_Penduduk',
+		'$SK_Permohonan_IMB_dll',
+		'$SK_Persetujuan_Sewa_Lahan',
+		'$SK_Riwayat_Tanah',
+		'$SK_Suami_Istri',
+		'$SK_Tanah',
+		'$SK_Tidak_Sengketa',
+		'$SK_Tidak_Keberatan_Didirikan',
 		'$Surat_Kuasa',
 		'$Surat_Kuasa_Pengambilan_Jaminan_Asli',
 		'$Surat_Jaminan_Hukum',
@@ -492,9 +500,9 @@
 		Ijin_IPB_Finish
 		)
 		VALUES(
-		'$Nomor_IPB',
-		'$Tanggal_Awal_IPB',
-		'$Tanggal_Akhir_IPB'
+		'$Ijin_IPB_Nomor',
+		'$Ijin_IPB_Start',
+		'$Ijin_IPB_Finish'
 		);
 
 		INSERT INTO ijin_prinsip (
@@ -538,4 +546,13 @@
 		'$Comcase_Mitra'
 		);
 		");
+
+	if(!$conn) {
+		echo "failed";
+		die("Connection failed: " . mysqli_connect_error());	
+	}
+	else {
+		echo "success";
+		//header("Location: List_User.php");
+	}
 ?>
