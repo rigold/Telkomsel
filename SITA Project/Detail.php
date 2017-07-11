@@ -197,37 +197,35 @@
 								$cloc="File/".$c;
 
 								echo "
-						<tr><th>Site ID</th><td>" . $row["sites_id"]."</td></tr> 
-						<tr><th>Nama Site</th><td>" .$row["sites_nama"]."</td></tr> 
-						<tr><th>Status Lahan</th><td>" .$row["sites_status_lahan"]."</td></tr> 
-						<tr><th>Status Tower</th><td>" .$row["sites_status_tower"]."</td></tr> 
-						<tr><th>Pemilik Tower</th><td>" .$row["sites_pemilik_tower"]."</td></tr> 
-						<tr><th>Alamat Site</th><td>" .$row["sites_alamat"]."</td></tr> 
-						<tr><th>Kota/Kabupaten</th><td>" .$row["sites_kota_kabupaten"]."</td></tr> 
-						<tr><th>Kontraktor Utama</th><td>" .$row["sites_kontraktor_utama"]."</td></tr> 
-						<tr><th>Penyedia Menara</th><td>" .$row["sites_penyedia_menara"]."</td></tr> 
-						<tr><th>Branch</th><td>" .$row["sites_branch"]."</td></tr> 
-						<tr><th>Longitude</th><td>" .$row["sites_long"]."</td></tr> 
-						<tr><th>Latitude</th><td>" .$row["sites_lat"]."</td></tr> 
-						<tr><th>On Air Date</th><td>" .$row["sites_on_air_date"]."</td></tr> 
-						<tr><th>Colocated Site</th><td>" .$row["sites_colocated_site"]."</td></tr> 
-						<tr><th>BTS Type</th><td>" .$row["sites_type_bts"]."</td></tr> 
-						<tr><th>Site Type</th><td>" .$row["sites_type_site"]."</td></tr> 
-						<tr><th>Tower Height</th><td>" .$row["sites_tower_height"]."</td></tr> 
-						<tr><th>Tower Type</th><td>" .$row["sites_tower_type"]."</td></tr> 
-						<tr><th>Shelter Type</th><td>" .$row["sites_shelter_type"]."</td></tr> 
-						<tr><th>Shelter Size</th><td>" .$row["sites_shelter_size"]."</td></tr> 
-						<tr><th>Luas Lahan</th><td>" .$row["sites_luas_lahan"]."</td></tr> 
-						<tr><th>Luas Jalan Akses</th><td>" .$row["sites_luas_jalan_akses"]."</td></tr> 
-
-						<tr><th>Denah Tanah</th><td><a href=".$aloc.">".$a."</a></td></tr> 
-						<tr><th>Peta Radius Tower</th><td><a href=".$bloc.">".$b."</a></td></tr> 
-						<tr><th>Sketsa Batas Lahan</th><td><a href=".$cloc.">".$c."</a></td></tr> 
-
-						<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
-						<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
-						<tr><th>Harga/Tahun</th><td>" .$row["sites_harga_per_tahun"]."</td></tr> 
-						<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr> 
+								<tr><th>Site ID</th><td>" . $row["sites_id"]."</td></tr> 
+								<tr><th>Nama Site</th><td>" .$row["sites_nama"]."</td></tr> 
+								<tr><th>Status Lahan</th><td>" .$row["sites_status_lahan"]."</td></tr> 
+								<tr><th>Status Tower</th><td>" .$row["sites_status_tower"]."</td></tr> 
+								<tr><th>Pemilik Tower</th><td>" .$row["sites_pemilik_tower"]."</td></tr> 
+								<tr><th>Alamat Site</th><td>" .$row["sites_alamat"]."</td></tr> 
+								<tr><th>Kota/Kabupaten</th><td>" .$row["sites_kota_kabupaten"]."</td></tr> 
+								<tr><th>Kontraktor Utama</th><td>" .$row["sites_kontraktor_utama"]."</td></tr> 
+								<tr><th>Penyedia Menara</th><td>" .$row["sites_penyedia_menara"]."</td></tr> 
+								<tr><th>Branch</th><td>" .$row["sites_branch"]."</td></tr> 
+								<tr><th>Longitude</th><td>" .$row["sites_long"]."</td></tr> 
+								<tr><th>Latitude</th><td>" .$row["sites_lat"]."</td></tr> 
+								<tr><th>On Air Date</th><td>" .$row["sites_on_air_date"]."</td></tr> 
+								<tr><th>Colocated Site</th><td>" .$row["sites_colocated_site"]."</td></tr> 
+								<tr><th>BTS Type</th><td>" .$row["sites_type_bts"]."</td></tr> 
+								<tr><th>Site Type</th><td>" .$row["sites_type_site"]."</td></tr> 
+								<tr><th>Tower Height</th><td>" .$row["sites_tower_height"]."</td></tr> 
+								<tr><th>Tower Type</th><td>" .$row["sites_tower_type"]."</td></tr> 
+								<tr><th>Shelter Type</th><td>" .$row["sites_shelter_type"]."</td></tr> 
+								<tr><th>Shelter Size</th><td>" .$row["sites_shelter_size"]."</td></tr> 
+								<tr><th>Luas Lahan</th><td>" .$row["sites_luas_lahan"]."</td></tr> 
+								<tr><th>Luas Jalan Akses</th><td>" .$row["sites_luas_jalan_akses"]."</td></tr> 
+								<tr><th>Denah Tanah</th><td><a href=".$aloc.">".$a."</a></td></tr> 
+								<tr><th>Peta Radius Tower</th><td><a href=".$bloc.">".$b."</a></td></tr> 
+								<tr><th>Sketsa Batas Lahan</th><td><a href=".$cloc.">".$c."</a></td></tr> 
+								<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
+								<tr><th>Harga/Tahun</th><td>" .$row["sites_harga_per_tahun"]."</td></tr> 
+								<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr> 
 								";
 							?>
 							</a>
@@ -237,57 +235,54 @@
 					<div id="PERPANJANGAN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Pagu</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>PIC</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>SPPH</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Vendor_List</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Invoice</th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									perpanjangan_pagu,
+									perpanjangan_pic,
+									perpanjangan_spph,
+									perpanjangan_vendor_list,
+									perpanjangan_invoice
+									FROM site
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Pagu</th><td>" . $row["perpanjangan_pagu"]."</td></tr> 
+								<tr><th>PIC</th><td>" .$row["perpanjangan_pic"]."</td></tr> 
+								<tr><th>SPPH</th><td>" .$row["perpanjangan_spph"]."</td></tr> 
+								<tr><th>Vendor</th><td>" .$row["perpanjangan_vendor_list"]."</td></tr> 
+								<tr><th>Invoice</th><td>" .$row["perpanjangan_invoice"]."</td></tr> 
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="BAK" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor BAK</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal_BAK</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Harga_BAK</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status</th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									bak_nomor,
+									bak_tanggal,
+									bak_harga,
+									bak_status
+									FROM site
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Nomor BAK</th><td>" . $row["bak_nomor"]."</td></tr> 
+								<tr><th>Tanggal_BAK</th><td>" .$row["bak_tanggal"]."</td></tr> 
+								<tr><th>Harga_BAK</th><td>" .$row["bak_harga"]."</td></tr> 
+								<tr><th>Status</th><td>" .$row["bak_status"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
@@ -870,36 +865,31 @@
 					<div id="COMCASE" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Comcase Tanggal</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Comcase Keterangan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Comcase Status</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Comcase Solusi</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Comcase File</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Comcase Mitra</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									comcase_tanggal,
+									comcase_keterangan,
+									comcase_status,
+									comcase_solusi,
+									comcase_file,
+									comcase_mitra
+									FROM site
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+								$a=$row["comcase_file"]; 
+								$aloc="File/".$a;
+								echo "
+								<tr><th>Comcase Tanggal</th><td>" . $row["comcase_tanggal"]."</td></tr> 
+								<tr><th>Comcase Keterangan</th><td>" .$row["comcase_keterangan"]."</td></tr> 
+								<tr><th>Comcase Status</th><td>" .$row["comcase_status"]."</td></tr> 
+								<tr><th>Comcase Solusi</th><td>" .$row["comcase_solusi"]."</td></tr>
+								<tr><th>Comcase File</th><td><a href=".$aloc.">".$a."</a></td></tr> 
+								<tr><th>Comcase Mitra</th><td>" .$row["comcase_mitra"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
