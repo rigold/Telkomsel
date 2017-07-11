@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -126,9 +139,54 @@
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
 							</form1>
+
+								<?php
+								$sql = "SELECT sites_id, sites_nama, sites_alamat FROM site";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) 
+								{
+								    echo "<table>
+								    		<tr>
+											  	<th>Site ID</th>
+												<th>Site Name</th>
+												<th>Alamat</th>
+												<th>Nomor IMB</th>
+												<th>Masa Berlaku</th>
+												<th>Tanggal Akhir</th>
+												<th>Status IMB</th>
+												<th>Action</th>
+								    		</tr>";
+								    // output data of each row
+								    while($row = $result->fetch_assoc())
+								    {
+										$file=$row["comcase_file"]; 
+										$loc="File/".$file;
+
+								        echo "
+								        <tr>
+									        <td>".$row["sites_id"]."</td>
+									        <td>".$row["sites_nama"]."</td>
+									        <td>".$row["comcase_tanggal"]."</td>
+									        <td>".$row["comcase_keterangan"]."</td>
+									        <td>".$row["comcase_status"]."</td>
+									        <td>".$row["comcase_solusi"]."</td>
+									        <td><a href=".$loc.">".$file."</a></h1></td>
+									        <td>".$row["comcase_mitra"]."</td>
+								        </tr>";
+								    } 
+
+								    echo "</table>";
+								}
+								else 
+								{
+								    //echo "0 results";
+								}
+								$conn->close();
+								?>	
+
 							<table>
 							  <tr>
-							  	<th>No.</th>
 							  	<th>Site ID</th>
 								<th>Site Name</th>
 								<th>Alamat</th>
@@ -139,119 +197,6 @@
 								<th>Action</th>
 
 							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>SBY123</td>
-							    <td>Surabaya X</td>
-							    <td>Surabaya</td>
-							    <td>NO xx/pp/zz</td>
-							    <td>5 Bulan</td>
-							    <td>1/12/2017</td>
-							    <td>Hampir Habis</td>
-							    <td><button type="button" onclick="location.href='Detail.php';">Detail
-									</button>
-								</td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
