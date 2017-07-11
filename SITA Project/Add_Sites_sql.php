@@ -309,6 +309,7 @@
 	mysqli_query($conn,"
 		INSERT INTO ho(
 		ho_nomor,
+		sites_id,
 		ho_daftar_ulang,
 		ho_start,
 		ho_finish,
@@ -316,6 +317,7 @@
 		)
 		VALUES(
 		'$Nomor_HO',
+		'$Site_ID',
 		'$Daftar_Ulang_HO',
 		'$Tanggal_Start_HO',
 		'$Tanggal_Finish_HO',
@@ -326,6 +328,7 @@
 	mysqli_query($conn,"
 		INSERT INTO identitas_pemilik (
 		identitas_pemilik_ktp,
+		sites_id,
 		identitas_pemilik_kk,
 		identitas_pemilik_lahan,
 		identitas_pemilik_kuasa,
@@ -385,6 +388,7 @@
 		)
 		VALUES(
 		'$KTP_Pemilik',
+		'$Site_ID',
 		'$Kartu_Keluarga_Pemilik',
 		'$Pemilik_Lahan',
 		'$Orang_Yang_Di_Kuasakan',
@@ -445,6 +449,7 @@
 	mysqli_query($conn,"
 		INSERT INTO pbb (
 		nop,
+		sites_id,
 		nilai_pbb_site,
 		tanggal_mulai,
 		tanggal_jatuh_tempo,
@@ -455,6 +460,7 @@
 		)
 		VALUES(
 		'$Nomor_Objek_Pajak',
+		'$Site_ID',
 		'$Nilai_PBB',
 		'$Tanggal_Mulai',
 		'$Tanggal_Jatuh_Tempo',
@@ -468,6 +474,7 @@
 	mysqli_query($conn,"
 		INSERT INTO skrd_rpm (
 		no_skrd,
+		sites_id,
 		harga_skrd,
 		tanggal_jatuh_tempo,
 		koef_skrd,
@@ -476,6 +483,7 @@
 		)
 		VALUES(
 		'$No_SKRD',
+		'$Site_ID',
 		'$Harga_SKRD',
 		'$Tanggal_Jatuh_Tempo',
 		'$Koef_SKRD',
@@ -487,6 +495,7 @@
 	mysqli_query($conn,"
 		INSERT INTO imb (
 		imb_nomor,
+		sites_id,
 		imb_mitra_pengurus,
 		imb_daftar_ulang,
 		imb_start,
@@ -496,6 +505,7 @@
 		)
 		VALUES(
 		'$Nomor_IMB',
+		'$Site_ID',
 		'$Mitra_Pengurus_IMB',
 		'$Daftar_Ulang_IMB',
 		'$Tanggal_Awal_IMB',
@@ -508,11 +518,13 @@
 	mysqli_query($conn,"
 		INSERT INTO imtu (
 		ijin_imtu_nomor,
+		sites_id,
 		ijin_imtu_start,
 		ijin_imtu_finish
 		)
 		VALUES(
 		'$Nomor_Ijin',
+		'$Site_ID',
 		'$Tanggal_Awal_Ijin',
 		'$Tanggal_Akhir_Ijin'
 		)
@@ -521,11 +533,13 @@
 	mysqli_query($conn,"
 		INSERT INTO ijin_dephub (
 		ijin_dephub_nomor,
+		sites_id,
 		ijin_dephub_start,
 		ijin_dephub_finish
 		)
 		VALUES(
 		'$Nomor_Ijin',
+		'$Site_ID',
 		'$Tanggal_Mulai_Ijin',
 		'$Tanggal_Akhir_Ijin' 
 		)
@@ -534,11 +548,13 @@
 	mysqli_query($conn,"
 		INSERT INTO ijin_ptt (
 		ijin_ptt_nomor,
+		sites_id,
 		ijin_ptt_start,
 		ijin_ptt_finish
 		)
 		VALUES(
 		'$Nomor_Ijin_Pendirian',
+		'$Site_ID',
 		'$Tanggal_Awal_Ijin_Pendirian', 
 		'$Tanggal_Akhir_Ijin_Pendirian'
 		)
@@ -547,11 +563,13 @@
 	mysqli_query($conn,"
 		INSERT INTO ipb (
 		ijin_ipb_nomor,
+		sites_id,
 		ijin_ipb_start,
 		ijin_ipb_finish
 		)
 		VALUES(
 		'$Ijin_IPB_Nomor',
+		'$Site_ID',
 		'$Ijin_IPB_Start',
 		'$Ijin_IPB_Finish'
 		)
@@ -560,11 +578,13 @@
 	mysqli_query($conn,"
 		INSERT INTO ijin_prinsip (
 		ijin_prinsip_nomor,
+		sites_id,
 		ijin_prinsip_start,
 		ijin_prinsip_finish
 		)
 		VALUES(
 		'$Nomor_Ijin_Prinsip',
+		'$Site_ID',
 		'$Tanggal_Awal_Ijin_Prinsip',
 		'$Tanggal_Akhir_Ijin_Prinsip'
 		)
@@ -573,12 +593,14 @@
 	mysqli_query($conn,"
 		INSERT INTO ijin_genset (
 		ijin_genset_nomor,
+		sites_id,
 		ijin_genset_status,
 		ijin_genset_start,
 		ijin_genset_finish
 		)
 		VALUES(
 		'$Nomor_Genset',
+		'$Site_ID',
 		'$Status_Genset',
 		'$Tanggal_Start',
 		'$Tanggal_Finish'
@@ -592,6 +614,6 @@
 	}
 	else {
 		echo "success";
-		//header("Location: List_User.php");
+		header("Location: List_User.php");
 	}
 ?>
