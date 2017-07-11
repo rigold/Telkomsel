@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+
+	$servername ="localhost";
+	$username = "root";
+	$password = "";
+	$database = "sita";
+	$conn = mysqli_connect($servername, $username, $password, $database);
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -143,151 +151,87 @@
 					<div id="INFORMASI SITES" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Site ID</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Nama Site</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status Lahan</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Satus Tower</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Pemilik Tower</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Alamat Site</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Kota / Kabupaten</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Kontraktor Utama</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Penyedia Menara</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Branch</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Longitude</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Latitude</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>On Air Date</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Colocated Site</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>BTS Type</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Site Type</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tower Height</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tower Type</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Shelter Type</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Shelter Size</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Luas Lahan</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Luas Jalan Akses</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Denah Tanah</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Peta Lokasi Radius Tower</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Sketsa Batas Lahan</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Mulai Sewa</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir Sewa</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Harga Per Tahun</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Remark</th>
-								<td>: No Database </td>
-								</tr> 
+							<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									sites_id,
+									sites_nama,
+									sites_status_lahan,
+									sites_status_tower,
+									sites_pemilik_tower,
+									sites_alamat,
+									sites_kota_kabupaten,
+									sites_kontraktor_utama,
+									sites_penyedia_menara,
+									sites_branch,
+									sites_long,
+									sites_lat,
+									sites_on_air_date,
+									sites_colocated_site,
+									sites_type_bts,
+									sites_type_site,
+									sites_tower_height,
+									sites_tower_type,
+									sites_shelter_type,
+									sites_shelter_size,
+									sites_luas_lahan,
+									sites_luas_jalan_akses,
+									sites_denah_tanah,
+									sites_peta_lrt,
+									sites_sketsa_bt,
+									sites_tanggal_start,
+									sites_tanggal_finish,
+									sites_harga_per_tahun,
+									sites_remark 
+									FROM site
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+
+								$a=$row["sites_denah_tanah"]; 
+								$aloc="File/".$a;
+								$b=$row["sites_peta_lrt"]; 
+								$bloc="File/".$b;
+								$c=$row["sites_sketsa_bt"]; 
+								$cloc="File/".$c;
+
+								echo "
+						<tr><th>Site ID</th><td>" . $row["sites_id"]."</td></tr> 
+						<tr><th>Nama Site</th><td>" .$row["sites_nama"]."</td></tr> 
+						<tr><th>Status Lahan</th><td>" .$row["sites_status_lahan"]."</td></tr> 
+						<tr><th>Status Tower</th><td>" .$row["sites_status_tower"]."</td></tr> 
+						<tr><th>Pemilik Tower</th><td>" .$row["sites_pemilik_tower"]."</td></tr> 
+						<tr><th>Alamat Site</th><td>" .$row["sites_alamat"]."</td></tr> 
+						<tr><th>Kota/Kabupaten</th><td>" .$row["sites_kota_kabupaten"]."</td></tr> 
+						<tr><th>Kontraktor Utama</th><td>" .$row["sites_kontraktor_utama"]."</td></tr> 
+						<tr><th>Penyedia Menara</th><td>" .$row["sites_penyedia_menara"]."</td></tr> 
+						<tr><th>Branch</th><td>" .$row["sites_branch"]."</td></tr> 
+						<tr><th>Longitude</th><td>" .$row["sites_long"]."</td></tr> 
+						<tr><th>Latitude</th><td>" .$row["sites_lat"]."</td></tr> 
+						<tr><th>On Air Date</th><td>" .$row["sites_on_air_date"]."</td></tr> 
+						<tr><th>Colocated Site</th><td>" .$row["sites_colocated_site"]."</td></tr> 
+						<tr><th>BTS Type</th><td>" .$row["sites_type_bts"]."</td></tr> 
+						<tr><th>Site Type</th><td>" .$row["sites_type_site"]."</td></tr> 
+						<tr><th>Tower Height</th><td>" .$row["sites_tower_height"]."</td></tr> 
+						<tr><th>Tower Type</th><td>" .$row["sites_tower_type"]."</td></tr> 
+						<tr><th>Shelter Type</th><td>" .$row["sites_shelter_type"]."</td></tr> 
+						<tr><th>Shelter Size</th><td>" .$row["sites_shelter_size"]."</td></tr> 
+						<tr><th>Luas Lahan</th><td>" .$row["sites_luas_lahan"]."</td></tr> 
+						<tr><th>Luas Jalan Akses</th><td>" .$row["sites_luas_jalan_akses"]."</td></tr> 
+
+						<tr><th>Denah Tanah</th><td><a href=".$aloc.">".$a."</a></td></tr> 
+						<tr><th>Peta Radius Tower</th><td><a href=".$bloc.">".$b."</a></td></tr> 
+						<tr><th>Sketsa Batas Lahan</th><td><a href=".$cloc.">".$c."</a></td></tr> 
+
+						<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
+						<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
+						<tr><th>Harga/Tahun</th><td>" .$row["sites_harga_per_tahun"]."</td></tr> 
+						<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr> 
+								";
+							?>
 							</a>
+
 						</table>
 					</div>
 					<div id="PERPANJANGAN" class="tabcontent">

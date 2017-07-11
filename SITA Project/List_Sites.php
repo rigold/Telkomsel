@@ -161,6 +161,7 @@
 									        <td>".$row["sites_alamat"]."</td>
 									        <td>".$row["sites_remark"]."</td>
 									        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
+									        	<button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button>
 									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]'\">Delete</button>
 								        </tr>";
 								    } 
