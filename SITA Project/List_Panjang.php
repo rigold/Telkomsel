@@ -141,7 +141,7 @@
 							</form1>
 
 								<?php
-								$sql = "SELECT sites_id, sites_nama, sites_alamat, sites_kota_kabupaten, perpanjangan_pagu, sites_tanggal_start, sites_tanggal_finish, perpanjangan_invoice FROM site";
+								$sql = "SELECT sites_id, sites_nama, sites_alamat, sites_kota_kabupaten, perpanjangan_pagu, sites_tanggal_start, sites_tanggal_finish, perpanjangan_invoice, AVG(perpanjangan_pagu) FROM site";
 								$result = $conn->query($sql);
 								
 								if ($result->num_rows > 0) 
@@ -159,8 +159,10 @@
 												<th>Invoice</th>
 								    		</tr>";
 								    // output data of each row
+								    $rows=array();
 								    while($row = $result->fetch_assoc())
 								    {
+								    	$rows = $row["AVG(perpanjangan_pagu)"];
 								        echo "
 								        <tr>
 									        <td>".$row["sites_id"]."</td>
@@ -168,7 +170,7 @@
 									        <td>".$row["sites_alamat"]."</td>
 									        <td>".$row["sites_kota_kabupaten"]."</td>
 									        <td>".$row["perpanjangan_pagu"]."</td>
-									        <td>rata-rata</td>
+									        <td>".$rows."</td>
 									        <td>".$row["sites_tanggal_start"]."</td>
 									        <td>".$row["sites_tanggal_finish"]."</td>
 									        <td>".$row["perpanjangan_invoice"]."</td>
