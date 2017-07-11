@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -125,131 +138,52 @@
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
 							</form1>
-							<table>
-							  <tr>
-							  	<th>No.</th>
-							  	<th>Site ID</th>
-								<th>Site Name</th>
-								<th>Tanggal</th>
-								<th>Keterangan</th>
-								<th>Status</th>
-								<th>Solusi</th>
-								<th>File</th>
-								<th>Mitra</th>
 
-							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>SBY123</td>
-							    <td>Surabaya X</td>
-							    <td>1/01/2007</td>
-							    <td>Tower Dirusak</td>
-							    <td>Sedang Diperbaiki</td>
-							    <td>Sedang Diperbaiki</td>
-							    <td><a href="File/File.docx">File.dox</a></h1></td>
-							    <td>PT.Bangun Tbk</td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
-							
+								<?php
+								$sql = "SELECT sites_id, sites_nama, comcase_tanggal, comcase_keterangan, comcase_status, comcase_solusi, comcase_file, comcase_mitra FROM site";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) 
+								{
+								    echo "<table>
+								    		<tr>
+											  	<th>Site ID</th>
+												<th>Site Name</th>
+												<th>Tanggal</th>
+												<th>Keterangan</th>
+												<th>Status</th>
+												<th>Solusi</th>
+												<th>File</th>
+												<th>Mitra</th>
+								    		</tr>";
+								    // output data of each row
+								    while($row = $result->fetch_assoc())
+								    {
+										$file=$row["comcase_file"]; 
+										$loc="File/".$file;
+
+								        echo "
+								        <tr>
+									        <td>".$row["sites_id"]."</td>
+									        <td>".$row["sites_nama"]."</td>
+									        <td>".$row["comcase_tanggal"]."</td>
+									        <td>".$row["comcase_keterangan"]."</td>
+									        <td>".$row["comcase_status"]."</td>
+									        <td>".$row["comcase_solusi"]."</td>
+									        <td><a href=".$loc.">".$file."</a></h1></td>
+									        
+									        <td>".$row["comcase_mitra"]."</td>
+								        </tr>";
+								    } 
+
+								    echo "</table>";
+								}
+								else 
+								{
+								    //echo "0 results";
+								}
+								$conn->close();
+								?>
 						</div>
 						
 					</div>
