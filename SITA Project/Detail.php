@@ -289,153 +289,106 @@
 					<div id="HO" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Start Tahun HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Daftar Ulang HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Start HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Finish HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ho_nomor,
+									ho_daftar_ulang,
+									ho_start,
+									ho_finish,
+									ho_status
+									FROM ho
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+
+								echo "
+								<tr><th>Nomor HO</th><td>" . $row["ho_nomor"]."</td></tr>
+								<tr><th>Daftar Ulang HO</th><td>" .$row["ho_daftar_ulang"]."</td></tr> 
+								<tr><th>Tanggal Start HO</th><td>" .$row["ho_start"]."</td></tr>
+								<tr><th>Tanggal Finish HO</th><td>" .$row["ho_finish"]."</td></tr>
+								<tr><th>Status HO</th><td>" .$row["ho_status"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="ID PEMILIK LAHAN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>KTP PemilikNomor HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Kartu Keluarga PemilikStart Tahun HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Pemilik LahanDaftar Ulang HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Orang Yang Di KuasakanTanggal Start HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Alamat PemilikTanggal Finish HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>TeleponStatus HO</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>HP</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>E-mail</th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Persetujuan Keluarga</th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									identitas_pemilik_ktp,
+									identitas_pemilik_kk,
+									identitas_pemilik_lahan,
+									identitas_pemilik_kuasa,
+									identitas_pemilik_alamat,
+									identitas_pemilik_telepon,
+									identitas_pemilik_hp,
+									identitas_pemilik_email,
+									identitas_pemilik_sp_keluarga
+									FROM identitas_pemilik
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>KTP Pemilik</th><td>" . $row["identitas_pemilik_ktp"]."</td></tr>
+								<tr><th>Kartu Keluarga Pemilik</th><td>" .$row["identitas_pemilik_kk"]."</td></tr> 
+								<tr><th>Pemilik Lahan</th><td>" .$row["identitas_pemilik_lahan"]."</td></tr>
+								<tr><th>Orang yang dikuasakan</th><td>" .$row["identitas_pemilik_kuasa"]."</td></tr>
+								<tr><th>Alamat Pemilik</th><td>" .$row["identitas_pemilik_alamat"]."</td></tr>
+								<tr><th>Telepon</th><td>" .$row["identitas_pemilik_telepon"]."</td></tr> 
+								<tr><th>No. HP</th><td>" .$row["identitas_pemilik_hp"]."</td></tr>
+								<tr><th>E-mail</th><td>" .$row["identitas_pemilik_email"]."</td></tr>
+								<tr><th>Surat Persetujuan Keluarga</th><td>" .$row["identitas_pemilik_sp_keluarga"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="SURAT PERNYATAAN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Surat Pernyataan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Ahli Waris</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Janda</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Kepemilikan Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Pelepasan Hak</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Pembayaran</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Penguasaan Fisik Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Peralihan Atas Pekarangan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Persetujuan Kepala Desa</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Tanah Pemohon</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Tidak Keberatan Jalan Pribadi</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Pernyataan Tidak Keberatan Jalan Umum</ th>
-								<td>: No Database </td>
-								</tr> 
+							<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									sp,
+									sp_ahli_waris,
+									sp_janda,
+									sp_kepemilikan_tanah,
+									sp_pelepasan_hak,
+									sp_pembayaran,
+									sp_penguasaan_fisik_tanah,
+									sp_peralihan_atas_pekarangan,
+									sp_persetujuan_kepala_desa,
+									sp_tanah_pemohon,
+									sp_tidak_keberatan_jalan_pribadi,
+									sp_tidak_keberatan_jalan_umum
+									FROM identitas_pemilik
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+									<tr><th>Surat Pernyataan</th><td>" . $row["sp"]."</td></tr>
+									<tr><th>Surat Pernyataan Ahli Waris</th><td>" .$row["sp_ahli_waris"]."</td></tr> 
+									<tr><th>Surat Pernyataan Janda</th><td>" .$row["sp_janda"]."</td></tr>
+									<tr><th>Surat Pernyataan Kepemilikan Tanah</th><td>" .$row["sp_kepemilikan_tanah"]."</td></tr>
+									<tr><th>Surat Pernyataan Pelepasan Hak</th><td>" .$row["sp_pelepasan_hak"]."</td></tr>
+									<tr><th>Surat Pernyataan Pembayaran</th><td>" .$row["sp_pembayaran"]."</td></tr> 
+									<tr><th>Surat Pernyataan Penguasaan Fisik Tanah</th><td>" .$row["sp_penguasaan_fisik_tanah"]."</td></tr>
+									<tr><th>Surat Pernyataan Peralihan Atas Pekarangan</th><td>" .$row["sp_peralihan_atas_pekarangan"]."</td></tr>
+									<tr><th>Surat Pernyataan Persetujuan Kepala Desa</th><td>" .$row["sp_persetujuan_kepala_desa"]."</td></tr>
+									<tr><th>Surat Pernyataan Tanah Pemohon</th><td>" .$row["sp_tanah_pemohon"]."</td></tr>
+									<tr><th>Surat Pernyataan Tidak Keberatan Jalan Pribadi</th><td>" .$row["sp_tidak_keberatan_jalan_pribadi"]."</td></tr>
+									<tr><th>Surat Pernyataan Tidak Keberatan Jalan Umum</th><td>" .$row["sp_tidak_keberatan_jalan_umum"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
