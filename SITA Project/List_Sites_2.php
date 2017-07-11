@@ -131,7 +131,7 @@
 				</div>
 
 				<div class="body">
-					<h1>List Sites</h1>
+					<h1>List User</h1>
 					<br>
 					<div class="line-separator"></div>
 								<?php
@@ -160,8 +160,8 @@
 									        <td>".$row["sites_kota_kabupaten"]."</td>
 									        <td>".$row["sites_alamat"]."</td>
 									        <td>".$row["sites_remark"]."</td>
-									        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
-									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]'\">Delete</button>
+									        <td><button onclick= \"location.href='Edit_Sites.php?nik=$row[nik]'\">Edit</button>
+									        	<button onclick= \"location.href='Delete_Sites.php?nik=$row[nik]'\">Delete</button>
 								        </tr>";
 								    } 
 

@@ -614,6 +614,6 @@
 	}
 	else {
 		echo "success";
-		header("Location: List_User.php");
+		header("Location: List_Sites.php");
 	}
 ?>
