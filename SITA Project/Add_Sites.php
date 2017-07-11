@@ -655,7 +655,7 @@
 											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="Status" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status_PBB" size="50">
 										</p>
 										<p>
 											<label for="a">NJOP Tanah :</label> <input type="text" name="NJOP_Tanah" size="50">
@@ -688,7 +688,7 @@
 											<label for="a">Koefisien SKRD :</label> <input type="text" name="Koef_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="Status" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status_SKRD" size="50">
 										</p>
 										<p>
 											<label for="a">Surat SKRD :</label> <input type="file" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
@@ -823,10 +823,10 @@
 									<h2>Informasi Ijin Genset</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor :</label> <input type="text" name="Nomor" size="50">
+											<label for="a">Nomor :</label> <input type="text" name="Nomor_Genset" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="Status" size="50">
+											<label for="a">Status :</label> <input type="text" name="Status_Genset" size="50">
 										</p>
 										<p>
 											<label for="a">Tanggal Start :</label> <input type="date" id="Tanggal_Start" name="Tanggal_Start" >

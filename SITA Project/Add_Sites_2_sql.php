@@ -319,10 +319,12 @@
 		akta_warisan,
 		akta_pemisahan,
 		akta_nikah,
+
 		ijin_ppt,
 		ijin_warga,
 		ijin_ukl_upl,
 		ijin_sertifikat_tanah,
+
 		sket_akses_lahan_jalan,
 		sket_asal_tanah,
 		sket_beda_luas_tanah,
@@ -371,10 +373,12 @@
 		'$Akta_Warisan',
 		'$Akta_Pemisahan',
 		'$Akta_Nikah',
+
 		'$Ijin_Perubahan_Pengguna_Tanah',
 		'$Ijin_Warga',
 		'$Ijin_UKL_UPL',
 		'$Ijin_Sertifikat_Tanah',
+
 		'$SK_Akses_Lahan_Jalan',
 		'$SK_Asal_Tanah',
 		'$SK_Beda_Luas_Tanah',
@@ -389,6 +393,7 @@
 		'$SK_Tanah',
 		'$SK_Tidak_Sengketa',
 		'$SK_Tidak_Keberatan_Didirikan',
+
 		'$Surat_Kuasa',
 		'$Surat_Kuasa_Pengambilan_Jaminan_Asli',
 		'$Surat_Jaminan_Hukum',
@@ -415,7 +420,7 @@
 		'$NJOP_Tanah',
 		'$NJOP_Bangunan',
 		'$Surat_PBB' 
-		);
+		)
 
 		INSERT INTO skrd_rpm (
 		no_skrd,
@@ -451,7 +456,7 @@
 		'$Tanggal_Akhir_IMB',
 		'$Status_Kepengurusan_IMB',
 		'$Status_IMB'
-		);
+		)
 
 		INSERT INTO imtu (
 		ijin_imtu_nomor,
