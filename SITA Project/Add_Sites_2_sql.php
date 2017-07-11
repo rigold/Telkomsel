@@ -223,6 +223,24 @@
 		sites_tanggal_finish,
 		sites_harga_tahun,
 		sites_remark,
+
+		perpanjangan_pagu
+		perpanjangan_pic
+		perpanjangan_spph
+		perpanjangan_vendor_list
+		perpanjangan_invoice
+		bak_nomor
+		bak_tanggal
+		bak_harga
+		bak_status
+		comcase_tanggal
+		comcase_keterangan
+		comcase_status
+		comcase_solusi
+		comcase_file
+		comcase_mitra
+
+
 		
 		)
 		VALUES(
@@ -301,7 +319,7 @@
 		akta_warisan,
 		akta_pemisahan,
 		akta_nikah,
-		ijin_perubahan_pengguna_tanah,
+		ijin_ppt,
 		ijin_warga,
 		ijin_ukl_upl,
 		ijin_sertifikat_tanah,
@@ -386,7 +404,7 @@
 		status,
 		njop_tanah,
 		njop_bangunan,
-		sket_pelunasan_pbb
+		surat_pbb
 		)
 		VALUES(
 		'$Nomor_Objek_Pajak',
@@ -469,9 +487,9 @@
 		);
 
 		INSERT INTO ipb (
-		Ijin_IPB_Nomor,
-		Ijin_IPB_Start,
-		Ijin_IPB_Finish
+		ijin_ipb_nomor,
+		ijin_ipb_start,
+		ijin_ipb_finish
 		)
 		VALUES(
 		'$Ijin_IPB_Nomor',
@@ -503,7 +521,7 @@
 		'$Tanggal_Finish'
 		);
 		
-		INSERT INTO comcase (
+		INSERT INTO site (
 		comcase_tanggal,
 		comcase_keterangan,
 		comcase_status,

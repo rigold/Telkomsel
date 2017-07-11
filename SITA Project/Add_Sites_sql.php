@@ -22,10 +22,13 @@
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file);
 	$Sketsa_Batas_Lahan="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
 
+	$target_file = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
+	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file);
+	$Comcase_File="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
 
-	$Surat_PBB="asd";
-	$Surat_SKRD="asd";
-	$Comcase_File="asd";
+	//$Surat_PBB="asd";
+	//$Surat_SKRD="asd";
+	//$Comcase_File="asd";
 
 //sites	
 	$Site_ID=$_POST['Site_ID']; 
@@ -50,8 +53,6 @@
 	$Shelter_Size=$_POST['Shelter_Size']; 
 	$Luas_Lahan=$_POST['Luas_Lahan']; 
 	$Luas_Jalan_Akses=$_POST['Luas_Jalan_Akses']; 
-	 
-	
 	$Tanggal_Mulai_Sewa=$_POST['Tanggal_Mulai_Sewa']; 
 	$Tanggal_Akhir_Sewa=$_POST['Tanggal_Akhir_Sewa']; 
 	$Harga_Per_Tahun=$_POST['Harga_Per_Tahun']; 
@@ -200,7 +201,6 @@
 	$Comcase_Keterangan=$_POST['Comcase_Keterangan']; 
 	$Comcase_Status=$_POST['Comcase_Status']; 
 	$Comcase_Solusi=$_POST['Comcase_Solusi']; 
-	
 	$Comcase_Mitra=$_POST['Comcase_Mitra']; 
 
 //perintah post
@@ -235,7 +235,22 @@
 		sites_tanggal_start,
 		sites_tanggal_finish,
 		sites_harga_per_tahun,
-		sites_remark
+		sites_remark,
+		perpanjangan_pagu,
+		perpanjangan_pic,
+		perpanjangan_spph,
+		perpanjangan_vendor_list,
+		perpanjangan_invoice,
+		bak_nomor,
+		bak_tanggal,
+		bak_harga,
+		bak_status,
+		comcase_tanggal,
+		comcase_keterangan,
+		comcase_status,
+		comcase_solusi,
+		comcase_file,
+		comcase_mitra
 		)
 		VALUES(
 		'$Site_ID',
@@ -266,7 +281,39 @@
 		'$Tanggal_Mulai_Sewa',
 		'$Tanggal_Akhir_Sewa',
 		'$Harga_Per_Tahun',
-		'$Remark'
+		'$Remark',
+		'$Pagu',
+		'$PIC',
+		'$SPPH',
+		'$Vendor_List',
+		'$Invoice',
+		'$Nomor_BAK',
+		'$Tanggal_BAK',
+		'$Harga_BAK',
+		'$Status',
+		'$Comcase_Tanggal',
+		'$Comcase_Keterangan ',
+		'$Comcase_Status',
+		'$Comcase_Solusi',
+		'$Comcase_File',
+		'$Comcase_Mitra'
+		)
+		");
+
+		mysqli_query($conn,"
+		INSERT INTO ho(
+		ho_nomor,
+		ho_daftar_ulang,
+		ho_start,
+		ho_finish,
+		ho_status
+		)
+		VALUES(
+		'$Nomor_HO',
+		'$Daftar_Ulang_HO',
+		'$Tanggal_Start_HO',
+		'$Tanggal_Finish_HO',
+		'$Status_HO' 
 		)
 		");
 
