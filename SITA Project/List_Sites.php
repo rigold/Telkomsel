@@ -134,7 +134,7 @@
 					<div class="line-separator"></div>
 								<?php
 
-								$sql = "SELECT sites_id, sites_nama, sites_kota_kabupaten, sites_alamat, sites_remark FROM site";
+								$sql = "SELECT sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";
 								$result = $conn->query($sql);
 								
 								if ($result->num_rows > 0) 
@@ -145,7 +145,6 @@
 								    	<th>Nama Site</th>
 								    	<th>Kota/Kab</th>
 								    	<th>Alamat</th>
-								    	<th>Remark</th>
 								    	<th>Action</th>
 								    </tr>";
 								    // output data of each row
@@ -157,7 +156,6 @@
 									        <td>".$row["sites_nama"]."</td>
 									        <td>".$row["sites_kota_kabupaten"]."</td>
 									        <td>".$row["sites_alamat"]."</td>
-									        <td>".$row["sites_remark"]."</td>
 									        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
 									        	<button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button>
 									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]'\">Delete</button>
