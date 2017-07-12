@@ -141,7 +141,7 @@
 							</form1>
 
 								<?php
-								$sql = "SELECT sites_id, sites_nama, sites_alamat FROM site";
+								$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, imb.imb_nomor, imb.imb_finish, DATEDIFF(imb.imb_finish, imb.imb_start) as datediff, imb.imb_status FROM site, imb WHERE site.sites_id = imb.sites_id";
 								$result = $conn->query($sql);
 								
 								if ($result->num_rows > 0) 
@@ -152,27 +152,24 @@
 												<th>Site Name</th>
 												<th>Alamat</th>
 												<th>Nomor IMB</th>
-												<th>Masa Berlaku</th>
 												<th>Tanggal Akhir</th>
+												<th>Masa Berlaku</th>
 												<th>Status IMB</th>
 												<th>Action</th>
 								    		</tr>";
 								    // output data of each row
 								    while($row = $result->fetch_assoc())
 								    {
-										$file=$row["comcase_file"]; 
-										$loc="File/".$file;
-
 								        echo "
 								        <tr>
 									        <td>".$row["sites_id"]."</td>
 									        <td>".$row["sites_nama"]."</td>
-									        <td>".$row["comcase_tanggal"]."</td>
-									        <td>".$row["comcase_keterangan"]."</td>
-									        <td>".$row["comcase_status"]."</td>
-									        <td>".$row["comcase_solusi"]."</td>
-									        <td><a href=".$loc.">".$file."</a></h1></td>
-									        <td>".$row["comcase_mitra"]."</td>
+									        <td>".$row["sites_alamat"]."</td>
+									        <td>".$row["imb_nomor"]."</td>
+									        <td>".$row["imb_finish"]."</td>
+									        <td>".$row["datediff"]."</td>
+									        <td>".$row["imb_status"]."</td>
+									        <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
 								        </tr>";
 								    } 
 
@@ -184,19 +181,6 @@
 								}
 								$conn->close();
 								?>	
-
-							<table>
-							  <tr>
-							  	<th>Site ID</th>
-								<th>Site Name</th>
-								<th>Alamat</th>
-								<th>Nomor IMB</th>
-								<th>Masa Berlaku</th>
-								<th>Tanggal Akhir</th>
-								<th>Status IMB</th>
-								<th>Action</th>
-
-							  </tr>
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
