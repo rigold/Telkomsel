@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+9<!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
@@ -103,14 +103,11 @@
 						<p>
 							<a href="Add_User.php">> ADD USER<br></a>
 							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
-							<a href="Edit_User.php"><br>> EDIT USER<br></a>
-							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
 							<a href="List_User.php"><br>> LIST USER<br></a>
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
-					
-					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
+					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
 					<h1>Formulir Input Site</h1>
@@ -599,6 +596,9 @@
 									<h2>Surat Lain</h2>
 									<a id="detail">
 										<p>
+											<label for="a">Surat Ijin PKS :</label> <input type="text" name="Surat_Ijin_PKS" size="50">
+										</p>
+										<p>
 											<label for="a">Surat Kuasa :</label>   
 											<select name="Surat_Kuasa">
 											    <option value="Ada">Ada</option>
@@ -615,13 +615,6 @@
 										<p>
 											<label for="a">Surat Kuasa Jaminan Hukum :</label>   
 											<select name="Surat_Jaminan_Hukum">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Ijin PKS :</label>   
-											<select name="Surat_Ijin_PKS">
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>

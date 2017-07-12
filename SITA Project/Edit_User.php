@@ -119,14 +119,12 @@
 						<p>
 							<a href="Add_User.php">> ADD USER<br></a>
 							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
-							<a href="Edit_User.php"><br>> EDIT USER<br></a>
-							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
 							<a href="List_User.php"><br>> LIST USER<br></a>
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
 					
-					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
+					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 
 				<div class="body">
