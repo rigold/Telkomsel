@@ -139,48 +139,46 @@
 							</form1>
 
 								<?php
-								$sql = "SELECT sites_id, sites_nama, sites_alamat, sites_kota_kabupaten, perpanjangan_pagu, sites_tanggal_start, sites_tanggal_finish, perpanjangan_invoice, AVG(perpanjangan_pagu) as avg_pagu FROM site";
-								$result = $conn->query($sql);
-								
-								if ($result->num_rows > 0) 
-								{
-								    echo "<table>
-								    		<tr>
-											  	<th>Site ID</th>
-												<th>Site Name</th>
-												<th>Alamat</th>
-												<th>Kab.Kota</th>
-												<th>Pagu</th>
-												<th>Harga Rata Rata</th>
-												<th>Awal Kontrak</th>
-												<th>Akhir Kontrak</th>
-												<th>Invoice</th>
-								    		</tr>";
-								    // output data of each row
+									$sql = "SELECT sites_id, sites_nama, sites_alamat, sites_kota_kabupaten, perpanjangan_pagu, sites_tanggal_start, sites_tanggal_finish, perpanjangan_invoice, (SELECT AVG(perpanjangan_pagu) FROM site) AS 'AVG_pagu' FROM site";
+									$result = $conn->query($sql);
+									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									if ($result->num_rows > 0) {
+									    echo "<table>
+									        <tr>
+									                        <th>Site ID</th>
+									                        <th>Site Name</th>
+									                        <th>Alamat</th>
+									                        <th>Kab.Kota</th>
+									                        <th>Pagu</th>
+									                        <th>Harga Rata Rata</th>
+									                        <th>Awal Kontrak</th>
+									                        <th>Akhir Kontrak</th>
+									                        <th>Invoice</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									                    <td>" . $row["sites_id"] . "</td>
+									                    <td>" . $row["sites_nama"] . "</td>
+									                    <td>" . $row["sites_alamat"] . "</td>
+									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["perpanjangan_pagu"] . "</td>
+									                    <td>" . $row["AVG_pagu"] . "</td>
+									                    <td>" . $row["sites_tanggal_start"] . "</td>
+									                    <td>" . $row["sites_tanggal_finish"] . "</td>
+									                    <td>" . $row["perpanjangan_invoice"] . "</td>
+									            </tr>";
+									    }
 
-								    while($row = $result->fetch_assoc())
-								    {
-
-								        echo "
-								        <tr>
-									        <td>".$row["sites_id"]."</td>
-									        <td>".$row["sites_nama"]."</td>
-									        <td>".$row["sites_alamat"]."</td>
-									        <td>".$row["sites_kota_kabupaten"]."</td>
-									        <td>".$row["perpanjangan_pagu"]."</td>
-									        <td>".$row["avg_pagu"]."</td>
-									        <td>".$row["sites_tanggal_start"]."</td>
-									        <td>".$row["sites_tanggal_finish"]."</td>
-									        <td>".$row["perpanjangan_invoice"]."</td>
-								        </tr>";
-								    } 
-								    echo "</table>";
-								}
-								else 
-								{
-								    //echo "0 results";
-								}
-								$conn->close();
+									    echo "</table>";
+									}
+									else {
+									    echo "No records found!";
+									}
+									$conn->close();
 								?>
 						</div>
 						
