@@ -145,16 +145,14 @@
 								    {
 								    	$image=$row["link_profile_pic"]; 
 										$img="upload/".$image;
-									    //echo '<img src= "'.$img.'" width="100" height="100" />';
-									    //echo '<br>';
 								        echo "
 								        <tr>
-								        	<td><img src= ".$img." width='100' height='100' /></td>
+								        	<td><img src= ".$img." max-width='100px' max-height='100px' /></td>
 									        <td>".$row["nama_user"]."</td>
 									        <td>".$row["jabatan"]."</td><td>".$row["nik"]."</td>
 									        <td>".$row["password"]."</td>
 									        <td><button onclick= \"location.href='Edit_User.php?nik=$row[nik]'\">Edit</button>
-									        	<button onclick= \"location.href='Delete_User.php?nik=$row[nik]'\">Delete</button>
+									        	<button onclick= \"location.href='Delete_User.php?nik=$row[nik]&img=$img'\">Delete</button>
 								        </tr>";
 								    } 
 
