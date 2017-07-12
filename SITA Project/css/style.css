@@ -349,6 +349,21 @@ body{
     position: absolute;
     //overflow: auto;
 }
+.body img
+{
+    max-width: 150px;
+    max-height: 150px;
+    //margin-left: 19%;
+}
+
+//.body td
+{
+    //border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    width: 200px;
+}
+s
 .body ul#navigation{
 	padding: 0;
 	margin: 0;
@@ -1144,7 +1159,7 @@ table {
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
     width: 200px;
 }
