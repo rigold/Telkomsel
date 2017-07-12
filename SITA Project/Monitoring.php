@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -127,174 +140,56 @@
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
 							</form1>
-							<table>
-							  <tr>
-							  	<th>No.</th>
-							  	<th>Site ID</th>
-								<th>Site Name</th>
-								<th>PIC</th>
-								<th>SPPH</th>
-								<th>BAK</th>
-								<th>Harga Total BAK</th>
-								<th>PKS</th>
-								<th>Vendor List</th>
-								<th>Invoice</th>
-								<th>Paid</th>
-								<th>To_Date</th>
-								<th>Status</th>
-							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>SBY123</td>
-							    <td>Surabaya X</td>
-							    <td>Johnson</td>
-							    <td>1/s</td>
-							    <td>1/b</td>
-							    <td>1.000.000</td>
-							    <td>-</td>
-							    <td>PT.Bangun</td>
-							    <td>Ada</td>
-							    <td>Tidak Lunas</td>
-							    <td>1/1/2017</td>
-							    <td>Habis</td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
-							
+
+								<?php
+								$sql = "SELECT site.sites_id, site.sites_nama, site.perpanjangan_pic, site.perpanjangan_spph, site.bak_nomor, site.bak_harga, site.perpanjangan_vendor_list, site.perpanjangan_invoice, site.sites_tanggal_start, DATEDIFF(CURRENT_DATE(), site.sites_tanggal_start) as datediff, site.sites_status_lahan, identitas_pemilik.sl_pks FROM site, identitas_pemilik WHERE site.sites_id = identitas_pemilik.sites_id";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) 
+								{
+								    echo "<table>
+								    		<tr>
+											  	<th>Site ID</th>
+												<th>Site Name</th>
+												<th>PIC</th>
+												<th>SPPH</th>
+												<th>BAK</th>
+												<th>Harga Total BAK</th>
+												<th>PKS</th>
+												<th>Vendor List</th>
+												<th>Invoice</th>
+												<th>Paid</th>
+												<th>To_Date</th>
+												<th>Status</th>
+								    		</tr>";
+								    // output data of each row
+								    while($row = $result->fetch_assoc())
+								    {
+								        echo "
+								        <tr>
+									        <td>".$row["sites_id"]."</td>
+									        <td>".$row["sites_nama"]."</td>
+									        <td>".$row["perpanjangan_pic"]."</td>
+									        <td>".$row["perpanjangan_spph"]."</td>
+									        <td>".$row["bak_nomor"]."</td>
+									        <td>".$row["bak_harga"]."</td>
+									        <td>".$row["sl_pks"]."</td>
+									        <td>".$row["perpanjangan_vendor_list"]."</td>
+									        <td>".$row["perpanjangan_invoice"]."</td>
+									        <td>".$row["sites_tanggal_start"]."</td>
+									        <td>".$row["datediff"]."</td>
+									        <td>".$row["sites_status_lahan"]."</td>
+								        </tr>";
+								    } 
+
+								    echo "</table>";
+								}
+								else 
+								{
+								    //echo "0 results";
+								}
+								$conn->close();
+								?>
 						</div>
 						
 					</div>
