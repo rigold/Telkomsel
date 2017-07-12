@@ -113,14 +113,12 @@
 						<p>
 							<a href="Add_User.php">> ADD USER<br></a>
 							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
-							<a href="Edit_User.php"><br>> EDIT USER<br></a>
-							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
 							<a href="List_User.php"><br>> LIST USER<br></a>
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
 					
-					<p><br><br>&#169; Copyright 2017. Created by R.I.KE.N</p>
+					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
 					<h1>DETAIL SITE</h1>
@@ -142,7 +140,7 @@
 						<button class="tablinks" onclick="openTabs(event, 'IMB')">IMB</button>
 						<button class="tablinks" onclick="openTabs(event, 'IMTU')">IMTU</button>
 						<button class="tablinks" onclick="openTabs(event, 'IJIN DEPHUB/KOMINFO')">IJIN DEPHUB/KOMINFO</button>
-						<button class="tablinks" onclick="openTabs(event, 'IPPT')">IPPT</button>
+						<button class="tablinks" onclick="openTabs(event, 'IPPT')">IPTT</button>
 						<button class="tablinks" onclick="openTabs(event, 'IPB')">IPB</button>
 						<button class="tablinks" onclick="openTabs(event, 'IJIN PRINSIP')">IJIN PRINSIP</button>
 						<button class="tablinks" onclick="openTabs(event, 'IJIN GENSET')">IJIN GENSET</button>
@@ -395,423 +393,376 @@
 					<div id="AKTA" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Akta Hibah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Akta Jual Beli Sewa</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Akta Hak Bersama</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Akta Warisan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Akta Pemisahan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Akta Nikah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									akta_hibah,
+									akta_jualbeli_sewa,
+									akta_hak_bersama,
+									akta_warisan,
+									akta_pemisahan,
+									akta_nikah
+									FROM identitas_pemilik
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+
+								echo "
+								<tr><th>Akta Hibah</th><td>" . $row["akta_hibah"]."</td></tr> 
+								<tr><th>Akta Jual Beli Sewa</th><td>" .$row["akta_jualbeli_sewa"]."</td></tr> 
+								<tr><th>Akta Hak Bersama</th><td>" .$row["akta_hak_bersama"]."</td></tr> 
+								<tr><th>Akta Warisan</th><td>" .$row["akta_warisan"]."</td></tr> 
+								<tr><th>Akta Pemisahan</th><td>" .$row["akta_pemisahan"]."</td></tr>
+								<tr><th>Akta Nikah</th><td>" .$row["akta_nikah"]."</td></tr> 
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="IJIN LAIN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Ijin Perubahan Pengguna Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Ijin Warga</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Ijin UKL UPL</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Ijin Sertifikat Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_ippt,
+									ijin_warga,
+									ijin_ukl_upl,
+									ijin_sertifikat_tanah
+									FROM identitas_pemilik
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Ijin Perubahan Pengguna Tanah</th><td>" . $row["ijin_ippt"]."</td></tr> 
+								<tr><th>Ijin Warga</th><td>" .$row["ijin_warga"]."</td></tr> 
+								<tr><th>Ijin UKL UPL</th><td>" .$row["ijin_ukl_upl"]."</td></tr> 
+								<tr><th>Ijin Sertifikat Tanah</th><td>" .$row["ijin_sertifikat_tanah"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="SURAT KETERANGAN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Surat Keterangan Akses Lahan Jalan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Asal Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Beda Luas Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Beda Nama</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Fatwa Waris</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Kematian</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Penduduk</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Permohonan IMB, HO, &IP</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Persetujuan Sewa Lahan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Riwayat Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Suami Istri</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Tidak Sengketa</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Keterangan Tidak Keberatan Didirikan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									sket_akses_lahan_jalan,
+									sket_asal_tanah,
+									sket_beda_luas_tanah,
+									sket_beda_nama,
+									sket_fatwa_waris,
+									sket_kematian,
+									sket_penduduk,
+									sket_permohonan_imb_ho_ip,
+									sket_persetujuan_sewa_lahan,
+									sket_riwayat_tanah,
+									sket_suami_istri,
+									sket_tanah,
+									sket_tidak_sengketa,
+									sket_keberatan
+									FROM identitas_pemilik
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+
+								echo "
+								<tr><th>Surat Keterangan Akses Lahan Jalan</th><td>" . $row["sket_akses_lahan_jalan"]."</td></tr> 
+								<tr><th>Surat Keterangan Asal Tanah</th><td>" .$row["sket_asal_tanah"]."</td></tr> 
+								<tr><th>Surat Keterangan Beda Luas Tanah</th><td>" .$row["sket_beda_luas_tanah"]."</td></tr> 
+								<tr><th>Surat Keterangan Beda Nama</th><td>" .$row["sket_beda_nama"]."</td></tr>
+								<tr><th>Surat Keterangan Fatwa Waris</th><td>" . $row["sket_fatwa_waris"]."</td></tr> 
+								<tr><th>Surat Keterangan Kematian</th><td>" .$row["sket_kematian"]."</td></tr> 
+								<tr><th>Surat Keterangan Penduduk</th><td>" .$row["sket_penduduk"]."</td></tr> 
+								<tr><th>Surat Keterangan Permohonan IMB, HO, &IP</th><td>" .$row["sket_permohonan_imb_ho_ip"]."</td></tr>
+								<tr><th>Surat Keterangan Persetujuan Sewa Lahan</th><td>" . $row["sket_persetujuan_sewa_lahan"]."</td></tr> 
+								<tr><th>Surat Keterangan Riwayat Tanah</th><td>" .$row["sket_riwayat_tanah"]."</td></tr> 
+								<tr><th>Surat Keterangan Suami Istri</th><td>" .$row["sket_suami_istri"]."</td></tr> 
+								<tr><th>Surat Keterangan Tanah</th><td>" .$row["sket_tanah"]."</td></tr>
+								<tr><th>Surat Keterangan Tidak Sengketa</th><td>" .$row["sket_tidak_sengketa"]."</td></tr> 
+								<tr><th>Surat Keterangan Tidak Keberatan Didirikan</th><td>" .$row["sket_keberatan"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="SURAT LAIN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Surat Kuasa</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Kuasa Pengambilan Jaminan Asli</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Jaminan Hukum</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Ijin PKS</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat Perjanjian Sewa Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									sl_sk,
+									sl_sk_pengambilan_jaminan_asli,
+									sl_surat_jaminan_hukum,
+									sl_pks,
+									sl_surat_perjanjian_sewa_tanah
+									FROM identitas_pemilik
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Surat Kuasa</th><td>" . $row["sl_sk"]."</td></tr> 
+								<tr><th>Surat Kuasa Pengambilan Jaminan Asli</th><td>" .$row["sl_sk_pengambilan_jaminan_asli"]."</td></tr> 
+								<tr><th>Surat Jaminan Hukum</th><td>" .$row["sl_surat_jaminan_hukum"]."</td></tr> 
+								<tr><th>Surat Ijin PKS</th><td>" .$row["sl_pks"]."</td></tr>
+								<tr><th>Surat Perjanjian Sewa Tanah</th><td>" .$row["sl_surat_perjanjian_sewa_tanah"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="PBB" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor Objek Pajak</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Nilai PBB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Mulai</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Jatuh Tempo</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>NJOP Tanah</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>NJOP Bangunan</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat PBB</ th>
-								<td>: No Database </td>
-								</tr> 
+							<?php
+							$sites_id = $_GET['sites_id'];
+							$sql = "SELECT
+								nop,
+								nilai_pbb_site,
+								tanggal_mulai,
+								tanggal_jatuh_tempo,
+								status,
+								njop_tanah,
+								njop_bangunan,
+								surat_pbb
+								FROM pbb
+								WHERE sites_id=$sites_id
+								";
+							$result = $conn->query($sql);
+							$row = $result->fetch_assoc();
+							$a=$row["surat_pbb"]; 
+							$aloc="File/".$a;
 
+							echo "
+							<tr><th>Nomor Objek Pajak</th><td>" .$row["nop"]."</td></tr> 
+							<tr><th>Nilai PBB</th><td>" .$row["nilai_pbb_site"]."</td></tr> 
+							<tr><th>Tanggal Mulai</th><td>" .$row["tanggal_mulai"]."</td></tr> 
+							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row["tanggal_jatuh_tempo"]."</td></tr>
+							<tr><th>Status</th><td>" .$row["status"]."</td></tr>
+							<tr><th>NJOP Tanah</th><td>" .$row["njop_tanah"]."</td></tr> 
+							<tr><th>NJOP Bangunan</th><td>" .$row["njop_bangunan"]."</td></tr>
+							<tr><th>Surat PBB</th><td><a href=".$aloc.">".$a."</a></td></tr>
+							";
+							?>
 							</a>
 						</table>
 					</div>
 					<div id="RPM" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>No SKRD</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Harga SKRD</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Jatuh Tempo</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Koef SKRD</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Surat SKRD</ th>
-								<td>: No Database </td>
-								</tr> 
+							<?php
+							$sites_id = $_GET['sites_id'];
+							$sql = "SELECT
+								no_skrd,
+								harga_skrd,
+								tanggal_jatuh_tempo,
+								koef_skrd,
+								status,
+								surat_skrd
+								FROM skrd_rpm
+								WHERE sites_id=$sites_id
+								";
+							$result = $conn->query($sql);
+							$row = $result->fetch_assoc();
+							$a=$row["surat_skrd"]; 
+							$aloc="File/".$a;
 
+							echo "
+							<tr><th>No SKRD</th><td>" .$row["no_skrd"]."</td></tr> 
+							<tr><th>Harga SKRD</th><td>" .$row["harga_skrd"]."</td></tr>
+							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row["tanggal_jatuh_tempo"]."</td></tr>
+							<tr><th>Koef SKRD</th><td>" .$row["koef_skrd"]."</td></tr> 
+							<tr><th>Status</th><td>" .$row["status"]."</td></tr>
+							<tr><th>Surat SKRD</th><td><a href=".$aloc.">".$a."</a></td></tr>
+							";
+							?>
 							</a>
 						</table>
 					</div>
 					<div id="IMB" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Mitra Pengurus IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Daftar Ulang IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Awal IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status Kepengurusan IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status IMB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
+							<?php
+							$sites_id = $_GET['sites_id'];
+							$sql = "SELECT
+								imb_nomor,
+								imb_mitra_pengurus,
+								imb_daftar_ulang,
+								imb_start,
+								imb_finish,
+								imb_status_kepengurusan,
+								imb_status
+								FROM imb
+								WHERE sites_id=$sites_id
+								";
+							$result = $conn->query($sql);
+							$row = $result->fetch_assoc();
+
+							echo "
+							<tr><th>Nomor IMB</th><td>" .$row["imb_nomor"]."</td></tr> 
+							<tr><th>Mitra Pengurus IMB</th><td>" .$row["imb_mitra_pengurus"]."</td></tr> 
+							<tr><th>Daftar Ulang IMB</th><td>" .$row["imb_daftar_ulang"]."</td></tr> 
+							<tr><th>Tanggal Awal IMB</th><td>" .$row["imb_start"]."</td></tr>
+							<tr><th>Tanggal Akhir IMB</th><td>" .$row["imb_finish"]."</td></tr>
+							<tr><th>Status Kepengurusan IMB</th><td>" .$row["imb_status_kepengurusan"]."</td></tr>
+							<tr><th>Status IMB</th><td>" .$row["imb_status"]."</td></tr>
+							";
+							?>
 							</a>
 						</table>
 					</div>
 					<div id="IMTU" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor Ijin</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Awal Ijin</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir Ijin</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_imtu_nomor,
+									ijin_imtu_start,
+									ijin_imtu_finish
+									FROM imtu
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Nomor Ijin</th><td>" .$row["ijin_imtu_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal Ijin</th><td>" .$row["ijin_imtu_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin</th><td>" .$row["ijin_imtu_finish"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="IJIN DEPHUB/KOMINFO" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor Ijin</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Mulai Ijin</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir Ijin</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_dephub_nomor,
+									ijin_dephub_start,
+									ijin_dephub_finish
+									FROM ijin_dephub
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+
+								echo "
+								<tr><th>Nomor Ijin</th><td>" .$row["ijin_dephub_nomor"]."</td></tr> 
+								<tr><th>Tanggal Mulai Ijin</th><td>" .$row["ijin_dephub_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin</th><td>" .$row["ijin_dephub_finish"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="IPPT" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor Ijin Pendirian</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Awal Ijin Pendirian</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir Ijin Pendirian</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_ptt_nomor,
+									ijin_ptt_start,
+									ijin_ptt_finish
+									FROM ijin_ptt
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Nomor Ijin Pendirian</th><td>" .$row["ijin_ptt_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal Ijin Pendirian</th><td>" .$row["ijin_ptt_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin Pendirian</th><td>" .$row["ijin_ptt_finish"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="IPB" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor IPB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Awal IPB</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir IPB</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_ipb_nomor,
+									ijin_ipb_start,
+									ijin_ipb_finish
+									FROM ipb
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Nomor IPB</th><td>" .$row["ijin_ipb_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal IPB</th><td>" .$row["ijin_ipb_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir IPB</th><td>" .$row["ijin_ipb_finish"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="IJIN PRINSIP" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor Ijin Prinsip</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Awal Ijin Prinsip</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Akhir Ijin Prinsip</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_prinsip_nomor,
+									ijin_prinsip_start,
+									ijin_prinsip_finish
+									FROM ijin_prinsip
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Nomor Ijin Prinsip</th><td>" .$row["ijin_prinsip_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal Ijin Prinsip</th><td>" .$row["ijin_prinsip_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin Prinsip</th><td>" .$row["ijin_prinsip_finish"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="IJIN GENSET" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								<tr>
-								<th>Nomor</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Status</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Start</ th>
-								<td>: No Database </td>
-								</tr> 
-								 
-								<tr>
-								<th>Tanggal Finish</ th>
-								<td>: No Database </td>
-								</tr> 
+								<?php
+								$sites_id = $_GET['sites_id'];
+								$sql = "SELECT
+									ijin_genset_nomor,
+									ijin_genset_status,
+									ijin_genset_start,
+									ijin_genset_finish
+									FROM ijin_genset
+									WHERE sites_id=$sites_id
+									";
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
 
+								echo "
+								<tr><th>Nomor</th><td>" .$row["ijin_genset_nomor"]."</td></tr> 
+								<tr><th>Status</th><td>" .$row["ijin_genset_status"]."</td></tr> 
+								<tr><th>Tanggal Start</th><td>" .$row["ijin_genset_start"]."</td></tr>
+								<tr><th>Tanggal Finish</th><td>" .$row["ijin_genset_finish"]."</td></tr>
+								";
+								?>
 							</a>
 						</table>
 					</div>
