@@ -12,10 +12,5 @@ $result = mysqli_query($conn, "DELETE FROM user WHERE nik=$nik");
 $file = $_GET['img'];
 unlink($file);
 
-//deleting the row from table
-
-
- 
-//redirecting to the display page (index.php in our case)
 header("Location:List_User.php");
 ?>

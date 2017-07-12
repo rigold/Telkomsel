@@ -147,7 +147,7 @@
 										$img="upload/".$image;
 								        echo "
 								        <tr>
-								        	<td><img src= ".$img." max-width='100px' max-height='100px' /></td>
+								        	<td><img src= ".$img."  /></td>
 									        <td>".$row["nama_user"]."</td>
 									        <td>".$row["jabatan"]."</td><td>".$row["nik"]."</td>
 									        <td>".$row["password"]."</td>

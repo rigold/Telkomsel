@@ -134,7 +134,8 @@
 					<div class="line-separator"></div>
 								<?php
 
-								$sql = "SELECT sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";
+								$sql = "SELECT sites_denah_tanah,sites_peta_lrt,sites_sketsa_bt,sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";
+
 								$result = $conn->query($sql);
 								
 								if ($result->num_rows > 0) 
@@ -150,6 +151,13 @@
 								    // output data of each row
 								    while($row = $result->fetch_assoc())
 								    {
+								    	$frow1=$row["sites_denah_tanah"]; 
+										$file1="File/".$frow1;
+										$frow2=$row["sites_peta_lrt"]; 
+										$file2="File/".$frow2;
+										$frow3=$row["sites_sketsa_bt"]; 
+										$file3="File/".$frow3;
+
 								        echo "
 								        <tr>
 								        	<td>".$row["sites_id"]."</td>
@@ -158,7 +166,7 @@
 									        <td>".$row["sites_alamat"]."</td>
 									        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
 									        	<button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button>
-									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]'\">Delete</button>
+									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]&file1=$file1&file2=$file2&file3=$file3'\">Delete</button>
 								        </tr>";
 								    } 
 
