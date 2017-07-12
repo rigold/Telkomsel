@@ -187,14 +187,6 @@
 					    window.print();
 					}
 					</script>
-					<div class="pagination">
-						  <a href="#">&laquo;</a>
-						  <a class="active" href="#">1</a>
-						  <a href="Not_Found.php">2</a>
-						  <a href="Not_Found.php">3</a>
-						  <a href="Not_Found.php">&raquo;</a>
-					</div>
-				</div>
 				</div>
 			</div>
 		</div>

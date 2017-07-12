@@ -254,18 +254,11 @@
 						
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
-						<script>
-							function myFunction() {
-						    window.print();
-						}
-						</script>
-					<div class="pagination">
-						  <a href="#">&laquo;</a>
-						  <a class="active" href="#">1</a>
-						  <a href="Not_Found.php">2</a>
-						  <a href="Not_Found.php">3</a>
-						  <a href="Not_Found.php">&raquo;</a>
-					</div>
+					<script>
+						function myFunction() {
+					    window.print();
+					}
+					</script>
 				</div>
 			</div>
 		</div>
