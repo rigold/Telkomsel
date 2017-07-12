@@ -26,7 +26,6 @@
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -96,10 +95,8 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
@@ -127,7 +124,6 @@
 					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
-
 				<div class="body">
 					<h1>List Sites</h1>
 					<br>
@@ -135,8 +131,14 @@
 								<?php
 
 								$sql = "SELECT sites_denah_tanah,sites_peta_lrt,sites_sketsa_bt,sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";
+								$sql2 = "SELECT surat_pbb FROM pbb";
+								$sql3 = "SELECT surat_skrd FROM skrd_rpm";
+								$sql4 = "SELECT comcase_file FROM site";
 
 								$result = $conn->query($sql);
+								$result1 = $conn->query($sql2);
+								$result2 = $conn->query($sql3);
+								$result3 = $conn->query($sql4);
 								
 								if ($result->num_rows > 0) 
 								{
@@ -158,6 +160,17 @@
 										$frow3=$row["sites_sketsa_bt"]; 
 										$file3="File/".$frow3;
 
+										$row1 = $result1->fetch_assoc();
+										$row2 = $result2->fetch_assoc();
+										$row3 = $result3->fetch_assoc();
+
+										$frow4=$row1["surat_pbb"];
+										$file4="File/".$frow4;
+										$frow5=$row2["surat_skrd"];
+										$file5="File/".$frow5;
+										$frow6=$row3["comcase_file"];
+										$file6="File/".$frow6;
+
 								        echo "
 								        <tr>
 								        	<td>".$row["sites_id"]."</td>
@@ -166,7 +179,7 @@
 									        <td>".$row["sites_alamat"]."</td>
 									        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
 									        	<button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button>
-									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]&file1=$file1&file2=$file2&file3=$file3'\">Delete</button>
+									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]&file1=$file1&file2=$file2&file3=$file3&file4=$file4&file5=$file5&file6=$file6'\">Delete</button>
 								        </tr>";
 								    } 
 

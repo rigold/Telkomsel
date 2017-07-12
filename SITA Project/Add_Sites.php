@@ -1,4 +1,4 @@
-9<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
