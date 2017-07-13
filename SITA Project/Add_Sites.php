@@ -142,7 +142,7 @@
 									<a id="detail">
 										
 										<p>
-											<label for="a">Site ID :</label> <input type="text" name="Site_ID" size="50">
+											<label for="a">Site ID :</label> <input type="text" name="Site_ID" size="50" required pattern="{6}" title="Input hanya boleh 6 Karakter!">
 										</p>
 										<p>
 											<label for="a">Nama Site :</label> <input type="text" name="Nama_Site" size="50">
@@ -267,7 +267,7 @@
 									<h2>Berita Acara Kesepakatan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">No BAK :</label> <input type="text" name="Nomor_BAK" size="50">
+											<label for="a">No BAK :</label> <input type="text" name="Nomor_BAK" size="50" required>
 										</p>
 										<p>
 											<label for="a">Tanggal BAK :</label> <input type="date" id="Tanggal_BAK" name="Tanggal_BAK" >
@@ -288,7 +288,7 @@
 									<h2>Tabel HO</h2>
 									<a id="detail">
 										<p>
-											<label for="a">No HO :</label> <input type="text" name="Nomor_HO" size="50">
+											<label for="a">No HO :</label> <input type="text" name="Nomor_HO" size="50" required>
 										</p>
 										<p>
 											<label for="a">Daftar Ulang HO :</label> <input type="date" id="Daftar_Ulang_HO" name="Daftar_Ulang_HO" >
@@ -312,7 +312,7 @@
 									<h2>Identitas Pemilik Lahan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">KTP Pemilik :</label> <input type="text" name="KTP_Pemilik" size="50">
+											<label for="a">KTP Pemilik :</label> <input type="text" name="KTP_Pemilik" size="50" required>
 										</p>
 										<p>
 											<label for="a">Kartu Keluarga Pemilik :</label> <input type="text" name="Kartu_Keluarga_Pemilik" size="50">
@@ -636,7 +636,7 @@
 									<h2>Informasi Pajak Bumi dan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="Nomor_Objek_Pajak" size="50">
+											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="Nomor_Objek_Pajak" size="50" required>
 										</p>
 										<p>
 											<label for="a">Nilai PBB :</label> <input type="text" name="Nilai_PBB" size="50">
@@ -672,7 +672,7 @@
 									<h2>SKRD dan RPM</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor SKRD :</label> <input type="text" name="No_SKRD" size="50">
+											<label for="a">Nomor SKRD :</label> <input type="text" name="No_SKRD" size="50" required>
 										</p>
 										<p>
 											<label for="a">Nilai SKRD :</label> <input type="text" name="Harga_SKRD" size="50">
@@ -699,7 +699,7 @@
 									<h2>Informasi Ijin Mendirikan Bangunan</h2>
 									<a id="detail">										
 										<p>
-											<label for="a">Nomor IMB :</label> <input type="text" name="Nomor_IMB" size="50">
+											<label for="a">Nomor IMB :</label> <input type="text" name="Nomor_IMB" size="50" required>
 										</p>
 										<p>
 											<label for="a">Mitra Pengurusa IMB :</label> <input type="text" name="Mitra_Pengurus_IMB" size="50">
@@ -729,7 +729,7 @@
 									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50">
+											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50" required>
 										</p>
 										<p>
 											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin" name="Tanggal_Awal_Ijin" >
@@ -747,7 +747,7 @@
 									<h2>Informasi Ijin Departemen DepHub/Kominfo</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50">
+											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50" required>
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai Ijin :</label> <input type="date" id="Tanggal_Mulai_Ijin" name="Tanggal_Mulai_Ijin" >
@@ -765,7 +765,7 @@
 									<h2>Informasi Ijin Pendirian Tower Telkomsel</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="Nomor_Ijin_Pendirian" size="50">
+											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="Nomor_Ijin_Pendirian" size="50" required>
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian" name="Tanggal_Awal_Ijin_Pendirian" >
@@ -783,7 +783,7 @@
 								<h2>Informasi Ijin Penggunaan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor IPB :</label> <input type="text" name="Nomor_IPB" size="50">
+											<label for="a">Nomor IPB :</label> <input type="text" name="Nomor_IPB" size="50" required>
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_IPB" name="Tanggal_Awal_IPB" >
@@ -801,7 +801,7 @@
 									<h2>Informasi Ijin Prinsip</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="Nomor_Ijin_Prinsip" size="50">
+											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="Nomor_Ijin_Prinsip" size="50" required>
 										</p>
 										<p>
 											<label for="a">Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="Tanggal_Awal_Ijin_Prinsip" name="Tanggal_Awal_Ijin_Prinsip" >
@@ -819,7 +819,7 @@
 									<h2>Informasi Ijin Genset</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor :</label> <input type="text" name="Nomor_Genset" size="50">
+											<label for="a">Nomor :</label> <input type="text" name="Nomor_Genset" size="50" required>
 										</p>
 										<p>
 											<label for="a">Status :</label> <input type="text" name="Status_Genset" size="50">

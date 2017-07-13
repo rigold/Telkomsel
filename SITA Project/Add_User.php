@@ -114,13 +114,13 @@
 					<form action="Add_User_sql.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
-							<label>Nama User:</label> <input type="text" name="Nama" size="50">
+							<label>Nama User:</label> <input type="text" name="Nama" size="50" required>
 							</p>
 							<p>
-							<label>NIK(ID):</label> <input type="text" name="NIK" size="50">
+							<label>NIK(ID):</label> <input type="text" name="NIK" size="50" required pattern="[A-Za-z]{1,5}" title="masukkan 5">
 							</p>
 							<p>
-							<label>Password:</label> <input type="text" name="Password" size="50">
+							<label>Password:</label> <input type="text" name="Password" size="50" required>
 							</p>
 							<p>
 							<label>Jabatan:</label> <input type="text" name="Jabatan" size="50">
