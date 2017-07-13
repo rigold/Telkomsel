@@ -177,11 +177,6 @@
 									}
 									$conn->close();
 								?>
-
-							<table>
-							  <tr>
-							  	
-							  </tr>
 							
 						</div>
 						
