@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <?php
-	$con = mysqli_connect("localhost","root","","sita");
-	// Check connection
-	if (mysqli_connect_errno())
-	  {
-	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	  }
-	$nik=$_REQUEST['nik'];
+	$servername ="localhost";
+	$username = "root";
+	$password = "";
+	$database = "sita";
+	$conn = mysqli_connect($servername, $username, $password, $database);
+
+	$nik=$_GET['nik'];
 	$query = "SELECT * from user where nik='".$nik."'"; 
-	$result = mysqli_query($con, $query) or die ( mysqli_error());
+	$result = mysqli_query($conn, $query);
 	$row = mysqli_fetch_assoc($result);
 ?>
 
@@ -20,7 +20,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -96,10 +95,8 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
@@ -126,42 +123,29 @@
 					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
-
 				<div class="body">
 					<h1>Formulir Edit User</h1>
-
-					<form action="List_User.php" method="post" enctype="multipart/form-data">
+					<form action="Edit_User_sql.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
-							<label for="a">Nama User:</label> <input type="text" name="Nama" value="<?php echo $row['nama_user'];?>" size="50">
+							<label>Nama User:</label> <input type="text" name="Nama" value="<?php echo $row['nama_user'];?>" size="50">
 							</p>
 							<p>
-							<label for="b">NIK(ID):</label> <input type="text" name="NIK" value="<?php echo $row['nik'];?>" size="50">
+							<label>NIK(ID):</label> <input type="text" name="NIK" value="<?php echo $row['nik'];?>" size="50">
 							</p>
 							<p>
-							<label for="c">Password:</label> <input type="text" name="Password" value="<?php echo $row['password'];?>" size="50">
+							<label>Password:</label> <input type="text" name="Password" value="<?php echo $row['password'];?>" size="50">
 							</p>
 							<p>
-							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" value="<?php echo $row['jabatan'];?>" size="50">
+							<label>Jabatan:</label> <input type="text" name="Jabatan" value="<?php echo $row['jabatan'];?>" size="50">
 							</p>
 							<p>
-							<label for="e">Picture:</label>
+							<label>Picture:</label>
 							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 							</p>
     						<input type="submit" value="Submit" name="submit">
 						</div>
 					</form>
-					<?php
-					$status = "";
-					$nama =$_REQUEST['NAMA'];
-					$nik =$_REQUEST['NIK'];
-					$password =$_REQUEST['Password'];
-					$jabatan =$_REQUEST['Jabatan'];
-					$update="nama='".$nama."', nik='".$nik."', password='".$password."', jabatan='".$jabatan."'";
-					mysqli_query($con, $update) or die(mysqli_error());
-					$status = "<a href='List_User.php'>View Updated Record</a>";
-					echo '<p style="color:#FF0000;">'.$status.'</p>';
-					?>
 				</div>
 			</div>
 		</div>
