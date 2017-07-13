@@ -659,6 +659,9 @@
 										<p>
 											<label for="a">Surat PBB :</label> <input type="file" name="Surat_PBB" id="Surat_PBB" size="50"><br>
 										</p>
+										<p>
+											<label for="a">Koefisien PBB :</label> <input type="text" name="Koef_PBB" size="50">
+										</p>
 									</a>
 								</table>
 							</div>

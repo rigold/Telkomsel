@@ -139,7 +139,7 @@
 							</form1>
 
 								<?php
-									$sql = "SELECT sites_id, sites_nama, sites_alamat, sites_kota_kabupaten, perpanjangan_pagu, sites_tanggal_start, sites_tanggal_finish, perpanjangan_invoice, (SELECT AVG(perpanjangan_pagu) FROM site) AS 'AVG_pagu' FROM site";
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, (SELECT AVG(perpanjangan_pagu) FROM site) AS 'AVG_pagu' FROM site, daerah WHERE site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									if ($result->num_rows > 0) {
@@ -164,7 +164,7 @@
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
-									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["kota_kabupaten"] . "</td>
 									                    <td>" . $row["perpanjangan_pagu"] . "</td>
 									                    <td>" . $row["AVG_pagu"] . "</td>
 									                    <td>" . $row["sites_tanggal_start"] . "</td>

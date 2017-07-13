@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -126,131 +139,47 @@
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
 							</form1>
-							<table>
-							  <tr>
-							  	<th>No.</th>
-							  	<th>Kabupaten/Kota</th>
-								<th>Jumlah Sites</th>
-								<th>Jumlah SPPT PBB</th>
-								<th>Total Nilai PBB</th>
-								<th>Tarif PBB</th>
-								<th>Tanggal Jatuh Tempo</th>
-								<th>Status</th>
-								<th>Action</th>
-							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>Surabaya</td>
-							    <td>998</td>
-							    <td>887</td>
-							    <td>5.000.000.000</td>
-							    <td>50.000.000</td>
-							    <td>1/12/2017</td>
-							    <td>Lunas</td>
-							    <td><button type="button" onclick="location.href='Detail.php';">Detail
-									</button></td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
-							
+
+							<?php
+									$sql = "SELECT pbb.koef_pbb,pbb.status,site.sites_id, site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', pbb.tanggal_jatuh_tempo, SUM(pbb.nilai_pbb_site) AS 'jl_pbb' FROM site,pbb,daerah WHERE site.sites_id = pbb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
+									$result = $conn->query($sql);
+									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									if ($result->num_rows > 0) {
+									    echo "<table>
+									        <tr>
+									            <th>Kabupaten/Kota</th>
+												<th>Jumlah Sites</th>
+												<th>Jumlah SPPT PBB</th>
+												<th>Total Nilai PBB</th>
+												<th>Koef PBB</th>
+												<th>Tanggal Jatuh Tempo</th>
+												<th>Status</th>
+												<th>Action</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["jl_site"] . "</td>
+									                    <td>" . $row["jl_site"] . "</td>
+									                    <td>" . $row["jl_pbb"] . "</td>
+									                    <td>" . $row["koef_pbb"] . "</td>
+									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
+									                    <td>" . $row["status"] . "</td>
+									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    echo "No records found!";
+									}
+									$conn->close();
+								?>
 						</div>
 						
 					</div>

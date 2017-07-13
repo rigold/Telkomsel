@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -123,132 +136,52 @@
 								<input type="text"/>
 								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
 							</form1>
+
+								<?php
+									$sql = "SELECT site.sites_id,site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', SUM(skrd_rpm.harga_skrd) AS 'jl_rpm', skrd_rpm.koef_skrd, skrd_rpm.tanggal_jatuh_tempo, skrd_rpm.status FROM site,skrd_rpm,daerah WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
+									$result = $conn->query($sql);
+									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									if ($result->num_rows > 0) {
+									    echo "<table>
+									        <tr>
+											  	<th>Kabupaten/Kota</th>
+												<th>Jumlah Sites</th>
+												<th>Jumlah Tagihan SKRD</th>
+												<th>Total Nilai SKRD</th>
+												<th>Koef SKRD</th>
+												<th>Tanggal Jatuh Tempo</th>
+												<th>Status</th>
+												<th>Action</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["jl_site"] . "</td>
+									                    <td>" . $row["jl_site"] . "</td>
+									                    <td>" . $row["jl_rpm"] . "</td>
+									                    <td>" . $row["koef_skrd"] . "</td>
+									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
+									                    <td>" . $row["status"] . "</td>
+									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    echo "No records found!";
+									}
+									$conn->close();
+								?>
+
 							<table>
 							  <tr>
-							  	<th>No.</th>
-							  	<th>Kabupaten/Kota</th>
-								<th>Jumlah Sites</th>
-								<th>Jumlah Tagihan SKRD</th>
-								<th>Total Nilai SKRD</th>
-								<th>Koef SKRD</th>
-								<th>Tanggal Jatuh Tempo</th>
-								<th>Status</th>
-								<th>Action</th>
+							  	
 							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>Surabaya</td>
-							    <td>786</td>
-							    <td>456</td>
-							    <td>589.000.000</td>
-							    <td>0,1</td>
-							    <td>1/12/2017</td>
-							    <td>Belum Lunas</td>
-							    <td>
-							    	<button type="button" onclick="location.href='Detail.php';">Detail
-									</button>
-							    </td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
 							
 						</div>
 						

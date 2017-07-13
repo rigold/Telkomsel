@@ -154,6 +154,7 @@
 	$Status_PBB=$_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
 	$NJOP_Bangunan=$_POST['NJOP_Bangunan'];
+	$Koef_PBB=$_POST['Koef_PBB'];
 	 
 //rpm
 	$No_SKRD=$_POST['No_SKRD']; 
@@ -210,6 +211,15 @@
 	$Comcase_Mitra=$_POST['Comcase_Mitra']; 
 
 //perintah post
+
+	mysqli_query($conn,"
+		INSERT INTO daerah (
+		kota_kabupaten
+		)
+		VALUES(
+		'$Kota_Kabupaten'
+		)
+	");
 
 	mysqli_query($conn,"
 		INSERT INTO site (
@@ -456,7 +466,8 @@
 		status,
 		njop_tanah,
 		njop_bangunan,
-		surat_pbb
+		surat_pbb,
+		koef_pbb
 		)
 		VALUES(
 		'$Nomor_Objek_Pajak',
@@ -467,7 +478,8 @@
 		'$Status_PBB',
 		'$NJOP_Tanah',
 		'$NJOP_Bangunan',
-		'$Surat_PBB' 
+		'$Surat_PBB',
+		'$Koef_PBB'
 		)
 	");
 
