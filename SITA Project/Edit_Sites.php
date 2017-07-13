@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -7,7 +6,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -83,7 +81,6 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
 
@@ -92,7 +89,6 @@
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
-
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
@@ -111,10 +107,8 @@
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
-					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
-
 				<div class="body">
 					<h1>Formulir Edit Site</h1>
 					<div class="tab">
@@ -140,14 +134,12 @@
 						<button class="tablinks" onclick="openTabs(event, 'Comcase')">COMCASE</button>
 						<button class="tablinks" onclick="openTabs(event, 'Submit')">SUBMIT</button>
 					</div>
-
 					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
 						<div id="site">
 							<div id="Sites" class="tabcontent">
 								<table border="0">
 									<h2>Informasi Sites</h2>
 									<a id="detail">
-										
 										<p>
 											<label for="a">Site ID :</label> <input type="text" name="NamaSite" size="50">
 										</p>
@@ -249,7 +241,6 @@
 								<table border="0">
 									<h2>Perpanjangan</h2>
 									<a id="detail">
-										
 										<p>
 											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
 										</p>
