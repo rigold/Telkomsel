@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <?php
 	$con = mysqli_connect("localhost","root","","sita");
-	// Check connection
-	if (mysqli_connect_errno())
-	  {
-	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	  }
 	$nik=$_REQUEST['nik'];
 	$query = "SELECT * from user where nik='".$nik."'"; 
 	$result = mysqli_query($con, $query) or die ( mysqli_error());
@@ -20,7 +14,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -96,10 +89,8 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
@@ -126,18 +117,17 @@
 					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
-
 				<div class="body">
 					<h1>Formulir Edit User</h1>
 					<?php
-					$servername = "localhost";
-					$username = "root";
-					$password = "";
-					$dbname = "sita";
-					$conn = new mysqli($servername, $username, $password, $dbname);
-					$sql = "SELECT * FROM user";
-					$result = $conn->query($sql);
-					$row = $result->fetch_assoc();
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$dbname = "sita";
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						$sql = "SELECT * FROM user";
+						$result = $conn->query($sql);
+						$row = $result->fetch_assoc();
 					?>
 					<form <?php echo " action= \"Edit_User_sql.php?hapus=$row[link_profile_pic]\" ";?> method="post" enctype="multipart/form-data">
 						<div id="tulis">

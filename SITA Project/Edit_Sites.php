@@ -1,4 +1,56 @@
 <!DOCTYPE html>
+
+<?php
+
+	$conn = mysqli_connect("localhost","root","","sita");
+
+	$sites_id=$_REQUEST['sites_id'];
+	//$file1=$_REQUEST['file1'];
+	//$file2=$_REQUEST['file2'];
+	//$file3=$_REQUEST['file3'];
+	//$file4=$_REQUEST['file4'];
+	
+	$query1 = "SELECT * from ho where sites_id='".$sites_id."'";
+	$query2 = "SELECT * from identitas_pemilik where sites_id='".$sites_id."'";
+	$query3 = "SELECT * from ijin_dephub where sites_id='".$sites_id."'";
+	$query4 = "SELECT * from ijin_genset where sites_id='".$sites_id."'";
+	$query5 = "SELECT * from ijin_prinsip where sites_id='".$sites_id."'";
+	$query6 = "SELECT * from ijin_ptt where sites_id='".$sites_id."'";
+	$query7 = "SELECT * from imb where sites_id='".$sites_id."'";
+	$query8 = "SELECT * from imtu where sites_id='".$sites_id."'";
+	$query9 = "SELECT * from ipb where sites_id='".$sites_id."'";
+	$query10 = "SELECT * from pbb where sites_id='".$sites_id."'";
+	$query11 = "SELECT * from site where sites_id='".$sites_id."'";
+	$query12 = "SELECT * from skrd_rpm where sites_id='".$sites_id."'";
+
+	$result1 = mysqli_query($conn, $query1);
+	$result2= mysqli_query($conn, $query2);
+	$result3 = mysqli_query($conn, $query3);
+	$result4 = mysqli_query($conn, $query4);
+	$result5 = mysqli_query($conn, $query5);
+	$result6 = mysqli_query($conn, $query6);
+	$result7 = mysqli_query($conn, $query7);
+	$result8 = mysqli_query($conn, $query8);
+	$result9 = mysqli_query($conn, $query9);
+	$result10 = mysqli_query($conn, $query10);
+	$result11 = mysqli_query($conn, $query11);
+	$result12 = mysqli_query($conn, $query12);
+
+	$row1 = mysqli_fetch_assoc($result1);
+	$row2 = mysqli_fetch_assoc($result2);
+	$row3 = mysqli_fetch_assoc($result3);
+	$row4 = mysqli_fetch_assoc($result4);
+	$row5 = mysqli_fetch_assoc($result5);
+	$row6 = mysqli_fetch_assoc($result6);
+	$row7 = mysqli_fetch_assoc($result7);
+	$row8 = mysqli_fetch_assoc($result8);
+	$row9 = mysqli_fetch_assoc($result9);
+	$row10 = mysqli_fetch_assoc($result10);
+	$row11 = mysqli_fetch_assoc($result11);
+	$row12 = mysqli_fetch_assoc($result12);
+
+?>
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -11,7 +63,6 @@
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -77,18 +128,18 @@
 				</h1>
 				<form action="Search.php" id="search">
 					<input type="text"/>
-					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
+					<input type="submit" onclick="location.href='Search.php';" value id="submit"/>
 				</form>
 			</ul>	
 		</div>
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
 						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
 					</div>
+
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
@@ -132,129 +183,102 @@
 						<button class="tablinks" onclick="openTabs(event, 'IIP')">IJIN PRINSIP</button>
 						<button class="tablinks" onclick="openTabs(event, 'Genset')">IJIN GENSET</button>
 						<button class="tablinks" onclick="openTabs(event, 'Comcase')">COMCASE</button>
-						<button class="tablinks" onclick="openTabs(event, 'Submit')">SUBMIT</button>
+						<button class="tablinks" onclick="openTabs(event, 'Submit')">UPDATE</button>
 					</div>
-					<form id="satu" action="List_Sites.php" method="post" enctype="multipart/form-data">
+					<form id="satu" action="Add_Sites_sql.php" method="post" enctype="multipart/form-data">
 						<div id="site">
 							<div id="Sites" class="tabcontent">
 								<table border="0">
 									<h2>Informasi Sites</h2>
 									<a id="detail">
+										
 										<p>
-											<label for="a">Site ID :</label> <input type="text" name="NamaSite" size="50">
+											<label >Site ID :</label> <input type="text" name="Site_ID" value="<?php echo $row11['sites_id'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Nama Site :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nama Site :</label> <input type="text" name="Nama_Site" value="<?php echo $row11['sites_nama'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Status Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status Lahan :</label> <input type="text" name="Status_Lahan" value="<?php echo $row11['sites_status_lahan'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Status Tower :</label>   
-											<select name="cars">
-											    <option value="volvo">Beli	</option>
-											    <option value="saab">Pinjam</option>
-											</select>
+											<label >Status Tower :</label> <input type="text" name="Satus_Tower" value="<?php echo $row11['sites_status_tower'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Pemilik Tower :</label> <input type="text" name="NamaSite" size="50">
+											<label >Pemilik Tower :</label> <input type="text" name="Pemilik_Tower" value="<?php echo $row11['sites_pemilik_tower'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Alamat Site :</label> <input type="text" name="NamaSite" size="50">
+											<label >Alamat Site :</label> <input type="text" name="Alamat_Site" value="<?php echo $row11['sites_alamat'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Kota/Kabupaten :</label> <input type="text" name="NamaSite" size="50">
+											<label >Kota/Kabupaten :</label> <input type="text" name="Kota_Kabupaten" value="<?php echo $row11['sites_kota_kabupaten'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Kontraktor Utama :</label> <input type="text" name="NamaSite" size="50">
+											<label >Kontraktor Utama :</label> <input type="text" name="Kontraktor_Utama" value="<?php echo $row11['sites_kontraktor_utama'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Penyedia Menara :</label> <input type="text" name="NamaSite" size="50">
+											<label >Penyedia Menara :</label> <input type="text" name="Penyedia_Menara" value="<?php echo $row11['sites_penyedia_menara'];?>" size="50">
 										</p>
 
 										<p>
-											<label for="a">Branch :</label> <input type="text" name="NamaSite" size="50">
+											<label >Branch :</label> <input type="text" name="Branch" value="<?php echo $row11['sites_branch'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Longitude :</label> <input type="text" name="NamaSite" size="50">
+											<label >Longitude :</label> <input type="text" name="Longitude" value="<?php echo $row11['sites_long'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Latitude :</label> <input type="text" name="NamaSite" size="50">
+											<label >Latitude :</label> <input type="text" name="Latitude" value="<?php echo $row11['sites_lat'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">On Air Date :</label> <input type="date" id="myDate" value="">
+											<label >On Air Date :</label> <input type="date" id="On_Air_Date" name="On_Air_Date" value="<?php echo $row11['sites_on_air_date'];?>">
 										</p>
 										<p>
-											<label for="a">Colocated Site :</label> <input type="text" name="NamaSite" size="50">
+											<label >Colocated Site :</label> <input type="text" name="Colocated_Site" value="<?php echo $row11['sites_colocated_site'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">BTS Type :</label> <input type="text" name="NamaSite" size="50">
+											<label >BTS Type :</label> <input type="text" name="BTS_Type" value="<?php echo $row11['sites_type_bts'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Site Type :</label> <input type="text" name="NamaSite" size="50">
+											<label >Site Type :</label> <input type="text" name="Site_Type" value="<?php echo $row11['sites_type_site'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Tower Height :</label> <input type="text" name="NamaSite" size="50">
+											<label >Tower Height :</label> <input type="text" name="Tower_Height" value="<?php echo $row11['sites_tower_height'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Tower Type :</label> <input type="text" name="NamaSite" size="50">
+											<label >Tower Type :</label> <input type="text" name="Tower_Type" value="<?php echo $row11['sites_tower_type'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Shelter Type :</label> <input type="text" name="NamaSite" size="50">
+											<label >Shelter Type :</label> <input type="text" name="Shelter_Type" value="<?php echo $row11['sites_shelter_type'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Shelter Size :</label> <input type="text" name="NamaSite" size="50">
+											<label >Shelter Size :</label> <input type="text" name="Shelter_Size" value="<?php echo $row11['sites_shelter_size'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Luas Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Luas Lahan :</label> <input type="text" name="Luas_Lahan" value="<?php echo $row11['sites_luas_lahan'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Luas Jalan Akses :</label> <input type="text" name="NamaSite" size="50">
+											<label >Luas Jalan Akses :</label> <input type="text" name="Luas_Jalan_Akses" value="<?php echo $row11['sites_luas_jalan_akses'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Denah Tanah :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label >Denah Tanah :</label> <input type="file" name="Denah_Tanah" id="Denah_Tanah" value="<?php echo $row11['sites_denah_tanah'];?>" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Peta Radius Tower :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label >Peta Radius Tower :</label> <input type="file" name="Peta_Lokasi_Radius_Tower" value="<?php echo $row11['sites_peta_lrt'];?>" id="Peta_Lokasi_Radius_Tower" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Sketsa Batas Lahan :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label >Sketsa Batas Lahan :</label> <input type="file" name="Sketsa_Batas_Lahan" value="<?php echo $row11['sites_sketsa_bt'];?>" id="Sketsa_Batas_Lahan" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Sewa :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Mulai Sewa :</label> <input type="date" id="Tanggal_Mulai_Sewa" value="<?php echo $row11['sites_tanggal_start'];?>" name="Tanggal_Mulai_Sewa" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Sewa :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir Sewa :</label> <input type="date" id="Tanggal_Akhir_Sewa" value="<?php echo $row11['sites_tanggal_finish'];?>" name="Tanggal_Akhir_Sewa" >
 										</p>
 										<p>
-											<label for="a">Harga/Tahun :</label> <input type="text" name="NamaSite" size="50">
+											<label >Harga/Tahun :</label> <input type="text" name="Harga_Per_Tahun" value="<?php echo $row11['sites_harga_per_tahun'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Remark :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-									</a>
-								</table>
-							</div>
-						</div>
-						<div id="site">
-							<div id="Perpanjangan" class="tabcontent">
-								<table border="0">
-									<h2>Perpanjangan</h2>
-									<a id="detail">
-										<p>
-											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">PIC :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">SPPH :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Vendor List :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Invoice :</label> <input type="date" id="myDate" value="">
+											<label >Remark :</label> <input type="text" name="Remark" value="<?php echo $row11['sites_remark'];?>" size="50">
 										</p>
 									</a>
 								</table>
@@ -266,19 +290,19 @@
 									<h2>Perpanjangan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Pagu :</label> <input type="text" name="NamaSite" size="50">
+											<label >Pagu :</label> <input type="text" name="Pagu" value="<?php echo $row11['perpanjangan_pagu'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">PIC :</label> <input type="text" name="NamaSite" size="50">
+											<label >PIC :</label> <input type="text" name="PIC" value="<?php echo $row11['perpanjangan_pic'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">SPPH :</label> <input type="text" name="NamaSite" size="50">
+											<label >SPPH :</label> <input type="text" name="SPPH" value="<?php echo $row11['perpanjangan_spph'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Vendor List :</label> <input type="text" name="NamaSite" size="50">
+											<label >Vendor List :</label> <input type="text" name="Vendor_List" value="<?php echo $row11['perpanjangan_vendor_list'];?>" size="50">
 										</p>
 										<p>
-											<label for="a">Invoice :</label> <input type="date" id="myDate" value="">
+											<label >Invoice :</label> <input type="date" id="Invoice" name="Invoice" value="<?php echo $row11['perpanjangan_invoice'];?>" >
 										</p>
 									</a>
 								</table>
@@ -290,16 +314,16 @@
 									<h2>Berita Acara Kesepakatan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">No BAK :</label> <input type="text" name="NamaSite" size="50">
+											<label >No BAK :</label> <input type="text"  value="<?php echo $row11['bak_nomor'];?>" name="Nomor_BAK" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal BAK :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal BAK :</label> <input type="date" id="Tanggal_BAK"  value="<?php echo $row11['bak_tanggal'];?>" name="Tanggal_BAK" >
 										</p>
 										<p>
-											<label for="a">Harga BAK :</label> <input type="text" name="NamaSite" size="50">
+											<label >Harga BAK :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>"  value="<?php echo $row11['bak_harga'];?>" name="Harga_BAK" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row11['bak_status'];?>" name="Status" size="50">
 										</p>
 									</a>
 								</table>
@@ -311,24 +335,20 @@
 									<h2>Tabel HO</h2>
 									<a id="detail">
 										<p>
-											<label for="a">No HO :</label> <input type="text" name="NamaSite" size="50">
+											<label >No HO :</label> <input type="text"  value="<?php echo $row1['ho_nomor'];?>" name="Nomor_HO" size="50">
 										</p>
 										<p>
-											<label for="a">Status HO :</label> <input type="text" name="NamaSite" size="50">
+											<label >Daftar Ulang HO :</label> <input type="date" id="Daftar_Ulang_HO"  value="<?php echo $row1['ho_daftar_ulang'];?>" name="Daftar_Ulang_HO" >
 										</p>
 										<p>
-											<label for="a">Start Tahun HO :</label> <input type="text" name="NamaSite" size="50">
+											<label >Tanggal Start HO :</label> <input type="date" id="Tanggal_Start_HO"  value="<?php echo $row1['ho_start'];?>" name="Tanggal_Start_HO" >
 										</p>
 										<p>
-											<label for="a">Daftar Ulang HO :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Finish HO :</label> <input type="date" id="Tanggal_Finish_HO"  value="<?php echo $row1['ho_finish'];?>" name="Tanggal_Finish_HO" >
 										</p>
 										<p>
-											<label for="a">Tanggal Start HO :</label> <input type="date" id="myDate" value="">
+											<label >Status HO :</label> <input type="text"  value="<?php echo $row1['ho_status'];?>" name="Status_HO" size="50">
 										</p>
-										<p>
-											<label for="a">Tanggal Finish HO :</label> <input type="date" id="myDate" value="">
-										</p>
-										
 									</a>
 								</table>
 							</div>
@@ -339,31 +359,31 @@
 									<h2>Identitas Pemilik Lahan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">KTP Pemilik :</label> <input type="text" name="NamaSite" size="50">
+											<label >KTP Pemilik :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_ktp'];?>" name="KTP_Pemilik" size="50">
 										</p>
 										<p>
-											<label for="a">Kartu Keluarga Pemilik :</label> <input type="text" name="NamaSite" size="50">
+											<label >Kartu Keluarga Pemilik :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_kk'];?>" name="Kartu_Keluarga_Pemilik" size="50">
 										</p>
 										<p>
-											<label for="a">Pemilik Lahan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Pemilik Lahan :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_lahan'];?>" name="Pemilik_Lahan" size="50">
 										</p>
 										<p>
-											<label for="a">Orang yang dikuasakan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Orang yang dikuasakan :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_kuasa'];?>" name="Orang_Yang_Di_Kuasakan" size="50">
 										</p>
 										<p>
-											<label for="a">Alamat Pemilik :</label> <input type="text" name="NamaSite" size="50">
+											<label >Alamat Pemilik :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_alamat'];?>" name="Alamat_Pemilik" size="50">
 										</p>
 										<p>
-											<label for="a">Telefon :</label> <input type="text" name="NamaSite" size="50">
+											<label >Telepon :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_telepon'];?>" name="Telepon" size="50">
 										</p>
 										<p>
-											<label for="a">No. HP :</label> <input type="text" name="NamaSite" size="50">
+											<label >No. HP :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_hp'];?>" name="HP" size="50">
 										</p>
 										<p>
-											<label for="a">E-Mail :</label> <input type="text" name="NamaSite" size="50">
+											<label >E-Mail :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_email'];?>" name="E_mail" size="50">
 										</p>
 										<p>
-											<label for="a">Surat Persetujuan Keluarga :</label> <input type="text" name="NamaSite" size="50">
+											<label >Surat Persetujuan Keluarga :</label> <input type="text"  value="<?php echo $row2['identitas_pemilik_sp_keluarga'];?>" name="Surat_Persetujuan_Keluarga" size="50">
 										</p>
 									</a>
 								</table>
@@ -374,90 +394,18 @@
 								<table border="0">
 									<h2>Surat Pernyataan</h2>
 									<a id="detail">
-										<p>
-											<label for="a">Surat Pernyataan :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Ahli Waris :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Janda:</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Kepemilikan Tanah :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Pelepasan Hak :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Pembayaran:</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Penguasaan Fisik Tanah:</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Peralihan Atas Pekarangan :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Persetujuan Kepala Desa :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Tanah Pemohon :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Tidak Keberatan Jalan Pribadi :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Pernyataan Tidak Keberatan Jalan Umum :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
+									<p><label >Surat Pernyataan :</label> <input type="text"  value="<?php echo $row2['sp'];?>" name="SP" size="50"></p>
+									<p><label >Surat Pernyataan Ahli Waris :</label> <input type="text"  value="<?php echo $row2['sp_ahli_waris'];?>" name="SP_Ahli_Waris" size="50"></p>
+									<p><label >Surat Pernyataan Janda :</label> <input type="text"  value="<?php echo $row2['sp_janda'];?>" name="SP_Janda" size="50"></p>
+									<p><label >Surat Pernyataan Kepemilikan Tanah :</label> <input type="text"  value="<?php echo $row2['sp_kepemilikan_tanah'];?>" name="SP_Kepemilikan_Tanah" size="50"></p>
+									<p><label >Surat Pernyataan Pelepasan Hak :</label> <input type="text"  value="<?php echo $row2['sp_pelepasan_hak'];?>" name="SP_Pelepasan_Hak" size="50"></p>
+									<p><label >Surat Pernyataan Pembayaran :</label> <input type="text"  value="<?php echo $row2['sp_pembayaran'];?>" name="SP_Pembayaran" size="50"></p>
+									<p><label >Surat Pernyataan Penguasaan Fisik Tanah :</label> <input type="text"  value="<?php echo $row2['sp_penguasaan_fisik_tanah'];?>" name="SP_Penguasaan_Fisik_Tanah" size="50"></p>
+									<p><label >Surat Pernyataan Peralihan Atas Pekarangan :</label> <input type="text"  value="<?php echo $row2['sp_peralihan_atas_pekarangan'];?>" name="SP_Peralihan_Atas_Pekarangan" size="50"></p>
+									<p><label >Surat Pernyataan Persetujuan Kepala Desa :</label> <input type="text"  value="<?php echo $row2['sp_persetujuan_kepala_desa'];?>" name="SP_Persetujuan_Kepala_Desa" size="50"></p>
+									<p><label >Surat Pernyataan Tanah Pemohon :</label> <input type="text"  value="<?php echo $row2['sp_tanah_pemohon'];?>" name="SP_Tanah_Pemohon" size="50"></p>
+									<p><label >Surat Pernyataan Tidak Keberatan Jalan Pribadi :</label> <input type="text"  value="<?php echo $row2['sp_tidak_keberatan_jalan_pribadi'];?>" name="SP_Tidak_Keberatan_Jalan_Pribadi" size="50"></p>
+									<p><label >Surat Pernyataan Tidak Keberatan Jalan Umum :</label> <input type="text"  value="<?php echo $row2['sp_tidak_keberatan_jalan_umum'];?>" name="SP_Tidak_Keberatan_Jalan_Umum" size="50"></p> 
 									</a>
 								</table>
 							</div>
@@ -468,22 +416,22 @@
 									<h2>Akta</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Akta Hibah :</label> <input type="text" name="NamaSite" size="50">
+											<label >Akta Hibah :</label> <input type="text"  value="<?php echo $row2['akta_hibah'];?>" name="Akta_Hibah" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Jual Beli Sewa :</label> <input type="text" name="NamaSite" size="50">
+											<label >Akta Jual Beli Sewa :</label> <input type="text"  value="<?php echo $row2['akta_jualbeli_sewa'];?>" name="Akta_Jual_Beli_Sewa" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Hak Bersama :</label> <input type="text" name="NamaSite" size="50">
+											<label >Akta Hak Bersama :</label> <input type="text"  value="<?php echo $row2['akta_hak_bersama'];?>" name="Akta_Hak_Bersama" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Warisan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Akta Warisan :</label> <input type="text"  value="<?php echo $row2['akta_warisan'];?>" name="Akta_Warisan" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Pemisahan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Akta Pemisahan :</label> <input type="text"  value="<?php echo $row2['akta_pemisahan'];?>" name="Akta_Pemisahan" size="50">
 										</p>
 										<p>
-											<label for="a">Akta Nikah :</label> <input type="text" name="NamaSite" size="50">
+											<label >Akta Nikah :</label> <input type="text"  value="<?php echo $row2['akta_nikah'];?>" name="Akta_Nikah" size="50">
 										</p>
 									</a>
 								</table>
@@ -495,19 +443,16 @@
 									<h2>Ijin Lain</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Ijin Perubahan Pengguna Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label >Ijin Perubahan Pengguna Tanah :</label> <input type="text"  value="<?php echo $row2['ijin_ippt'];?>" name="Ijin_Perubahan_Pengguna_Tanah" size="50">
 										</p>
 										<p>
-											<label for="a">Ijin IPPT :</label> <input type="text" name="NamaSite" size="50">
+											<label >Ijin Warga :</label> <input type="text"  value="<?php echo $row2['ijin_warga'];?>" name="Ijin_Warga" size="50">
 										</p>
 										<p>
-											<label for="a">Ijin Warga :</label> <input type="text" name="NamaSite" size="50">
+											<label >Ijin UKL UPL :</label> <input type="text"  value="<?php echo $row2['ijin_ukl_upl'];?>" name="Ijin_UKL_UPL" size="50">
 										</p>
 										<p>
-											<label for="a">Ijin UKL UPL :</label> <input type="text" name="NamaSite" size="50">
-										</p>
-										<p>
-											<label for="a">Ijin Sertifikat Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label >Ijin Sertifikat Tanah :</label> <input type="text"  value="<?php echo $row2['ijin_sertifikat_tanah'];?>" name="Ijin_Sertifikat_Tanah" size="50">
 										</p>
 									</a>
 								</table>
@@ -518,104 +463,20 @@
 								<table border="0">
 									<h2>Surat Keterangan</h2>
 									<a id="detail">
-										<p>
-											<label for="a">Surat Keterangan Akses Lahan Jalan :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Asal Tanah :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Beda Luas Tanah :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Beda Nama :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Fatwa Waris :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Kematian :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Penduduk :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Permohonan IMB, HO, dan IP :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Persetujuan Sewa Lahan :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Riwayat Tanah :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Suami Istri :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Tanah :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Tidak Sengketa :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Keterangan Tidak Keberatan Didirikan :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
+									<p><label >Surat Keterangan Akses Lahan Jalan :</label> <input type="text"  value="<?php echo $row2['sket_akses_lahan_jalan'];?>" name="SK_Akses_Lahan_Jalan" size="50"></p>
+									<p><label >Surat Keterangan Asal Tanah :</label> <input type="text"  value="<?php echo $row2['sket_asal_tanah'];?>" name="SK_Asal_Tanah" size="50"></p>
+									<p><label >Surat Keterangan Beda Luas Tanah :</label> <input type="text"  value="<?php echo $row2['sket_beda_luas_tanah'];?>" name="SK_Beda_Luas_Tanah" size="50"></p>
+									<p><label >Surat Keterangan Beda Nama :</label> <input type="text"  value="<?php echo $row2['sket_beda_nama'];?>" name="SK_Beda_Nama" size="50"></p>
+									<p><label >Surat Keterangan Fatwa Waris :</label> <input type="text"  value="<?php echo $row2['sket_fatwa_waris'];?>" name="SK_Fatwa_Waris" size="50"></p>
+									<p><label >Surat Keterangan Kematian :</label> <input type="text"  value="<?php echo $row2['sket_kematian'];?>" name="SK_Kematian" size="50"></p>
+									<p><label >Surat Keterangan Penduduk :</label> <input type="text"  value="<?php echo $row2['sket_penduduk'];?>" name="SK_Penduduk" size="50"></p>
+									<p><label >Surat Keterangan Permohonan IMB, HO, dan IP :</label> <input type="text"  value="<?php echo $row2['sket_permohonan_imb_ho_ip'];?>" name="SK_Permohonan_IMB_dll" size="50"></p>
+									<p><label >Surat Keterangan Persetujuan Sewa Lahan :</label> <input type="text"  value="<?php echo $row2['sket_persetujuan_sewa_lahan'];?>" name="SK_Persetujuan_Sewa_Lahan" size="50"></p>
+									<p><label >Surat Keterangan Riwayat Tanah :</label> <input type="text"  value="<?php echo $row2['sket_riwayat_tanah'];?>" name="SK_Riwayat_Tanah" size="50"></p>
+									<p><label >Surat Keterangan Suami Istri :</label> <input type="text"  value="<?php echo $row2['sket_suami_istri'];?>" name="SK_Suami_Istri" size="50"></p>
+									<p><label >Surat Keterangan Tanah :</label> <input type="text"  value="<?php echo $row2['sket_tanah'];?>" name="SK_Tanah" size="50"></p>
+									<p><label >Surat Keterangan Tidak Sengketa :</label> <input type="text"  value="<?php echo $row2['sket_tidak_sengketa'];?>" name="SK_Tidak_Sengketa" size="50"></p>
+									<p><label >Surat Keterangan Tidak Keberatan Didirikan :</label> <input type="text"  value="<?php echo $row2['sket_keberatan'];?>" name="SK_Tidak_Keberatan_Didirikan" size="50"></p>
 									</a>
 								</table>
 							</div>
@@ -625,41 +486,11 @@
 								<table border="0">
 									<h2>Surat Lain</h2>
 									<a id="detail">
-										<p>
-											<label for="a">Surat Kuasa :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Kuasa Pengambilan Jaminan Asli :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Kuasa Jaminan Hukum :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Ijin PKS :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
-										<p>
-											<label for="a">Surat Perjanjian Sewa Tanah :</label>   
-											<select name="cars">
-											    <option value="Ada">Ada</option>
-											    <option value="Tidak">Tidak</option>
-											</select>
-										</p>
+										<p><label >Surat Ijin PKS :</label> <input type="text"  value="<?php echo $row2['sl_pks'];?>" name="Surat_Ijin_PKS" size="50"></p>
+										<p><label >Surat Kuasa :</label> <input type="text"  value="<?php echo $row2['sl_sk_pengambilan_jaminan_asli'];?>" name="Surat_Kuasa" size="50"></p>
+										<p><label >Surat Kuasa Pengambilan Jaminan Asli :</label> <input type="text"  value="<?php echo $row2['sl_surat_jaminan_hukum'];?>" name="Surat_Kuasa_Pengambilan_Jaminan_Asli" size="50"></p>
+										<p><label >Surat Kuasa Jaminan Hukum :</label> <input type="text"  value="<?php echo $row2['sl_sk'];?>" name="Surat_Jaminan_Hukum" size="50"></p>
+										<p><label >Surat Perjanjian Sewa Tanah :</label> <input type="text"  value="<?php echo $row2['sl_surat_perjanjian_sewa_tanah'];?>" name="Surat_Perjanjian_Sewa_Tanah" size="50"></p>
 									</a>
 								</table>
 							</div>
@@ -670,28 +501,31 @@
 									<h2>Informasi Pajak Bumi dan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Objek Pajak :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor Objek Pajak :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Objek_Pajak" size="50">
 										</p>
 										<p>
-											<label for="a">Nilai PBB :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nilai PBB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nilai_PBB" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Mulai" >
 										</p>
 										<p>
-											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_PBB" size="50">
 										</p>
 										<p>
-											<label for="a">NJOP Tanah :</label> <input type="text" name="NamaSite" size="50">
+											<label >NJOP Tanah :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="NJOP_Tanah" size="50">
 										</p>
 										<p>
-											<label for="a">NJOP Bangunan :</label> <input type="text" name="NamaSite" size="50">
+											<label >NJOP Bangunan :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="NJOP_Bangunan" size="50">
 										</p>
 										<p>
-											<label for="a">Surat PBB :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label >Surat PBB :</label> <input type="file"  value="<?php echo $row11['sites_id'];?>" name="Surat_PBB" id="Surat_PBB" size="50"><br>
+										</p>
+										<p>
+											<label >Koefisien PBB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Koef_PBB" size="50">
 										</p>
 									</a>
 								</table>
@@ -703,22 +537,22 @@
 									<h2>SKRD dan RPM</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor SKRD :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="No_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Nilai SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nilai SKRD :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Harga_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Jatuh Tempo :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label for="a">Koefisien SKRD :</label> <input type="text" name="NamaSite" size="50">
+											<label >Koefisien SKRD :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Koef_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_SKRD" size="50">
 										</p>
 										<p>
-											<label for="a">Surat SKRD :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>	
+											<label >Surat SKRD :</label> <input type="file"  value="<?php echo $row11['sites_id'];?>" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
 										</p>
 									</a>
 								</table>
@@ -730,25 +564,25 @@
 									<h2>Informasi Ijin Mendirikan Bangunan</h2>
 									<a id="detail">										
 										<p>
-											<label for="a">Nomor IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_IMB" size="50">
 										</p>
 										<p>
-											<label for="a">Status IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label >Mitra Pengurusa IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Mitra_Pengurus_IMB" size="50">
 										</p>
 										<p>
-											<label for="a">Daftar Ulang IMB :</label> <input type="date" id="myDate" value="">
+											<label >Daftar Ulang IMB :</label> <input type="date" id="Daftar_Ulang_IMB"  value="<?php echo $row11['sites_id'];?>" name="Daftar_Ulang_IMB" >
 										</p>
 										<p>
-											<label for="a">Tanggal Awal Mulai IMB :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Awal Mulai IMB :</label> <input type="date" id="Tanggal_Awal_IMB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_IMB" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir IMB :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir IMB :</label> <input type="date" id="Tanggal_Akhir_IMB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_IMB" >
 										</p>
 										<p>
-											<label for="a">Status Kepengurusan IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status Kepengurusan IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_Kepengurusan_IMB" size="50">
 										</p>
 										<p>
-											<label for="a">Mitra Pengurusa IMB :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_IMB" size="50">
 										</p>
 									</a>
 								</table>
@@ -760,13 +594,13 @@
 									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_Ijin" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin" >
 										</p>
 									</a>
 								</table>
@@ -778,13 +612,13 @@
 									<h2>Informasi Ijin Departemen DepHub/Kominfo</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Ijin :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Mulai Ijin :</label> <input type="date" id="Tanggal_Mulai_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Mulai_Ijin" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin" >
 										</p>
 									</a>
 								</table>
@@ -796,13 +630,13 @@
 									<h2>Informasi Ijin Pendirian Tower Telkomsel</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin Pendirian :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor Ijin Pendirian :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin_Pendirian" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_Ijin_Pendirian" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="Tanggal_Akhir_Ijin_Pendirian"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin_Pendirian" >
 										</p>
 									</a>
 								</table>
@@ -814,13 +648,13 @@
 								<h2>Informasi Ijin Penggunaan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor IPB :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor IPB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_IPB" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai IPB :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_IPB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_IPB" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir IPB :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir IPB :</label> <input type="date" id="Tanggal_Akhir_IPB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_IPB" >
 										</p>
 									</a>
 								</table>
@@ -832,13 +666,13 @@
 									<h2>Informasi Ijin Prinsip</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin Prinsip :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor Ijin Prinsip :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin_Prinsip" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="Tanggal_Awal_Ijin_Prinsip"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_Ijin_Prinsip" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="Tanggal_Akhir_Ijin_Prinsip"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin_Prinsip" >
 										</p>
 									</a>
 								</table>
@@ -850,16 +684,16 @@
 									<h2>Informasi Ijin Genset</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor :</label> <input type="text" name="NamaSite" size="50">
+											<label >Nomor :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Genset" size="50">
 										</p>
 										<p>
-											<label for="a">Status :</label> <input type="text" name="NamaSite" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_Genset" size="50">
 										</p>
 										<p>
-											<label for="a">Tanggal Start :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Start :</label> <input type="date" id="Tanggal_Start"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Start" >
 										</p>
 										<p>
-											<label for="a">Tanggal Finish :</label> <input type="date" id="myDate" value="">
+											<label >Tanggal Finish :</label> <input type="date" id="Tanggal_Finish"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Finish" >
 										</p>
 									</a>
 								</table>
@@ -871,22 +705,22 @@
 									<h2>Comcase</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Comcase Tanggal :</label> <input type="date" id="myDate" value="">
+											<label >Comcase Tanggal :</label> <input type="date" id="Comcase_Tanggal"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Tanggal" >
 										</p>
 										<p>
-											<label for="a">Comcase Keterangan :</label> <input type="text" name="NamaSite" size="50">
+											<label >Comcase Keterangan :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Keterangan" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase Status :</label> <input type="text" name="NamaSite" size="50">
+											<label >Comcase Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Status" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase Solusi :</label> <input type="text" name="NamaSite" size="50">
+											<label >Comcase Solusi :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Solusi" size="50">
 										</p>
 										<p>
-											<label for="a">Comcase File :</label> <input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
+											<label >Comcase File :</label> <input type="file"  value="<?php echo $row11['sites_id'];?>" name="Comcase_File" id="Comcase_File" size="50"><br>
 										</p>
 										<p>
-											<label for="a">Comcase Mitra :</label> <input type="text" name="NamaSite" size="50">
+											<label >Comcase Mitra :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Mitra" size="50">
 										</p>
 									</a>
 								</table>
@@ -895,15 +729,15 @@
 						<div id="site">
 							<div id="Submit" class="tabcontent">
 								<table border="0">
-									<h2 id="check">Submit</h2>
+									<h2 id="check">Update</h2>
 									<a id="detail">
 									<h3>
 										Apakah anda yakin data yang anda masukkan sudah benar?
 									</h3>
 									<h3>
-										Jika Ya, klik Submit
+										Jika Ya, klik Update
 									</h3>
-									<br><input id="final" type="submit" value="Submit" name="submit">
+									<br><input id="final" type="submit" value="UPDATE" name="submit">
 									</a>
 								</table>
 							</div>
