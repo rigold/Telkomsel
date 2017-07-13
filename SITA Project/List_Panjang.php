@@ -176,7 +176,7 @@
 									    echo "</table>";
 									}
 									else {
-									    echo "No records found!";
+									    //echo "No records found!";
 									}
 									$conn->close();
 								?>
