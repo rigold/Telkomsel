@@ -5,6 +5,7 @@
 -- Host: 127.0.0.1
 -- Generation Time: 13 Jul 2017 pada 06.53
 -- Versi Server: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
