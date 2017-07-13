@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <?php
-	$servername ="localhost";
-	$username = "root";
-	$password = "";
-	$database = "sita";
-	$conn = mysqli_connect($servername, $username, $password, $database);
-
-	$nik=$_GET['nik'];
+	$con = mysqli_connect("localhost","root","","sita");
+	// Check connection
+	if (mysqli_connect_errno())
+	  {
+	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	  }
+	$nik=$_REQUEST['nik'];
 	$query = "SELECT * from user where nik='".$nik."'"; 
-	$result = mysqli_query($conn, $query);
+	$result = mysqli_query($con, $query) or die ( mysqli_error());
 	$row = mysqli_fetch_assoc($result);
 ?>
 
@@ -20,6 +20,7 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
+	
 	<body>
 		<div class=navi>
 			<ul>
@@ -95,8 +96,10 @@
 				</form>
 			</ul>	
 		</div>
+
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
+
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
@@ -123,27 +126,38 @@
 					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
+
 				<div class="body">
 					<h1>Formulir Edit User</h1>
-					<form action="Edit_User_sql.php" method="post" enctype="multipart/form-data">
+					<?php
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$dbname = "sita";
+					$conn = new mysqli($servername, $username, $password, $dbname);
+					$sql = "SELECT * FROM user";
+					$result = $conn->query($sql);
+					$row = $result->fetch_assoc();
+					?>
+					<form <?php echo " action= \"Edit_User_sql.php?hapus=$row[link_profile_pic]\" ";?> method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
-							<label>Nama User:</label> <input type="text" name="Nama" value="<?php echo $row['nama_user'];?>" size="50">
+							<label for="a">Nama User:</label> <input type="text" name="Nama" value="<?php echo $row['nama_user'];?>" size="50">
 							</p>
 							<p>
-							<label>NIK(ID):</label> <input type="text" name="NIK" value="<?php echo $row['nik'];?>" size="50">
+							<label for="b">NIK(ID):</label> <input type="text" name="NIK" value="<?php echo $row['nik'];?>" size="50">
 							</p>
 							<p>
-							<label>Password:</label> <input type="text" name="Password" value="<?php echo $row['password'];?>" size="50">
+							<label for="c">Password:</label> <input type="text" name="Password" value="<?php echo $row['password'];?>" size="50">
 							</p>
 							<p>
-							<label>Jabatan:</label> <input type="text" name="Jabatan" value="<?php echo $row['jabatan'];?>" size="50">
+							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" value="<?php echo $row['jabatan'];?>" size="50">
 							</p>
 							<p>
-							<label>Picture:</label>
+							<label for="e">Picture:</label>
 							<input type="file" name="fileToUpload" id="fileToUpload" size="50"><br>
 							</p>
-    						<input type="submit" value="Submit" name="submit">
+							<input type="submit" name="submit" value="Submit">
 						</div>
 					</form>
 				</div>

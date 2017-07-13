@@ -5,7 +5,13 @@
 	$database = "sita";
 	$conn = mysqli_connect($servername, $username, $password, $database);
 
-	$temp = explode(".", $_FILES["file"]["name"]);
+	$hapus=$_REQUEST['hapus'];
+	$file ="upload/" . $hapus;
+	$query = "SELECT * from user where nik='".$nik."'"; 
+	$result = mysqli_query($conn, $query) or die ( mysqli_error());
+	$row = mysqli_fetch_assoc($result);
+
+	$temp = explode(".", $_FILES["fileToUpload"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	$target_dir = "upload/";
 	$target_file = $target_dir . $newfilename . basename($_FILES["fileToUpload"]["name"]);
@@ -26,6 +32,8 @@
 	else
 	{
 		$result = mysqli_query($conn, "UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',	link_profile_pic='$image' WHERE nik='$nik'");
+		unlink($file);
+		header("Location:List_User.php");
 	}
-	header("Location:List_User.php");
+	//header("Location:List_User.php");
 ?>
