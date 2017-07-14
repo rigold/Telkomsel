@@ -28,8 +28,8 @@
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
-	      				<a href="Site_Daerah.php">Bangkalan</a> 
-						<a href="Site_Daerah.php">Banyuwangi</a> 
+	      				<a href="Site_Daerah.php?site=Bangkalan">Bangkalan</a> 
+						<a href="Site_Daerah.php?site=Banyuwangi">Banyuwangi</a> 
 						<a href="Site_Daerah.php">Batu</a> 
 						<a href="Site_Daerah.php">Blitar Kab.</a> 
 						<a href="Site_Daerah.php">Blitar Kota</a> 
@@ -63,9 +63,9 @@
 						<a href="Site_Daerah.php">Situbondo</a> 
 						<a href="Site_Daerah.php">Sumenep</a> 
 						<a href="Site_Daerah.php">Surabaya</a> 
-						<a href="Site_Daerah.php">Trenggalek</a> 
-						<a href="Site_Daerah.php">Tuban</a> 
-						<a href="Site_Daerah.php">Tulungagung</a> 
+						<a href="Site_Daerah.php?site=Trenggalek">Trenggalek</a> 
+						<a href="Site_Daerah.php?site=Tuban">Tuban</a> 
+						<a href="Site_Daerah.php?site=Tulungagung">Tulungagung</a> 
 				    </div>
 				</li>
 

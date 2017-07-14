@@ -18,10 +18,10 @@
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
-	      				<a href="Site_Daerah.php">Bangkalan</a> 
-						<a href="Site_Daerah.php">Banyuwangi</a> 
-						<a href="Site_Daerah.php">Batu</a> 
-						<a href="Site_Daerah.php">Blitar Kab.</a> 
+	      				<a href="Site_Daerah.php?siteloc=Bangkalan">Bangkalan</a> 
+						<a href="Site_Daerah.php?siteloc=Banyuwangi">Banyuwangi</a> 
+						<a href="Site_Daerah.php?siteloc=Batu">Batu</a> 
+						<a href="Site_Daerah.php?siteloc=Blitar Kab.">Blitar Kab.</a> 
 						<a href="Site_Daerah.php">Blitar Kota</a> 
 						<a href="Site_Daerah.php">Bojonegoro</a> 
 						<a href="Site_Daerah.php">Bondowoso</a> 

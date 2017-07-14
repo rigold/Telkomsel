@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -112,97 +125,53 @@
 				</div>
 
 				<div class="body">
-					<h1><a href="Home.php">DATA SITE</a></h1>
+							<?php
+								$siteloc=$_REQUEST['siteloc'];
+								$sql = "SELECT * from daerah where kota_kabupaten = '".$siteloc."'";;
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+							?>
+					<h1><a href="Home.php">DATA SITE di <?php echo $siteloc;?></a></h1>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
-							<br>
-							<h5>Cari Berdasarkan Daerah :
-							</h5>
-						</div>
-						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
+							<?php
+									$sql = "SELECT sites_id, sites_nama, sites_alamat FROM site WHERE sites_kota_kabupaten LIKE '%".$siteloc."%'";
+									$result = $conn->query($sql);
+									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									if ($result->num_rows > 0) {
+									    echo "<table>
+									        <tr>
+											  	<th>Site ID</th>
+											  	<th>Name</th>
+												<th>Alamat</th>
+												<th>Detail</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									                    <td>" . $row["sites_id"] . "</td>
+									                    <td>" . $row["sites_nama"] . "</td>
+									                    <td>" . $row["sites_alamat"] . "</td>
+									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
+									                    
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							<table>
 							  <tr>
-							  	<th>No.</th>
-							  	<th>SITE ID</th>
-							  	<th>Name</th>
-								<th>Alamat</th>
-								<th>Detail</th>
-							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>Surabaya</td>
-							    <td>SBY123</td>
-							    <td>Surabaya X</td>
-							    <td><button type="button" onclick="location.href='Detail.php';">Detail</button></td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
+							  	
 							  </tr>
 							</table>
 						</div>
