@@ -143,7 +143,9 @@
 						<div>
 
 							<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, pbb.njop_tanah, pbb.njop_bangunan, pbb.nilai_pbb_site, (SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_pbb', ijin_ptt.ijin_ptt_nomor FROM site,pbb,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, skrd_rpm.harga_skrd, (SELECT SUM(skrd_rpm.harga_skrd) FROM skrd_rpm,site WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_skrd' FROM site,skrd_rpm WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
+
+									//
 
 									//$totpbb = "SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site WHERE site.sites_id = pbb.sites_id";
 									$result = $conn->query($sql);
@@ -154,12 +156,9 @@
 									            <th>Site ID</th>
 												<th>Nama Site</th>
 												<th>Alamat</th>
-												<th>No. SPPT</th>
-												<th>NJOP Tanah</th>
-												<th>NJOP Bangunan</th>
 												<th>Luas Tanah</th>
 												<th>Tinggi Tower</th>
-												<th>Nilai PBB</th>
+												<th>Nilai SKRD</th>
 									        </tr>";
 									    //  output data of each row
 									    //  $rows = array(); // This is not actually required
@@ -170,12 +169,9 @@
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
-									                    <td>" . $row["ijin_ptt_nomor"] . "</td>
-									                    <td>" . $row["njop_tanah"] . "</td>
-									                    <td>" . $row["njop_bangunan"] . "</td>
 									                    <td>" . $row["sites_luas_lahan"] . "</td>
 									                    <td>" . $row["sites_tower_height"] . "</td>
-									                    <td>" . $row["nilai_pbb_site"] . "</td>
+									                    <td>" . $row["harga_skrd"] . "</td>
 
 									            </tr>";
 									    }
@@ -187,10 +183,10 @@
 									    <table>
 									    	<tr>
 									    		<td>
-									    			Total PBB
+									    			Total SKRD
 									    		</td>
 									    		<td>
-									    			" . $row["jl_pbb"] . "
+									    			" . $row["jl_skrd"] . "
 									    		</td>
 									    	</tr>
 									    	<tr>
