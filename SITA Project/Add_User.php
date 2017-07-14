@@ -117,7 +117,7 @@
 							<label>Nama User:</label> <input type="text" name="Nama" size="50" required>
 							</p>
 							<p>
-							<label>NIK(ID):</label> <input type="text" name="NIK" size="50" required pattern="[A-Za-z]{1,5}" title="masukkan 5">
+							<label>NIK(ID):</label> <input type="text" name="NIK" size="50" required pattern="[A-Za-z1-0]{1,5}" title="masukkan 5">
 							</p>
 							<p>
 							<label>Password:</label> <input type="text" name="Password" size="50" required>

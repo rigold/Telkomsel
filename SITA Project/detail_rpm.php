@@ -94,8 +94,10 @@
 				</form>
 			</ul>	
 		</div>
+
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
+
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
@@ -119,39 +121,45 @@
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
+					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
-					<h1><a href="Home.php">RPM</a></h1>
+					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
 							<br>
-							<h5>Cari Berdasarkan Tahun :
+							<?php
+								$kota_kab=$_REQUEST['kota_kab'];
+								$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+							?>
+							<h5><?php echo $row['sites_kota_kabupaten'];?>
 							</h5>
 						</div>
 						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
 
-								<?php
-									$sql = "SELECT daerah.kota_kabupaten,site.sites_id,site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', SUM(skrd_rpm.harga_skrd) AS 'jl_rpm', skrd_rpm.koef_skrd, skrd_rpm.tanggal_jatuh_tempo, skrd_rpm.status FROM site,skrd_rpm,daerah WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
+							<?php
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, pbb.njop_tanah, pbb.njop_bangunan, pbb.nilai_pbb_site, (SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_pbb', ijin_ptt.ijin_ptt_nomor FROM site,pbb,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
+
+									//$totpbb = "SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site WHERE site.sites_id = pbb.sites_id";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									if ($result->num_rows > 0) {
 									    echo "<table>
 									        <tr>
-											  	<th>Kabupaten/Kota</th>
-												<th>Jumlah Sites</th>
-												<th>Jumlah Tagihan SKRD</th>
-												<th>Total Nilai SKRD</th>
-												<th>Koef SKRD</th>
-												<th>Tanggal Jatuh Tempo</th>
-												<th>Status</th>
-												<th>Action</th>
+									            <th>Site ID</th>
+												<th>Nama Site</th>
+												<th>Alamat</th>
+												<th>No. SPPT</th>
+												<th>NJOP Tanah</th>
+												<th>NJOP Bangunan</th>
+												<th>Luas Tanah</th>
+												<th>Tinggi Tower</th>
+												<th>Nilai PBB</th>
 									        </tr>";
 									    //  output data of each row
 									    //  $rows = array(); // This is not actually required
@@ -159,25 +167,104 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
-									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>" . $row["jl_rpm"] . "</td>
-									                    <td>" . $row["koef_skrd"] . "</td>
-									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
-									                    <td>" . $row["status"] . "</td>
-									                    <td><button onclick= \"location.href='detail_rpm.php?kota_kab=$row[kota_kabupaten]'\">Detail</button></td>
+									                    <td>" . $row["sites_id"] . "</td>
+									                    <td>" . $row["sites_nama"] . "</td>
+									                    <td>" . $row["sites_alamat"] . "</td>
+									                    <td>" . $row["ijin_ptt_nomor"] . "</td>
+									                    <td>" . $row["njop_tanah"] . "</td>
+									                    <td>" . $row["njop_bangunan"] . "</td>
+									                    <td>" . $row["sites_luas_lahan"] . "</td>
+									                    <td>" . $row["sites_tower_height"] . "</td>
+									                    <td>" . $row["nilai_pbb_site"] . "</td>
+
 									            </tr>";
 									    }
 
 									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									    echo "
+									    <table>
+									    	<tr>
+									    		<td>
+									    			Total PBB
+									    		</td>
+									    		<td>
+									    			" . $row["jl_pbb"] . "
+									    		</td>
+									    	</tr>
+									    	<tr>
+									    		<td>
+									    			Remark<br><br><br><br>
+									    		</td>
+									    		<td>
+									    		</td>
+									    	</tr>
+									    </table>";
+									    echo " " . date("Y/m/d") ;
+									    echo "<br><br>";
+									    echo "
+									    ";
 									}
 									else {
 									    //echo "No records found!";
 									}
 									$conn->close();
 								?>
-							
+								<table>
+									<tr>
+										
+									    <td style="width: 145px;">
+									    	Dibuat Oleh,
+									    </td>
+									    <td>
+									   		Diperiksa Oleh,
+									    </td>
+									    <td>
+									    	Disetujui Oleh,
+									    </td>
+									    <td style="text-align: center;">
+									    	Mengetahui,
+									    </td>
+									</tr>
+								</table>
+								<br><br><br><br><br><br>
+								<table>
+									<tr>
+									    <td>
+									    	Login User
+									    </td>
+									    <td>
+									   		Danial Sam
+									    </td>
+									    <td>
+									    	Yoyok Dwi Harianto
+									    </td>
+									    <td>
+									    	Erika Widiasuti
+									    </td>
+									    <td>
+									    	Maruli Simamora
+									    </td>
+									</tr>
+									<tr style="background-color: none;">
+									    <td>
+									    	Jabatan
+									    </td>
+									    <td>
+									   		Pj. Spv. Site Administrasi Jatim
+									    </td>
+									    <td>
+									    	Manager Site Management Jatim
+									    </td>
+									    <td>
+									    	Manager Legal and Regulatory Jawa Bali
+									    </td>
+									    <td>
+									    	GM Legal and Stakeholder Jawa Bali
+									    </td>
+									</tr>
+								</table>
 						</div>
 						
 					</div>

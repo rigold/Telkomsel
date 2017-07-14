@@ -141,7 +141,7 @@
 							</form1>
 
 							<?php
-									$sql = "SELECT pbb.koef_pbb,pbb.status,site.sites_id, site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', pbb.tanggal_jatuh_tempo, SUM(pbb.nilai_pbb_site) AS 'jl_pbb' FROM site,pbb,daerah WHERE site.sites_id = pbb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
+									$sql = "SELECT daerah.kota_kabupaten,pbb.koef_pbb,pbb.status,site.sites_id, site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', pbb.tanggal_jatuh_tempo, SUM(pbb.nilai_pbb_site) AS 'jl_pbb' FROM site,pbb,daerah WHERE site.sites_id = pbb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									if ($result->num_rows > 0) {
@@ -169,7 +169,7 @@
 									                    <td>" . $row["koef_pbb"] . "</td>
 									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
 									                    <td>" . $row["status"] . "</td>
-									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
+									                    <td><button onclick= \"location.href='detail_pbb.php?kota_kab=$row[kota_kabupaten]'\">Detail</button></td>
 									            </tr>";
 									    }
 
