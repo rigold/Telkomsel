@@ -228,17 +228,15 @@
 			UPDATE ho 
 			SET 
 				ho_nomor='$Nomor_HO' ,
-				sites_id='$Site_ID' ,
 				ho_daftar_ulang='$Daftar_Ulang_HO' ,
 				ho_start='$Tanggal_Start_HO' ,
 				ho_finish='$Tanggal_Finish_HO' ,
-				ho_status='$Status_HO',
+				ho_status='$Status_HO'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE identitas_pemilik 
 			SET
 				identitas_pemilik_ktp='$KTP_Pemilik' ,
-				sites_id='$Site_ID' ,
 				identitas_pemilik_kk='$Kartu_Keluarga_Pemilik' ,
 				identitas_pemilik_lahan='$Pemilik_Lahan' ,
 				identitas_pemilik_kuasa='$Orang_Yang_Di_Kuasakan' ,
@@ -293,7 +291,6 @@
 			UPDATE ijin_dephub 
 			SET
 				ijin_dephub_nomor='$Nomor_Ijin' ,
-				sites_id='$Site_ID' ,
 				ijin_dephub_start='$Tanggal_Mulai_Ijin' ,
 				ijin_dephub_finish='$Tanggal_Akhir_Ijin'
 			WHERE sites_id='$sites_id' ");
@@ -301,7 +298,6 @@
 			UPDATE ijin_genset 
 			SET
 				ijin_genset_nomor='$Nomor_Genset' ,
-				sites_id='$Site_ID' ,
 				ijin_genset_status='$Status_Genset' ,
 				ijin_genset_start='$Tanggal_Start' ,
 				ijin_genset_finish='$Tanggal_Finish'
@@ -310,34 +306,52 @@
 			UPDATE ijin_prinsip 
 			SET
 				ijin_genset_nomor='$Nomor_Genset' ,
-				sites_id='$Site_ID' ,
 				ijin_prinsip_start='$Tanggal_Awal_Ijin_Prinsip' ,
 				ijin_prinsip_finish='$Tanggal_Akhir_Ijin_Prinsip'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE ijin_ptt 
 			SET
-
+				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
+				ijin_ptt_start='$Tanggal_Awal_Ijin_Pendirian' ,
+				ijin_ptt_finish='$Tanggal_Akhir_Ijin_Pendirian'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE imb 
 			SET
-
+				imb_nomor='$Nomor_IMB' ,
+				imb_mitra_pengurus='$Mitra_Pengurus_IMB' ,
+				imb_daftar_ulang='$Daftar_Ulang_IMB' ,
+				imb_start='$Tanggal_Awal_IMB' ,
+				imb_finish='$Tanggal_Akhir_IMB' ,
+				imb_status_kepengurusan='$Status_Kepengurusan_IMB' ,
+				imb_status='$Status_IMB'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE imtu 
 			SET
-
+				ijin_imtu_nomor,='$Nomor_Ijin_imtu', 
+				ijin_imtu_start,='$Tanggal_Awal_Ijin_imtu', 
+				ijin_imtu_finish='$Tanggal_Akhir_Ijin_imtu'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE ipb 
 			SET
-
+				ijin_ipb_nomor='$Ijin_IPB_Nomor' ,
+				ijin_ipb_start='$Ijin_IPB_Start' ,
+				ijin_ipb_finish='$Ijin_IPB_Finish'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE pbb 
 			SET 
-
+				nop='$Nomor_Objek_Pajak' ,
+				nilai_pbb_site='$Nilai_PBB' ,
+				tanggal_mulai='$Tanggal_Mulai' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				status='$Status_PBB' ,
+				njop_tanah='$NJOP_Tanah' ,
+				njop_bangunan='$NJOP_Bangunan' ,
+				koef_pbb='$Koef_PBB'
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE site 
@@ -364,9 +378,6 @@
 				sites_shelter_size='$Shelter_Size' ,
 				sites_luas_lahan='$Luas_Lahan' ,
 				sites_luas_jalan_akses='$Luas_Jalan_Akses' ,
-				sites_denah_tanah='$Denah_Tanah' ,
-				sites_peta_lrt='$Peta_Lokasi_Radius_Tower' ,
-				sites_sketsa_bt='$Sketsa_Batas_Lahan' ,
 				sites_tanggal_start='$Tanggal_Mulai_Sewa' ,
 				sites_tanggal_finish='$Tanggal_Akhir_Sewa' ,
 				sites_harga_per_tahun='$Harga_Per_Tahun' ,
@@ -384,13 +395,17 @@
 				comcase_keterangan='$Comcase_Keterangan ' ,
 				comcase_status='$Comcase_Status' ,
 				comcase_solusi='$Comcase_Solusi' ,
-				comcase_file='$Comcase_File' ,
 				comcase_mitra='$Comcase_Mitra' 
 			WHERE sites_id='$sites_id' ");
 		mysql_query($conn, "
 			UPDATE skrd_rpm 
 			SET
-
+				no_skrd='$No_SKRD' ,
+				sites_id='$Site_ID' ,
+				harga_skrd='$Harga_SKRD' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				koef_skrd='$Koef_SKRD' ,
+				status='$Status_SKRD'
 			WHERE sites_id='$sites_id' ");
 	}
 	else
@@ -444,31 +459,196 @@
 			unlink($filehapus6);
 		}
 
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
-		mysql_query($conn, "UPDATE xxx SET xxx='xxx' WHERE xxx='xxx' ");
+		mysql_query($conn, "
+			UPDATE ho 
+			SET 
+				ho_nomor='$Nomor_HO' ,
+				ho_daftar_ulang='$Daftar_Ulang_HO' ,
+				ho_start='$Tanggal_Start_HO' ,
+				ho_finish='$Tanggal_Finish_HO' ,
+				ho_status='$Status_HO'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE identitas_pemilik 
+			SET
+				identitas_pemilik_ktp='$KTP_Pemilik' ,
+				identitas_pemilik_kk='$Kartu_Keluarga_Pemilik' ,
+				identitas_pemilik_lahan='$Pemilik_Lahan' ,
+				identitas_pemilik_kuasa='$Orang_Yang_Di_Kuasakan' ,
+				identitas_pemilik_alamat='$Alamat_Pemilik' ,
+				identitas_pemilik_telepon='$Telepon' ,
+				identitas_pemilik_hp='$HP' ,
+				identitas_pemilik_email='$E_mail' ,
+				identitas_pemilik_sp_keluarga='$Surat_Persetujuan_Keluarga' ,
+				sp='$SP' ,
+				sp_ahli_waris='$SP_Ahli_Waris' ,
+				sp_janda='$SP_Janda' ,
+				sp_kepemilikan_tanah='$SP_Kepemilikan_Tanah' ,
+				sp_pelepasan_hak='$SP_Pelepasan_Hak' ,
+				sp_pembayaran='$SP_Pembayaran' ,
+				sp_penguasaan_fisik_tanah='$SP_Penguasaan_Fisik_Tanah' ,
+				sp_peralihan_atas_pekarangan='$SP_Peralihan_Atas_Pekarangan' ,
+				sp_persetujuan_kepala_desa='$SP_Persetujuan_Kepala_Desa' ,
+				sp_tanah_pemohon='$SP_Tanah_Pemohon' ,
+				sp_tidak_keberatan_jalan_pribadi='$SP_Tidak_Keberatan_Jalan_Pribadi' ,
+				sp_tidak_keberatan_jalan_umum='$SP_Tidak_Keberatan_Jalan_Umum' ,
+				akta_hibah='$Akta_Hibah' ,
+				akta_jualbeli_sewa='$Akta_Jual_Beli_Sewa' ,
+				akta_hak_bersama='$Akta_Hak_Bersama' ,
+				akta_warisan='$Akta_Warisan' ,
+				akta_pemisahan='$Akta_Pemisahan' ,
+				akta_nikah='$Akta_Nikah' ,
+				ijin_ippt='$Ijin_Perubahan_Pengguna_Tanah' ,
+				ijin_warga='$Ijin_Warga' ,
+				ijin_ukl_upl='$Ijin_UKL_UPL' ,
+				ijin_sertifikat_tanah='$Ijin_Sertifikat_Tanah' ,
+				sket_beda_nama='$SK_Akses_Lahan_Jalan' ,
+				sket_akses_lahan_jalan='$SK_Asal_Tanah' ,
+				sket_asal_tanah='$SK_Beda_Luas_Tanah' ,
+				sket_beda_luas_tanah='$SK_Beda_Nama' ,
+				sket_fatwa_waris='$SK_Fatwa_Waris' ,
+				sket_kematian='$SK_Kematian' ,
+				sket_penduduk='$SK_Penduduk' ,
+				sket_permohonan_imb_ho_ip='$SK_Permohonan_IMB_dll' ,
+				sket_persetujuan_sewa_lahan='$SK_Persetujuan_Sewa_Lahan' ,
+				sket_riwayat_tanah='$SK_Riwayat_Tanah' ,
+				sket_suami_istri='$SK_Suami_Istri' ,
+				sket_tanah='$SK_Tanah' ,
+				sket_tidak_sengketa='$SK_Tidak_Sengketa' ,
+				sket_keberatan='$SK_Tidak_Keberatan_Didirikan' ,
+				sl_sk='$Surat_Kuasa' ,
+				sl_sk_pengambilan_jaminan_asli='$Surat_Kuasa_Pengambilan_Jaminan_Asli' ,
+				sl_surat_jaminan_hukum='$Surat_Jaminan_Hukum' ,
+				sl_pks='$Surat_Ijin_PKS' ,
+				sl_surat_perjanjian_sewa_tanah='$Surat_Perjanjian_Sewa_Tanah'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE ijin_dephub 
+			SET
+				ijin_dephub_nomor='$Nomor_Ijin' ,
+				ijin_dephub_start='$Tanggal_Mulai_Ijin' ,
+				ijin_dephub_finish='$Tanggal_Akhir_Ijin'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE ijin_genset 
+			SET
+				ijin_genset_nomor='$Nomor_Genset' ,
+				ijin_genset_status='$Status_Genset' ,
+				ijin_genset_start='$Tanggal_Start' ,
+				ijin_genset_finish='$Tanggal_Finish'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE ijin_prinsip 
+			SET
+				ijin_genset_nomor='$Nomor_Genset' ,
+				ijin_prinsip_start='$Tanggal_Awal_Ijin_Prinsip' ,
+				ijin_prinsip_finish='$Tanggal_Akhir_Ijin_Prinsip'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE ijin_ptt 
+			SET
+				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
+				ijin_ptt_start='$Tanggal_Awal_Ijin_Pendirian' ,
+				ijin_ptt_finish='$Tanggal_Akhir_Ijin_Pendirian'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE imb 
+			SET
+				imb_nomor='$Nomor_IMB' ,
+				imb_mitra_pengurus='$Mitra_Pengurus_IMB' ,
+				imb_daftar_ulang='$Daftar_Ulang_IMB' ,
+				imb_start='$Tanggal_Awal_IMB' ,
+				imb_finish='$Tanggal_Akhir_IMB' ,
+				imb_status_kepengurusan='$Status_Kepengurusan_IMB' ,
+				imb_status='$Status_IMB'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE imtu 
+			SET
+				ijin_imtu_nomor,='$Nomor_Ijin_imtu', 
+				ijin_imtu_start,='$Tanggal_Awal_Ijin_imtu', 
+				ijin_imtu_finish='$Tanggal_Akhir_Ijin_imtu'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE ipb 
+			SET
+				ijin_ipb_nomor='$Ijin_IPB_Nomor' ,
+				ijin_ipb_start='$Ijin_IPB_Start' ,
+				ijin_ipb_finish='$Ijin_IPB_Finish'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE pbb 
+			SET 
+				nop='$Nomor_Objek_Pajak' ,
+				nilai_pbb_site='$Nilai_PBB' ,
+				tanggal_mulai='$Tanggal_Mulai' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				status='$Status_PBB' ,
+				njop_tanah='$NJOP_Tanah' ,
+				njop_bangunan='$NJOP_Bangunan' ,
+				surat_pbb='$file5' ,
+				koef_pbb='$Koef_PBB'
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE site 
+			SET
+				sites_id='$Site_ID' ,
+				sites_nama='$Nama_Site' ,
+				sites_status_lahan='$Status_Lahan' ,
+				sites_status_tower='$Satus_Tower' ,
+				sites_pemilik_tower='$Pemilik_Tower' ,
+				sites_alamat='$Alamat_Site' ,
+				sites_kota_kabupaten='$Kota_Kabupaten' ,
+				sites_kontraktor_utama='$Kontraktor_Utama' ,
+				sites_penyedia_menara='$Penyedia_Menara' ,
+				sites_branch='$Branch' ,
+				sites_long='$Longitude' ,
+				sites_lat='$Latitude' ,
+				sites_on_air_date='$On_Air_Date' ,
+				sites_colocated_site='$Colocated_Site' ,
+				sites_type_bts='$BTS_Type' ,
+				sites_type_site='$Site_Type' ,
+				sites_tower_height='$Tower_Height' ,
+				sites_tower_type='$Tower_Type' ,
+				sites_shelter_type='$Shelter_Type' ,
+				sites_shelter_size='$Shelter_Size' ,
+				sites_luas_lahan='$Luas_Lahan' ,
+				sites_luas_jalan_akses='$Luas_Jalan_Akses' ,
+				sites_denah_tanah='$file1' ,
+				sites_peta_lrt='$file2' ,
+				sites_sketsa_bt='$file3' ,
+				sites_tanggal_start='$Tanggal_Mulai_Sewa' ,
+				sites_tanggal_finish='$Tanggal_Akhir_Sewa' ,
+				sites_harga_per_tahun='$Harga_Per_Tahun' ,
+				sites_remark='$Remark' ,
+				perpanjangan_pagu='$Pagu' ,
+				perpanjangan_pic='$PIC' ,
+				perpanjangan_spph='$SPPH' ,
+				perpanjangan_vendor_list='$Vendor_List' ,
+				perpanjangan_invoice='$Invoice' ,
+				bak_nomor='$Nomor_BAK' ,
+				bak_tanggal='$Tanggal_BAK' ,
+				bak_harga='$Harga_BAK' ,
+				bak_status='$Status' ,
+				comcase_tanggal='$Comcase_Tanggal' ,
+				comcase_keterangan='$Comcase_Keterangan ' ,
+				comcase_status='$Comcase_Status' ,
+				comcase_solusi='$Comcase_Solusi' ,
+				comcase_file='$file4' ,
+				comcase_mitra='$Comcase_Mitra' 
+			WHERE sites_id='$sites_id' ");
+		mysql_query($conn, "
+			UPDATE skrd_rpm 
+			SET
+				no_skrd='$No_SKRD' ,
+				sites_id='$Site_ID' ,
+				harga_skrd='$Harga_SKRD' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				koef_skrd='$Koef_SKRD' ,
+				status='$Status_SKRD' ,
+				surat_skrd='$file6'
+			WHERE sites_id='$sites_id' ");
 
 	}
-
-	if(empty($_FILES["Denah_Tanah"]["name"]))
-	{
-		$result = mysqli_query($conn, "UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan' WHERE nik='$nik'");
-		header("Location:List_User.php");
-	}
-	else
-	{
-		$result = mysqli_query($conn, "UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',	link_profile_pic='$image' WHERE nik='$nik'");
-		unlink($file);
-		header("Location:List_User.php");
-	}
-	header("Location:List_Sites.php");
+	//header("Location:List_Sites.php");
 ?>
