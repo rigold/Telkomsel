@@ -633,7 +633,7 @@
 									WHERE sites_id=$sites_id
 									";
 								$result14 = $conn->query($sql14);
-								$row14 = $result->fetch_assoc();
+								$row14 = $result14->fetch_assoc();
 
 								echo "
 								<tr><th>Nomor Ijin</th><td>" .$row14["ijin_imtu_nomor"]."</td></tr> 

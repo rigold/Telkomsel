@@ -594,13 +594,13 @@
 									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row8['ijin_imtu_nomor'];?>" name="Nomor_Ijin" size="50">
+											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row8['ijin_imtu_nomor'];?>" name="Nomor_Ijin_imtu" size="50">
 										</p>
 										<p>
-											<label >Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin"  value="<?php echo $row8['ijin_imtu_start'];?>" name="Tanggal_Awal_Ijin" >
+											<label >Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin_imtu"  value="<?php echo $row8['ijin_imtu_start'];?>" name="Tanggal_Awal_Ijin_imtu" >
 										</p>
 										<p>
-											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row8['ijin_imtu_finish'];?>" name="Tanggal_Akhir_Ijin" >
+											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin_imtu"  value="<?php echo $row8['ijin_imtu_finish'];?>" name="Tanggal_Akhir_Ijin_imtu" >
 										</p>
 									</a>
 								</table>
