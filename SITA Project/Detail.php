@@ -235,7 +235,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql2 = "SELECT
 									perpanjangan_pagu,
 									perpanjangan_pic,
 									perpanjangan_spph,
@@ -244,15 +244,15 @@
 									FROM site
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result2 = $conn->query($sql2);
+								$row2 = $result2->fetch_assoc();
 
 								echo "
-								<tr><th>Pagu</th><td>" . $row["perpanjangan_pagu"]."</td></tr> 
-								<tr><th>PIC</th><td>" .$row["perpanjangan_pic"]."</td></tr> 
-								<tr><th>SPPH</th><td>" .$row["perpanjangan_spph"]."</td></tr> 
-								<tr><th>Vendor</th><td>" .$row["perpanjangan_vendor_list"]."</td></tr> 
-								<tr><th>Invoice</th><td>" .$row["perpanjangan_invoice"]."</td></tr> 
+								<tr><th>Pagu</th><td>" . $row2["perpanjangan_pagu"]."</td></tr> 
+								<tr><th>PIC</th><td>" .$row2["perpanjangan_pic"]."</td></tr> 
+								<tr><th>SPPH</th><td>" .$row2["perpanjangan_spph"]."</td></tr> 
+								<tr><th>Vendor</th><td>" .$row2["perpanjangan_vendor_list"]."</td></tr> 
+								<tr><th>Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr> 
 								";
 								?>
 							</a>
@@ -263,7 +263,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql3 = "SELECT
 									bak_nomor,
 									bak_tanggal,
 									bak_harga,
@@ -271,14 +271,14 @@
 									FROM site
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result3 = $conn->query($sql3);
+								$row3 = $result3->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor BAK</th><td>" . $row["bak_nomor"]."</td></tr> 
-								<tr><th>Tanggal_BAK</th><td>" .$row["bak_tanggal"]."</td></tr> 
-								<tr><th>Harga_BAK</th><td>" .$row["bak_harga"]."</td></tr> 
-								<tr><th>Status</th><td>" .$row["bak_status"]."</td></tr>
+								<tr><th>Nomor BAK</th><td>" . $row3["bak_nomor"]."</td></tr> 
+								<tr><th>Tanggal_BAK</th><td>" .$row3["bak_tanggal"]."</td></tr> 
+								<tr><th>Harga_BAK</th><td>" .$row3["bak_harga"]."</td></tr> 
+								<tr><th>Status</th><td>" .$row3["bak_status"]."</td></tr>
 								";
 								?>
 							</a>
@@ -289,7 +289,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql4 = "SELECT
 									ho_nomor,
 									ho_daftar_ulang,
 									ho_start,
@@ -298,15 +298,15 @@
 									FROM ho
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result4 = $conn->query($sql4);
+								$row4 = $result4->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor HO</th><td>" . $row["ho_nomor"]."</td></tr>
-								<tr><th>Daftar Ulang HO</th><td>" .$row["ho_daftar_ulang"]."</td></tr> 
-								<tr><th>Tanggal Start HO</th><td>" .$row["ho_start"]."</td></tr>
-								<tr><th>Tanggal Finish HO</th><td>" .$row["ho_finish"]."</td></tr>
-								<tr><th>Status HO</th><td>" .$row["ho_status"]."</td></tr>
+								<tr><th>Nomor HO</th><td>" . $row4["ho_nomor"]."</td></tr>
+								<tr><th>Daftar Ulang HO</th><td>" .$row4["ho_daftar_ulang"]."</td></tr> 
+								<tr><th>Tanggal Start HO</th><td>" .$row4["ho_start"]."</td></tr>
+								<tr><th>Tanggal Finish HO</th><td>" .$row4["ho_finish"]."</td></tr>
+								<tr><th>Status HO</th><td>" .$row4["ho_status"]."</td></tr>
 								";
 								?>
 							</a>
@@ -317,7 +317,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql5 = "SELECT
 									identitas_pemilik_ktp,
 									identitas_pemilik_kk,
 									identitas_pemilik_lahan,
@@ -330,19 +330,19 @@
 									FROM identitas_pemilik
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result5 = $conn->query($sql5);
+								$row5 = $result5->fetch_assoc();
 
 								echo "
-								<tr><th>KTP Pemilik</th><td>" . $row["identitas_pemilik_ktp"]."</td></tr>
-								<tr><th>Kartu Keluarga Pemilik</th><td>" .$row["identitas_pemilik_kk"]."</td></tr> 
-								<tr><th>Pemilik Lahan</th><td>" .$row["identitas_pemilik_lahan"]."</td></tr>
-								<tr><th>Orang yang dikuasakan</th><td>" .$row["identitas_pemilik_kuasa"]."</td></tr>
-								<tr><th>Alamat Pemilik</th><td>" .$row["identitas_pemilik_alamat"]."</td></tr>
-								<tr><th>Telepon</th><td>" .$row["identitas_pemilik_telepon"]."</td></tr> 
-								<tr><th>No. HP</th><td>" .$row["identitas_pemilik_hp"]."</td></tr>
-								<tr><th>E-mail</th><td>" .$row["identitas_pemilik_email"]."</td></tr>
-								<tr><th>Surat Persetujuan Keluarga</th><td>" .$row["identitas_pemilik_sp_keluarga"]."</td></tr>
+								<tr><th>KTP Pemilik</th><td>" . $row5["identitas_pemilik_ktp"]."</td></tr>
+								<tr><th>Kartu Keluarga Pemilik</th><td>" .$row5["identitas_pemilik_kk"]."</td></tr> 
+								<tr><th>Pemilik Lahan</th><td>" .$row5["identitas_pemilik_lahan"]."</td></tr>
+								<tr><th>Orang yang dikuasakan</th><td>" .$row5["identitas_pemilik_kuasa"]."</td></tr>
+								<tr><th>Alamat Pemilik</th><td>" .$row5["identitas_pemilik_alamat"]."</td></tr>
+								<tr><th>Telepon</th><td>" .$row5["identitas_pemilik_telepon"]."</td></tr> 
+								<tr><th>No. HP</th><td>" .$row5["identitas_pemilik_hp"]."</td></tr>
+								<tr><th>E-mail</th><td>" .$row5["identitas_pemilik_email"]."</td></tr>
+								<tr><th>Surat Persetujuan Keluarga</th><td>" .$row5["identitas_pemilik_sp_keluarga"]."</td></tr>
 								";
 								?>
 							</a>
@@ -353,7 +353,7 @@
 							<a id="detail">
 							<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql6 = "SELECT
 									sp,
 									sp_ahli_waris,
 									sp_janda,
@@ -369,22 +369,22 @@
 									FROM identitas_pemilik
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result6 = $conn->query($sql6);
+								$row6 = $result6->fetch_assoc();
 
 								echo "
-									<tr><th>Surat Pernyataan</th><td>" . $row["sp"]."</td></tr>
-									<tr><th>Surat Pernyataan Ahli Waris</th><td>" .$row["sp_ahli_waris"]."</td></tr> 
-									<tr><th>Surat Pernyataan Janda</th><td>" .$row["sp_janda"]."</td></tr>
-									<tr><th>Surat Pernyataan Kepemilikan Tanah</th><td>" .$row["sp_kepemilikan_tanah"]."</td></tr>
-									<tr><th>Surat Pernyataan Pelepasan Hak</th><td>" .$row["sp_pelepasan_hak"]."</td></tr>
-									<tr><th>Surat Pernyataan Pembayaran</th><td>" .$row["sp_pembayaran"]."</td></tr> 
-									<tr><th>Surat Pernyataan Penguasaan Fisik Tanah</th><td>" .$row["sp_penguasaan_fisik_tanah"]."</td></tr>
-									<tr><th>Surat Pernyataan Peralihan Atas Pekarangan</th><td>" .$row["sp_peralihan_atas_pekarangan"]."</td></tr>
-									<tr><th>Surat Pernyataan Persetujuan Kepala Desa</th><td>" .$row["sp_persetujuan_kepala_desa"]."</td></tr>
-									<tr><th>Surat Pernyataan Tanah Pemohon</th><td>" .$row["sp_tanah_pemohon"]."</td></tr>
-									<tr><th>Surat Pernyataan Tidak Keberatan Jalan Pribadi</th><td>" .$row["sp_tidak_keberatan_jalan_pribadi"]."</td></tr>
-									<tr><th>Surat Pernyataan Tidak Keberatan Jalan Umum</th><td>" .$row["sp_tidak_keberatan_jalan_umum"]."</td></tr>
+									<tr><th>Surat Pernyataan</th><td>" . $row6["sp"]."</td></tr>
+									<tr><th>Surat Pernyataan Ahli Waris</th><td>" .$row6["sp_ahli_waris"]."</td></tr> 
+									<tr><th>Surat Pernyataan Janda</th><td>" .$row6["sp_janda"]."</td></tr>
+									<tr><th>Surat Pernyataan Kepemilikan Tanah</th><td>" .$row6["sp_kepemilikan_tanah"]."</td></tr>
+									<tr><th>Surat Pernyataan Pelepasan Hak</th><td>" .$row6["sp_pelepasan_hak"]."</td></tr>
+									<tr><th>Surat Pernyataan Pembayaran</th><td>" .$row6["sp_pembayaran"]."</td></tr> 
+									<tr><th>Surat Pernyataan Penguasaan Fisik Tanah</th><td>" .$row6["sp_penguasaan_fisik_tanah"]."</td></tr>
+									<tr><th>Surat Pernyataan Peralihan Atas Pekarangan</th><td>" .$row6["sp_peralihan_atas_pekarangan"]."</td></tr>
+									<tr><th>Surat Pernyataan Persetujuan Kepala Desa</th><td>" .$row6["sp_persetujuan_kepala_desa"]."</td></tr>
+									<tr><th>Surat Pernyataan Tanah Pemohon</th><td>" .$row6["sp_tanah_pemohon"]."</td></tr>
+									<tr><th>Surat Pernyataan Tidak Keberatan Jalan Pribadi</th><td>" .$row6["sp_tidak_keberatan_jalan_pribadi"]."</td></tr>
+									<tr><th>Surat Pernyataan Tidak Keberatan Jalan Umum</th><td>" .$row6["sp_tidak_keberatan_jalan_umum"]."</td></tr>
 								";
 								?>
 							</a>
@@ -395,7 +395,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql7 = "SELECT
 									akta_hibah,
 									akta_jualbeli_sewa,
 									akta_hak_bersama,
@@ -405,16 +405,16 @@
 									FROM identitas_pemilik
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result7 = $conn->query($sql7);
+								$row7 = $result7->fetch_assoc();
 
 								echo "
-								<tr><th>Akta Hibah</th><td>" . $row["akta_hibah"]."</td></tr> 
-								<tr><th>Akta Jual Beli Sewa</th><td>" .$row["akta_jualbeli_sewa"]."</td></tr> 
-								<tr><th>Akta Hak Bersama</th><td>" .$row["akta_hak_bersama"]."</td></tr> 
-								<tr><th>Akta Warisan</th><td>" .$row["akta_warisan"]."</td></tr> 
-								<tr><th>Akta Pemisahan</th><td>" .$row["akta_pemisahan"]."</td></tr>
-								<tr><th>Akta Nikah</th><td>" .$row["akta_nikah"]."</td></tr> 
+								<tr><th>Akta Hibah</th><td>" . $row7["akta_hibah"]."</td></tr> 
+								<tr><th>Akta Jual Beli Sewa</th><td>" .$row7["akta_jualbeli_sewa"]."</td></tr> 
+								<tr><th>Akta Hak Bersama</th><td>" .$row7["akta_hak_bersama"]."</td></tr> 
+								<tr><th>Akta Warisan</th><td>" .$row7["akta_warisan"]."</td></tr> 
+								<tr><th>Akta Pemisahan</th><td>" .$row7["akta_pemisahan"]."</td></tr>
+								<tr><th>Akta Nikah</th><td>" .$row7["akta_nikah"]."</td></tr> 
 								";
 								?>
 							</a>
@@ -425,7 +425,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql8 = "SELECT
 									ijin_ippt,
 									ijin_warga,
 									ijin_ukl_upl,
@@ -433,14 +433,14 @@
 									FROM identitas_pemilik
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result8 = $conn->query($sql8);
+								$row8 = $result8->fetch_assoc();
 
 								echo "
-								<tr><th>Ijin Perubahan Pengguna Tanah</th><td>" . $row["ijin_ippt"]."</td></tr> 
-								<tr><th>Ijin Warga</th><td>" .$row["ijin_warga"]."</td></tr> 
-								<tr><th>Ijin UKL UPL</th><td>" .$row["ijin_ukl_upl"]."</td></tr> 
-								<tr><th>Ijin Sertifikat Tanah</th><td>" .$row["ijin_sertifikat_tanah"]."</td></tr>
+								<tr><th>Ijin Perubahan Pengguna Tanah</th><td>" . $row8["ijin_ippt"]."</td></tr> 
+								<tr><th>Ijin Warga</th><td>" .$row8["ijin_warga"]."</td></tr> 
+								<tr><th>Ijin UKL UPL</th><td>" .$row8["ijin_ukl_upl"]."</td></tr> 
+								<tr><th>Ijin Sertifikat Tanah</th><td>" .$row8["ijin_sertifikat_tanah"]."</td></tr>
 								";
 								?>
 							</a>
@@ -451,7 +451,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql9 = "SELECT
 									sket_akses_lahan_jalan,
 									sket_asal_tanah,
 									sket_beda_luas_tanah,
@@ -469,24 +469,24 @@
 									FROM identitas_pemilik
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result9 = $conn->query($sql9);
+								$row9 = $result9->fetch_assoc();
 
 								echo "
-								<tr><th>Surat Keterangan Akses Lahan Jalan</th><td>" . $row["sket_akses_lahan_jalan"]."</td></tr> 
-								<tr><th>Surat Keterangan Asal Tanah</th><td>" .$row["sket_asal_tanah"]."</td></tr> 
-								<tr><th>Surat Keterangan Beda Luas Tanah</th><td>" .$row["sket_beda_luas_tanah"]."</td></tr> 
-								<tr><th>Surat Keterangan Beda Nama</th><td>" .$row["sket_beda_nama"]."</td></tr>
-								<tr><th>Surat Keterangan Fatwa Waris</th><td>" . $row["sket_fatwa_waris"]."</td></tr> 
-								<tr><th>Surat Keterangan Kematian</th><td>" .$row["sket_kematian"]."</td></tr> 
-								<tr><th>Surat Keterangan Penduduk</th><td>" .$row["sket_penduduk"]."</td></tr> 
-								<tr><th>Surat Keterangan Permohonan IMB, HO, &IP</th><td>" .$row["sket_permohonan_imb_ho_ip"]."</td></tr>
-								<tr><th>Surat Keterangan Persetujuan Sewa Lahan</th><td>" . $row["sket_persetujuan_sewa_lahan"]."</td></tr> 
-								<tr><th>Surat Keterangan Riwayat Tanah</th><td>" .$row["sket_riwayat_tanah"]."</td></tr> 
-								<tr><th>Surat Keterangan Suami Istri</th><td>" .$row["sket_suami_istri"]."</td></tr> 
-								<tr><th>Surat Keterangan Tanah</th><td>" .$row["sket_tanah"]."</td></tr>
-								<tr><th>Surat Keterangan Tidak Sengketa</th><td>" .$row["sket_tidak_sengketa"]."</td></tr> 
-								<tr><th>Surat Keterangan Tidak Keberatan Didirikan</th><td>" .$row["sket_keberatan"]."</td></tr>
+								<tr><th>Surat Keterangan Akses Lahan Jalan</th><td>" . $row9["sket_akses_lahan_jalan"]."</td></tr> 
+								<tr><th>Surat Keterangan Asal Tanah</th><td>" .$row9["sket_asal_tanah"]."</td></tr> 
+								<tr><th>Surat Keterangan Beda Luas Tanah</th><td>" .$row9["sket_beda_luas_tanah"]."</td></tr> 
+								<tr><th>Surat Keterangan Beda Nama</th><td>" .$row9["sket_beda_nama"]."</td></tr>
+								<tr><th>Surat Keterangan Fatwa Waris</th><td>" . $row9["sket_fatwa_waris"]."</td></tr> 
+								<tr><th>Surat Keterangan Kematian</th><td>" .$row9["sket_kematian"]."</td></tr> 
+								<tr><th>Surat Keterangan Penduduk</th><td>" .$row9["sket_penduduk"]."</td></tr> 
+								<tr><th>Surat Keterangan Permohonan IMB, HO, &IP</th><td>" .$row9["sket_permohonan_imb_ho_ip"]."</td></tr>
+								<tr><th>Surat Keterangan Persetujuan Sewa Lahan</th><td>" . $row9["sket_persetujuan_sewa_lahan"]."</td></tr> 
+								<tr><th>Surat Keterangan Riwayat Tanah</th><td>" .$row9["sket_riwayat_tanah"]."</td></tr> 
+								<tr><th>Surat Keterangan Suami Istri</th><td>" .$row9["sket_suami_istri"]."</td></tr> 
+								<tr><th>Surat Keterangan Tanah</th><td>" .$row9["sket_tanah"]."</td></tr>
+								<tr><th>Surat Keterangan Tidak Sengketa</th><td>" .$row9["sket_tidak_sengketa"]."</td></tr> 
+								<tr><th>Surat Keterangan Tidak Keberatan Didirikan</th><td>" .$row9["sket_keberatan"]."</td></tr>
 								";
 								?>
 							</a>
@@ -497,7 +497,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql0 = "SELECT
 									sl_sk,
 									sl_sk_pengambilan_jaminan_asli,
 									sl_surat_jaminan_hukum,
@@ -506,15 +506,15 @@
 									FROM identitas_pemilik
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result0 = $conn->query($sql0);
+								$row0 = $result0->fetch_assoc();
 
 								echo "
-								<tr><th>Surat Kuasa</th><td>" . $row["sl_sk"]."</td></tr> 
-								<tr><th>Surat Kuasa Pengambilan Jaminan Asli</th><td>" .$row["sl_sk_pengambilan_jaminan_asli"]."</td></tr> 
-								<tr><th>Surat Jaminan Hukum</th><td>" .$row["sl_surat_jaminan_hukum"]."</td></tr> 
-								<tr><th>Surat Ijin PKS</th><td>" .$row["sl_pks"]."</td></tr>
-								<tr><th>Surat Perjanjian Sewa Tanah</th><td>" .$row["sl_surat_perjanjian_sewa_tanah"]."</td></tr>
+								<tr><th>Surat Kuasa</th><td>" . $row0["sl_sk"]."</td></tr> 
+								<tr><th>Surat Kuasa Pengambilan Jaminan Asli</th><td>" .$row0["sl_sk_pengambilan_jaminan_asli"]."</td></tr> 
+								<tr><th>Surat Jaminan Hukum</th><td>" .$row0["sl_surat_jaminan_hukum"]."</td></tr> 
+								<tr><th>Surat Ijin PKS</th><td>" .$row0["sl_pks"]."</td></tr>
+								<tr><th>Surat Perjanjian Sewa Tanah</th><td>" .$row0["sl_surat_perjanjian_sewa_tanah"]."</td></tr>
 								";
 								?>
 							</a>
@@ -525,7 +525,7 @@
 							<a id="detail">
 							<?php
 							$sites_id = $_GET['sites_id'];
-							$sql = "SELECT
+							$sql11 = "SELECT
 								nop,
 								nilai_pbb_site,
 								tanggal_mulai,
@@ -537,19 +537,19 @@
 								FROM pbb
 								WHERE sites_id=$sites_id
 								";
-							$result = $conn->query($sql);
-							$row = $result->fetch_assoc();
-							$a=$row["surat_pbb"]; 
+							$result11 = $conn->query($sql11);
+							$row11 = $result11->fetch_assoc();
+							$a=$row11["surat_pbb"]; 
 							$aloc="File/".$a;
 
 							echo "
-							<tr><th>Nomor Objek Pajak</th><td>" .$row["nop"]."</td></tr> 
-							<tr><th>Nilai PBB</th><td>" .$row["nilai_pbb_site"]."</td></tr> 
-							<tr><th>Tanggal Mulai</th><td>" .$row["tanggal_mulai"]."</td></tr> 
-							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row["tanggal_jatuh_tempo"]."</td></tr>
-							<tr><th>Status</th><td>" .$row["status"]."</td></tr>
-							<tr><th>NJOP Tanah</th><td>" .$row["njop_tanah"]."</td></tr> 
-							<tr><th>NJOP Bangunan</th><td>" .$row["njop_bangunan"]."</td></tr>
+							<tr><th>Nomor Objek Pajak</th><td>" .$row11["nop"]."</td></tr> 
+							<tr><th>Nilai PBB</th><td>" .$row11["nilai_pbb_site"]."</td></tr> 
+							<tr><th>Tanggal Mulai</th><td>" .$row11["tanggal_mulai"]."</td></tr> 
+							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row11["tanggal_jatuh_tempo"]."</td></tr>
+							<tr><th>Status</th><td>" .$row11["status"]."</td></tr>
+							<tr><th>NJOP Tanah</th><td>" .$row11["njop_tanah"]."</td></tr> 
+							<tr><th>NJOP Bangunan</th><td>" .$row11["njop_bangunan"]."</td></tr>
 							<tr><th>Surat PBB</th><td><a href=".$aloc.">".$a."</a></td></tr>
 							";
 							?>
@@ -561,7 +561,7 @@
 							<a id="detail">
 							<?php
 							$sites_id = $_GET['sites_id'];
-							$sql = "SELECT
+							$sql12 = "SELECT
 								no_skrd,
 								harga_skrd,
 								tanggal_jatuh_tempo,
@@ -571,17 +571,17 @@
 								FROM skrd_rpm
 								WHERE sites_id=$sites_id
 								";
-							$result = $conn->query($sql);
-							$row = $result->fetch_assoc();
-							$a=$row["surat_skrd"]; 
+							$result12 = $conn->query($sql12);
+							$row12 = $result12->fetch_assoc();
+							$a=$row12["surat_skrd"]; 
 							$aloc="File/".$a;
 
 							echo "
-							<tr><th>No SKRD</th><td>" .$row["no_skrd"]."</td></tr> 
-							<tr><th>Harga SKRD</th><td>" .$row["harga_skrd"]."</td></tr>
-							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row["tanggal_jatuh_tempo"]."</td></tr>
-							<tr><th>Koef SKRD</th><td>" .$row["koef_skrd"]."</td></tr> 
-							<tr><th>Status</th><td>" .$row["status"]."</td></tr>
+							<tr><th>No SKRD</th><td>" .$row12["no_skrd"]."</td></tr> 
+							<tr><th>Harga SKRD</th><td>" .$row12["harga_skrd"]."</td></tr>
+							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row12["tanggal_jatuh_tempo"]."</td></tr>
+							<tr><th>Koef SKRD</th><td>" .$row12["koef_skrd"]."</td></tr> 
+							<tr><th>Status</th><td>" .$row12["status"]."</td></tr>
 							<tr><th>Surat SKRD</th><td><a href=".$aloc.">".$a."</a></td></tr>
 							";
 							?>
@@ -593,7 +593,7 @@
 							<a id="detail">
 							<?php
 							$sites_id = $_GET['sites_id'];
-							$sql = "SELECT
+							$sql13 = "SELECT
 								imb_nomor,
 								imb_mitra_pengurus,
 								imb_daftar_ulang,
@@ -604,17 +604,17 @@
 								FROM imb
 								WHERE sites_id=$sites_id
 								";
-							$result = $conn->query($sql);
-							$row = $result->fetch_assoc();
+							$result13 = $conn->query($sql13);
+							$row13 = $result13->fetch_assoc();
 
 							echo "
-							<tr><th>Nomor IMB</th><td>" .$row["imb_nomor"]."</td></tr> 
-							<tr><th>Mitra Pengurus IMB</th><td>" .$row["imb_mitra_pengurus"]."</td></tr> 
-							<tr><th>Daftar Ulang IMB</th><td>" .$row["imb_daftar_ulang"]."</td></tr> 
-							<tr><th>Tanggal Awal IMB</th><td>" .$row["imb_start"]."</td></tr>
-							<tr><th>Tanggal Akhir IMB</th><td>" .$row["imb_finish"]."</td></tr>
-							<tr><th>Status Kepengurusan IMB</th><td>" .$row["imb_status_kepengurusan"]."</td></tr>
-							<tr><th>Status IMB</th><td>" .$row["imb_status"]."</td></tr>
+							<tr><th>Nomor IMB</th><td>" .$row13["imb_nomor"]."</td></tr> 
+							<tr><th>Mitra Pengurus IMB</th><td>" .$row13["imb_mitra_pengurus"]."</td></tr> 
+							<tr><th>Daftar Ulang IMB</th><td>" .$row13["imb_daftar_ulang"]."</td></tr> 
+							<tr><th>Tanggal Awal IMB</th><td>" .$row13["imb_start"]."</td></tr>
+							<tr><th>Tanggal Akhir IMB</th><td>" .$row13["imb_finish"]."</td></tr>
+							<tr><th>Status Kepengurusan IMB</th><td>" .$row13["imb_status_kepengurusan"]."</td></tr>
+							<tr><th>Status IMB</th><td>" .$row13["imb_status"]."</td></tr>
 							";
 							?>
 							</a>
@@ -625,20 +625,20 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql14 = "SELECT
 									ijin_imtu_nomor,
 									ijin_imtu_start,
 									ijin_imtu_finish
 									FROM imtu
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result14 = $conn->query($sql14);
+								$row14 = $result->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor Ijin</th><td>" .$row["ijin_imtu_nomor"]."</td></tr> 
-								<tr><th>Tanggal Awal Ijin</th><td>" .$row["ijin_imtu_start"]."</td></tr> 
-								<tr><th>Tanggal Akhir Ijin</th><td>" .$row["ijin_imtu_finish"]."</td></tr>
+								<tr><th>Nomor Ijin</th><td>" .$row14["ijin_imtu_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal Ijin</th><td>" .$row14["ijin_imtu_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin</th><td>" .$row14["ijin_imtu_finish"]."</td></tr>
 								";
 								?>
 							</a>
@@ -649,20 +649,20 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql15 = "SELECT
 									ijin_dephub_nomor,
 									ijin_dephub_start,
 									ijin_dephub_finish
 									FROM ijin_dephub
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result15 = $conn->query($sql15);
+								$row15 = $result15->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor Ijin</th><td>" .$row["ijin_dephub_nomor"]."</td></tr> 
-								<tr><th>Tanggal Mulai Ijin</th><td>" .$row["ijin_dephub_start"]."</td></tr> 
-								<tr><th>Tanggal Akhir Ijin</th><td>" .$row["ijin_dephub_finish"]."</td></tr>
+								<tr><th>Nomor Ijin</th><td>" .$row15["ijin_dephub_nomor"]."</td></tr> 
+								<tr><th>Tanggal Mulai Ijin</th><td>" .$row15["ijin_dephub_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin</th><td>" .$row15["ijin_dephub_finish"]."</td></tr>
 								";
 								?>
 							</a>
@@ -673,20 +673,20 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql16 = "SELECT
 									ijin_ptt_nomor,
 									ijin_ptt_start,
 									ijin_ptt_finish
 									FROM ijin_ptt
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result16 = $conn->query($sql16);
+								$row16 = $result16->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor Ijin Pendirian</th><td>" .$row["ijin_ptt_nomor"]."</td></tr> 
-								<tr><th>Tanggal Awal Ijin Pendirian</th><td>" .$row["ijin_ptt_start"]."</td></tr> 
-								<tr><th>Tanggal Akhir Ijin Pendirian</th><td>" .$row["ijin_ptt_finish"]."</td></tr>
+								<tr><th>Nomor Ijin Pendirian</th><td>" .$row16["ijin_ptt_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal Ijin Pendirian</th><td>" .$row16["ijin_ptt_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin Pendirian</th><td>" .$row16["ijin_ptt_finish"]."</td></tr>
 								";
 								?>
 							</a>
@@ -697,20 +697,20 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql17 = "SELECT
 									ijin_ipb_nomor,
 									ijin_ipb_start,
 									ijin_ipb_finish
 									FROM ipb
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result17 = $conn->query($sql17);
+								$row17 = $result17->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor IPB</th><td>" .$row["ijin_ipb_nomor"]."</td></tr> 
-								<tr><th>Tanggal Awal IPB</th><td>" .$row["ijin_ipb_start"]."</td></tr> 
-								<tr><th>Tanggal Akhir IPB</th><td>" .$row["ijin_ipb_finish"]."</td></tr>
+								<tr><th>Nomor IPB</th><td>" .$row17["ijin_ipb_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal IPB</th><td>" .$row17["ijin_ipb_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir IPB</th><td>" .$row17["ijin_ipb_finish"]."</td></tr>
 								";
 								?>
 							</a>
@@ -721,20 +721,20 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql18 = "SELECT
 									ijin_prinsip_nomor,
 									ijin_prinsip_start,
 									ijin_prinsip_finish
 									FROM ijin_prinsip
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result18 = $conn->query($sql18);
+								$row18 = $result18->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor Ijin Prinsip</th><td>" .$row["ijin_prinsip_nomor"]."</td></tr> 
-								<tr><th>Tanggal Awal Ijin Prinsip</th><td>" .$row["ijin_prinsip_start"]."</td></tr> 
-								<tr><th>Tanggal Akhir Ijin Prinsip</th><td>" .$row["ijin_prinsip_finish"]."</td></tr>
+								<tr><th>Nomor Ijin Prinsip</th><td>" .$row18["ijin_prinsip_nomor"]."</td></tr> 
+								<tr><th>Tanggal Awal Ijin Prinsip</th><td>" .$row18["ijin_prinsip_start"]."</td></tr> 
+								<tr><th>Tanggal Akhir Ijin Prinsip</th><td>" .$row18["ijin_prinsip_finish"]."</td></tr>
 								";
 								?>
 							</a>
@@ -745,7 +745,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql19 = "SELECT
 									ijin_genset_nomor,
 									ijin_genset_status,
 									ijin_genset_start,
@@ -753,14 +753,14 @@
 									FROM ijin_genset
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result19 = $conn->query($sql19);
+								$row19 = $result19->fetch_assoc();
 
 								echo "
-								<tr><th>Nomor</th><td>" .$row["ijin_genset_nomor"]."</td></tr> 
-								<tr><th>Status</th><td>" .$row["ijin_genset_status"]."</td></tr> 
-								<tr><th>Tanggal Start</th><td>" .$row["ijin_genset_start"]."</td></tr>
-								<tr><th>Tanggal Finish</th><td>" .$row["ijin_genset_finish"]."</td></tr>
+								<tr><th>Nomor</th><td>" .$row19["ijin_genset_nomor"]."</td></tr> 
+								<tr><th>Status</th><td>" .$row19["ijin_genset_status"]."</td></tr> 
+								<tr><th>Tanggal Start</th><td>" .$row19["ijin_genset_start"]."</td></tr>
+								<tr><th>Tanggal Finish</th><td>" .$row19["ijin_genset_finish"]."</td></tr>
 								";
 								?>
 							</a>
@@ -771,7 +771,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql = "SELECT
+								$sql20 = "SELECT
 									comcase_tanggal,
 									comcase_keterangan,
 									comcase_status,
@@ -781,17 +781,17 @@
 									FROM site
 									WHERE sites_id=$sites_id
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
-								$a=$row["comcase_file"]; 
+								$result20 = $conn->query($sql20);
+								$row20 = $result20->fetch_assoc();
+								$a=$row20["comcase_file"]; 
 								$aloc="File/".$a;
 								echo "
-								<tr><th>Comcase Tanggal</th><td>" . $row["comcase_tanggal"]."</td></tr> 
-								<tr><th>Comcase Keterangan</th><td>" .$row["comcase_keterangan"]."</td></tr> 
-								<tr><th>Comcase Status</th><td>" .$row["comcase_status"]."</td></tr> 
-								<tr><th>Comcase Solusi</th><td>" .$row["comcase_solusi"]."</td></tr>
+								<tr><th>Comcase Tanggal</th><td>" . $row20["comcase_tanggal"]."</td></tr> 
+								<tr><th>Comcase Keterangan</th><td>" .$row20["comcase_keterangan"]."</td></tr> 
+								<tr><th>Comcase Status</th><td>" .$row20["comcase_status"]."</td></tr> 
+								<tr><th>Comcase Solusi</th><td>" .$row20["comcase_solusi"]."</td></tr>
 								<tr><th>Comcase File</th><td><a href=".$aloc.">".$a."</a></td></tr> 
-								<tr><th>Comcase Mitra</th><td>" .$row["comcase_mitra"]."</td></tr>
+								<tr><th>Comcase Mitra</th><td>" .$row20["comcase_mitra"]."</td></tr>
 								";
 								?>
 							</a>

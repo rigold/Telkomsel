@@ -185,7 +185,7 @@
 						<button class="tablinks" onclick="openTabs(event, 'Comcase')">COMCASE</button>
 						<button class="tablinks" onclick="openTabs(event, 'Submit')">UPDATE</button>
 					</div>
-					<form id="satu" action="Add_Sites_sql.php" method="post" enctype="multipart/form-data">
+					<form  id="satu" <?php echo "action= \"Edit_Sites_sql.php?sites_id=$row11[sites_id]&file1=$row11[sites_denah_tanah]&file2=$row11[sites_peta_lrt]&file3=$row11[sites_sketsa_bt]&file4=$row10[surat_pbb]&file5=$row12[surat_skrd]&file6=$row11[comcase_file]\" ";?> method="post" enctype="multipart/form-data">
 						<div id="site">
 							<div id="Sites" class="tabcontent">
 								<table border="0">
@@ -320,7 +320,7 @@
 											<label >Tanggal BAK :</label> <input type="date" id="Tanggal_BAK"  value="<?php echo $row11['bak_tanggal'];?>" name="Tanggal_BAK" >
 										</p>
 										<p>
-											<label >Harga BAK :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>"  value="<?php echo $row11['bak_harga'];?>" name="Harga_BAK" size="50">
+											<label >Harga BAK :</label> <input type="text" value="<?php echo $row11['bak_harga'];?>" name="Harga_BAK" size="50">
 										</p>
 										<p>
 											<label >Status :</label> <input type="text"  value="<?php echo $row11['bak_status'];?>" name="Status" size="50">
@@ -501,31 +501,31 @@
 									<h2>Informasi Pajak Bumi dan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor Objek Pajak :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Objek_Pajak" size="50">
+											<label >Nomor Objek Pajak :</label> <input type="text"  value="<?php echo $row10['nop'];?>" name="Nomor_Objek_Pajak" size="50">
 										</p>
 										<p>
-											<label >Nilai PBB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nilai_PBB" size="50">
+											<label >Nilai PBB :</label> <input type="text"  value="<?php echo $row10['nilai_pbb_site'];?>" name="Nilai_PBB" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Mulai" >
+											<label >Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai"  value="<?php echo $row10['tanggal_mulai'];?>" name="Tanggal_Mulai" >
 										</p>
 										<p>
-											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Jatuh_Tempo" >
+											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row10['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label >Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_PBB" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row10['status'];?>" name="Status_PBB" size="50">
 										</p>
 										<p>
-											<label >NJOP Tanah :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="NJOP_Tanah" size="50">
+											<label >NJOP Tanah :</label> <input type="text"  value="<?php echo $row10['njop_tanah'];?>" name="NJOP_Tanah" size="50">
 										</p>
 										<p>
-											<label >NJOP Bangunan :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="NJOP_Bangunan" size="50">
+											<label >NJOP Bangunan :</label> <input type="text"  value="<?php echo $row10['njop_bangunan'];?>" name="NJOP_Bangunan" size="50">
 										</p>
 										<p>
-											<label >Surat PBB :</label> <input type="file"  value="<?php echo $row11['sites_id'];?>" name="Surat_PBB" id="Surat_PBB" size="50"><br>
+											<label >Surat PBB :</label> <input type="file"  value="<?php echo $row10['surat_pbb'];?>" name="Surat_PBB" id="sket_pelunasan_pbb" size="50"><br>
 										</p>
 										<p>
-											<label >Koefisien PBB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Koef_PBB" size="50">
+											<label >Koefisien PBB :</label> <input type="text"  value="<?php echo $row10['koef_pbb'];?>" name="Koef_PBB" size="50">
 										</p>
 									</a>
 								</table>
@@ -537,22 +537,22 @@
 									<h2>SKRD dan RPM</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor SKRD :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="No_SKRD" size="50">
+											<label >Nomor SKRD :</label> <input type="text"  value="<?php echo $row12['no_skrd'];?>" name="No_SKRD" size="50">
 										</p>
 										<p>
-											<label >Nilai SKRD :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Harga_SKRD" size="50">
+											<label >Nilai SKRD :</label> <input type="text"  value="<?php echo $row12['harga_skrd'];?>" name="Harga_SKRD" size="50">
 										</p>
 										<p>
-											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Jatuh_Tempo" >
+											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row12['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo" >
 										</p>
 										<p>
-											<label >Koefisien SKRD :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Koef_SKRD" size="50">
+											<label >Koefisien SKRD :</label> <input type="text"  value="<?php echo $row12['koef_skrd'];?>" name="Koef_SKRD" size="50">
 										</p>
 										<p>
-											<label >Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_SKRD" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row12['status'];?>" name="Status_SKRD" size="50">
 										</p>
 										<p>
-											<label >Surat SKRD :</label> <input type="file"  value="<?php echo $row11['sites_id'];?>" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
+											<label >Surat SKRD :</label> <input type="file"  value="<?php echo $row12['surat_skrd'];?>" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
 										</p>
 									</a>
 								</table>
@@ -564,25 +564,25 @@
 									<h2>Informasi Ijin Mendirikan Bangunan</h2>
 									<a id="detail">										
 										<p>
-											<label >Nomor IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_IMB" size="50">
+											<label >Nomor IMB :</label> <input type="text"  value="<?php echo $row7['imb_nomor'];?>" name="Nomor_IMB" size="50">
 										</p>
 										<p>
-											<label >Mitra Pengurusa IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Mitra_Pengurus_IMB" size="50">
+											<label >Mitra Pengurusa IMB :</label> <input type="text"  value="<?php echo $row7['imb_mitra_pengurus'];?>" name="Mitra_Pengurus_IMB" size="50">
 										</p>
 										<p>
-											<label >Daftar Ulang IMB :</label> <input type="date" id="Daftar_Ulang_IMB"  value="<?php echo $row11['sites_id'];?>" name="Daftar_Ulang_IMB" >
+											<label >Daftar Ulang IMB :</label> <input type="date" id="Daftar_Ulang_IMB"  value="<?php echo $row7['imb_daftar_ulang'];?>" name="Daftar_Ulang_IMB" >
 										</p>
 										<p>
-											<label >Tanggal Awal Mulai IMB :</label> <input type="date" id="Tanggal_Awal_IMB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_IMB" >
+											<label >Tanggal Awal Mulai IMB :</label> <input type="date" id="Tanggal_Awal_IMB"  value="<?php echo $row7['imb_start'];?>" name="Tanggal_Awal_IMB" >
 										</p>
 										<p>
-											<label >Tanggal Akhir IMB :</label> <input type="date" id="Tanggal_Akhir_IMB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_IMB" >
+											<label >Tanggal Akhir IMB :</label> <input type="date" id="Tanggal_Akhir_IMB"  value="<?php echo $row7['imb_finish'];?>" name="Tanggal_Akhir_IMB" >
 										</p>
 										<p>
-											<label >Status Kepengurusan IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_Kepengurusan_IMB" size="50">
+											<label >Status Kepengurusan IMB :</label> <input type="text"  value="<?php echo $row7['imb_status_kepengurusan'];?>" name="Status_Kepengurusan_IMB" size="50">
 										</p>
 										<p>
-											<label >Status IMB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_IMB" size="50">
+											<label >Status IMB :</label> <input type="text"  value="<?php echo $row7['imb_status'];?>" name="Status_IMB" size="50">
 										</p>
 									</a>
 								</table>
@@ -594,13 +594,13 @@
 									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin" size="50">
+											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row8['ijin_imtu_nomor'];?>" name="Nomor_Ijin" size="50">
 										</p>
 										<p>
-											<label >Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_Ijin" >
+											<label >Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin"  value="<?php echo $row8['ijin_imtu_start'];?>" name="Tanggal_Awal_Ijin" >
 										</p>
 										<p>
-											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin" >
+											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row8['ijin_imtu_finish'];?>" name="Tanggal_Akhir_Ijin" >
 										</p>
 									</a>
 								</table>
@@ -612,13 +612,13 @@
 									<h2>Informasi Ijin Departemen DepHub/Kominfo</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin" size="50">
+											<label >Nomor Ijin :</label> <input type="text"  value="<?php echo $row3['ijin_dephub_nomor'];?>" name="Nomor_Ijin" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai Ijin :</label> <input type="date" id="Tanggal_Mulai_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Mulai_Ijin" >
+											<label >Tanggal Mulai Ijin :</label> <input type="date" id="Tanggal_Mulai_Ijin"  value="<?php echo $row3['ijin_dephub_start'];?>" name="Tanggal_Mulai_Ijin" >
 										</p>
 										<p>
-											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin" >
+											<label >Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin"  value="<?php echo $row3['ijin_dephub_finish'];?>" name="Tanggal_Akhir_Ijin" >
 										</p>
 									</a>
 								</table>
@@ -630,13 +630,13 @@
 									<h2>Informasi Ijin Pendirian Tower Telkomsel</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor Ijin Pendirian :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin_Pendirian" size="50">
+											<label >Nomor Ijin Pendirian :</label> <input type="text"  value="<?php echo $row6['ijin_ptt_nomor'];?>" name="Nomor_Ijin_Pendirian" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_Ijin_Pendirian" >
+											<label >Tanggal Mulai Ijin Pendirian :</label> <input type="date" id="Tanggal_Awal_Ijin_Pendirian"  value="<?php echo $row6['ijin_ptt_start'];?>" name="Tanggal_Awal_Ijin_Pendirian" >
 										</p>
 										<p>
-											<label >Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="Tanggal_Akhir_Ijin_Pendirian"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin_Pendirian" >
+											<label >Tanggal Akhir Ijin Pendirian:</label> <input type="date" id="Tanggal_Akhir_Ijin_Pendirian"  value="<?php echo $row6['ijin_ptt_finish'];?>" name="Tanggal_Akhir_Ijin_Pendirian" >
 										</p>
 									</a>
 								</table>
@@ -648,13 +648,13 @@
 								<h2>Informasi Ijin Penggunaan Bangunan</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor IPB :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_IPB" size="50">
+											<label >Nomor IPB :</label> <input type="text"  value="<?php echo $row9['ijin_ipb_nomor'];?>" name="Nomor_IPB" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_IPB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_IPB" >
+											<label >Tanggal Mulai IPB :</label> <input type="date" id="Tanggal_Awal_IPB"  value="<?php echo $row9['ijin_ipb_start'];?>" name="Tanggal_Awal_IPB" >
 										</p>
 										<p>
-											<label >Tanggal Akhir IPB :</label> <input type="date" id="Tanggal_Akhir_IPB"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_IPB" >
+											<label >Tanggal Akhir IPB :</label> <input type="date" id="Tanggal_Akhir_IPB"  value="<?php echo $row9['ijin_ipb_finish'];?>" name="Tanggal_Akhir_IPB" >
 										</p>
 									</a>
 								</table>
@@ -666,13 +666,13 @@
 									<h2>Informasi Ijin Prinsip</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor Ijin Prinsip :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Ijin_Prinsip" size="50">
+											<label >Nomor Ijin Prinsip :</label> <input type="text"  value="<?php echo $row5['ijin_prinsip_nomor'];?>" name="Nomor_Ijin_Prinsip" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="Tanggal_Awal_Ijin_Prinsip"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Awal_Ijin_Prinsip" >
+											<label >Tanggal Mulai Ijin Prinsip :</label> <input type="date" id="Tanggal_Awal_Ijin_Prinsip"  value="<?php echo $row5['ijin_prinsip_start'];?>" name="Tanggal_Awal_Ijin_Prinsip" >
 										</p>
 										<p>
-											<label >Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="Tanggal_Akhir_Ijin_Prinsip"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Akhir_Ijin_Prinsip" >
+											<label >Tanggal Akhir Ijin Prinsip:</label> <input type="date" id="Tanggal_Akhir_Ijin_Prinsip"  value="<?php echo $row5['ijin_prinsip_finish'];?>" name="Tanggal_Akhir_Ijin_Prinsip" >
 										</p>
 									</a>
 								</table>
@@ -684,16 +684,16 @@
 									<h2>Informasi Ijin Genset</h2>
 									<a id="detail">
 										<p>
-											<label >Nomor :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Nomor_Genset" size="50">
+											<label >Nomor :</label> <input type="text"  value="<?php echo $row4['ijin_genset_nomor'];?>" name="Nomor_Genset" size="50">
 										</p>
 										<p>
-											<label >Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Status_Genset" size="50">
+											<label >Status :</label> <input type="text"  value="<?php echo $row4['ijin_genset_status'];?>" name="Status_Genset" size="50">
 										</p>
 										<p>
-											<label >Tanggal Start :</label> <input type="date" id="Tanggal_Start"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Start" >
+											<label >Tanggal Start :</label> <input type="date" id="Tanggal_Start"  value="<?php echo $row4['ijin_genset_start'];?>" name="Tanggal_Start" >
 										</p>
 										<p>
-											<label >Tanggal Finish :</label> <input type="date" id="Tanggal_Finish"  value="<?php echo $row11['sites_id'];?>" name="Tanggal_Finish" >
+											<label >Tanggal Finish :</label> <input type="date" id="Tanggal_Finish"  value="<?php echo $row4['ijin_genset_finish'];?>" name="Tanggal_Finish" >
 										</p>
 									</a>
 								</table>
@@ -705,22 +705,22 @@
 									<h2>Comcase</h2>
 									<a id="detail">
 										<p>
-											<label >Comcase Tanggal :</label> <input type="date" id="Comcase_Tanggal"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Tanggal" >
+											<label >Comcase Tanggal :</label> <input type="date" id="Comcase_Tanggal"  value="<?php echo $row11['comcase_tanggal'];?>" name="Comcase_Tanggal" >
 										</p>
 										<p>
-											<label >Comcase Keterangan :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Keterangan" size="50">
+											<label >Comcase Keterangan :</label> <input type="text"  value="<?php echo $row11['comcase_keterangan'];?>" name="Comcase_Keterangan" size="50">
 										</p>
 										<p>
-											<label >Comcase Status :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Status" size="50">
+											<label >Comcase Status :</label> <input type="text"  value="<?php echo $row11['comcase_status'];?>" name="Comcase_Status" size="50">
 										</p>
 										<p>
-											<label >Comcase Solusi :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Solusi" size="50">
+											<label >Comcase Solusi :</label> <input type="text"  value="<?php echo $row11['comcase_solusi'];?>" name="Comcase_Solusi" size="50">
 										</p>
 										<p>
-											<label >Comcase File :</label> <input type="file"  value="<?php echo $row11['sites_id'];?>" name="Comcase_File" id="Comcase_File" size="50"><br>
+											<label >Comcase File :</label> <input type="file"  value="<?php echo $row11['comcase_file'];?>" name="Comcase_File" id="Comcase_File" size="50"><br>
 										</p>
 										<p>
-											<label >Comcase Mitra :</label> <input type="text"  value="<?php echo $row11['sites_id'];?>" name="Comcase_Mitra" size="50">
+											<label >Comcase Mitra :</label> <input type="text"  value="<?php echo $row11['comcase_mitra'];?>" name="Comcase_Mitra" size="50">
 										</p>
 									</a>
 								</table>
