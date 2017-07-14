@@ -83,9 +83,9 @@
 					echo " " . date("Y/m/d") ;
 					?>
 				</h1>
-				<form action="Search.php" id="search">
-					<input type="text"/>
-					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
+				<form action="Search.php" id="search" method="GET">
+					<input type="text" name="cari" />
+					<input type="submit" value="" id="submit"/>
 				</form>
 			</ul>	
 		</div>

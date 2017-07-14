@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -74,9 +87,9 @@
 					echo " " . date("Y/m/d") ;
 					?>
 				</h1>
-				<form action="Search.php" id="search">
-					<input type="text"/>
-					<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
+				<form action="Search.php" id="search" method="GET">
+					<input type="text" name="cari" />
+					<input type="submit" value="" id="submit"/>
 				</form>
 			</ul>	
 		</div>
@@ -114,129 +127,56 @@
 					<div id="featured">
 						<div>
 							<br>
-							<h5>Hasil Pencarian :
+							<?php
+								$cari=$_REQUEST['cari'];
+								$sql = "SELECT * from site where sites_id='".$cari."'";;
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+							?>
+							<h5>Hasil Pencarian untuk : <?php echo $cari;?>
 							</h5>
 						</div>
 						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
-							<table>
-							  <tr>
-							  	<th>No.</th>
-							  	<th>Site ID</th>
-								<th>Site Name</th>
-								<th>Daerah</th>
-								<th>No.PBB</th>
-								<th>No.RPM</th>
-								<th>No.IMB</th>
-								<th>Action</th>
-							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>SBY123</td>
-							    <td>Surabaya X</td>
-							    <td>Surabaya</td>
-							    <td>1/PBB/2015</td>
-							    <td>1/RPM/2015</td>
-							    <td>1/IMB/2015</td>
-							    <td>
-							    	<button type="button" onclick="location.href='Detail.php';">Detail
-									</button>
-								</td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
+								<?php
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && site.sites_id LIKE '%".$cari."%'";
+									$result = $conn->query($sql);
+									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									if ($result->num_rows > 0) {
+									    echo "<table>
+									        <tr>
+											  	<th>Site ID</th>
+												<th>Site Name</th>
+												<th>Daerah</th>
+												<th>No.PBB</th>
+												<th>No.RPM</th>
+												<th>No.IMB</th>
+												<th>Action</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									                    <td>" . $row["sites_id"] . "</td>
+									                    <td>" . $row["sites_nama"] . "</td>
+									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["nop"] . "</td>
+									                    <td>" . $row["no_skrd"] . "</td>
+									                    <td>" . $row["imb_nomor"] . "</td>
+									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
+
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
@@ -245,13 +185,6 @@
 					    window.print();
 					}
 					</script>
-					<div class="pagination">
-						  <a href="#">&laquo;</a>
-						  <a class="active" href="#">1</a>
-						  <a href="Not_Found.php">2</a>
-						  <a href="#">3</a>
-						  <a href="#">&raquo;</a>
-					</div>
 				</div>
 			</div>
 		</div>
