@@ -138,7 +138,7 @@
 						</div>
 						<div>
 								<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && site.sites_id LIKE '%".$cari."%'";
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_kota_kabupaten LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%')" ;
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									if ($result->num_rows > 0) {
