@@ -436,7 +436,7 @@ body{
 .body h1{
 	font-family: helvetica, arial;
 	color: #4a14f8;
-	font-size: 33px;
+	font-size: 28px;
 	clear: both;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1147,6 +1147,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 td, th {
@@ -1250,8 +1251,10 @@ tr:nth-child(even) {
 }
 @page {
     size:  landscape;   /* auto is the initial value */
-    margin: 10mm;
-
+    margin-top: 12.5mm;
+    margin-bottom: 12.5mm;
+    margin-right: 0mm;
+    margin-left: 0mm
 }
 
 /*---------------------jam--------------------*/
@@ -1409,9 +1412,3 @@ div.tab button {
 	display: table-cell;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}

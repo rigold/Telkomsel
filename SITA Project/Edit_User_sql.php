@@ -22,7 +22,6 @@
 	$nik=$_POST["NIK"];
 	$password=$_POST["Password"];
 	$jabatan=$_POST["Jabatan"];
-	$link="fileToUpload";
 
 	if(empty($_FILES['fileToUpload']['name']))
 	{
