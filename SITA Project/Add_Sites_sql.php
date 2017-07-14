@@ -6,9 +6,9 @@
 	$database = "sita";
 	$conn = mysqli_connect($servername, $username, $password, $database);
 
-
 	$temp = explode(".", $_FILES["file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
+
 	$target_dir = "File/";
 	$target_file = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file);
@@ -173,9 +173,9 @@
 	$Status_IMB=$_POST['Status_IMB'];
 
 //imtu
-	$Nomor_Ijin=$_POST['Nomor_Ijin']; 
-	$Tanggal_Awal_Ijin=$_POST['Tanggal_Awal_Ijin']; 
-	$Tanggal_Akhir_Ijin=$_POST['Tanggal_Akhir_Ijin']; 
+	$Nomor_Ijin_imtu=$_POST['Nomor_Ijin_imtu']; 
+	$Tanggal_Awal_Ijin_imtu=$_POST['Tanggal_Awal_Ijin_imtu']; 
+	$Tanggal_Akhir_Ijin_imtu=$_POST['Tanggal_Akhir_Ijin_imtu']; 
 
 //dephub/kominfo
 	$$Nomor_Ijin=$_POST['Nomor_Ijin']; 
@@ -535,10 +535,10 @@
 		ijin_imtu_finish
 		)
 		VALUES(
-		'$Nomor_Ijin',
+		'$Nomor_Ijin_imtu',
 		'$Site_ID',
-		'$Tanggal_Awal_Ijin',
-		'$Tanggal_Akhir_Ijin'
+		'$Tanggal_Awal_Ijin_imtu',
+		'$Tanggal_Akhir_Ijin_imtu'
 		)
 	");
 

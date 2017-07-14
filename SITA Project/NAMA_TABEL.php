@@ -122,6 +122,7 @@ tanggal_jatuh_tempo
 status
 njop_tanah
 njop_bangunan
+surat_pbb
 sket_pelunasan_pbb
 
 --------------rpm------------------

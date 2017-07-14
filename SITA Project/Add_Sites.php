@@ -729,13 +729,13 @@
 									<h2>Informasi Ijin Mendirikan Tempat Usaha</h2>
 									<a id="detail">
 										<p>
-											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin" size="50" required>
+											<label for="a">Nomor Ijin :</label> <input type="text" name="Nomor_Ijin_imtu" size="50" required>
 										</p>
 										<p>
-											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin" name="Tanggal_Awal_Ijin" >
+											<label for="a">Tanggal Awal Ijin :</label> <input type="date" id="Tanggal_Awal_Ijin" name="Tanggal_Awal_Ijin_imtu" >
 										</p>
 										<p>
-											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin" name="Tanggal_Akhir_Ijin" >
+											<label for="a">Tanggal Akhir Ijin :</label> <input type="date" id="Tanggal_Akhir_Ijin" name="Tanggal_Akhir_Ijin_imtu" >
 										</p>
 									</a>
 								</table>
