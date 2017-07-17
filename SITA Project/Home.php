@@ -1,3 +1,12 @@
+<?php
+	if(empty($_SESSION))
+		session_start();
+
+	if(!isset($_SESSION['login_user'])) {
+   		header("Location: Index.php");
+   	exit;
+   }
+?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
@@ -10,6 +19,10 @@
 	</head>
 	
 	<body>
+	Welcome 
+	<?php 
+		echo $_SESSION['login_user']; 
+	?>
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
@@ -71,7 +84,7 @@
 				    </div>
 				</li>
 				<li><a href="About.php">About</a></li>
-				<li><a href="Index.php">Log out</a></li>
+				<li><a href="logout.php">Log out</a></li>
 				<h1>
 					<?php
 					echo " " . date("Y/m/d") ;
