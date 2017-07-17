@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <?php
-	$servername = "localhost";
+	if(empty($_SESSION))
+		session_start();
+
+	if(!isset($_SESSION['login_user'])) {
+   		header("Location: Index.php");
+   		}
+
+   	$servername = "localhost";
 	$username = "root";
 	$password = "";
 	$dbname = "sita";
 
-	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	} 
+	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = $conn->query($sql);
+	$row1 = $result->fetch_assoc();
+   
 ?>
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -231,7 +240,7 @@
 								<table>
 									<tr>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
-									    	Login User
+									    	<?php echo $row1['nama_user'];?>
 									    </td>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									   		Danial Sam
@@ -248,7 +257,7 @@
 									</tr>
 									<tr style="background-color: none;">
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
-									    	Jabatan
+									    	<?php echo $row1['jabatan'];?>
 									    </td>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									   		Pj. Spv. Site Administrasi Jatim
