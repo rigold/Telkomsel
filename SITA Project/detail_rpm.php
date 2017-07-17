@@ -213,53 +213,53 @@
 								<table>
 									<tr>
 										
-									    <td style="width: 145px;">
+									    <td style="width: 145px;border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Dibuat Oleh,
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									   		Diperiksa Oleh,
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Disetujui Oleh,
 									    </td>
-									    <td style="text-align: center;">
+									    <td style="text-align: center;border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Mengetahui,
 									    </td>
 									</tr>
 								</table>
-								<br><br><br><br><br><br>
+								<br><br><br><br>
 								<table>
 									<tr>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Login User
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									   		Danial Sam
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Yoyok Dwi Harianto
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Erika Widiasuti
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Maruli Simamora
 									    </td>
 									</tr>
 									<tr style="background-color: none;">
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Jabatan
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									   		Pj. Spv. Site Administrasi Jatim
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Manager Site Management Jatim
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Manager Legal and Regulatory Jawa Bali
 									    </td>
-									    <td>
+									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	GM Legal and Stakeholder Jawa Bali
 									    </td>
 									</tr>
