@@ -4,8 +4,21 @@
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
-   	exit;
-   }
+   		}
+
+   	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+   
 ?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
@@ -104,17 +117,25 @@
 				<div class="sidebar">
 
 					<div class="featured">						
-						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
+						<a class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
 
 					</h1>
 					<div id="tweets">
 						<h3>Staff 1</h3>
 						<p>
-							<br>Nama User : Immanuel Rio
-							<br>NIK : 19574
-							<br>Jabatan : Staff Manajemen Site
-							<br>Akun : Admin
+							<br>Nama User : <?php echo $row['nama_user'];?>
+							<br>NIK : <?php echo $row['nik'];?>
+							<br>Jabatan : <?php echo $row['jabatan'];?>
+							<br>Akun : <?php 
+										if (empty($row['admin']))
+										{
+											echo "User";
+										}
+										else{
+											echo $row['admin'];
+										}
+										?>
 						</p>
 					</div>
 					<div id="article">
