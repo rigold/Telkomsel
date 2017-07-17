@@ -15,7 +15,6 @@ body{
     margin: 0;
     padding: 0;
     background: #fff;
-
     color: #fff;
     font-family: Arial;
     font-size: 12px;
