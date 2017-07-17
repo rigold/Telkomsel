@@ -15,9 +15,9 @@
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	} 
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
+	$sqlz = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$resultz = $conn->query($sqlz);
+	$rowz = $resultz->fetch_assoc();
    
 ?>
 <!DOCTYPE html>

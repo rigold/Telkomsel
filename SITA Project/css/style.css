@@ -146,7 +146,7 @@ body{
 }
 .sidebar div#tweets{
 	clear: both;
-	margin: 30px 0 0;
+	margin: 30px 0 0 23px;
 }
 .sidebar div#tweets h3{
 	text-align: center;
@@ -189,7 +189,7 @@ body{
 	color: #5A5A6B;
 }
 .sidebar div#article{
-	margin: 30px 0 0 0;
+	margin: 30px 0 0 23px;
 }
 .sidebar div#article h3{
 	//background: url(../images/icons.gif) no-repeat 100px -35px;
@@ -211,8 +211,8 @@ body{
 	font-family: arial;
     font-size: 14px;
     height: 90px;
-    padding: 10px 0 0 40px;
-    text-align: left;
+    padding: 10px 0 0 0px;
+    text-align: center;
 	color: #ffffff;
 	font-weight: bold;
 }
@@ -453,11 +453,10 @@ body{
 .body h2 {
     font-family: helvetica, arial;
     color: black;
-    font-size: 25px;
+    font-size: 18px;
     clear: both;
     text-transform: uppercase;
     font-weight: bold;
-    //padding: 20px 0 0;
     text-align: left;
 }
 .body h2#check{
@@ -1277,7 +1276,7 @@ tr:nth-child(even) {
 .body h2 {
     font-family: helvetica, arial;
     color: black;
-    font-size: 25px;
+    font-size: 18px;
     clear: both;
     text-transform: uppercase;
     font-weight: bold;
@@ -1314,12 +1313,14 @@ tr:nth-child(even) {
 .body form #site p {
     display: table-row;
     color: black;
+    font-size: 15px;
 }
 .body form #site #detail h3 {
     color: red;
     text-align: center;
-    line-height: 55px;
-    font-family: helvetica;
+    line-height: 5px;
+    font-size: 14px;
+    font-family: verdana;
 }
 .body form #site label {
     display: table-cell;
@@ -1327,6 +1328,7 @@ tr:nth-child(even) {
     font-family: arial;
     line-height: 25px;
     padding-left: 70px;
+    font-size: 14px;
 }
 
 .body form #site input, select {
@@ -1336,8 +1338,8 @@ tr:nth-child(even) {
 .body form #site input#final{
     margin-left: 42%;
     width: 150px;
-    height: 70px;
-    font-size: 30px;
+    height: 30px;
+    font-size: 18px;
     font-family: sans-serif;
 }
 
@@ -1375,7 +1377,7 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .body p {
