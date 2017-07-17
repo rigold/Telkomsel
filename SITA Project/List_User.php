@@ -30,44 +30,44 @@
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
-	      				<a href="Site_Daerah.php"> Bangkalan </a> 
-						<a href="Site_Daerah.php"> Banyuwangi </a> 
-						<a href="Site_Daerah.php"> Batu </a> 
-						<a href="Site_Daerah.php"> Blitar Kab. </a> 
-						<a href="Site_Daerah.php"> Blitar Kota </a> 
-						<a href="Site_Daerah.php"> Bojonegoro </a> 
-						<a href="Site_Daerah.php"> Bondowoso </a> 
-						<a href="Site_Daerah.php"> Gresik </a> 
-						<a href="Site_Daerah.php"> Jember </a> 
-						<a href="Site_Daerah.php"> Jombang </a> 
-						<a href="Site_Daerah.php"> Kediri Kab. </a> 
-						<a href="Site_Daerah.php"> Kediri Kota </a> 
-						<a href="Site_Daerah.php"> Lamongan </a> 
-						<a href="Site_Daerah.php"> Lumajang </a> 
-						<a href="Site_Daerah.php"> Madiun Kab. </a> 
-						<a href="Site_Daerah.php"> Madiun Kota </a> 
-						<a href="Site_Daerah.php"> Magetan </a> 
-						<a href="Site_Daerah.php"> Malang Kab. </a> 
-						<a href="Site_Daerah.php"> Malang Kota </a> 
-						<a href="Site_Daerah.php"> Mojokerto Kab. </a> 
-						<a href="Site_Daerah.php"> Mojokerto Kota </a> 
-						<a href="Site_Daerah.php"> Nganjuk </a> 
-						<a href="Site_Daerah.php"> Ngawi </a> 
-						<a href="Site_Daerah.php"> Pacitan </a> 
-						<a href="Site_Daerah.php"> Pamekasan </a> 
-						<a href="Site_Daerah.php"> Pasuruan Kab. </a> 
-						<a href="Site_Daerah.php"> Pasuruan Kota </a> 
-						<a href="Site_Daerah.php"> Ponorogo </a> 
-						<a href="Site_Daerah.php"> Probolinggo Kab. </a> 
-						<a href="Site_Daerah.php"> Probolinggo Kota </a> 
-						<a href="Site_Daerah.php"> Sampang </a> 
-						<a href="Site_Daerah.php"> Sidoarjo </a> 
-						<a href="Site_Daerah.php"> Situbondo </a> 
-						<a href="Site_Daerah.php"> Sumenep </a> 
-						<a href="Site_Daerah.php"> Surabaya </a> 
-						<a href="Site_Daerah.php"> Trenggalek </a> 
-						<a href="Site_Daerah.php"> Tuban </a> 
-						<a href="Site_Daerah.php"> Tulungagung </a> 
+	      				<a href="Site_Daerah.php?siteloc=Bangkalan">Bangkalan</a> 
+						<a href="Site_Daerah.php?siteloc=Banyuwangi">Banyuwangi</a> 
+						<a href="Site_Daerah.php?siteloc=Batu">Batu</a> 
+						<a href="Site_Daerah.php?siteloc=Blitar Kab.">Blitar Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Blitar Kota">Blitar Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Bojonegoro">Bojonegoro</a> 
+						<a href="Site_Daerah.php?siteloc=Bondowoso">Bondowoso</a> 
+						<a href="Site_Daerah.php?siteloc=Gresik">Gresik</a> 
+						<a href="Site_Daerah.php?siteloc=Jember">Jember</a> 
+						<a href="Site_Daerah.php?siteloc=Jombang">Jombang</a> 
+						<a href="Site_Daerah.php?siteloc=Kediri Kab.">Kediri Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Kediri Kota">Kediri Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Lamongan">Lamongan</a> 
+						<a href="Site_Daerah.php?siteloc=Lumajang">Lumajang</a> 
+						<a href="Site_Daerah.php?siteloc=Madiun Kab.">Madiun Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Madiun Kota">Madiun Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Magetan">Magetan</a> 
+						<a href="Site_Daerah.php?siteloc=Malang Kab.">Malang Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Malang Kota">Malang Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Mojokerto Kab.">Mojokerto Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Mojokerto Kota">Mojokerto Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Nganjuk">Nganjuk</a> 
+						<a href="Site_Daerah.php?siteloc=Ngawi">Ngawi</a> 
+						<a href="Site_Daerah.php?siteloc=Pacitan">Pacitan</a> 
+						<a href="Site_Daerah.php?siteloc=Pamekasan">Pamekasan</a> 
+						<a href="Site_Daerah.php?siteloc=Pasuruan Kab.">Pasuruan Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Pasuruan Kota">Pasuruan Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Ponorogo">Ponorogo</a> 
+						<a href="Site_Daerah.php?siteloc=Probolinggo Kab.">Probolinggo Kab.</a> 
+						<a href="Site_Daerah.php?siteloc=Probolinggo Kota">Probolinggo Kota</a> 
+						<a href="Site_Daerah.php?siteloc=Sampang">Sampang</a> 
+						<a href="Site_Daerah.php?siteloc=Sidoarjo">Sidoarjo</a> 
+						<a href="Site_Daerah.php?siteloc=Situbondo">Situbondo</a> 
+						<a href="Site_Daerah.php?siteloc=Sumenep">Sumenep</a> 
+						<a href="Site_Daerah.php?siteloc=Surabaya">Surabaya</a> 
+						<a href="Site_Daerah.php?siteloc=Trenggalek">Trenggalek</a> 
+						<a href="Site_Daerah.php?siteloc=Tuban">Tuban</a> 
+						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
 
 				    </div>
 				</li>
@@ -139,7 +139,16 @@
 								
 								if ($result->num_rows > 0) 
 								{
-								    echo "<table><tr><th>Profile Picture</th><th>Nama</th><th>Jabatan</th><th>NIK</th><th>Password</th><th>Action</th></tr>";
+								    echo "
+								    <table id= 'myTable'>
+								    	<tr>
+								    		<th>Profile Picture</th>
+								    		<th onclick='sortTable(0)'>Nama</th>
+								    		<th onclick='sortTable(1)'>Jabatan</th>
+								    		<th>NIK</th>
+								    		<th>Password</th>
+								    		<th>Action</th>
+								    	</tr>";
 								    // output data of each row
 								    while($row = $result->fetch_assoc())
 								    {
@@ -168,5 +177,61 @@
 				</div>
 			</div>
 		</div>
+		<script>
+		function sortTable(n) {
+		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+		  table = document.getElementById("myTable");
+		  switching = true;
+		  //Set the sorting direction to ascending:
+		  dir = "asc"; 
+		  /*Make a loop that will continue until
+		  no switching has been done:*/
+		  while (switching) {
+		    //start by saying: no switching is done:
+		    switching = false;
+		    rows = table.getElementsByTagName("TR");
+		    /*Loop through all table rows (except the
+		    first, which contains table headers):*/
+		    for (i = 1; i < (rows.length - 1); i++) {
+		      //start by saying there should be no switching:
+		      shouldSwitch = false;
+		      /*Get the two elements you want to compare,
+		      one from current row and one from the next:*/
+		      x = rows[i].getElementsByTagName("TD")[n];
+		      y = rows[i + 1].getElementsByTagName("TD")[n];
+		      /*check if the two rows should switch place,
+		      based on the direction, asc or desc:*/
+		      if (dir == "asc") {
+		        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+		          //if so, mark as a switch and break the loop:
+		          shouldSwitch= true;
+		          break;
+		        }
+		      } else if (dir == "desc") {
+		        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+		          //if so, mark as a switch and break the loop:
+		          shouldSwitch= true;
+		          break;
+		        }
+		      }
+		    }
+		    if (shouldSwitch) {
+		      /*If a switch has been marked, make the switch
+		      and mark that a switch has been done:*/
+		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		      switching = true;
+		      //Each time a switch is done, increase this count by 1:
+		      switchcount ++;      
+		    } else {
+		      /*If no switching has been done AND the direction is "asc",
+		      set the direction to "desc" and run the while loop again.*/
+		      if (switchcount == 0 && dir == "asc") {
+		        dir = "desc";
+		        switching = true;
+		      }
+		    }
+		  }
+		}
+		</script>
 	</body>
 </html>
