@@ -141,12 +141,14 @@
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_kota_kabupaten LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%')" ;
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-											  	<th onclick='sortTable(0)'>Site ID</th>
-												<th onclick='sortTable(1)'>Site Name</th>
-												<th onclick='sortTable(2)'>Daerah</th>
+											  	<th onclick='sortTable(0)'>No.</th>
+											  	<th onclick='sortTable(1)'>Site ID</th>
+												<th onclick='sortTable(2)'>Site Name</th>
+												<th onclick='sortTable(3)'>Daerah</th>
 												<th>No.PBB</th>
 												<th>No.RPM</th>
 												<th>No.IMB</th>
@@ -158,6 +160,7 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
+									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_kota_kabupaten"] . "</td>

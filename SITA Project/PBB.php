@@ -144,13 +144,15 @@
 									$sql = "SELECT daerah.kota_kabupaten,pbb.koef_pbb,pbb.status,site.sites_id, site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', pbb.tanggal_jatuh_tempo, SUM(pbb.nilai_pbb_site) AS 'jl_pbb' FROM site,pbb,daerah WHERE site.sites_id = pbb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-									            <th onclick='sortTable(0)'>Kabupaten/Kota</th>
-												<th onclick='sortTable(1)'>Jumlah Sites</th>
+									            <th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>Kabupaten/Kota</th>
+												<th onclick='sortTable(2)'>Jumlah Sites</th>
 												<th>Jumlah SPPT PBB</th>
-												<th onclick='sortTable(2)'>Total Nilai PBB</th>
+												<th onclick='sortTable(3)'>Total Nilai PBB</th>
 												<th>Koef PBB</th>
 												<th>Tanggal Jatuh Tempo</th>
 												<th>Status</th>
@@ -162,6 +164,7 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
+									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>

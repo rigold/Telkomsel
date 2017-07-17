@@ -140,13 +140,15 @@
 								<?php
 								$sql = "SELECT sites_id, sites_nama, comcase_tanggal, comcase_keterangan, comcase_status, comcase_solusi, comcase_file, comcase_mitra FROM site";
 								$result = $conn->query($sql);
+								$no = 1;
 								
 								if ($result->num_rows > 0) 
 								{
 								    echo "<table id= 'myTable'>
 								    		<tr>
-											  	<th onclick='sortTable(0)'>Site ID</th>
-												<th onclick='sortTable(1)'>Site Name</th>
+								    			<th onclick='sortTable(0)'>No.</th>
+											  	<th onclick='sortTable(1)'>Site ID</th>
+												<th onclick='sortTable(2)'>Site Name</th>
 												<th>Tanggal</th>
 												<th>Keterangan</th>
 												<th>Status</th>
@@ -162,6 +164,7 @@
 
 								        echo "
 								        <tr>
+									        <td>".$no++."</td>
 									        <td>".$row["sites_id"]."</td>
 									        <td>".$row["sites_nama"]."</td>
 									        <td>".$row["comcase_tanggal"]."</td>

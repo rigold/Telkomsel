@@ -150,15 +150,17 @@
 									//$totpbb = "SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site WHERE site.sites_id = pbb.sites_id";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-									            <th onclick='sortTable(0)'>Site ID</th>
-												<th onclick='sortTable(1)'>Nama Site</th>
+									            <th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>Site ID</th>
+												<th onclick='sortTable(2)'>Nama Site</th>
 												<th>Alamat</th>
-												<th onclick='sortTable(2)'>Luas Tanah</th>
-												<th onclick='sortTable(3)'>Tinggi Tower</th>
-												<th onclick='sortTable(4)'>Nilai SKRD</th>
+												<th onclick='sortTable(3)'>Luas Tanah</th>
+												<th onclick='sortTable(4)'>Tinggi Tower</th>
+												<th onclick='sortTable(5)'>Nilai SKRD</th>
 									        </tr>";
 									    //  output data of each row
 									    //  $rows = array(); // This is not actually required
@@ -166,6 +168,7 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
+									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>

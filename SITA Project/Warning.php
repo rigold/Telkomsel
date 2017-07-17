@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+?>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -123,147 +136,53 @@
 							</h5>
 						</div>
 						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
+							<?php
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, (SELECT AVG(perpanjangan_pagu) FROM site) AS 'AVG_pagu' FROM site, daerah WHERE site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
+									$result = $conn->query($sql);
+									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+											  	<th>Site ID</th>
+												<th>Jatuh Tempo PBB</th>
+												<th>Sisa Waktu PBB</th>
+												<th>Jatuh Tempo RPM</th>
+												<th>Sisa Waktu RPM</th>
+												<th>Jatuh Tempo Sewa Lahan</th>
+												<th>Sisa Waktu Sewa</th>
+												<th>Status Akhir</th>
+												<th>Action</th>
+
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									                    <td>" . $row["sites_id"] . "</td>
+									                    <td>" . $row["sites_nama"] . "</td>
+									                    <td>" . $row["sites_alamat"] . "</td>
+									                    <td>" . $row["kota_kabupaten"] . "</td>
+									                    <td>" . $row["perpanjangan_pagu"] . "</td>
+									                    <td>" . $row["AVG_pagu"] . "</td>
+									                    <td>" . $row["sites_tanggal_start"] . "</td>
+									                    <td>" . $row["sites_tanggal_finish"] . "</td>
+									                    <td>" . $row["perpanjangan_invoice"] . "</td>
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							<table>
 							  <tr>
-							  	<th>No.</th>
-							  	<th>Site ID</th>
-								<th>Jatuh Tempo PBB</th>
-								<th>Sisa Waktu PBB</th>
-								<th>Jatuh Tempo RPM</th>
-								<th>Sisa Waktu RPM</th>
-								<th>Jatuh Tempo Sewa Lahan</th>
-								<th>Sisa Waktu Sewa</th>
-								<th>Status Akhir</th>
-								<th>Action</th>
-
+							  	
 							  </tr>
-							  <tr>
-							    <td>1</td>
-							    <td>SBY123</td>
-							    <td>1/12/2017</td>
-							    <td>6 Bulan</td>
-							    <td>1/12/2017</td>
-							    <td>6 Bulan</td>
-							    <td>1/09/2017</td>
-							    <td>3 Bulan</td>
-							    <td>Bayar Sewa Segera</td>
-							    <td><button type="button" onclick="location.href='Detail.php';">Detail
-								</button>
-								</td>
-							  </tr>
-							  <tr>
-							    <td>2</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							    <td>-</td>
-							  </tr>
-							  <tr>
-							    <td>3</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>4</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>5</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>6</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>7</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>8</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>9</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							  <tr>
-							    <td>10</td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							    <td></td>
-							  </tr>
-							</table>
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
@@ -272,13 +191,6 @@
 					    window.print();
 						}
 					</script>
-					<div class="pagination">
-						  <a href="#">&laquo;</a>
-						  <a class="active" href="#">1</a>
-						  <a href="Not_Found.php">2</a>
-						  <a href="Not_Found.php">3</a>
-						  <a href="Not_Found.php">&raquo;</a>
-					</div>
 				</div>
 			</div>
 		</div>

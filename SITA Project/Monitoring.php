@@ -143,12 +143,14 @@
 								$sql = "SELECT site.sites_id, site.sites_nama, site.perpanjangan_pic, site.perpanjangan_spph, site.bak_nomor, site.bak_harga, site.perpanjangan_vendor_list, site.perpanjangan_invoice, site.sites_tanggal_start, DATEDIFF(CURRENT_DATE(), site.sites_tanggal_start) as datediff, site.sites_status_lahan, identitas_pemilik.sl_pks FROM site, identitas_pemilik WHERE site.sites_id = identitas_pemilik.sites_id";
 								$result = $conn->query($sql);
 								
+								$no = 1;
 								if ($result->num_rows > 0) 
 								{
 								    echo "<table id= 'myTable'>
 								    		<tr>
-											  	<th onclick='sortTable(0)'>Site ID</th>
-												<th onclick='sortTable(1)'>Site Name</th>
+											  	<th onclick='sortTable(0)'>No.</th>
+											  	<th onclick='sortTable(1)'>Site ID</th>
+												<th onclick='sortTable(2)'>Site Name</th>
 												<th>PIC</th>
 												<th>SPPH</th>
 												<th>BAK</th>
@@ -165,6 +167,7 @@
 								    {
 								        echo "
 								        <tr>
+									        <td>".$no++."</td>
 									        <td>".$row["sites_id"]."</td>
 									        <td>".$row["sites_nama"]."</td>
 									        <td>".$row["perpanjangan_pic"]."</td>

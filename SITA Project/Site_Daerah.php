@@ -140,11 +140,13 @@
 									$sql = "SELECT sites_id, sites_nama, sites_alamat FROM site WHERE sites_kota_kabupaten LIKE '%".$siteloc."%'";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-											  	<th onclick='sortTable(0)'>Site ID</th>
-											  	<th onclick='sortTable(1)'>Name</th>
+											  	<th onclick='sortTable(0)'>No</th>
+											  	<th onclick='sortTable(1)'>Site ID</th>
+											  	<th onclick='sortTable(2)'>Name</th>
 												<th>Alamat</th>
 												<th>Detail</th>
 									        </tr>";
@@ -154,6 +156,7 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
+									            		<td>" . $no++ . "</td>
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>

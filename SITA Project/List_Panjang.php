@@ -141,15 +141,17 @@
 								<?php
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, (SELECT AVG(perpanjangan_pagu) FROM site) AS 'AVG_pagu' FROM site, daerah WHERE site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
 									$result = $conn->query($sql);
+									$no = 1;
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-									                        <th onclick='sortTable(0)'>Site ID</th>
-									                        <th onclick='sortTable(1)'>Site Name</th>
+									        				<th onclick='sortTable(1)'>No.</th>
+									                        <th onclick='sortTable(2)'>Site ID</th>
+									                        <th onclick='sortTable(3)'>Site Name</th>
 									                        <th>Alamat</th>
-									                        <th onclick='sortTable(2)'>Kab.Kota</th>
-									                        <th onclick='sortTable(3)'>Pagu</th>
+									                        <th onclick='sortTable(4)'>Kab.Kota</th>
+									                        <th onclick='sortTable(5)'>Pagu</th>
 									                        <th>Harga Rata Rata</th>
 									                        <th>Awal Kontrak</th>
 									                        <th>Akhir Kontrak</th>
@@ -161,6 +163,7 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
+									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>

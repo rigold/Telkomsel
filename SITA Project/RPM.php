@@ -141,13 +141,15 @@
 									$sql = "SELECT daerah.kota_kabupaten,site.sites_id,site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', SUM(skrd_rpm.harga_skrd) AS 'jl_rpm', skrd_rpm.koef_skrd, skrd_rpm.tanggal_jatuh_tempo, skrd_rpm.status FROM site,skrd_rpm,daerah WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-											  	<th onclick='sortTable(0)'>Kabupaten/Kota</th>
-												<th onclick='sortTable(1)'>Jumlah Sites</th>
+											  	<th onclick='sortTable(0)'>No.</th>
+											  	<th onclick='sortTable(1)'>Kabupaten/Kota</th>
+												<th onclick='sortTable(2)'>Jumlah Sites</th>
 												<th>Jumlah Tagihan SKRD</th>
-												<th onclick='sortTable(2)'>Total Nilai SKRD</th>
+												<th onclick='sortTable(3)'>Total Nilai SKRD</th>
 												<th>Koef SKRD</th>
 												<th>Tanggal Jatuh Tempo</th>
 												<th>Status</th>
@@ -160,6 +162,7 @@
 									        echo "
 									            <tr>
 									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_rpm"] . "</td>

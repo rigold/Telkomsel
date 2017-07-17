@@ -137,14 +137,16 @@
 								$sql = "SELECT link_profile_pic, nama_user, jabatan, nik, password FROM user";
 								$result = $conn->query($sql);
 								
+								$no = 1;
 								if ($result->num_rows > 0) 
 								{
 								    echo "
 								    <table id= 'myTable'>
 								    	<tr>
+								    		<th onclick='sortTable(0)'>No.</th>
 								    		<th>Profile Picture</th>
-								    		<th onclick='sortTable(0)'>Nama</th>
-								    		<th onclick='sortTable(1)'>Jabatan</th>
+								    		<th onclick='sortTable(1)'>Nama</th>
+								    		<th onclick='sortTable(2)'>Jabatan</th>
 								    		<th>NIK</th>
 								    		<th>Password</th>
 								    		<th>Action</th>
@@ -156,6 +158,7 @@
 										$img="upload/".$image;
 								        echo "
 								        <tr>
+								        	<td>".$no++."</td>
 								        	<td><img src= ".$img."  /></td>
 									        <td>".$row["nama_user"]."</td>
 									        <td>".$row["jabatan"]."</td><td>".$row["nik"]."</td>
