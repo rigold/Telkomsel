@@ -15,9 +15,9 @@
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	} 
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
+	$sqlz = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$resultz = $conn->query($sqlz);
+	$rowz = $resultz->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
@@ -142,16 +142,6 @@
 				</div>
 				<div class="body">
 					<h1>Formulir Edit User</h1>
-					<?php
-						$servername = "localhost";
-						$username = "root";
-						$password = "";
-						$dbname = "sita";
-						$conn = new mysqli($servername, $username, $password, $dbname);
-						$sql = "SELECT * FROM user";
-						$result = $conn->query($sql);
-						$row = $result->fetch_assoc();
-					?>
 					<form <?php echo " action= \"Edit_User_sql.php?hapus=$row[link_profile_pic]\" ";?> method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
