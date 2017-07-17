@@ -1,3 +1,25 @@
+<?php
+	if(empty($_SESSION))
+		session_start();
+
+	if(!isset($_SESSION['login_user'])) {
+   		header("Location: Index.php");
+   		}
+
+   	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = $conn->query($sql);
+	$rowz = $result->fetch_assoc();
+   
+?>
 <!DOCTYPE html>
 
 <?php
@@ -137,16 +159,16 @@
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
-						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
+						<a href="upload/<?php echo $rowz['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $rowz['link_profile_pic'];?>" alt=""/></a>		
 					</div>
 
+					</h1>
 					<div id="tweets">
-						<h3>Staff 1</h3>
+						<h3><?php echo $rowz['jabatan'];?></h3>
 						<p>
-							<br>Nama User : Immanuel Rio
-							<br>NIK : 19574
-							<br>Jabatan : Staff Manajemen Site
-							<br>Akun : Admin
+							<br>Nama User : <?php echo $rowz['nama_user'];?>
+							<br>NIK : <?php echo $rowz['nik'];?>
+							<br>Akun : <?php if (empty($rowz['admin'])){echo "User";}else{echo $rowz['admin'];}?>
 						</p>
 					</div>
 					<div id="article">
