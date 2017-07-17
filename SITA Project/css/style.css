@@ -89,7 +89,7 @@ body{
 	width: auto;
 }
 .sidebar .featured a.figure img{
-	border: 0;
+	border: 2px solid gold;
 	border-radius: 50%;
 	max-width: 100%;
     max-height: 100%;
@@ -153,7 +153,7 @@ body{
 	height: 20px;
 	font-family: arial;
 	font-size: 20 px;
-	color: #ff6000;
+	color: gold;
 	text-decoration: none;
 	display: block;
 	//padding: 0 50px 0 0;
@@ -197,7 +197,7 @@ body{
 	height: 20px;
 	font-family: arial;
 	font-size: 20px;
-	color: #ff6000;
+	color: gold;
 	text-decoration: none;
 	display: block;
 	padding: 0 0 0 0;
@@ -1246,7 +1246,6 @@ tr:nth-child(even) {
     button {
       display: none;
     }
-    
 
 }
 @page {
@@ -1263,7 +1262,7 @@ tr:nth-child(even) {
     font-family: arial;
     font-size: 14px;
     display: block;
-    color: yellow;
+    color: gold;
     text-align: right;
     padding-right: 25px;
     text-decoration: none;
