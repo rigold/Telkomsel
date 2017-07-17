@@ -113,25 +113,16 @@
 				<div class="sidebar">
 
 					<div class="featured">						
-						<a class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
+						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
 
 					</h1>
 					<div id="tweets">
-						<h3>Staff 1</h3>
+						<h3><?php echo $row['jabatan'];?></h3>
 						<p>
 							<br>Nama User : <?php echo $row['nama_user'];?>
 							<br>NIK : <?php echo $row['nik'];?>
-							<br>Jabatan : <?php echo $row['jabatan'];?>
-							<br>Akun : <?php 
-										if (empty($row['admin']))
-										{
-											echo "User";
-										}
-										else{
-											echo $row['admin'];
-										}
-										?>
+							<br>Akun : <?php if (empty($row['admin'])){echo "User";}else{echo $row['admin'];}?>
 						</p>
 					</div>
 					<div id="article">
