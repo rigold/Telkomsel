@@ -29,7 +29,7 @@
 	}
 	else
 	{
-		$result = mysqli_query($conn, "UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',	link_profile_pic='$image' WHERE nik='$nik'");
+		$result = mysqli_query($conn, "UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',link_profile_pic='$image' WHERE nik='$nik'");
 		unlink($file);
 	}
 	header("Location:List_User.php");

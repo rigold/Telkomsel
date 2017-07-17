@@ -30,7 +30,7 @@ body{
     width: auto;
     height: auto;
     background-image: url(images/bg.jpg);
-    background-size: contain;
+    background-size: cover;
     -webkit-filter: blur(5px);
     z-index: 0;
 }
@@ -172,10 +172,10 @@ body{
                         {     
                     include("connect.php");
                     session_start();
-                    $username=$_POST['username'];
+                    $nik=$_POST['NIK'];
                     $password=$_POST['password'];
-                    $_SESSION['login_user']=$username; 
-                    $query = mysqli_query($conn,"SELECT nama_user FROM user WHERE nama_user='$username' and password='$password'");
+                    $_SESSION['login_user']=$nik; 
+                    $query = mysqli_query($conn,"SELECT nik FROM user WHERE nik='$nik' and password='$password'");
                      if (mysqli_num_rows($query) != 0)
                     {
                         if(empty($_SESSION))
@@ -191,8 +191,8 @@ body{
                     ?>
                         <table border="0" cellpadding="3"
                         cellspacing="1" width="100%">
-                            <tr><input placeholder="username" id="username" name=
-                                "username" type="text">
+                            <tr><input placeholder="NIK" id="NIK" name=
+                                "NIK" type="text">
                             </tr>
                             <tr><input placeholder="password" id="password" name="password" type=
                                 "password">
