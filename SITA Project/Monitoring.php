@@ -129,15 +129,6 @@
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
-							<br>
-							<h5>Cari Berdasarkan Tahun :
-							</h5>
-						</div>
-						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
 
 								<?php
 								$sql = "SELECT site.sites_id, site.sites_nama, site.perpanjangan_pic, site.perpanjangan_spph, site.bak_nomor, site.bak_harga, site.perpanjangan_vendor_list, site.perpanjangan_invoice, site.sites_tanggal_start, DATEDIFF(CURRENT_DATE(), site.sites_tanggal_start) as datediff, site.sites_status_lahan, identitas_pemilik.sl_pks FROM site, identitas_pemilik WHERE site.sites_id = identitas_pemilik.sites_id";

@@ -66,7 +66,7 @@
 						<a href="Site_Daerah.php?siteloc=Surabaya">Surabaya</a> 
 						<a href="Site_Daerah.php?siteloc=Trenggalek">Trenggalek</a> 
 						<a href="Site_Daerah.php?siteloc=Tuban">Tuban</a> 
-						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
+						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
 				    </div>
 				</li>
 
@@ -131,58 +131,52 @@
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
-							<br>
-							<h5>Cari Berdasarkan Tahun :
-							</h5>
-						</div>
-						<div>
-							<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, (SELECT AVG(perpanjangan_pagu) FROM site) AS 'AVG_pagu' FROM site, daerah WHERE site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
-									if ($result->num_rows > 0) {
-									    echo "<table id= 'myTable'>
-									        <tr>
-											  	<th>Site ID</th>
+
+								<?php
+								$sql = "SELECT site.sites_id, site.sites_tanggal_finish, pbb.tanggal_jatuh_tempo as tjt1, skrd_rpm.tanggal_jatuh_tempo as tjt2, DATEDIFF(pbb.tanggal_jatuh_tempo, CURRENT_DATE()) as datediff1, DATEDIFF(skrd_rpm.tanggal_jatuh_tempo, CURRENT_DATE()) as datediff2, DATEDIFF(site.sites_tanggal_finish, CURRENT_DATE()) as datediff3 FROM site, pbb,skrd_rpm WHERE site.sites_id = pbb.sites_id && site.sites_id = skrd_rpm.sites_id && (DATEDIFF(pbb.tanggal_jatuh_tempo, CURRENT_DATE()) <= 180 OR DATEDIFF(skrd_rpm.tanggal_jatuh_tempo, CURRENT_DATE()) <= 180 OR DATEDIFF(site.sites_tanggal_finish, CURRENT_DATE()) <= 180) ";
+								$result = $conn->query($sql);
+								
+								$no = 1;
+								if ($result->num_rows > 0) 
+								{
+								    echo "<table id= 'myTable'>
+								    		<tr>
+											  	<th onclick='sortTable(0)'>No.</th>
+											  	<th onclick='sortTable(1)'>Site ID</th>
 												<th>Jatuh Tempo PBB</th>
 												<th>Sisa Waktu PBB</th>
 												<th>Jatuh Tempo RPM</th>
 												<th>Sisa Waktu RPM</th>
 												<th>Jatuh Tempo Sewa Lahan</th>
 												<th>Sisa Waktu Sewa</th>
-												<th>Status Akhir</th>
 												<th>Action</th>
+								    		</tr>";
+								    // output data of each row
+								    while($row = $result->fetch_assoc())
+								    {
+								        echo "
+								        <tr>
+									        <td>".$no++."</td>
+									        <td>".$row["sites_id"]."</td>
+									        <td>".$row["tjt1"]."</td>
+									        <td>".$row["datediff1"]." Hari</td>
+									        <td>".$row["tjt2"]."</td>
+									        <td>".$row["datediff2"]." Hari</td>
+									        <td>".$row["sites_tanggal_finish"]."</td>
+									        <td>".$row["datediff3"]." Hari</td>
+									        <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
 
-									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
-									        echo "
-									            <tr>
-									                    <td>" . $row["sites_id"] . "</td>
-									                    <td>" . $row["sites_nama"] . "</td>
-									                    <td>" . $row["sites_alamat"] . "</td>
-									                    <td>" . $row["kota_kabupaten"] . "</td>
-									                    <td>" . $row["perpanjangan_pagu"] . "</td>
-									                    <td>" . $row["AVG_pagu"] . "</td>
-									                    <td>" . $row["sites_tanggal_start"] . "</td>
-									                    <td>" . $row["sites_tanggal_finish"] . "</td>
-									                    <td>" . $row["perpanjangan_invoice"] . "</td>
-									            </tr>";
-									    }
+								        </tr>";
+								    } 
 
-									    echo "</table>";
-									}
-									else {
-									    //echo "No records found!";
-									}
-									$conn->close();
+								    echo "</table>";
+								}
+								else 
+								{
+								    //echo "0 results";
+								}
+								$conn->close();
 								?>
-							<table>
-							  <tr>
-							  	
-							  </tr>
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
@@ -194,5 +188,61 @@
 				</div>
 			</div>
 		</div>
+		<script>
+		function sortTable(n) {
+		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+		  table = document.getElementById("myTable");
+		  switching = true;
+		  //Set the sorting direction to ascending:
+		  dir = "asc"; 
+		  /*Make a loop that will continue until
+		  no switching has been done:*/
+		  while (switching) {
+		    //start by saying: no switching is done:
+		    switching = false;
+		    rows = table.getElementsByTagName("TR");
+		    /*Loop through all table rows (except the
+		    first, which contains table headers):*/
+		    for (i = 1; i < (rows.length - 1); i++) {
+		      //start by saying there should be no switching:
+		      shouldSwitch = false;
+		      /*Get the two elements you want to compare,
+		      one from current row and one from the next:*/
+		      x = rows[i].getElementsByTagName("TD")[n];
+		      y = rows[i + 1].getElementsByTagName("TD")[n];
+		      /*check if the two rows should switch place,
+		      based on the direction, asc or desc:*/
+		      if (dir == "asc") {
+		        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+		          //if so, mark as a switch and break the loop:
+		          shouldSwitch= true;
+		          break;
+		        }
+		      } else if (dir == "desc") {
+		        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+		          //if so, mark as a switch and break the loop:
+		          shouldSwitch= true;
+		          break;
+		        }
+		      }
+		    }
+		    if (shouldSwitch) {
+		      /*If a switch has been marked, make the switch
+		      and mark that a switch has been done:*/
+		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		      switching = true;
+		      //Each time a switch is done, increase this count by 1:
+		      switchcount ++;      
+		    } else {
+		      /*If no switching has been done AND the direction is "asc",
+		      set the direction to "desc" and run the while loop again.*/
+		      if (switchcount == 0 && dir == "asc") {
+		        dir = "desc";
+		        switching = true;
+		      }
+		    }
+		  }
+		}
+		</script>
 	</body>
 </html>

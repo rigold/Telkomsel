@@ -127,15 +127,6 @@
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
-							<br>
-							<h5>Cari Berdasarkan Tahun :
-							</h5>
-						</div>
-						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
 
 								<?php
 									$sql = "SELECT daerah.kota_kabupaten,site.sites_id,site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', SUM(skrd_rpm.harga_skrd) AS 'jl_rpm', skrd_rpm.koef_skrd, skrd_rpm.tanggal_jatuh_tempo, skrd_rpm.status FROM site,skrd_rpm,daerah WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";

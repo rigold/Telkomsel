@@ -128,15 +128,6 @@
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
-							<br>
-							<h5>Cari Berdasarkan Tahun :
-							</h5>
-						</div>
-						<div>
-							<form1 action="Search.php" id="search">
-								<input type="text"/>
-								<input type="submit" onclick="location.href='Search.php';" value="" id="submit"/>
-							</form1>
 
 								<?php
 								$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, imb.imb_nomor, imb.imb_finish, DATEDIFF(imb.imb_finish, imb.imb_start) as datediff, imb.imb_status FROM site, imb WHERE site.sites_id = imb.sites_id";
