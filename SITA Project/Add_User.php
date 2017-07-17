@@ -137,16 +137,16 @@
 					<form action="Add_User_sql.php" method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
-							<label>Nama User:</label> <input type="text" name="Nama" size="50" required>
+							<label>Nama User:</label> <input type="text" name="Nama" size="50" required placeholder="Masukkan Nama Pegawai">
 							</p>
 							<p>
-							<label>NIK(ID):</label> <input type="text" name="NIK" size="50" required pattern="[A-Za-z1-0]{1,5}" title="masukkan 5">
+							<label>NIK(ID):</label> <input type="text" name="NIK" size="50" required pattern="[0-9]{1,5}" placeholder="Masukan NIK Pegawai">
 							</p>
 							<p>
-							<label>Password:</label> <input type="text" name="Password" size="50" required>
+							<label>Password:</label> <input type="text" name="Password" size="50" required placeholder="Masukkan Password Pegawai">
 							</p>
 							<p>
-							<label>Jabatan:</label> <input type="text" name="Jabatan" size="50">
+							<label>Jabatan:</label> <input type="text" name="Jabatan" size="50" placeholder="Masukkan Jabatan Pegawai">
 							</p>
 							<p>
 							<label>Picture:</label>

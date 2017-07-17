@@ -17,8 +17,9 @@
 	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
+	$result1 = $conn->query($sql);
 	$row = $result->fetch_assoc();
-	$row1 = $result->fetch_assoc();
+	$row1 = $result1->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
@@ -183,9 +184,9 @@
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
-									                    <td>" . $row["sites_luas_lahan"] . "</td>
-									                    <td>" . $row["sites_tower_height"] . "</td>
-									                    <td>" . $row["harga_skrd"] . "</td>
+									                    <td>" . $row["sites_luas_lahan"] . " m<sup>2</sup></td>
+									                    <td>" . $row["sites_tower_height"] . " m</td>
+									                    <td>Rp." . $row["harga_skrd"] . "</td>
 
 									            </tr>";
 									    }

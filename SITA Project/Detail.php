@@ -232,18 +232,18 @@
 								<tr><th>Colocated Site</th><td>" .$row["sites_colocated_site"]."</td></tr> 
 								<tr><th>BTS Type</th><td>" .$row["sites_type_bts"]."</td></tr> 
 								<tr><th>Site Type</th><td>" .$row["sites_type_site"]."</td></tr> 
-								<tr><th>Tower Height</th><td>" .$row["sites_tower_height"]."</td></tr> 
+								<tr><th>Tower Height</th><td>" .$row["sites_tower_height"]." m</td></tr> 
 								<tr><th>Tower Type</th><td>" .$row["sites_tower_type"]."</td></tr> 
 								<tr><th>Shelter Type</th><td>" .$row["sites_shelter_type"]."</td></tr> 
 								<tr><th>Shelter Size</th><td>" .$row["sites_shelter_size"]."</td></tr> 
-								<tr><th>Luas Lahan</th><td>" .$row["sites_luas_lahan"]."</td></tr> 
-								<tr><th>Luas Jalan Akses</th><td>" .$row["sites_luas_jalan_akses"]."</td></tr> 
+								<tr><th>Luas Lahan</th><td>" .$row["sites_luas_lahan"]." m<sup>2</sup></td></tr> 
+								<tr><th>Luas Jalan Akses</th><td>" .$row["sites_luas_jalan_akses"]." m<sup>2</sup></td></tr> 
 								<tr><th>Denah Tanah</th><td><a href=".$aloc.">".$a."</a></td></tr> 
 								<tr><th>Peta Radius Tower</th><td><a href=".$bloc.">".$b."</a></td></tr> 
 								<tr><th>Sketsa Batas Lahan</th><td><a href=".$cloc.">".$c."</a></td></tr> 
 								<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
 								<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
-								<tr><th>Harga/Tahun</th><td>" .$row["sites_harga_per_tahun"]."</td></tr> 
+								<tr><th>Harga/Tahun</th><td>Rp." .$row["sites_harga_per_tahun"]."</td></tr> 
 								<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr> 
 								";
 							?>
@@ -269,7 +269,7 @@
 								$row2 = $result2->fetch_assoc();
 
 								echo "
-								<tr><th>Pagu</th><td>" . $row2["perpanjangan_pagu"]."</td></tr> 
+								<tr><th>Pagu</th><td>Rp." . $row2["perpanjangan_pagu"]."</td></tr> 
 								<tr><th>PIC</th><td>" .$row2["perpanjangan_pic"]."</td></tr> 
 								<tr><th>SPPH</th><td>" .$row2["perpanjangan_spph"]."</td></tr> 
 								<tr><th>Vendor</th><td>" .$row2["perpanjangan_vendor_list"]."</td></tr> 
@@ -297,8 +297,8 @@
 
 								echo "
 								<tr><th>Nomor BAK</th><td>" . $row3["bak_nomor"]."</td></tr> 
-								<tr><th>Tanggal_BAK</th><td>" .$row3["bak_tanggal"]."</td></tr> 
-								<tr><th>Harga_BAK</th><td>" .$row3["bak_harga"]."</td></tr> 
+								<tr><th>Tanggal BAK</th><td>" .$row3["bak_tanggal"]."</td></tr> 
+								<tr><th>Harga BAK</th><td>Rp." .$row3["bak_harga"]."</td></tr> 
 								<tr><th>Status</th><td>" .$row3["bak_status"]."</td></tr>
 								";
 								?>
@@ -565,12 +565,12 @@
 
 							echo "
 							<tr><th>Nomor Objek Pajak</th><td>" .$row11["nop"]."</td></tr> 
-							<tr><th>Nilai PBB</th><td>" .$row11["nilai_pbb_site"]."</td></tr> 
+							<tr><th>Nilai PBB</th><td>Rp." .$row11["nilai_pbb_site"]."</td></tr> 
 							<tr><th>Tanggal Mulai</th><td>" .$row11["tanggal_mulai"]."</td></tr> 
 							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row11["tanggal_jatuh_tempo"]."</td></tr>
 							<tr><th>Status</th><td>" .$row11["status"]."</td></tr>
-							<tr><th>NJOP Tanah</th><td>" .$row11["njop_tanah"]."</td></tr> 
-							<tr><th>NJOP Bangunan</th><td>" .$row11["njop_bangunan"]."</td></tr>
+							<tr><th>NJOP Tanah</th><td>Rp." .$row11["njop_tanah"]."</td></tr> 
+							<tr><th>NJOP Bangunan</th><td>Rp." .$row11["njop_bangunan"]."</td></tr>
 							<tr><th>Surat PBB</th><td><a href=".$aloc.">".$a."</a></td></tr>
 							";
 							?>
@@ -599,7 +599,7 @@
 
 							echo "
 							<tr><th>No SKRD</th><td>" .$row12["no_skrd"]."</td></tr> 
-							<tr><th>Harga SKRD</th><td>" .$row12["harga_skrd"]."</td></tr>
+							<tr><th>Harga SKRD</th><td>Rp." .$row12["harga_skrd"]."</td></tr>
 							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row12["tanggal_jatuh_tempo"]."</td></tr>
 							<tr><th>Koef SKRD</th><td>" .$row12["koef_skrd"]."</td></tr> 
 							<tr><th>Status</th><td>" .$row12["status"]."</td></tr>

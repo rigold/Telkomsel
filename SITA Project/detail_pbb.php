@@ -17,8 +17,9 @@
 	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
+	$result1 = $conn->query($sql);
 	$row = $result->fetch_assoc();
-	$row1 = $result->fetch_assoc();
+	$row1 = $result1->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
@@ -32,10 +33,6 @@
 	</head>
 	
 	<body>
-	Welcome 
-	<?php 
-		echo $_SESSION['login_user']; 
-	?>
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
@@ -189,11 +186,11 @@
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
 									                    <td>" . $row["ijin_ptt_nomor"] . "</td>
-									                    <td>" . $row["njop_tanah"] . "</td>
-									                    <td>" . $row["njop_bangunan"] . "</td>
-									                    <td>" . $row["sites_luas_lahan"] . "</td>
-									                    <td>" . $row["sites_tower_height"] . "</td>
-									                    <td>" . $row["nilai_pbb_site"] . "</td>
+									                    <td>Rp." . $row["njop_tanah"] . "</td>
+									                    <td>Rp." . $row["njop_bangunan"] . "</td>
+									                    <td>" . $row["sites_luas_lahan"] . "m<sup>2</sup></td>
+									                    <td>" . $row["sites_tower_height"] . " m</td>
+									                    <td>Rp." . $row["nilai_pbb_site"] . "</td>
 
 									            </tr>";
 									    }
@@ -208,7 +205,7 @@
 									    			Total PBB
 									    		</td>
 									    		<td>
-									    			" . $row["jl_pbb"] . "
+									    			Rp." . $row["jl_pbb"] . "
 									    		</td>
 									    	</tr>
 									    	<tr>

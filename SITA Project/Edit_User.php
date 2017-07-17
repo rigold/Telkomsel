@@ -142,16 +142,6 @@
 				</div>
 				<div class="body">
 					<h1>Formulir Edit User</h1>
-					<?php
-						$servername = "localhost";
-						$username = "root";
-						$password = "";
-						$dbname = "sita";
-						$conn = new mysqli($servername, $username, $password, $dbname);
-						$sql = "SELECT * FROM user";
-						$result = $conn->query($sql);
-						$row = $result->fetch_assoc();
-					?>
 					<form <?php echo " action= \"Edit_User_sql.php?hapus=$row[link_profile_pic]\" ";?> method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>

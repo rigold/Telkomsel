@@ -169,7 +169,7 @@
 									        <td>".$row["sites_alamat"]."</td>
 									        <td>".$row["imb_nomor"]."</td>
 									        <td>".$row["imb_finish"]."</td>
-									        <td>".$row["datediff"]."</td>
+									        <td>".$row["datediff"]." Hari</td>
 									        <td>".$row["imb_status"]."</td>
 									        <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
 								        </tr>";

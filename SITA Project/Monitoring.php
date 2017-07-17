@@ -174,12 +174,12 @@
 									        <td>".$row["perpanjangan_pic"]."</td>
 									        <td>".$row["perpanjangan_spph"]."</td>
 									        <td>".$row["bak_nomor"]."</td>
-									        <td>".$row["bak_harga"]."</td>
+									        <td>Rp.".$row["bak_harga"]."</td>
 									        <td>".$row["sl_pks"]."</td>
 									        <td>".$row["perpanjangan_vendor_list"]."</td>
 									        <td>".$row["perpanjangan_invoice"]."</td>
 									        <td>".$row["sites_tanggal_start"]."</td>
-									        <td>".$row["datediff"]."</td>
+									        <td>".$row["datediff"]." Hari</td>
 									        <td>".$row["sites_status_lahan"]."</td>
 								        </tr>";
 								    } 

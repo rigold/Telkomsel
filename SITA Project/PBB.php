@@ -169,7 +169,7 @@
 									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>" . $row["jl_pbb"] . "</td>
+									                    <td>Rp." . $row["jl_pbb"] . "</td>
 									                    <td>" . $row["koef_pbb"] . "</td>
 									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
 									                    <td>" . $row["status"] . "</td>

@@ -1,3 +1,27 @@
+<?php
+	if(empty($_SESSION))
+		session_start();
+
+	if(!isset($_SESSION['login_user'])) {
+   		header("Location: Index.php");
+   		}
+
+   	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = $conn->query($sql);
+	$result1 = $conn->query($sql);
+	$row = $result->fetch_assoc();
+	$row1 = $result1->fetch_assoc();
+   
+?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
@@ -87,16 +111,16 @@
 				<div class="sidebar">
 
 					<div class="featured">						
-						<a href="gallery.php" class="figure"><img src="images/person.jpg" alt=""/></a>		
+						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
 
+					</h1>
 					<div id="tweets">
-						<h3>Staff 1</h3>
+						<h3><?php echo $row['jabatan'];?></h3>
 						<p>
-							<br>Nama User : Immanuel Rio
-							<br>NIK : 19574
-							<br>Jabatan : Staff Manajemen Site
-							<br>Akun : Admin
+							<br>Nama User : <?php echo $row['nama_user'];?>
+							<br>NIK : <?php echo $row['nik'];?>
+							<br>Akun : <?php if (empty($row['admin'])){echo "User";}else{echo $row['admin'];}?>
 						</p>
 					</div>
 					<div id="article">
@@ -104,14 +128,12 @@
 						<p>
 							<a href="Add_User.php">> ADD USER<br></a>
 							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
-							<a href="Edit_User.php"><br>> EDIT USER<br></a>
-							<a href="Edit_Sites.php"><br>> EDIT SITE<br></a>
 							<a href="List_User.php"><br>> LIST USER<br></a>
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
 					
-					<p><br><br>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
+					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
 					<h1><a href="About.php">HALAMAN TIDAK DITEMUKAN !</a></h1>

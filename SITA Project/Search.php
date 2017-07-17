@@ -107,9 +107,9 @@
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
-						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
+						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/>
+						</a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -186,7 +186,7 @@
 									    echo "</table>";
 									}
 									else {
-									    //echo "No records found!";
+									    header("Location: Not_Found.php");
 									}
 									$conn->close();
 								?>

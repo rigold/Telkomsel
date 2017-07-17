@@ -166,7 +166,7 @@
 									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>" . $row["jl_rpm"] . "</td>
+									                    <td>Rp." . $row["jl_rpm"] . "</td>
 									                    <td>" . $row["koef_skrd"] . "</td>
 									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
 									                    <td>" . $row["status"] . "</td>

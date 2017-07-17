@@ -169,8 +169,8 @@
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
 									                    <td>" . $row["kota_kabupaten"] . "</td>
-									                    <td>" . $row["perpanjangan_pagu"] . "</td>
-									                    <td>" . $row["AVG_pagu"] . "</td>
+									                    <td>Rp." . $row["perpanjangan_pagu"] . "</td>
+									                    <td>Rp." . $row["AVG_pagu"] . "</td>
 									                    <td>" . $row["sites_tanggal_start"] . "</td>
 									                    <td>" . $row["sites_tanggal_finish"] . "</td>
 									                    <td>" . $row["perpanjangan_invoice"] . "</td>
