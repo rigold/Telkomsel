@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18 Jul 2017 pada 04.01
+-- Generation Time: 18 Jul 2017 pada 04.12
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -449,12 +449,12 @@ INSERT INTO `skrd_rpm` (`no_skrd`, `sites_id`, `status`, `surat_skrd`, `harga_sk
 --
 
 CREATE TABLE `user` (
-  `nik` varchar(7) NOT NULL,
+  `nik` int(7) NOT NULL,
   `password` varchar(20) NOT NULL,
   `nama_user` varchar(20) NOT NULL,
   `link_profile_pic` varchar(100) DEFAULT NULL,
   `jabatan` varchar(50) NOT NULL,
-  `admin` int(11) NOT NULL
+  `admin` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -462,8 +462,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`nik`, `password`, `nama_user`, `link_profile_pic`, `jabatan`, `admin`) VALUES
-('12345', '12345', 'Hinata Hyuga', '1500276519.pngHinata.png', 'Istri Hokage', 0),
-('54321', '54321', 'Neji Hyuga', '1500278146.Neji.png', 'Satpam Afterlife', 0);
+(12345, '12345', 'Hinata Hyuga', '1500276519.pngHinata.png', 'Istri Hokage', '0'),
+(15243, '15243', 'Rock Lee', '1500343573.rocklee.png', 'Staff Hokage', '0'),
+(54321, '54321', 'Neji Hyuga', '1500278146.Neji.png', 'Satpam Afterlife', '0'),
+(99999, 'admin', 'Naruto Uzumaki', '1500343821.jpgnaruto.jpg', 'Hokage', 'Admin');
 
 --
 -- Indexes for dumped tables
