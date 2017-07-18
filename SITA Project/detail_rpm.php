@@ -126,29 +126,48 @@
 					</div>
 					<div id="article">
 						<h3>MENU ADMIN</h3>
-						<p>
-							<a href="Add_User.php">> ADD USER<br></a>
-							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
-							<a href="List_User.php"><br>> LIST USER<br></a>
-							<a href="List_Sites.php"><br>> LIST SITES<br></a>
-						</p>
+						<?php
+							if($row1['admin']=="Admin")
+							{
+								echo "
+								<p>
+									<a href='Add_User.php'>> ADD USER<br></a>
+									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
+									<a href='List_User.php'><br>> LIST USER<br></a>
+									<a href='List_Sites.php'><br>> LIST SITES<br></a>
+								</p>
+								";
+							}
+							else
+								echo "
+									<p>
+									<a >> ADD USER<br></a>
+									<a ><br>> ADD SITE<br></a>
+									<a ><br>> LIST USER<br></a>
+									<a ><br>> LIST SITES<br></a>
+								</p>
+								";
+						?>
 					</div>
 					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
+					<?php
+						$kota_kab=$_REQUEST['kota_kab'];
+						$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+						$result = $conn->query($sql);
+						$row = $result->fetch_assoc();
+						$sql3 = "SELECT * FROM nomor_surat";
+						$result3 = $conn->query($sql3);
+						$row3 = $result3->fetch_assoc();
+					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
 							<br>
-							<?php
-								$kota_kab=$_REQUEST['kota_kab'];
-								$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
-							?>
 							<h5><?php echo $row['sites_kota_kabupaten'];?>
 							</h5>
 						</div>
