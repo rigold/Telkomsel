@@ -444,12 +444,19 @@ body{
 	text-align: center;
 }
 .body h1 a{
-<<<<<<< HEAD
-	color: #ff6000;
 	text-decoration: none;
 	
 }
-
+.body h6 {
+    font-family: helvetica, arial;
+    color: black;
+    font-size: 12px;
+    clear: both;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
 .body h2 {
     font-family: helvetica, arial;
     color: black;
@@ -464,9 +471,7 @@ body{
 }
 .body h2 a{
 	color: #4a14f8;
-=======
 	color: orangered;
->>>>>>> ad43b15b5e151cf5fe975af466bef9d82d7faa52
 	text-decoration: none;
 	
 }
@@ -576,17 +581,6 @@ body{
     width: 100%;
     font-weight: bold;
 }
-.body div#featured div h5{
-	color: RED;
-    float: left;
-    font-family: calibri;
-    font-size: 24px;
-    line-height: 30px;
-    margin: 0 0 20px 0;
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-}
 .body div#featured div h4 a{
 	color: #131ccf;
 	text-decoration: none;
@@ -616,7 +610,7 @@ body{
     width: 100%;
     font-weight: bold;
 }
-.body div#featured div h6{
+//.body div#featured div h6{
 	color: darkred;
     font-family: arial;
     font-size: 160px;
@@ -1233,7 +1227,7 @@ tr:nth-child(even) {
       display: none;
     }
     .body div#featured div h5 {
-      display: none;
+      float: left;
     }
     .pagination {
       display: none;
@@ -1280,7 +1274,6 @@ tr:nth-child(even) {
     clear: both;
     text-transform: uppercase;
     font-weight: bold;
-    //padding: 20px 0 0;
     text-align: left;
 }
 
