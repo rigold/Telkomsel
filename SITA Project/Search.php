@@ -180,16 +180,21 @@
 									                    <td>" . $row["no_skrd"] . "</td>
 									                    <td>" . $row["imb_nomor"] . "</td>
 									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
-
-
 									            </tr>";
 									    }
 
 									    echo "</table>";
 									}
 									else {
-									    //echo "No records found!";
-									}
+									    echo "
+									    <h4>
+											Data tidak ditemukan!
+										</h4>
+										<h4>
+											<a href='Home.php'>KEMBALI KE HALAMAN UTAMA?</a>
+										</h4>
+												    ";
+												}
 									$conn->close();
 								?>
 						</div>
