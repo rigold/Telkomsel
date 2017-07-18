@@ -17,7 +17,7 @@
 	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+	$rowz = $result->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
@@ -28,12 +28,12 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
+
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -74,7 +74,8 @@
 						<a href="Site_Daerah.php?siteloc=Surabaya">Surabaya</a> 
 						<a href="Site_Daerah.php?siteloc=Trenggalek">Trenggalek</a> 
 						<a href="Site_Daerah.php?siteloc=Tuban">Tuban</a> 
-						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
+						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
+
 				    </div>
 				</li>
 
@@ -95,36 +96,34 @@
 					<?php
 					echo " " . date("Y/m/d") ;
 					?>
-					</h1>
+				</h1>
 				<form action="Search.php" id="search" method="GET">
 					<input type="text" name="cari" />
 					<input type="submit" value="" id="submit"/>
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
-						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
+						<a href="upload/<?php echo $rowz['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $rowz['link_profile_pic'];?>" alt=""/></a>		
 					</div>
 
 					</h1>
 					<div id="tweets">
-						<h3><?php echo $row['jabatan'];?></h3>
+						<h3><?php echo $rowz['jabatan'];?></h3>
 						<p>
-							<br>Nama User : <?php echo $row['nama_user'];?>
-							<br>NIK : <?php echo $row['nik'];?>
-							<br>Akun : <?php if (empty($row['admin'])){echo "User";}else{echo $row['admin'];}?>
+							<br>Nama User : <?php echo $rowz['nama_user'];?>
+							<br>NIK : <?php echo $rowz['nik'];?>
+							<br>Akun : <?php if (empty($rowz['admin'])){echo "User";}else{echo $rowz['admin'];}?>
 						</p>
 					</div>
 					<div id="article">
 						<h3>MENU ADMIN</h3>
 						<?php
-							if($row['admin']=="Admin")
+							if($rowz['admin']=="Admin")
 							{
 								echo "
 								<p>
@@ -132,6 +131,7 @@
 									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
 									<a href='List_User.php'><br>> LIST USER<br></a>
 									<a href='List_Sites.php'><br>> LIST SITES<br></a>
+									<a href='riwayat_print.php'><br>> RIWAYAT PRINT<br></a>
 								</p>
 								";
 							}
@@ -150,122 +150,111 @@
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
-					<h1><a href="Home.php">PAJAK BUMI BANGUNAN</a></h1>
+					<h1>RIWAYAT CETAK</h1>
 					<br>
-					<div class="line-separator"></div>
-					<div id="featured">
-						<div>
-
-							<?php
-									$sql = "SELECT daerah.kota_kabupaten,pbb.koef_pbb,pbb.status,site.sites_id, site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', pbb.tanggal_jatuh_tempo, SUM(pbb.nilai_pbb_site) AS 'jl_pbb' FROM site,pbb,daerah WHERE site.sites_id = pbb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
-									$no = 1;
-									if ($result->num_rows > 0) {
-									    echo "<table id= 'myTable'>
-									        <tr>
-									            <th onclick='sortTable(0)'>No.</th>
-									            <th onclick='sortTable(1)'>Kabupaten/Kota</th>
-												<th onclick='sortTable(2)'>Jumlah Sites</th>
-												<th>Jumlah SPPT PBB</th>
-												<th onclick='sortTable(3)'>Total Nilai PBB</th>
-												<th>Koef PBB</th>
-												<th>Tanggal Jatuh Tempo</th>
-												<th>Status</th>
-												<th>Action</th>
-									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
-									        echo "
-									            <tr>
-									                    <td>" . $no++ . "</td>
-									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
-									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>Rp." . $row["jl_pbb"] . "</td>
-									                    <td>" . $row["koef_pbb"] . "</td>
-									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
-									                    <td>" . $row["status"] . "</td>
-									                    <td><button onclick= \"location.href='detail_pbb.php?kota_kab=$row[kota_kabupaten]'\">Detail</button></td>
-									            </tr>";
-									    }
-
-									    echo "</table>";
-									}
-									else {
-									    //echo "No records found!";
-									}
-									$conn->close();
-								?>
-						</div>
-						
+					<div class="line-separator"></div>	
+					<div class="tab">
+						<button class="tablinks" onclick="openTabs(event, 'DATA SITES')">DATA SITES</button>
+						<button class="tablinks" onclick="openTabs(event, 'LIST PANJANG')">LIST PANJANG</button>
+						<button class="tablinks" onclick="openTabs(event, 'MONITORING')">MONITORING</button>
+						<button class="tablinks" onclick="openTabs(event, 'PERIZINAN')">PERIZINAN</button>
+						<button class="tablinks" onclick="openTabs(event, 'PBB')">PBB</button>
+						<button class="tablinks" onclick="openTabs(event, 'DETAIL PBB')">DETAIL PBB</button>
+						<button class="tablinks" onclick="openTabs(event, 'RPM')">RPM</button>
+						<button class="tablinks" onclick="openTabs(event, 'DETAIL RPM')">DETAIL RPM</button>
+						<button class="tablinks" onclick="openTabs(event, 'COMCASE')">COMCASE</button>
 					</div>
-					<button onclick="myFunction() ">Print Halaman</button>
+					<div id="DATA SITES" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+							SIAPA???
+							</a>
+
+						</table>
+					</div>
+					<div id="LIST PANJANG" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								YANG???
+							</a>
+						</table>
+					</div>
+					<div id="MONITORING" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								TANYA???
+							</a>
+						</table>
+					</div>
+					<div id="PERIZINAN" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								AYO??
+							</a>
+						</table>
+					</div>
+					<div id="PBB" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								JAWAB???
+							</a>
+						</table>
+					</div>
+					<div id="DETAIL PBB" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+							NANTI???
+							</a>
+						</table>
+					</div>
+					<div id="RPM" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								YANG JAWAB??
+							</a>
+						</table>
+					</div>
+					<div id="DETAIL RPM" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								DIKASI???
+							</a>
+						</table>
+					</div>
+					<div id="COMCASE" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								SEPEDA???
+							</a>
+						</table>
+					</div>
+
+					<button onclick="myFunction()"  style="margin-bottom: 200px;">Print Halaman</button>
 					<script>
 						function myFunction() {
 					    window.print();
-					}
+						}
 					</script>
 				</div>
 			</div>
 		</div>
-		<script>
-		function sortTable(n) {
-		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-		  table = document.getElementById("myTable");
-		  switching = true;
-		  //Set the sorting direction to ascending:
-		  dir = "asc"; 
-		  /*Make a loop that will continue until
-		  no switching has been done:*/
-		  while (switching) {
-		    //start by saying: no switching is done:
-		    switching = false;
-		    rows = table.getElementsByTagName("TR");
-		    /*Loop through all table rows (except the
-		    first, which contains table headers):*/
-		    for (i = 1; i < (rows.length - 1); i++) {
-		      //start by saying there should be no switching:
-		      shouldSwitch = false;
-		      /*Get the two elements you want to compare,
-		      one from current row and one from the next:*/
-		      x = rows[i].getElementsByTagName("TD")[n];
-		      y = rows[i + 1].getElementsByTagName("TD")[n];
-		      /*check if the two rows should switch place,
-		      based on the direction, asc or desc:*/
-		      if (dir == "asc") {
-		        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
-		          shouldSwitch= true;
-		          break;
-		        }
-		      } else if (dir == "desc") {
-		        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
-		          shouldSwitch= true;
-		          break;
-		        }
-		      }
-		    }
-		    if (shouldSwitch) {
-		      /*If a switch has been marked, make the switch
-		      and mark that a switch has been done:*/
-		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-		      switching = true;
-		      //Each time a switch is done, increase this count by 1:
-		      switchcount ++;      
-		    } else {
-		      /*If no switching has been done AND the direction is "asc",
-		      set the direction to "desc" and run the while loop again.*/
-		      if (switchcount == 0 && dir == "asc") {
-		        dir = "desc";
-		        switching = true;
-		      }
-		    }
-		  }
-		}
-		</script>
 	</body>
 </html>
+
+<!-- - - - - - - - - - JavaScript untuk tab menu di class=page - - - - - - - - - -->
+<script>
+	document.getElementsByClassName('tablinks')[0].click()
+	function openTabs(evt, TabName) {
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablinks");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].className = tablinks[i].className.replace(" active", "");
+	    }
+	    document.getElementById(TabName).style.display = "block";
+	    evt.currentTarget.className += " active";
+	}
+</script>	
