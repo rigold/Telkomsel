@@ -24,8 +24,8 @@
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
 
-	$masuk="RPM/".$row3['no']."/".$row1['nik']."/".date("Y");
-	mysqli_query($conn,"INSERT INTO z_detail_rpm (no_surat) VALUES ('$masuk');");
+	$masuk="PERPANJANGAN/".$row3['no']."/".$row1['nik']."/".date("Y");
+	mysqli_query($conn,"INSERT INTO z_perpanjangan (no_surat) VALUES ('$masuk');");
 
 	header("Location: List_Panjang.php");
 ?>

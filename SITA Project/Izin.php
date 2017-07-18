@@ -149,7 +149,15 @@
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
-					<h1><a href="Home.php">IZIN PERPANJANGAN</a></h1>
+					<?php
+						$sql3 = "SELECT * FROM z_perizinan ORDER BY no DESC LIMIT 1";
+						$result3 = $conn->query($sql3);
+						$row3 = $result3->fetch_assoc();
+					?>
+					<h1><a href="Home.php">PERIZINAN</a></h1>
+					<h6>PERIZINAN/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
+						?>
+					</h6>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
@@ -201,11 +209,16 @@
 								?>	
 						</div>
 					</div>
-					<button onclick="myFunction() ">Print Halaman</button>
-					<script>
-						function myFunction() {
-					    window.print();
-					}
+					<?php
+					$link="in_perizinan.php";
+					?>
+					<button  onclick="myFunction()">Print Halaman </button>
+					<script type="text/javascript">
+						function myFunction(){
+							var a="<?php echo $link; ?>";
+							document.location.href = a;
+					    	window.print();
+						}
 					</script>
 				</div>
 			</div>
