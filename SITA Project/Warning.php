@@ -169,11 +169,11 @@
 											  	<th onclick='sortTable(0)'>No.</th>
 											  	<th onclick='sortTable(1)'>Site ID</th>
 												<th>Jatuh Tempo PBB</th>
-												<th>Sisa Waktu PBB</th>
+												<th onclick='sortTable(2)'>Sisa Waktu PBB</th>
 												<th>Jatuh Tempo RPM</th>
-												<th>Sisa Waktu RPM</th>
+												<th onclick='sortTable(3)'>Sisa Waktu RPM</th>
 												<th>Jatuh Tempo Sewa Lahan</th>
-												<th>Sisa Waktu Sewa</th>
+												<th onclick='sortTable(4)'>Sisa Waktu Sewa</th>
 												<th>Action</th>
 								    		</tr>";
 								    // output data of each row

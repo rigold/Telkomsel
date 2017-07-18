@@ -160,7 +160,6 @@
 						$row = $result->fetch_assoc();
 						$sql3 = "SELECT * FROM nomor_surat";
 						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
 					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
 					<br>
