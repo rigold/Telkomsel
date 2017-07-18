@@ -21,7 +21,6 @@
    
 ?>
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -149,7 +148,15 @@
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
+					<?php
+						$sql3 = "SELECT * FROM z_perpanjangan ORDER BY no DESC LIMIT 1";
+						$result3 = $conn->query($sql3);
+						$row3 = $result3->fetch_assoc();
+					?>
 					<h1><a href="Home.php">LIST PERPANJANGAN</a></h1>
+					<h6>PERPANJANGAN/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
+						?>
+					</h6>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
@@ -203,11 +210,16 @@
 						</div>
 						
 					</div>
-					<button onclick="myFunction() ">Print Halaman</button>
-					<script>
-						function myFunction() {
-					    window.print();
-					}
+					<?php
+					$link="in_rpm.php?kota_kab=".$kota_kab;
+					?>
+					<button  onclick="myFunction()">Print Halaman </button>
+					<script type="text/javascript">
+						function myFunction(){
+							var a="<?php echo $link; ?>";
+							document.location.href = a;
+					    	window.print();
+						}
 					</script>
 				</div>
 				</div>
