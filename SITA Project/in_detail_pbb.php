@@ -21,12 +21,12 @@
 	$result1 = $conn->query($sql);
 	$row1 = $result1->fetch_assoc();
 
-	$sql3 = "SELECT * FROM z_detail_rpm ORDER BY no DESC LIMIT 1";
+	$sql3 = "SELECT * FROM z_detail_pbb ORDER BY no DESC LIMIT 1";
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
 
-	$masuk="RPM/".$kota_kab."/".$row3['no']."/".$row1['nik']."/".date("Y");
-	mysqli_query($conn,"INSERT INTO z_detail_rpm (no_surat) VALUES ('$masuk');");
+	$masuk="PBB/".$kota_kab."/".$row3['no']."/".$row1['nik']."/".date("Y");
+	mysqli_query($conn,"INSERT INTO z_detail_pbb (no_surat) VALUES ('$masuk');");
 
-	header("Location: detail_rpm.php?kota_kab=".$kota_kab);
+	header("Location: detail_pbb.php?kota_kab=".$kota_kab);
 ?>

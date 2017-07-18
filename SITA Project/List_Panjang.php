@@ -211,7 +211,7 @@
 						
 					</div>
 					<?php
-					$link="in_rpm.php?kota_kab=".$kota_kab;
+					$link="in_perpanjangan.php";
 					?>
 					<button  onclick="myFunction()">Print Halaman </button>
 					<script type="text/javascript">

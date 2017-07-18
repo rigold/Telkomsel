@@ -166,7 +166,7 @@
 						$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
 						$result = $conn->query($sql);
 						$row = $result->fetch_assoc();
-						$sql3 = "SELECT * FROM nomor_surat";
+						$sql3 = "SELECT * FROM z_detail_rpm";
 						$result3 = $conn->query($sql3);
 					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
@@ -309,7 +309,7 @@
 						
 					</div>
 					<?php
-					$link="in_rpm.php?kota_kab=".$kota_kab;
+					$link="in_detail_rpm.php?kota_kab=".$kota_kab;
 					?>
 					<button  onclick="myFunction()">Print Halaman </button>
 					<script type="text/javascript">
