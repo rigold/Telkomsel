@@ -167,7 +167,38 @@
 					<div id="DATA SITES" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-							SIAPA???
+							<?php
+									$sqla = "SELECT no,no_surat,nama FROM z_datasites WHERE no > 1 ";
+
+									$resulta = $conn->query($sqla);
+									$noa = 1;
+									if ($resulta->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($rowa = $resulta->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $noa++ . "</td>
+									                    <td>" . $rowa["no_surat"] . "</td>
+									                    <td>" . $rowa["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 
 						</table>
@@ -175,56 +206,318 @@
 					<div id="LIST PANJANG" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								YANG???
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_perpanjangan WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="MONITORING" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								TANYA???
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_monitoring WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="PERIZINAN" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								AYO??
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_perizinan WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="PBB" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								JAWAB???
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_pbb WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="DETAIL PBB" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-							NANTI???
+							<?php
+									$sql = "SELECT no,no_surat,nama FROM z_detail_pbb WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="RPM" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								YANG JAWAB??
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_rpm WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="DETAIL RPM" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								DIKASI???
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_detail_rpm WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
 					<div id="COMCASE" class="tabcontent">
 						<table border="0">
 							<a id="detail">
-								SEPEDA???
+								<?php
+									$sql = "SELECT no,no_surat,nama FROM z_comcase WHERE no > 1 ";
+
+									$result = $conn->query($sql);
+									$no = 1;
+									if ($result->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th onclick='sortTable(0)'>No.</th>
+									            <th onclick='sortTable(1)'>No. Surat</th>
+												<th onclick='sortTable(2)'>Nama User</th>
+									        </tr>";
+									    //  output data of each row
+									    //  $rows = array(); // This is not actually required
+									    while ($row = $result->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $row["no_surat"] . "</td>
+									                    <td>" . $row["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									    $result = $conn->query($sql);
+									    $row = $result->fetch_assoc();
+									}
+									else {
+									    //echo "No records found!";
+									}
+									$conn->close();
+								?>
 							</a>
 						</table>
 					</div>
