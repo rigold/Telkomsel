@@ -178,8 +178,8 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
 									                    <td>" . $no++ . "</td>
+									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>Rp." . $row["jl_rpm"] . "</td>
