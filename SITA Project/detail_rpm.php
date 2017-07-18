@@ -20,6 +20,14 @@
 	$result1 = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$row1 = $result1->fetch_assoc();
+
+	$kota_kab=$_REQUEST['kota_kab'];
+	$sql2 = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+	$result2 = $conn->query($sql2);
+	$row2 = $result2->fetch_assoc();
+	$sql3 = "SELECT * FROM z_detail_rpm ORDER BY no DESC LIMIT 1";
+	$result3 = $conn->query($sql3);
+	$row3 = $result3->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
@@ -154,21 +162,18 @@
 				</div>
 				<div class="body">
 					<?php
-						$kota_kab=$_REQUEST['kota_kab'];
-						$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
-						$result = $conn->query($sql);
-						$row = $result->fetch_assoc();
-						$sql3 = "SELECT * FROM nomor_surat";
-						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
+						
 					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
+					<h6>RPM/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("Y");
+						?>	 
+					</h6>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
 						<div>
 							<br>
-							<h5><?php echo $row['sites_kota_kabupaten'];?>
+							<h5><?php echo $row2['sites_kota_kabupaten'];?>
 							</h5>
 						</div>
 						<div>
@@ -298,11 +303,16 @@
 						</div>
 						
 					</div>
-					<button onclick="myFunction() ">Print Halaman</button>
-					<script>
-						function myFunction() {
-					    window.print();
-					}
+					<?php
+					$link="in_rpm.php?kota_kab=".$kota_kab;
+					?>
+					<button  onclick="myFunction()">Print Halaman </button>
+					<script type="text/javascript">
+						function myFunction(){
+							var a="<?php echo $link; ?>";
+							document.location.href = a;
+					    	window.print();
+						}
 					</script>
 				</div>
 			</div>
