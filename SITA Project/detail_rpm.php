@@ -162,7 +162,16 @@
 				</div>
 				<div class="body">
 					<?php
+<<<<<<< HEAD
 						
+=======
+						$kota_kab=$_REQUEST['kota_kab'];
+						$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+						$result = $conn->query($sql);
+						$row = $result->fetch_assoc();
+						$sql3 = "SELECT * FROM nomor_surat";
+						$result3 = $conn->query($sql3);
+>>>>>>> origin/master
 					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
 					<h6>RPM/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("Y");

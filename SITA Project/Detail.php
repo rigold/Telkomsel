@@ -29,6 +29,7 @@
 	$password = "";
 	$database = "sita";
 	$conn = mysqli_connect($servername, $username, $password, $database);
+
 ?>
 <html>
 	<head>
@@ -230,6 +231,8 @@
 								$bloc="File/".$b;
 								$c=$row["sites_sketsa_bt"]; 
 								$cloc="File/".$c;
+								$link = "https://www.google.com/maps/?q=" .$row["sites_long"]."," .$row["sites_lat"]."";
+							
 
 								echo "
 								<tr><th>Site ID</th><td>" . $row["sites_id"]."</td></tr> 
@@ -260,8 +263,10 @@
 								<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
 								<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
 								<tr><th>Harga/Tahun</th><td>Rp." .$row["sites_harga_per_tahun"]."</td></tr> 
-								<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr> 
+								<tr><th>Lokasi</th><td><a target='_blank' href=\"$link\">" .$row["sites_long"]. "," .$row["sites_lat"]."</a></td></tr>
+								<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr>
 								";
+								//echo '<a href="'.$link.'">Link</a>';
 							?>
 							</a>
 
