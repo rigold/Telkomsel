@@ -153,13 +153,30 @@
 				</div>
 
 				<div class="body">
-							<?php
-								$siteloc=$_REQUEST['siteloc'];
-								$sql = "SELECT * from daerah where kota_kabupaten = '".$siteloc."'";;
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
-							?>
-					<h1><a href="Home.php">DATA SITE di <?php echo $siteloc;?></a></h1>
+					<?php
+						$siteloc=$_REQUEST['siteloc'];
+						$sql = "SELECT * from daerah where kota_kabupaten = '".$siteloc."'";;
+						$result = $conn->query($sql);
+						$row = $result->fetch_assoc();
+					?>
+					<?php
+						$siteloc=$_REQUEST['siteloc'];
+						$sql5 = "SELECT * from site where sites_kota_kabupaten='".$siteloc."'";;
+						$result5 = $conn->query($sql5);
+						$row5 = $result5->fetch_assoc();
+
+						$sql3 = "SELECT * FROM z_datasites";
+						$result3 = $conn->query($sql3);
+						$row3 = $result3->fetch_assoc();
+
+						$sql4 = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+						$result4 = $conn->query($sql4);
+						$row4 = $result4->fetch_assoc();
+					?>
+					<h1><a href="Home.php">Data Site</a></h1>
+					<h6>DATASITES/<?php echo $row5['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row4['nik'];?>/<?php echo date("Y");
+						?>	 
+					</h6>
 					<br>
 					<div class="line-separator"></div>
 					<div id="featured">
@@ -207,10 +224,15 @@
 							</table>
 						</div>
 					</div>
-					<button onclick="myFunction() ">Print Halaman</button>
-					<script>
-						function myFunction() {
-					    window.print();
+					<?php
+					$link="in_datasites.php?siteloc=".$siteloc;
+					?>
+					<button  onclick="myFunction()">Print Halaman </button>
+					<script type="text/javascript">
+						function myFunction(){
+							var a="<?php echo $link; ?>";
+							document.location.href = a;
+					    	window.print();
 						}
 					</script>
 				</div>

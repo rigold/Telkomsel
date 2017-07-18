@@ -170,6 +170,7 @@
 						$row = $result->fetch_assoc();
 						$sql3 = "SELECT * FROM z_detail_rpm";
 						$result3 = $conn->query($sql3);
+						$row3 = $result3->fetch_assoc();
 					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
 					<h6>RPM/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("Y");
