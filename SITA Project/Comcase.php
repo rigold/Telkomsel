@@ -131,6 +131,7 @@
 									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
 									<a href='List_User.php'><br>> LIST USER<br></a>
 									<a href='List_Sites.php'><br>> LIST SITES<br></a>
+									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
 								</p>
 								";
 							}
@@ -141,6 +142,7 @@
 									<a ><br>> ADD SITE<br></a>
 									<a ><br>> LIST USER<br></a>
 									<a ><br>> LIST SITES<br></a>
+									<a ><br>> RIWAYAT CETAK<br></a>
 								</p>
 								";
 						?>
