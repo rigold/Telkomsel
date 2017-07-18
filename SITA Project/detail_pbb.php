@@ -259,7 +259,7 @@
 									    </td>
 									</tr>
 								</table>
-								<br><br><br><br>
+								<br><br><br>
 								<table>
 									<tr>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
@@ -283,7 +283,7 @@
 									    	<?php echo $row1['jabatan'];?>
 									    </td>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
-									   		Pj. Spv. Site Administrasi Jatim
+									   		Spv. Site Administrasi Jatim
 									    </td>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
 									    	Manager Site Management Jatim
