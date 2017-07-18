@@ -18,6 +18,7 @@
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$rowz = $result->fetch_assoc();
+	$row = $result->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
@@ -168,46 +169,7 @@
 						<table border="0">
 							<a id="detail">
 							<?php
-									$sqla = "SELECT no,no_surat,nama FROM z_datasites WHERE no > 1 ";
-
-									$resulta = $conn->query($sqla);
-									$noa = 1;
-									if ($resulta->num_rows > 0) {
-									    echo "<table id= 'myTable'>
-									        <tr>
-									        	<th onclick='sortTable(0)'>No.</th>
-									            <th onclick='sortTable(1)'>No. Surat</th>
-												<th onclick='sortTable(2)'>Nama User</th>
-									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($rowa = $resulta->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
-									        echo "
-									            <tr>
-									            		<td>" . $noa++ . "</td>
-									                    <td>" . $rowa["no_surat"] . "</td>
-									                    <td>" . $rowa["nama"] . "</td>
-
-									            </tr>";
-									    }
-
-									    echo "</table>";
-									}
-									else {
-									    //echo "No records found!";
-									}
-									$conn->close();
-								?>
-							</a>
-
-						</table>
-					</div>
-					<div id="LIST PANJANG" class="tabcontent">
-						<table border="0">
-							<a id="detail">
-								<?php
-									$sql = "SELECT no,no_surat,nama FROM z_perpanjangan WHERE no > 1 ";
+									$sql = "SELECT no,no_surat,nama FROM z_datasites WHERE no > 1 ";
 
 									$result = $conn->query($sql);
 									$no = 1;
@@ -218,10 +180,7 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
 									            		<td>" . $no++ . "</td>
@@ -236,7 +195,44 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
+								?>
+							</a>
+
+						</table>
+					</div>
+					<div id="LIST PANJANG" class="tabcontent">
+						<table border="0">
+							<a id="detail">
+								<?php
+									$sqla = "SELECT * FROM z_perpanjangan WHERE no > 1 ";
+
+									$resulta = $conn->query($sqla);
+									$no = 1;
+									if ($resulta->num_rows > 0) {
+									    echo "<table id= 'myTable'>
+									        <tr>
+									        	<th>No.</th>
+									            <th>No. Surat</th>
+												<th>Nama User</th>
+									        </tr>";
+									    while ($rowa = $resulta->fetch_assoc()) {
+									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									        echo "
+									            <tr>
+									            		<td>" . $no++ . "</td>
+									                    <td>" . $rowa["no_surat"] . "</td>
+									                    <td>" . $rowa["nama"] . "</td>
+
+									            </tr>";
+									    }
+
+									    echo "</table>";
+									}
+									else {
+									    //echo "No records found!";
+									}
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -276,7 +272,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -316,7 +312,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -356,7 +352,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -396,7 +392,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -436,7 +432,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -476,7 +472,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -516,7 +512,7 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
+									//$conn->close();
 								?>
 							</a>
 						</table>
