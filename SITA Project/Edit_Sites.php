@@ -529,6 +529,12 @@
 											<label >Nilai PBB :</label> <input type="text"  value="<?php echo $row10['nilai_pbb_site'];?>" name="Nilai_PBB" size="50">
 										</p>
 										<p>
+											<label >Denda PBB</label> <input type="text" value="<?php echo $row10['pbb_denda'];?>" name="Denda_PBB" size="50">
+										</p>
+										<p>
+											<label >Fee PBB</label> <input type="text" value="<?php echo $row10['pbb_fee'];?>" name="Fee_PBB" size="50">
+										</p>
+										<p>
 											<label >Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai"  value="<?php echo $row10['tanggal_mulai'];?>" name="Tanggal_Mulai" >
 										</p>
 										<p>
@@ -548,6 +554,9 @@
 										</p>
 										<p>
 											<label >Koefisien PBB :</label> <input type="text"  value="<?php echo $row10['koef_pbb'];?>" name="Koef_PBB" size="50">
+										</p>
+										<p>
+											<label >Mitra PBB</label> <input type="text" value="<?php echo $row10['pbb_mitra'];?>" name="Mitra_PBB" size="50">
 										</p>
 									</a>
 								</table>

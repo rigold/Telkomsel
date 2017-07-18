@@ -200,12 +200,15 @@
 //pbb
 	$Nomor_Objek_Pajak=$_POST['Nomor_Objek_Pajak'];
 	$Nilai_PBB=$_POST['Nilai_PBB'];
+	$Denda_PBB=$_POST['Denda_PBB'];
+	$Fee_PBB=$_POST['Fee_PBB'];
 	$Tanggal_Mulai=$_POST['Tanggal_Mulai'];
 	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo'];
 	$Status_PBB=$_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
 	$NJOP_Bangunan=$_POST['NJOP_Bangunan'];
 	$Koef_PBB=$_POST['Koef_PBB'];
+	$Mitra_PBB=$_POST['Mitra_PBB'];
 	 
 //rpm
 	$No_SKRD=$_POST['No_SKRD']; 
@@ -385,12 +388,15 @@
 			SET 
 				nop='$Nomor_Objek_Pajak' ,
 				nilai_pbb_site='$Nilai_PBB' ,
+				pbb_denda='$Denda_PBB' ,
+				pbb_fee='$Fee_PBB' ,
 				tanggal_mulai='$Tanggal_Mulai' ,
 				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
 				status='$Status_PBB' ,
 				njop_tanah='$NJOP_Tanah' ,
 				njop_bangunan='$NJOP_Bangunan' ,
-				koef_pbb='$Koef_PBB'
+				koef_pbb='$Koef_PBB' ,
+				pbb_mitra='$Mitra_PBB'
 			WHERE sites_id='$sites_id' ");
 		$result11 = mysqli_query($conn, "
 			UPDATE site 

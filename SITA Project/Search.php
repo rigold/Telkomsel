@@ -107,9 +107,9 @@
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
-						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/>
-						</a>		
+						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
+
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -148,7 +148,7 @@
 						</div>
 						<div>
 								<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_kota_kabupaten LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%')" ;
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, site.sites_alamat, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_kota_kabupaten LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%' OR site.sites_alamat LIKE '%".$cari."%')" ;
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									$no = 1;
@@ -159,6 +159,7 @@
 											  	<th onclick='sortTable(1)'>Site ID</th>
 												<th onclick='sortTable(2)'>Site Name</th>
 												<th onclick='sortTable(3)'>Daerah</th>
+												<th>Alamat</th>
 												<th>No.PBB</th>
 												<th>No.RPM</th>
 												<th>No.IMB</th>
@@ -174,6 +175,7 @@
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["sites_alamat"] . "</td>
 									                    <td>" . $row["nop"] . "</td>
 									                    <td>" . $row["no_skrd"] . "</td>
 									                    <td>" . $row["imb_nomor"] . "</td>
@@ -186,7 +188,7 @@
 									    echo "</table>";
 									}
 									else {
-									    header("Location: Not_Found.php");
+									    //echo "No records found!";
 									}
 									$conn->close();
 								?>

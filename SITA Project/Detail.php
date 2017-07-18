@@ -554,7 +554,11 @@
 								status,
 								njop_tanah,
 								njop_bangunan,
-								surat_pbb
+								surat_pbb,
+								koef_pbb,
+								pbb_denda,
+								pbb_mitra,
+								pbb_fee
 								FROM pbb
 								WHERE sites_id=$sites_id
 								";
@@ -565,13 +569,17 @@
 
 							echo "
 							<tr><th>Nomor Objek Pajak</th><td>" .$row11["nop"]."</td></tr> 
-							<tr><th>Nilai PBB</th><td>Rp." .$row11["nilai_pbb_site"]."</td></tr> 
+							<tr><th>Nilai PBB</th><td>Rp." .$row11["nilai_pbb_site"]."</td></tr>
+							<tr><th>Denda PBB</th><td>Rp." .$row11["pbb_denda"]."</td></tr>
+							<tr><th>Fee PBB</th><td>Rp." .$row11["pbb_fee"]."</td></tr>
 							<tr><th>Tanggal Mulai</th><td>" .$row11["tanggal_mulai"]."</td></tr> 
 							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row11["tanggal_jatuh_tempo"]."</td></tr>
 							<tr><th>Status</th><td>" .$row11["status"]."</td></tr>
+							<tr><th>Koef. PBB</th><td>" .$row11["koef_pbb"]."</td></tr>
 							<tr><th>NJOP Tanah</th><td>Rp." .$row11["njop_tanah"]."</td></tr> 
 							<tr><th>NJOP Bangunan</th><td>Rp." .$row11["njop_bangunan"]."</td></tr>
 							<tr><th>Surat PBB</th><td><a href=".$aloc.">".$a."</a></td></tr>
+							<tr><th>Mitra PBB</th><td>" .$row11["pbb_mitra"]."</td></tr>
 							";
 							?>
 							</a>

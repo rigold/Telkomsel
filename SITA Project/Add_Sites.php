@@ -187,7 +187,7 @@
 										</p>
 										<p>
 											<label >Kota/Kabupaten</label>
-											<select name="Satus_Tower">
+											<select name="Kota_Kabupaten">
 											    <option value="Bangkalan">Bangkalan</option>
 											    <option value="Banyuwangi">Banyuwangi</option>
 											    <option value="Batu">Batu</option>
@@ -707,6 +707,12 @@
 											<label >Nilai PBB</label> <input placeholder="Masukkan Nilai PBB" type="text" name="Nilai_PBB" size="50">
 										</p>
 										<p>
+											<label >Denda PBB</label> <input placeholder="Masukkan Nilai Denda PBB" type="text" name="Denda_PBB" size="50">
+										</p>
+										<p>
+											<label >Fee PBB</label> <input placeholder="Masukkan Fee PBB" type="text" name="Fee_PBB" size="50">
+										</p>
+										<p>
 											<label >Tanggal Mulai</label> <input type="date" id="Tanggal_Mulai" name="Tanggal_Mulai" >
 										</p>
 										<p>
@@ -726,6 +732,9 @@
 										</p>
 										<p>
 											<label >Koefisien PBB</label> <input placeholder="Masukkan Koefisien PBB,CONTOH : 0.1 (Koma memakai titik)" type="text" name="Koef_PBB" size="50">
+										</p>
+										<p>
+											<label >Mitra PBB</label> <input placeholder="Masukkan Mitra PBB" type="text" name="Mitra_PBB" size="50">
 										</p>
 									</a>
 								</table>
