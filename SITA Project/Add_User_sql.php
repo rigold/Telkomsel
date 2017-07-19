@@ -39,15 +39,7 @@
 	    }
 	}
 	
-	/* Displaying Image*/
-	if(empty($image))
-	{
-		$image="no_image.jpg";
-	}
-	else
-	{
-		$image=$newfilename . $_FILES["fileToUpload"]["name"];
-	}
+	$image=$newfilename . $_FILES["fileToUpload"]["name"];
 
 	$Nama=$_POST['Nama'];
 	$NIK=$_POST['NIK'];
