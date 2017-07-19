@@ -40,10 +40,14 @@
 	}
 	
 	/* Displaying Image*/
-	$image=$newfilename . $_FILES["fileToUpload"]["name"]; 
-    //$img="images/".$image;
-    //echo '<img src= "'.$img.'" width="100" height="100" />';
-    //echo '<br>';
+	if(empty($image))
+	{
+		$image="no_image.jpg";
+	}
+	else
+	{
+		$image=$newfilename . $_FILES["fileToUpload"]["name"];
+	}
 
 	$Nama=$_POST['Nama'];
 	$NIK=$_POST['NIK'];
