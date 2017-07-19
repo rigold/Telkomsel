@@ -211,7 +211,7 @@
 									sites_harga_per_tahun,
 									sites_remark 
 									FROM site
-									WHERE sites_id=$sites_id
+									WHERE sites_id = '$sites_id'
 									";
 								$result = $conn->query($sql);
 								$row = $result->fetch_assoc();
@@ -275,7 +275,7 @@
 									perpanjangan_vendor_list,
 									perpanjangan_invoice
 									FROM site
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result2 = $conn->query($sql2);
 								$row2 = $result2->fetch_assoc();
@@ -302,7 +302,7 @@
 									bak_harga,
 									bak_status
 									FROM site
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result3 = $conn->query($sql3);
 								$row3 = $result3->fetch_assoc();
@@ -329,7 +329,7 @@
 									ho_finish,
 									ho_status
 									FROM ho
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result4 = $conn->query($sql4);
 								$row4 = $result4->fetch_assoc();
@@ -361,7 +361,7 @@
 									identitas_pemilik_email,
 									identitas_pemilik_sp_keluarga
 									FROM identitas_pemilik
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result5 = $conn->query($sql5);
 								$row5 = $result5->fetch_assoc();
@@ -400,7 +400,7 @@
 									sp_tidak_keberatan_jalan_pribadi,
 									sp_tidak_keberatan_jalan_umum
 									FROM identitas_pemilik
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result6 = $conn->query($sql6);
 								$row6 = $result6->fetch_assoc();
@@ -436,7 +436,7 @@
 									akta_pemisahan,
 									akta_nikah
 									FROM identitas_pemilik
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result7 = $conn->query($sql7);
 								$row7 = $result7->fetch_assoc();
@@ -464,7 +464,7 @@
 									ijin_ukl_upl,
 									ijin_sertifikat_tanah
 									FROM identitas_pemilik
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result8 = $conn->query($sql8);
 								$row8 = $result8->fetch_assoc();
@@ -500,7 +500,7 @@
 									sket_tidak_sengketa,
 									sket_keberatan
 									FROM identitas_pemilik
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result9 = $conn->query($sql9);
 								$row9 = $result9->fetch_assoc();
@@ -537,7 +537,7 @@
 									sl_pks,
 									sl_surat_perjanjian_sewa_tanah
 									FROM identitas_pemilik
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result0 = $conn->query($sql0);
 								$row0 = $result0->fetch_assoc();
@@ -572,7 +572,7 @@
 								pbb_mitra,
 								pbb_fee
 								FROM pbb
-								WHERE sites_id=$sites_id
+								WHERE sites_id='$sites_id'
 								";
 							$result11 = $conn->query($sql11);
 							$row11 = $result11->fetch_assoc();
@@ -610,7 +610,7 @@
 								status,
 								surat_skrd
 								FROM skrd_rpm
-								WHERE sites_id=$sites_id
+								WHERE sites_id='$sites_id'
 								";
 							$result12 = $conn->query($sql12);
 							$row12 = $result12->fetch_assoc();
@@ -643,7 +643,7 @@
 								imb_status_kepengurusan,
 								imb_status
 								FROM imb
-								WHERE sites_id=$sites_id
+								WHERE sites_id='$sites_id'
 								";
 							$result13 = $conn->query($sql13);
 							$row13 = $result13->fetch_assoc();
@@ -671,7 +671,7 @@
 									ijin_imtu_start,
 									ijin_imtu_finish
 									FROM imtu
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result14 = $conn->query($sql14);
 								$row14 = $result14->fetch_assoc();
@@ -695,7 +695,7 @@
 									ijin_dephub_start,
 									ijin_dephub_finish
 									FROM ijin_dephub
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result15 = $conn->query($sql15);
 								$row15 = $result15->fetch_assoc();
@@ -719,7 +719,7 @@
 									ijin_ptt_start,
 									ijin_ptt_finish
 									FROM ijin_ptt
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result16 = $conn->query($sql16);
 								$row16 = $result16->fetch_assoc();
@@ -743,7 +743,7 @@
 									ijin_ipb_start,
 									ijin_ipb_finish
 									FROM ipb
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result17 = $conn->query($sql17);
 								$row17 = $result17->fetch_assoc();
@@ -767,7 +767,7 @@
 									ijin_prinsip_start,
 									ijin_prinsip_finish
 									FROM ijin_prinsip
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result18 = $conn->query($sql18);
 								$row18 = $result18->fetch_assoc();
@@ -792,7 +792,7 @@
 									ijin_genset_start,
 									ijin_genset_finish
 									FROM ijin_genset
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result19 = $conn->query($sql19);
 								$row19 = $result19->fetch_assoc();
@@ -820,7 +820,7 @@
 									comcase_file,
 									comcase_mitra
 									FROM site
-									WHERE sites_id=$sites_id
+									WHERE sites_id='$sites_id'
 									";
 								$result20 = $conn->query($sql20);
 								$row20 = $result20->fetch_assoc();
