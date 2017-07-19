@@ -25,8 +25,9 @@
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
 
+	$masuk2=$row1['nama_user'];
 	$masuk="DATASITE/".$siteloc."/".$row3['no']."/".$row1['nik']."/".date("Y");
-	mysqli_query($conn,"INSERT INTO z_datasites (no_surat) VALUES ('$masuk');");
+	mysqli_query($conn,"INSERT INTO z_datasites (no_surat,nama) VALUES ('$masuk','$masuk2');");
 
 	header("Location: Site_Daerah.php?siteloc=".$siteloc);
 ?>

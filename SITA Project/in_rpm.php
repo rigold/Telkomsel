@@ -24,8 +24,9 @@
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
 
+	$masuk2=$row1['nama_user'];
 	$masuk="RPM/".$row3['no']."/".$row1['nik']."/".date("Y");
-	mysqli_query($conn,"INSERT INTO z_rpm (no_surat) VALUES ('$masuk');");
+	mysqli_query($conn,"INSERT INTO z_rpm (no_surat,nama) VALUES ('$masuk','$masuk2');");
 
 	header("Location: RPM.php");
 ?>
