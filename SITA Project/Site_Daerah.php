@@ -165,7 +165,7 @@
 						$result5 = $conn->query($sql5);
 						$row5 = $result5->fetch_assoc();
 
-						$sql3 = "SELECT * FROM z_datasites";
+						$sql3 = "SELECT * FROM z_datasites ORDER BY no DESC LIMIT 1";
 						$result3 = $conn->query($sql3);
 						$row3 = $result3->fetch_assoc();
 

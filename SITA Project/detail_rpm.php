@@ -168,7 +168,7 @@
 						$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
 						$result = $conn->query($sql);
 						$row = $result->fetch_assoc();
-						$sql3 = "SELECT * FROM z_detail_rpm";
+						$sql3 = "SELECT * FROM z_detail_rpm ORDER BY no DESC LIMIT 1";
 						$result3 = $conn->query($sql3);
 						$row3 = $result3->fetch_assoc();
 					?>
