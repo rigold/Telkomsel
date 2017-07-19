@@ -245,7 +245,7 @@
 								<tr><th>Tower Height</th><td>" .$row["sites_tower_height"]." m</td></tr> 
 								<tr><th>Tower Type</th><td>" .$row["sites_tower_type"]."</td></tr> 
 								<tr><th>Shelter Type</th><td>" .$row["sites_shelter_type"]."</td></tr> 
-								<tr><th>Shelter Size</th><td>" .$row["sites_shelter_size"]."</td></tr> 
+								<tr><th>Shelter Size</th><td>" .$row["sites_shelter_size"]." m<sup>3</sup></td></tr> 
 								<tr><th>Luas Lahan</th><td>" .$row["sites_luas_lahan"]." m<sup>2</sup></td></tr> 
 								<tr><th>Luas Jalan Akses</th><td>" .$row["sites_luas_jalan_akses"]." m<sup>2</sup></td></tr> 
 								<tr><th>Denah Tanah</th><td><a href=".$aloc.">".$a."</a></td></tr> 
