@@ -140,7 +140,6 @@
 					<div class="line-separator"></div>	
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'DATA SITES')">DATA SITES</button>
-						<button class="tablinks" onclick="openTabs(event, 'LIST PANJANG')">LIST PANJANG</button>
 						<button class="tablinks" onclick="openTabs(event, 'MONITORING')">MONITORING</button>
 						<button class="tablinks" onclick="openTabs(event, 'PERIZINAN')">PERIZINAN</button>
 						<button class="tablinks" onclick="openTabs(event, 'PBB')">PBB</button>
