@@ -166,7 +166,7 @@
 						</div>
 						<div>
 								<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_kota_kabupaten, site.sites_alamat, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site,pbb,skrd_rpm,imb WHERE site.sites_id = imb.sites_id && site.sites_id = skrd_rpm.sites_id && site.sites_id = pbb.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_kota_kabupaten LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%' OR site.sites_alamat LIKE '%".$cari."%')" ;
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site, daerah, pbb, skrd_rpm, imb WHERE site.sites_id = imb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten && pbb.sites_id = site.sites_id && skrd_rpm.sites_id = site.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_nama LIKE '%".$cari."%' OR daerah.kota_kabupaten LIKE '%".$cari."%' OR site.sites_alamat LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%') " ;
 									$result = $conn->query($sql);
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
 									$no = 1;
@@ -192,7 +192,7 @@
 									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
-									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
+									                    <td>" . $row["kota_kabupaten"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
 									                    <td>" . $row["nop"] . "</td>
 									                    <td>" . $row["no_skrd"] . "</td>
