@@ -20,6 +20,7 @@
 	$rowz = $result->fetch_assoc();
 	$row = $result->fetch_assoc();
    
+   	if($rowz['admin']=="User"){header("Location: Home.php");}
 ?>
 <!DOCTYPE html>
 <html>

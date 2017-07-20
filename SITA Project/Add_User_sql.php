@@ -54,10 +54,8 @@
 	$Jabatan=$_POST['Jabatan'];
 	
 	mysqli_query($conn,
-		"INSERT INTO user (nama_user,nik,password,jabatan,link_profile_pic)
-		VALUES('$Nama','$NIK','$Password','$Jabatan','$image')");
-
-
+		"INSERT INTO user (nama_user,nik,password,jabatan,link_profile_pic,admin)
+		VALUES('$Nama','$NIK','$Password','$Jabatan','$image','User')");
 
 	if(!$conn) {
 		echo "failed";
@@ -66,7 +64,5 @@
 	else {
 		echo "success";
 		header("Location: List_User.php");
-		
-		
 	}
 ?>

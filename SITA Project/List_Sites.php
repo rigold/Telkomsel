@@ -19,6 +19,7 @@
 	$result = $conn->query($sql);
 	$rowz = $result->fetch_assoc();
    
+   	if($rowz['admin']=="User"){header("Location: Home.php");}
 ?>
 <!DOCTYPE html>
 <html>

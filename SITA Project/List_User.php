@@ -18,7 +18,9 @@
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$rowz = $result->fetch_assoc();
-   
+
+   	if($rowz['admin']=="User"){header("Location: Home.php");}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -196,7 +198,7 @@
 									        	<button onclick= \"location.href='Delete_User.php?nik=$row[nik]&img=$img'\">Delete</button>
 									        	<button onclick= \"location.href='Edit_User_admin.php?nik=$row[nik]&admin=admin'\">Make Admin</button>
 									        	<button onclick= \"location.href='Edit_User_admin.php?nik=$row[nik]&admin=user'\">Make User</button>
-
+									        </td>
 								        </tr>";
 								    } 
 
