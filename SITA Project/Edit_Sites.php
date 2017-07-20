@@ -539,7 +539,7 @@
 											<label >Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai"  value="<?php echo $row10['tanggal_mulai'];?>" name="Tanggal_Mulai" >
 										</p>
 										<p>
-											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row10['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo" >
+											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo_PBB"  value="<?php echo $row10['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo_PBB" >
 										</p>
 										<p>
 											<label >Status :</label> <input type="text"  value="<?php echo $row10['status'];?>" name="Status_PBB" size="50">
@@ -575,7 +575,7 @@
 											<label >Nilai SKRD :</label> <input type="text"  value="<?php echo $row12['harga_skrd'];?>" name="Harga_SKRD" size="50">
 										</p>
 										<p>
-											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo"  value="<?php echo $row12['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo" >
+											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo_RPM"  value="<?php echo $row12['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo_RPM" >
 										</p>
 										<p>
 											<label >Koefisien SKRD :</label> <input type="text"  value="<?php echo $row12['koef_skrd'];?>" name="Koef_SKRD" size="50">
