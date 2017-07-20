@@ -323,13 +323,13 @@
 									<h2>Perpanjangan</h2>
 									<a id="detail">
 										<p>
-											<label >Pagu</label> <input placeholder="Maximum Penawaran"type="text" name="Pagu" size="50">
+											<label >Pagu</label> <input placeholder="!! HANYA ANGKA SAJA, Maximum Penawaran"type="text" name="Pagu" size="50">
 										</p>
 										<p>
 											<label >PIC</label> <input placeholder="Masukkan Nama Orang yang bertanggung jawab"type="text" name="PIC" size="50">
 										</p>
 										<p>
-											<label >SPPH</label> <input placeholder="Masukkan SPPH"type="text" name="SPPH" size="50">
+											<label >SPPH</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan SPPH"type="text" name="SPPH" size="50">
 										</p>
 										<p>
 											<label >Vendor</label> <input placeholder="Masukkan Nama Vendor"type="text" name="Vendor_List" size="50">
@@ -347,7 +347,7 @@
 									<h2>Berita Acara Kesepakatan</h2>
 									<a id="detail">
 										<p>
-											<label >No BAK</label> <input placeholder="Masukkan Nomor BAK"type="text" name="Nomor_BAK" size="50" >
+											<label >No BAK</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nomor BAK"type="text" name="Nomor_BAK" size="50" >
 										</p>
 										<p>
 											<label >Tanggal BAK</label> <input type="date" id="Tanggal_BAK" name="Tanggal_BAK" >
@@ -368,7 +368,7 @@
 									<h2>Tabel HO</h2>
 									<a id="detail">
 										<p>
-											<label >No HO</label> <input placeholder="Masukkan Nomor HO"type="text" name="Nomor_HO" size="50" >
+											<label >No HO</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nomor HO"type="text" name="Nomor_HO" size="50" >
 										</p>
 										<p>
 											<label >Daftar Ulang HO</label> <input type="date" id="Daftar_Ulang_HO" name="Daftar_Ulang_HO" >
@@ -392,10 +392,10 @@
 									<h2>Identitas Pemilik Lahan</h2>
 									<a id="detail">
 										<p>
-											<label >KTP Pemilik</label> <input placeholder="Masukkan Nomor KTP Pemilik" type="text" name="KTP_Pemilik" size="50" >
+											<label >KTP Pemilik</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nomor KTP Pemilik" type="text" name="KTP_Pemilik" size="50" >
 										</p>
 										<p>
-											<label >Kartu Keluarga Pemilik</label> <input placeholder="Masukkan Nomor Kartu Keluarga" type="text" name="Kartu_Keluarga_Pemilik" size="50">
+											<label >Kartu Keluarga Pemilik</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nomor Kartu Keluarga" type="text" name="Kartu_Keluarga_Pemilik" size="50">
 										</p>
 										<p>
 											<label >Pemilik Lahan</label> <input placeholder="Masukkan Nama Pemilik Lahan" type="text" name="Pemilik_Lahan" size="50">
@@ -722,13 +722,13 @@
 											<label >Nomor Objek Pajak</label> <input placeholder="Masukkan Nomor Surat Objek Pajak" type="text" name="Nomor_Objek_Pajak" size="50">
 										</p>
 										<p>
-											<label >Nilai PBB</label> <input placeholder="Masukkan Nilai PBB" type="text" name="Nilai_PBB" size="50">
+											<label >Nilai PBB</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai PBB" type="text" name="Nilai_PBB" size="50">
 										</p>
 										<p>
-											<label >Denda PBB</label> <input placeholder="Masukkan Nilai Denda PBB" type="text" name="Denda_PBB" size="50">
+											<label >Denda PBB</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai Denda PBB" type="text" name="Denda_PBB" size="50">
 										</p>
 										<p>
-											<label >Fee PBB</label> <input placeholder="Masukkan Fee PBB" type="text" name="Fee_PBB" size="50">
+											<label >Fee PBB</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Fee PBB" type="text" name="Fee_PBB" size="50">
 										</p>
 										<p>
 											<label >Tanggal Mulai</label> <input type="date" id="Tanggal_Mulai" name="Tanggal_Mulai" >
@@ -740,10 +740,10 @@
 											<label >Status</label> <input placeholder="Masukkan Status PBB Site Terkini" type="text" name="Status_PBB" size="50">
 										</p>
 										<p>
-											<label >NJOP Tanah</label> <input placeholder="Masukkan Nilai Jual Objek Pajak Tanah" type="text" name="NJOP_Tanah" size="50">
+											<label >NJOP Tanah</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai Jual Objek Pajak Tanah" type="text" name="NJOP_Tanah" size="50">
 										</p>
 										<p>
-											<label >NJOP Bangunan</label> <input placeholder="Masukkan Nilai Jual Objek Pajak Bangunan" type="text" name="NJOP_Bangunan" size="50">
+											<label >NJOP Bangunan</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai Jual Objek Pajak Bangunan" type="text" name="NJOP_Bangunan" size="50">
 										</p>
 										<p>
 											<label >Surat PBB</label> <input type="file" name="Surat_PBB" id="Surat_PBB" size="50"><br>
@@ -767,7 +767,7 @@
 											<label >Nomor RPM</label> <input placeholder="Masukkan Nomor RPM" type="text" name="No_SKRD" size="50">
 										</p>
 										<p>
-											<label >Nilai RPM</label> <input placeholder="Masukkan Nilai RPM" type="text" name="Harga_SKRD" size="50">
+											<label >Nilai/Harga RPM</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai RPM" type="text" name="Harga_SKRD" size="50">
 										</p>
 										<p>
 											<label >Tanggal Jatuh Tempo</label> <input type="date" id="Tanggal_Jatuh_Tempo" name="Tanggal_Jatuh_Tempo" >
