@@ -203,7 +203,7 @@
 	$Denda_PBB=$_POST['Denda_PBB'];
 	$Fee_PBB=$_POST['Fee_PBB'];
 	$Tanggal_Mulai=$_POST['Tanggal_Mulai'];
-	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo'];
+	$Tanggal_Jatuh_Tempo_PBB=$_POST['Tanggal_Jatuh_Tempo_PBB'];
 	$Status_PBB=$_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
 	$NJOP_Bangunan=$_POST['NJOP_Bangunan'];
@@ -213,7 +213,7 @@
 //rpm
 	$No_SKRD=$_POST['No_SKRD']; 
 	$Harga_SKRD=$_POST['Harga_SKRD']; 
-	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo']; 
+	$Tanggal_Jatuh_Tempo_RPM=$_POST['Tanggal_Jatuh_Tempo_RPM']; 
 	$Koef_SKRD=$_POST['Koef_SKRD']; 
 	$Status_SKRD=$_POST['Status_SKRD']; 
 	 
@@ -391,7 +391,7 @@
 				pbb_denda='$Denda_PBB' ,
 				pbb_fee='$Fee_PBB' ,
 				tanggal_mulai='$Tanggal_Mulai' ,
-				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_PBB' ,
 				status='$Status_PBB' ,
 				njop_tanah='$NJOP_Tanah' ,
 				njop_bangunan='$NJOP_Bangunan' ,
@@ -448,7 +448,7 @@
 				no_skrd='$No_SKRD' ,
 				sites_id='$Site_ID' ,
 				harga_skrd='$Harga_SKRD' ,
-				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_RPM' ,
 				koef_skrd='$Koef_SKRD' ,
 				status='$Status_SKRD'
 			WHERE sites_id='$sites_id' ");
@@ -627,7 +627,7 @@
 				nop='$Nomor_Objek_Pajak' ,
 				nilai_pbb_site='$Nilai_PBB' ,
 				tanggal_mulai='$Tanggal_Mulai' ,
-				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_PBB' ,
 				status='$Status_PBB' ,
 				njop_tanah='$NJOP_Tanah' ,
 				njop_bangunan='$NJOP_Bangunan' ,
@@ -688,7 +688,7 @@
 				no_skrd='$No_SKRD' ,
 				sites_id='$Site_ID' ,
 				harga_skrd='$Harga_SKRD' ,
-				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo' ,
+				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_RPM' ,
 				koef_skrd='$Koef_SKRD' ,
 				status='$Status_SKRD' ,
 				surat_skrd='$file5'
