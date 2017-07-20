@@ -734,7 +734,7 @@
 											<label >Tanggal Mulai</label> <input type="date" id="Tanggal_Mulai" name="Tanggal_Mulai" >
 										</p>
 										<p>
-											<label >Tanggal Jatuh Tempo</label> <input type="date" id="Tanggal_Jatuh_Tempo" name="Tanggal_Jatuh_Tempo" >
+											<label >Tanggal Jatuh Tempo</label> <input type="date" id="Tanggal_Jatuh_Tempo_PBB" name="Tanggal_Jatuh_Tempo_PBB" >
 										</p>
 										<p>
 											<label >Status</label> <input placeholder="Masukkan Status PBB Site Terkini" type="text" name="Status_PBB" size="50">
@@ -770,7 +770,7 @@
 											<label >Nilai/Harga RPM</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai RPM" type="text" name="Harga_SKRD" size="50">
 										</p>
 										<p>
-											<label >Tanggal Jatuh Tempo</label> <input type="date" id="Tanggal_Jatuh_Tempo" name="Tanggal_Jatuh_Tempo" >
+											<label >Tanggal Jatuh Tempo</label> <input type="date" id="Tanggal_Jatuh_Tempo_RPM" name="Tanggal_Jatuh_Tempo_RPM" >
 										</p>
 										<p>
 											<label >Koefisien RPM</label> <input placeholder="Masukkan Koefisien RPM,CONTOH : 0.1 (Koma memakai titik)" type="text" name="Koef_SKRD" size="50">

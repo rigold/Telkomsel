@@ -150,7 +150,7 @@
 	$Denda_PBB = empty($_POST['Denda_PBB']) ?  : $_POST['Denda_PBB'];
 	$Fee_PBB = empty($_POST['Fee_PBB']) ?  : $_POST['Fee_PBB'];
 	$Tanggal_Mulai=$_POST['Tanggal_Mulai'];
-	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo'];
+	$Tanggal_Jatuh_Tempo_PBB=$_POST['Tanggal_Jatuh_Tempo_PBB'];
 	$Status_PBB = empty($_POST['Status_PBB']) ?  : $_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
 	$NJOP_Bangunan=$_POST['NJOP_Bangunan'];
@@ -160,7 +160,7 @@
 //rpm
 	$No_SKRD = empty($_POST['No_SKRD']) ?  : $_POST['No_SKRD'];
 	$Harga_SKRD = empty($_POST['Harga_SKRD']) ?  : $_POST['Harga_SKRD'];
-	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo']; 
+	$Tanggal_Jatuh_Tempo_RPM=$_POST['Tanggal_Jatuh_Tempo_RPM']; 
 	$Koef_SKRD=$_POST['Koef_SKRD']; 
 	$Status_SKRD = empty($_POST['Status_SKRD']) ?  : $_POST['Status_SKRD'];
 	 
@@ -478,7 +478,7 @@
 		'$Site_ID',
 		'$Nilai_PBB',
 		'$Tanggal_Mulai',
-		'$Tanggal_Jatuh_Tempo',
+		'$Tanggal_Jatuh_Tempo_PBB',
 		'$Status_PBB',
 		'$NJOP_Tanah',
 		'$NJOP_Bangunan',
@@ -504,7 +504,7 @@
 		'$No_SKRD',
 		'$Site_ID',
 		'$Harga_SKRD',
-		'$Tanggal_Jatuh_Tempo',
+		'$Tanggal_Jatuh_Tempo_RPM',
 		'$Koef_SKRD',
 		'$Status_SKRD',
 		'$Surat_SKRD' 
