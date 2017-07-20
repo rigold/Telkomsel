@@ -38,72 +38,65 @@
 
 //sites	
 	$Site_ID=$_POST['Site_ID'];
-	$Nama_Site = empty($_POST['Nama_Site']) ? "-" : $_POST['Nama_Site']; 
-	$Status_Lahan = empty($_POST['Status_Lahan']) ? "-" : $_POST['Status_Lahan'];
+	$Nama_Site = empty($_POST['Nama_Site']) ?  : $_POST['Nama_Site']; 
+	$Status_Lahan = empty($_POST['Status_Lahan']) ?  : $_POST['Status_Lahan'];
 	$Satus_Tower=$_POST['Satus_Tower']; 
-	$Pemilik_Tower = empty($_POST['Pemilik_Tower']) ? "-" : $_POST['Pemilik_Tower'];
-	$Alamat_Site = empty($_POST['Alamat_Site']) ? "-" : $_POST['Alamat_Site'];
-	$Kota_Kabupaten = empty($_POST['Kota_Kabupaten']) ? "-" : $_POST['Kota_Kabupaten'];
-	$Kontraktor_Utama = empty($_POST['Kontraktor_Utama']) ? "-" : $_POST['Kontraktor_Utama'];
-	$Penyedia_Menara = empty($_POST['Penyedia_Menara']) ? "-" : $_POST['Penyedia_Menara'];
-	$Branch = empty($_POST['Branch']) ? "-" : $_POST['Branch'];
-	$Longitude = empty($_POST['Longitude']) ? "-" : $_POST['Longitude'];
-	$Latitude = empty($_POST['Latitude']) ? "-" : $_POST['Latitude'];
+	$Pemilik_Tower = empty($_POST['Pemilik_Tower']) ?  : $_POST['Pemilik_Tower'];
+	$Alamat_Site = empty($_POST['Alamat_Site']) ?  : $_POST['Alamat_Site'];
+	$Kota_Kabupaten = empty($_POST['Kota_Kabupaten']) ?  : $_POST['Kota_Kabupaten'];
+	$Kontraktor_Utama = empty($_POST['Kontraktor_Utama']) ?  : $_POST['Kontraktor_Utama'];
+	$Penyedia_Menara = empty($_POST['Penyedia_Menara']) ?  : $_POST['Penyedia_Menara'];
+	$Branch = empty($_POST['Branch']) ?  : $_POST['Branch'];
+	$Longitude = empty($_POST['Longitude']) ?  : $_POST['Longitude'];
+	$Latitude = empty($_POST['Latitude']) ?  : $_POST['Latitude'];
 	$On_Air_Date=$_POST['On_Air_Date']; 
-	$Colocated_Site = empty($_POST['Colocated_Site']) ? "-" : $_POST['Colocated_Site'];
-	$BTS_Type = empty($_POST['BTS_Type']) ? "-" : $_POST['BTS_Type'];
-	$Site_Type = empty($_POST['Site_Type']) ? "-" : $_POST['Site_Type'];
-	$Tower_Height = empty($_POST['Tower_Height']) ? "-" : $_POST['Tower_Height'];
-	$Tower_Type = empty($_POST['Tower_Type']) ? "-" : $_POST['Tower_Type'];
-	$Shelter_Type = empty($_POST['Shelter_Type']) ? "-" : $_POST['Shelter_Type'];
-	$Shelter_Size = empty($_POST['Shelter_Size']) ? "-" : $_POST['Shelter_Size'];
-	$Luas_Lahan = empty($_POST['Luas_Lahan']) ? "-" : $_POST['Luas_Lahan'];
-	$Luas_Jalan_Akses = empty($_POST['Luas_Jalan_Akses']) ? "-" : $_POST['Luas_Jalan_Akses'];
+	$Colocated_Site = empty($_POST['Colocated_Site']) ?  : $_POST['Colocated_Site'];
+	$BTS_Type = empty($_POST['BTS_Type']) ?  : $_POST['BTS_Type'];
+	$Site_Type = empty($_POST['Site_Type']) ?  : $_POST['Site_Type'];
+	$Tower_Height = empty($_POST['Tower_Height']) ?  : $_POST['Tower_Height'];
+	$Tower_Type = empty($_POST['Tower_Type']) ?  : $_POST['Tower_Type'];
+	$Shelter_Type = empty($_POST['Shelter_Type']) ?  : $_POST['Shelter_Type'];
+	$Shelter_Size = empty($_POST['Shelter_Size']) ?  : $_POST['Shelter_Size'];
+	$Luas_Lahan = empty($_POST['Luas_Lahan']) ?  : $_POST['Luas_Lahan'];
+	$Luas_Jalan_Akses = empty($_POST['Luas_Jalan_Akses']) ?  : $_POST['Luas_Jalan_Akses'];
 	$Tanggal_Mulai_Sewa=$_POST['Tanggal_Mulai_Sewa']; 
 	$Tanggal_Akhir_Sewa=$_POST['Tanggal_Akhir_Sewa']; 
-	$Harga_Per_Tahun = empty($_POST['Harga_Per_Tahun']) ? "-" : $_POST['Harga_Per_Tahun'];
-	$Remark = empty($_POST['Remark']) ? "-" : $_POST['Remark'];
+	$Harga_Per_Tahun = empty($_POST['Harga_Per_Tahun']) ?  : $_POST['Harga_Per_Tahun'];
+	$Remark = empty($_POST['Remark']) ?  : $_POST['Remark'];
 
 //perpanjangan
-	$Pagu = empty($_POST['Pagu']) ? "-" : $_POST['Pagu'];
-	$PIC = empty($_POST['PIC']) ? "-" : $_POST['PIC'];
-	$SPPH = empty($_POST['SPPH']) ? "-" : $_POST['SPPH'];
-	$Vendor_List = empty($_POST['Vendor_List']) ? "-" : $_POST['Vendor_List'];
-	$Invoice = empty($_POST['Invoice']) ? "-" : $_POST['Invoice'];
+	$Pagu = empty($_POST['Pagu']) ?  : $_POST['Pagu'];
+	$PIC = empty($_POST['PIC']) ?  : $_POST['PIC'];
+	$SPPH = empty($_POST['SPPH']) ?  : $_POST['SPPH'];
+	$Vendor_List = empty($_POST['Vendor_List']) ?  : $_POST['Vendor_List'];
+	$Invoice = empty($_POST['Invoice']) ?  : $_POST['Invoice'];
 
 //bak
-	$Nomor_BAK = empty($_POST['Nomor_BAK']) ? "-" : $_POST['Nomor_BAK'];
-	$Tanggal_BAK = empty($_POST['Tanggal_BAK']) ? "-" : $_POST['Tanggal_BAK'];
-	$Harga_BAK = empty($_POST['Harga_BAK']) ? "-" : $_POST['Harga_BAK'];
-	$Status = empty($_POST['Status']) ? "-" : $_POST['Status'];
+	$Nomor_BAK = empty($_POST['Nomor_BAK']) ?  : $_POST['Nomor_BAK'];
+	$Tanggal_BAK = empty($_POST['Tanggal_BAK']) ?  : $_POST['Tanggal_BAK'];
+	$Harga_BAK = empty($_POST['Harga_BAK']) ?  : $_POST['Harga_BAK'];
+	$Status = empty($_POST['Status']) ?  : $_POST['Status'];
 
-//ho
-	if(empty('Nomor_HO'))
-	{
-		$_POST['Nomor_HO']=0;
-	}
-	else
-	{
-		$_POST['Nomor_HO'];
-	}
-	$Daftar_Ulang_HO = empty($_POST['Daftar_Ulang_HO']) ? "-" : $_POST['Daftar_Ulang_HO'];
+//hoz
+	$Nomor_HO = empty($_POST['Nomor_HO']) ?  : $_POST['Nomor_HO'];
+	$Daftar_Ulang_HO = empty($_POST['Daftar_Ulang_HO']) ?  : $_POST['Daftar_Ulang_HO'];
 	$Tanggal_Start_HO=$_POST['Tanggal_Start_HO']; 
 	$Tanggal_Finish_HO=$_POST['Tanggal_Finish_HO']; 
-	$Status_HO = empty($_POST['Status_HO']) ? "-" : $_POST['Status_HO'];
+	$Status_HO = empty($_POST['Status_HO']) ?  : $_POST['Status_HO'];
 
 //identitas pemilik lahan
-	$KTP_Pemilik = empty($_POST['KTP_Pemilik']) ? "-" : $_POST['KTP_Pemilik'];
-	$Kartu_Keluarga_Pemilik = empty($_POST['Kartu_Keluarga_Pemilik']) ? "-" : $_POST['Kartu_Keluarga_Pemilik'];
-	$Pemilik_Lahan = empty($_POST['Pemilik_Lahan']) ? "-" : $_POST['Pemilik_Lahan'];
-	$Orang_Yang_Di_Kuasakan = empty($_POST['Orang_Yang_Di_Kuasakan']) ? "-" : $_POST['Orang_Yang_Di_Kuasakan'];
-	$Alamat_Pemilik = empty($_POST['Alamat_Pemilik']) ? "-" : $_POST['Alamat_Pemilik'];
-	$Telepon = empty($_POST['Telepon']) ? "-" : $_POST['Telepon'];
-	$HP = empty($_POST['HP']) ? "-" : $_POST['HP'];
-	$E_mail = empty($_POST['E_mail']) ? "-" : $_POST['E_mail'];
-	$Surat_Persetujuan_Keluarga = empty($_POST['Surat_Persetujuan_Keluarga']) ? "-" : $_POST['Surat_Persetujuan_Keluarga'];
+	$KTP_Pemilik = empty($_POST['KTP_Pemilik']) ?  : $_POST['KTP_Pemilik'];
+	$Kartu_Keluarga_Pemilik = empty($_POST['Kartu_Keluarga_Pemilik']) ?  : $_POST['Kartu_Keluarga_Pemilik'];
+	$Pemilik_Lahan = empty($_POST['Pemilik_Lahan']) ?  : $_POST['Pemilik_Lahan'];
+	$Orang_Yang_Di_Kuasakan = empty($_POST['Orang_Yang_Di_Kuasakan']) ?  : $_POST['Orang_Yang_Di_Kuasakan'];
+	$Alamat_Pemilik = empty($_POST['Alamat_Pemilik']) ?  : $_POST['Alamat_Pemilik'];
+	$Telepon = empty($_POST['Telepon']) ?  : $_POST['Telepon'];
+	$HP = empty($_POST['HP']) ?  : $_POST['HP'];
+	$E_mail = empty($_POST['E_mail']) ?  : $_POST['E_mail'];
+	$Surat_Persetujuan_Keluarga = empty($_POST['Surat_Persetujuan_Keluarga']) ?  : $_POST['Surat_Persetujuan_Keluarga'];
 
 //surat_pernyataan
-	$SP = empty($_POST['SP']) ? "-" : $_POST['SP'];
+	$SP = empty($_POST['SP']) ?  : $_POST['SP'];
 	$SP_Ahli_Waris=$_POST['SP_Ahli_Waris']; 
 	$SP_Janda=$_POST['SP_Janda']; 
 	$SP_Kepemilikan_Tanah=$_POST['SP_Kepemilikan_Tanah']; 
@@ -117,18 +110,18 @@
 	$SP_Tidak_Keberatan_Jalan_Umum=$_POST['SP_Tidak_Keberatan_Jalan_Umum']; 
 
 //akta
-	$Akta_Hibah = empty($_POST['Akta_Hibah']) ? "-" : $_POST['Akta_Hibah'];
-	$Akta_Jual_Beli_Sewa = empty($_POST['Akta_Jual_Beli_Sewa']) ? "-" : $_POST['Akta_Jual_Beli_Sewa'];
-	$Akta_Hak_Bersama = empty($_POST['Akta_Hak_Bersama']) ? "-" : $_POST['Akta_Hak_Bersama']; 
-	$Akta_Warisan = empty($_POST['Akta_Warisan']) ? "-" : $_POST['Akta_Warisan'];
-	$Akta_Pemisahan = empty($_POST['Akta_Pemisahan']) ? "-" : $_POST['Akta_Pemisahan'];
-	$Akta_Nikah = empty($_POST['Akta_Nikah']) ? "-" : $_POST['Akta_Nikah'];
+	$Akta_Hibah = empty($_POST['Akta_Hibah']) ?  : $_POST['Akta_Hibah'];
+	$Akta_Jual_Beli_Sewa = empty($_POST['Akta_Jual_Beli_Sewa']) ?  : $_POST['Akta_Jual_Beli_Sewa'];
+	$Akta_Hak_Bersama = empty($_POST['Akta_Hak_Bersama']) ?  : $_POST['Akta_Hak_Bersama']; 
+	$Akta_Warisan = empty($_POST['Akta_Warisan']) ?  : $_POST['Akta_Warisan'];
+	$Akta_Pemisahan = empty($_POST['Akta_Pemisahan']) ?  : $_POST['Akta_Pemisahan'];
+	$Akta_Nikah = empty($_POST['Akta_Nikah']) ?  : $_POST['Akta_Nikah'];
 
 //ijin_lain
-	$Ijin_Perubahan_Pengguna_Tanah = empty($_POST['Ijin_Perubahan_Pengguna_Tanah']) ? "-" : $_POST['Ijin_Perubahan_Pengguna_Tanah'];
-	$Ijin_Warga = empty($_POST['Ijin_Warga']) ? "-" : $_POST['Ijin_Warga'];
-	$Ijin_UKL_UPL = empty($_POST['Ijin_UKL_UPL']) ? "-" : $_POST['Ijin_UKL_UPL'];
-	$Ijin_Sertifikat_Tanah = empty($_POST['Ijin_Sertifikat_Tanah']) ? "-" : $_POST['Ijin_Sertifikat_Tanah'];
+	$Ijin_Perubahan_Pengguna_Tanah = empty($_POST['Ijin_Perubahan_Pengguna_Tanah']) ?  : $_POST['Ijin_Perubahan_Pengguna_Tanah'];
+	$Ijin_Warga = empty($_POST['Ijin_Warga']) ?  : $_POST['Ijin_Warga'];
+	$Ijin_UKL_UPL = empty($_POST['Ijin_UKL_UPL']) ?  : $_POST['Ijin_UKL_UPL'];
+	$Ijin_Sertifikat_Tanah = empty($_POST['Ijin_Sertifikat_Tanah']) ?  : $_POST['Ijin_Sertifikat_Tanah'];
 
 //surat_keterangan
 	$SK_Akses_Lahan_Jalan=$_POST['SK_Akses_Lahan_Jalan']; 
@@ -147,78 +140,78 @@
 	$SK_Tidak_Keberatan_Didirikan=$_POST['SK_Tidak_Keberatan_Didirikan']; 
 
 //surat_lain
-	$Surat_Kuasa = empty($_POST['Surat_Kuasa']) ? "-" : $_POST['Surat_Kuasa'];
+	$Surat_Kuasa = empty($_POST['Surat_Kuasa']) ?  : $_POST['Surat_Kuasa'];
 	$Surat_Kuasa_Pengambilan_Jaminan_Asli=$_POST['Surat_Kuasa_Pengambilan_Jaminan_Asli']; 
 	$Surat_Jaminan_Hukum=$_POST['Surat_Jaminan_Hukum']; 
-	$Surat_Ijin_PKS=empty($_POST['Surat_Ijin_PKS']) ? "-" : $_POST['Surat_Ijin_PKS'];
+	$Surat_Ijin_PKS=$_POST['Surat_Ijin_PKS']; 
 	$Surat_Perjanjian_Sewa_Tanah=$_POST['Surat_Perjanjian_Sewa_Tanah']; 
 
 //pbb
-	$Nomor_Objek_Pajak = empty($_POST['Nomor_Objek_Pajak']) ? "-" : $_POST['Nomor_Objek_Pajak'];
-	$Nilai_PBB = empty($_POST['Nilai_PBB']) ? "-" : $_POST['Nilai_PBB'];
-	$Denda_PBB = empty($_POST['Denda_PBB']) ? "-" : $_POST['Denda_PBB'];
-	$Fee_PBB = empty($_POST['Fee_PBB']) ? "-" : $_POST['Fee_PBB'];
+	$Nomor_Objek_Pajak = empty($_POST['Nomor_Objek_Pajak']) ?  : $_POST['Nomor_Objek_Pajak'];
+	$Nilai_PBB = empty($_POST['Nilai_PBB']) ?  : $_POST['Nilai_PBB'];
+	$Denda_PBB = empty($_POST['Denda_PBB']) ?  : $_POST['Denda_PBB'];
+	$Fee_PBB = empty($_POST['Fee_PBB']) ?  : $_POST['Fee_PBB'];
 	$Tanggal_Mulai=$_POST['Tanggal_Mulai'];
 	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo'];
-	$Status_PBB = empty($_POST['Status_PBB']) ? "-" : $_POST['Status_PBB'];
+	$Status_PBB = empty($_POST['Status_PBB']) ?  : $_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
 	$NJOP_Bangunan=$_POST['NJOP_Bangunan'];
 	$Koef_PBB=$_POST['Koef_PBB'];
-	$Mitra_PBB = empty($_POST['Mitra_PBB']) ? "-" : $_POST['Mitra_PBB'];
+	$Mitra_PBB = empty($_POST['Mitra_PBB']) ?  : $_POST['Mitra_PBB'];
 	 
 //rpm
-	$No_SKRD = empty($_POST['No_SKRD']) ? "-" : $_POST['No_SKRD'];
-	$Harga_SKRD = empty($_POST['Harga_SKRD']) ? "-" : $_POST['Harga_SKRD'];
+	$No_SKRD = empty($_POST['No_SKRD']) ?  : $_POST['No_SKRD'];
+	$Harga_SKRD = empty($_POST['Harga_SKRD']) ?  : $_POST['Harga_SKRD'];
 	$Tanggal_Jatuh_Tempo=$_POST['Tanggal_Jatuh_Tempo']; 
 	$Koef_SKRD=$_POST['Koef_SKRD']; 
-	$Status_SKRD = empty($_POST['Status_SKRD']) ? "-" : $_POST['Status_SKRD'];
+	$Status_SKRD = empty($_POST['Status_SKRD']) ?  : $_POST['Status_SKRD'];
 	 
 //imb
-	$Nomor_IMB = empty($_POST['Nomor_IMB']) ? "-" : $_POST['Nomor_IMB'];
-	$Mitra_Pengurus_IMB = empty($_POST['Mitra_Pengurus_IMB']) ? "-" : $_POST['Mitra_Pengurus_IMB'];
+	$Nomor_IMB = empty($_POST['Nomor_IMB']) ?  : $_POST['Nomor_IMB'];
+	$Mitra_Pengurus_IMB = empty($_POST['Mitra_Pengurus_IMB']) ?  : $_POST['Mitra_Pengurus_IMB'];
 	$Daftar_Ulang_IMB=$_POST['Daftar_Ulang_IMB'];
 	$Tanggal_Awal_IMB=$_POST['Tanggal_Awal_IMB'];
 	$Tanggal_Akhir_IMB=$_POST['Tanggal_Akhir_IMB'];
-	$Status_Kepengurusan_IMB = empty($_POST['Status_Kepengurusan_IMB']) ? "-" : $_POST['Status_Kepengurusan_IMB'];
-	$Status_IMB = empty($_POST['Status_IMB']) ? "-" : $_POST['Status_IMB'];
+	$Status_Kepengurusan_IMB = empty($_POST['Status_Kepengurusan_IMB']) ?  : $_POST['Status_Kepengurusan_IMB'];
+	$Status_IMB = empty($_POST['Status_IMB']) ?  : $_POST['Status_IMB'];
 
 //imtu
-	$Nomor_Ijin_imtu = empty($_POST['Nomor_Ijin_imtu']) ? "-" : $_POST['Nomor_Ijin_imtu'];
+	$Nomor_Ijin_imtu = empty($_POST['Nomor_Ijin_imtu']) ?  : $_POST['Nomor_Ijin_imtu'];
 	$Tanggal_Awal_Ijin_imtu=$_POST['Tanggal_Awal_Ijin_imtu']; 
 	$Tanggal_Akhir_Ijin_imtu=$_POST['Tanggal_Akhir_Ijin_imtu']; 
 
 //dephub/kominfo
-	$Nomor_Ijin = empty($_POST['Nomor_Ijin']) ? "-" : $_POST['Nomor_Ijin'];
+	$Nomor_Ijin = empty($_POST['Nomor_Ijin']) ?  : $_POST['Nomor_Ijin'];
 	$Tanggal_Mulai_Ijin=$_POST['Tanggal_Mulai_Ijin']; 
 	$Tanggal_Akhir_Ijin=$_POST['Tanggal_Akhir_Ijin']; 
 
 //ippt
-	$Nomor_Ijin_Pendirian = empty($_POST['Nomor_Ijin_Pendirian']) ? "-" : $_POST['Nomor_Ijin_Pendirian'];
+	$Nomor_Ijin_Pendirian = empty($_POST['Nomor_Ijin_Pendirian']) ?  : $_POST['Nomor_Ijin_Pendirian'];
 	$Tanggal_Awal_Ijin_Pendirian=$_POST['Tanggal_Awal_Ijin_Pendirian']; 
 	$Tanggal_Akhir_Ijin_Pendirian=$_POST['Tanggal_Akhir_Ijin_Pendirian']; 
 
 //ipb
-	$Ijin_IPB_Nomor = empty($_POST['Nomor_IPB']) ? "-" : $_POST['Nomor_IPB'];
+	$Ijin_IPB_Nomor = empty($_POST['Nomor_IPB']) ?  : $_POST['Nomor_IPB'];
 	$Ijin_IPB_Start=$_POST['Tanggal_Awal_IPB']; 
 	$Ijin_IPB_Finish=$_POST['Tanggal_Akhir_IPB']; 
 
 //ijin_prinsip
-	$Nomor_Ijin_Prinsip = empty($_POST['Nomor_Ijin_Prinsip']) ? "-" : $_POST['Nomor_Ijin_Prinsip'];
+	$Nomor_Ijin_Prinsip = empty($_POST['Nomor_Ijin_Prinsip']) ?  : $_POST['Nomor_Ijin_Prinsip'];
 	$Tanggal_Awal_Ijin_Prinsip=$_POST['Tanggal_Awal_Ijin_Prinsip']; 
 	$Tanggal_Akhir_Ijin_Prinsip=$_POST['Tanggal_Akhir_Ijin_Prinsip']; 
 
 //ijin_genset
-	$Nomor_Genset = empty($_POST['Nomor_Genset']) ? "-" : $_POST['Nomor_Genset'];
-	$Status_Genset = empty($_POST['Status_Genset']) ? "-" : $_POST['Status_Genset'];
+	$Nomor_Genset = empty($_POST['Nomor_Genset']) ?  : $_POST['Nomor_Genset'];
+	$Status_Genset = empty($_POST['Status_Genset']) ?  : $_POST['Status_Genset'];
 	$Tanggal_Start=$_POST['Tanggal_Start']; 
 	$Tanggal_Finish=$_POST['Tanggal_Finish']; 
 
 //comsace
 	$Comcase_Tanggal=$_POST['Comcase_Tanggal']; 
-	$Comcase_Keterangan = empty($_POST['Comcase_Keterangan']) ? "-" : $_POST['Comcase_Keterangan'];
-	$Comcase_Status = empty($_POST['Comcase_Status']) ? "-" : $_POST['Comcase_Status'];
-	$Comcase_Solusi = empty($_POST['Comcase_Solusi']) ? "-" : $_POST['Comcase_Solusi'];
-	$Comcase_Mitra = empty($_POST['Comcase_Mitra']) ? "-" : $_POST['Comcase_Mitra'];
+	$Comcase_Keterangan = empty($_POST['Comcase_Keterangan']) ?  : $_POST['Comcase_Keterangan'];
+	$Comcase_Status = empty($_POST['Comcase_Status']) ?  : $_POST['Comcase_Status'];
+	$Comcase_Solusi = empty($_POST['Comcase_Solusi']) ?  : $_POST['Comcase_Solusi'];
+	$Comcase_Mitra = empty($_POST['Comcase_Mitra']) ?  : $_POST['Comcase_Mitra'];
 
 //perintah post
 
