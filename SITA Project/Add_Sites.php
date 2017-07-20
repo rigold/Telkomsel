@@ -257,10 +257,10 @@
 											<label >Branch</label> <input placeholder="Masukkan Branch Site" type="text" name="Branch" size="50">
 										</p>
 										<p>
-											<label >Longitude</label> <input placeholder="Masukkan Longitude Site" type="text" name="Longitude" size="50">
+											<label >Longitude</label> <input placeholder="!! HANYA ANGKA, '-', dan '.' CONTOH: -17.12" type="text" name="Longitude" size="50">
 										</p>
 										<p>
-											<label >Latitude</label> <input placeholder="Masukkan Ltitude Site" type="text" name="Latitude" size="50">
+											<label >Latitude</label> <input placeholder="!! HANYA ANGKA, '-', dan '.' CONTOH: -17.12" type="text" name="Latitude" size="50">
 										</p>
 										<p>
 											<label >On Air Date</label> <input type="date" id="On_Air_Date" name="On_Air_Date">
@@ -275,7 +275,7 @@
 											<label >Site Type</label> <input placeholder="Masukkan Tipe Site" type="text" name="Site_Type" size="50">
 										</p>
 										<p>
-											<label >Tower Height</label> <input placeholder="Masukkan Tinggi Tower" type="text" name="Tower_Height" size="50">
+											<label >Tower Height</label> <input placeholder="!! HANYA ANGKA SAJA" type="text" name="Tower_Height" size="50">
 										</p>
 										<p>
 											<label >Tower Type</label> <input placeholder="Masukkan Tipe Tower" type="text" name="Tower_Type" size="50">
@@ -308,7 +308,7 @@
 											<label >Tanggal Akhir Sewa</label> <input type="date" id="Tanggal_Akhir_Sewa" name="Tanggal_Akhir_Sewa" >
 										</p>
 										<p>
-											<label >Harga/Tahun</label> <input placeholder="Masukkan Harga per Tahun" type="text" name="Harga_Per_Tahun" size="50">
+											<label >Harga per Tahun</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Harga_Per_Tahun" size="50">
 										</p>
 										<p>
 											<label >Remark</label> <input placeholder="Masukkan Detail Tentang Site" type="text" name="Remark" size="50">
