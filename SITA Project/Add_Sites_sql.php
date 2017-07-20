@@ -78,7 +78,14 @@
 	$Status = empty($_POST['Status']) ? "-" : $_POST['Status'];
 
 //ho
-	$Nomor_HO = empty($_POST['Nomor_HO']) ? "-" : $_POST['Nomor_HO'];
+	if(empty('Nomor_HO'))
+	{
+		$_POST['Nomor_HO']=0;
+	}
+	else
+	{
+		$_POST['Nomor_HO'];
+	}
 	$Daftar_Ulang_HO = empty($_POST['Daftar_Ulang_HO']) ? "-" : $_POST['Daftar_Ulang_HO'];
 	$Tanggal_Start_HO=$_POST['Tanggal_Start_HO']; 
 	$Tanggal_Finish_HO=$_POST['Tanggal_Finish_HO']; 
