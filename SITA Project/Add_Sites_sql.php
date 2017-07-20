@@ -150,7 +150,7 @@
 	$Surat_Kuasa = empty($_POST['Surat_Kuasa']) ? "-" : $_POST['Surat_Kuasa'];
 	$Surat_Kuasa_Pengambilan_Jaminan_Asli=$_POST['Surat_Kuasa_Pengambilan_Jaminan_Asli']; 
 	$Surat_Jaminan_Hukum=$_POST['Surat_Jaminan_Hukum']; 
-	$Surat_Ijin_PKS=$_POST['Surat_Ijin_PKS']; 
+	$Surat_Ijin_PKS=empty($_POST['Surat_Ijin_PKS']) ? "-" : $_POST['Surat_Ijin_PKS'];
 	$Surat_Perjanjian_Sewa_Tanah=$_POST['Surat_Perjanjian_Sewa_Tanah']; 
 
 //pbb
