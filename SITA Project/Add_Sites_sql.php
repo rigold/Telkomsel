@@ -34,8 +34,6 @@
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file);
 	$Surat_SKRD="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
 	
-	//$Comcase_File="asd";
-
 //sites	
 	$Site_ID=$_POST['Site_ID'];
 	$Nama_Site = empty($_POST['Nama_Site']) ?  : $_POST['Nama_Site']; 

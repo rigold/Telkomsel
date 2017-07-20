@@ -125,13 +125,30 @@
 					</div>
 					<div id="article">
 						<h3>MENU ADMIN</h3>
-						<p>
-							<a href="Add_User.php">> ADD USER<br></a>
-							<a href="Add_Sites.php"><br>> ADD SITE<br></a>
-							<a href="List_User.php"><br>> LIST USER<br></a>
-							<a href="List_Sites.php"><br>> LIST SITES<br></a>
-							<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
-						</p>
+						<?php
+							if($rowz['admin']=="Admin")
+							{
+								echo "
+								<p>
+									<a href='Add_User.php'>> ADD USER<br></a>
+									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
+									<a href='List_User.php'><br>> LIST USER<br></a>
+									<a href='List_Sites.php'><br>> LIST SITES<br></a>
+									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
+								</p>
+								";
+							}
+							else
+								echo "
+									<p>
+									<a >> ADD USER<br></a>
+									<a ><br>> ADD SITE<br></a>
+									<a ><br>> LIST USER<br></a>
+									<a ><br>> LIST SITES<br></a>
+									<a ><br>> RIWAYAT CETAK<br></a>
+								</p>
+								";
+						?>
 					</div>
 					
 					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
@@ -143,7 +160,7 @@
 					<div class="line-separator"></div>
 								<?php
 
-								$sql = "SELECT link_profile_pic, nama_user, jabatan, nik, password FROM user";
+								$sql = "SELECT * FROM user";
 								$result = $conn->query($sql);
 								
 								$no = 1;
@@ -158,9 +175,11 @@
 								    		<th onclick='sortTable(2)'>Jabatan</th>
 								    		<th>NIK</th>
 								    		<th>Password</th>
+								    		<th>Akun</th>
 								    		<th>Action</th>
 								    	</tr>";
 								    // output data of each row
+								    	
 								    while($row = $result->fetch_assoc())
 								    {
 								    	$image=$row["link_profile_pic"]; 
@@ -172,8 +191,12 @@
 									        <td>".$row["nama_user"]."</td>
 									        <td>".$row["jabatan"]."</td><td>".$row["nik"]."</td>
 									        <td>".$row["password"]."</td>
+									        <td>".$row["admin"]."</td>
 									        <td><button onclick= \"location.href='Edit_User.php?nik=$row[nik]'\">Edit</button>
 									        	<button onclick= \"location.href='Delete_User.php?nik=$row[nik]&img=$img'\">Delete</button>
+									        	<button onclick= \"location.href='Edit_User_admin.php?nik=$row[nik]&admin=admin'\">Make Admin</button>
+									        	<button onclick= \"location.href='Edit_User_admin.php?nik=$row[nik]&admin=user'\">Make User</button>
+
 								        </tr>";
 								    } 
 
