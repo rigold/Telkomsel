@@ -561,7 +561,6 @@
 							$sql11 = "SELECT
 								nop,
 								nilai_pbb_site,
-								tanggal_mulai,
 								tanggal_jatuh_tempo,
 								status,
 								njop_tanah,
@@ -584,7 +583,6 @@
 							<tr><th>Nilai PBB</th><td>Rp." .$row11["nilai_pbb_site"]."</td></tr>
 							<tr><th>Denda PBB</th><td>Rp." .$row11["pbb_denda"]."</td></tr>
 							<tr><th>Fee PBB</th><td>Rp." .$row11["pbb_fee"]."</td></tr>
-							<tr><th>Tanggal Mulai</th><td>" .$row11["tanggal_mulai"]."</td></tr> 
 							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row11["tanggal_jatuh_tempo"]."</td></tr>
 							<tr><th>Status</th><td>" .$row11["status"]."</td></tr>
 							<tr><th>Koef. PBB</th><td>" .$row11["koef_pbb"]."</td></tr>

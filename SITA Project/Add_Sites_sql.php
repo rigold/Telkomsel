@@ -36,7 +36,7 @@
 	
 //sites	
 	$Site_ID=$_POST['Site_ID'];
-	$Nama_Site = empty($_POST['Nama_Site']) ?  : $_POST['Nama_Site']; 
+	$Nama_Site = empty($_POST['Nama_Site']) ? "-" : $_POST['Nama_Site']; 
 	$Status_Lahan = empty($_POST['Status_Lahan']) ?  : $_POST['Status_Lahan'];
 	$Satus_Tower=$_POST['Satus_Tower']; 
 	$Pemilik_Tower = empty($_POST['Pemilik_Tower']) ?  : $_POST['Pemilik_Tower'];
@@ -149,7 +149,6 @@
 	$Nilai_PBB = empty($_POST['Nilai_PBB']) ?  : $_POST['Nilai_PBB'];
 	$Denda_PBB = empty($_POST['Denda_PBB']) ?  : $_POST['Denda_PBB'];
 	$Fee_PBB = empty($_POST['Fee_PBB']) ?  : $_POST['Fee_PBB'];
-	$Tanggal_Mulai=$_POST['Tanggal_Mulai'];
 	$Tanggal_Jatuh_Tempo_PBB=$_POST['Tanggal_Jatuh_Tempo_PBB'];
 	$Status_PBB = empty($_POST['Status_PBB']) ?  : $_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
@@ -462,7 +461,6 @@
 		nop,
 		sites_id,
 		nilai_pbb_site,
-		tanggal_mulai,
 		tanggal_jatuh_tempo,
 		status,
 		njop_tanah,
@@ -477,7 +475,6 @@
 		'$Nomor_Objek_Pajak',
 		'$Site_ID',
 		'$Nilai_PBB',
-		'$Tanggal_Mulai',
 		'$Tanggal_Jatuh_Tempo_PBB',
 		'$Status_PBB',
 		'$NJOP_Tanah',

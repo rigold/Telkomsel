@@ -732,9 +732,6 @@
 											<label >Fee PBB</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Fee PBB" type="text" name="Fee_PBB" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai</label> <input type="date" id="Tanggal_Mulai" name="Tanggal_Mulai" >
-										</p>
-										<p>
 											<label >Tanggal Jatuh Tempo</label> <input type="date" id="Tanggal_Jatuh_Tempo_PBB" name="Tanggal_Jatuh_Tempo_PBB" >
 										</p>
 										<p>

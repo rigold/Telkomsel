@@ -537,9 +537,6 @@
 											<label >Fee PBB</label> <input type="text" value="<?php echo $row10['pbb_fee'];?>" name="Fee_PBB" size="50">
 										</p>
 										<p>
-											<label >Tanggal Mulai :</label> <input type="date" id="Tanggal_Mulai"  value="<?php echo $row10['tanggal_mulai'];?>" name="Tanggal_Mulai" >
-										</p>
-										<p>
 											<label >Tanggal Jatuh Tempo :</label> <input type="date" id="Tanggal_Jatuh_Tempo_PBB"  value="<?php echo $row10['tanggal_jatuh_tempo'];?>" name="Tanggal_Jatuh_Tempo_PBB" >
 										</p>
 										<p>

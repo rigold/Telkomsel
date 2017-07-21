@@ -202,7 +202,6 @@
 	$Nilai_PBB=$_POST['Nilai_PBB'];
 	$Denda_PBB=$_POST['Denda_PBB'];
 	$Fee_PBB=$_POST['Fee_PBB'];
-	$Tanggal_Mulai=$_POST['Tanggal_Mulai'];
 	$Tanggal_Jatuh_Tempo_PBB=$_POST['Tanggal_Jatuh_Tempo_PBB'];
 	$Status_PBB=$_POST['Status_PBB'];
 	$NJOP_Tanah=$_POST['NJOP_Tanah'];
@@ -390,7 +389,6 @@
 				nilai_pbb_site='$Nilai_PBB' ,
 				pbb_denda='$Denda_PBB' ,
 				pbb_fee='$Fee_PBB' ,
-				tanggal_mulai='$Tanggal_Mulai' ,
 				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_PBB' ,
 				status='$Status_PBB' ,
 				njop_tanah='$NJOP_Tanah' ,
@@ -626,7 +624,6 @@
 			SET 
 				nop='$Nomor_Objek_Pajak' ,
 				nilai_pbb_site='$Nilai_PBB' ,
-				tanggal_mulai='$Tanggal_Mulai' ,
 				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_PBB' ,
 				status='$Status_PBB' ,
 				njop_tanah='$NJOP_Tanah' ,
