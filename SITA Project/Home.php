@@ -132,19 +132,11 @@
 							{
 								echo "
 								<p>
-<<<<<<< HEAD
-									<a href='Add_User.php'>> ADD USER <br></a>
-									<a href='Add_Sites.php'><br>> ADD SITE <br></a>
-									<a href='List_User.php'><br>> LIST USER <br></a>
-									<a href='List_Sites.php'><br>> LIST SITES <br></a>
-									<a href='riwayat_print.php'><br>> RIWAYAT CETAK <br></a>
-=======
 									<a href='Add_User.php'>> ADD USER<br></a>
 									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
 									<a href='List_User.php'><br>> LIST USER<br></a>
 									<a href='List_Sites.php'><br>> LIST SITES<br></a>
 									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
->>>>>>> ef0b426ce4dd41b5384e7f5b88a38bba478666d9
 								</p>
 								";
 							}
