@@ -1208,7 +1208,7 @@ tr:nth-child(even) {
     	margin: 50px;
     }
     .body {
-    	margin: 0 50px 0 50px;
+    	margin: 100px 50px 0 50px;
     	padding-right: 0px;
      	float: center;
      }
