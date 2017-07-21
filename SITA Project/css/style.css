@@ -62,10 +62,9 @@ body{
 /*------------------------- Sidebar ------------------------*/ 
 .sidebar{
 	float: left;
-    //margin: 0 9px 0 0;
-    //_margin: 0 3px 0 0;
     width: 200px;
-    height: 100%
+    height: 100%;
+    margin-top: 100px;
 }
 .sidebar .featured{
 	width: 218px;
@@ -347,7 +346,7 @@ body{
     left: 0px;
     height: 100%;
     position: absolute;
-    //overflow: auto;
+    margin-top: 100px;
 }
 .body img
 {
@@ -1065,6 +1064,9 @@ body{
 	margin:0 0 0 0;
 	padding: 0 0 10px 0;
 	background-color: gold;
+	position: fixed;
+	z-index: 20;
+	width: 100%
 }
 
 
@@ -1206,7 +1208,7 @@ tr:nth-child(even) {
     	margin: 50px;
     }
     .body {
-    	margin: 0 50px 0 50px;
+    	margin: 100px 50px 0 50px;
     	padding-right: 0px;
      	float: center;
      }
