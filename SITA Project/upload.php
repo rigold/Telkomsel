@@ -104,9 +104,8 @@
 						<br>
 
 					</p>
-					<form action="/action_page.php">
-							<input type="file" name="file" size="50" style="
-    margin-left: 50px;"> 
+					<form action="upload_sql.php">
+							<input type="file" name="file" size="50" style="margin-left: 50px;"> 
 							<br>
 							<br>
 						 	<input type="submit" value="Submit">
