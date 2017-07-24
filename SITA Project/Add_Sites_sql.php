@@ -230,7 +230,7 @@
 	$Tanggal_Akhir_Ijin_Pendirian=$_POST['Tanggal_Akhir_Ijin_Pendirian']; 
 
 //ipb
-	$Ijin_IPB_Nomor = empty($_POST['Ijin_IPB_Nomor']) ? "-" : $_POST['Nomor_IPB'];
+	$Ijin_IPB_Nomor = empty($_POST['Nomor_IPB']) ? "-" : $_POST['Nomor_IPB'];
 	$Ijin_IPB_Start=$_POST['Tanggal_Awal_IPB']; 
 	$Ijin_IPB_Finish=$_POST['Tanggal_Akhir_IPB']; 
 
