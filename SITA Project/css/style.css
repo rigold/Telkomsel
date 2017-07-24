@@ -348,6 +348,7 @@ body{
     position: absolute;
     margin-top: 100px;
 }
+
 .body img
 {
     max-width: 150px;
@@ -1420,4 +1421,47 @@ button {
     border-style: outset;
     border-color: buttonface;
     border-image: initial;
+}
+
+/*-----------upload-----------------*/
+
+.body2{
+    float: left;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    position: absolute;
+    margin-top: 100px;
+    background-color: white;
+}
+.body2 h1 {
+	font-family: helvetica, arial;
+	color: #4a14f8;
+	font-size: 28px;
+	clear: both;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 20px 0 0;
+	text-align: center;
+}
+
+.body2 h1 a{
+	text-decoration: none;
+}
+
+.body2 p{
+
+	color: #000000;
+    font-weight: bold;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+.body2 form{
+
+	text-align: center;
 }
