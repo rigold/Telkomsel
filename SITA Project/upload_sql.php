@@ -35,15 +35,11 @@ if(isset($_POST['submit']))
                 }
                 else{
                     //insert member data into database
-                     mysqli_query($conn,
-                    "INSERT INTO y (b)
-                    VALUES('$line[1]')");
-                    mysqli_query($conn,
-                    "INSERT INTO x (a,b)
-                    VALUES('$line[0]','$line[1]'))");
+                    mysqli_query($conn, "INSERT INTO daerah (kota_kabupaten) VALUES('$line[6]') ");
+                    mysqli_query($conn, "INSERT INTO site (sites_id,sites_kota_kabupaten) VALUES('$line[0]','$line[6]') ");
 
                     echo "<br> insert->";
-                    echo $line[0]; echo $line[1];
+                    echo $line[0]; echo ",".$line[1];
                     //echo $line[1];
                     //echo $line[2];
                 }
