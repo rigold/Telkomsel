@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jul 2017 pada 04.42
+-- Generation Time: 24 Jul 2017 pada 04.45
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -294,39 +294,6 @@ INSERT INTO `ipb` (`ijin_ipb_nomor`, `sites_id`, `ijin_ipb_start`, `ijin_ipb_fin
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `nomor_surat`
---
-
-CREATE TABLE `nomor_surat` (
-  `no` int(11) NOT NULL,
-  `data_sites` varchar(100) DEFAULT NULL,
-  `perpanjangan` varchar(100) DEFAULT NULL,
-  `monitoring` varchar(100) DEFAULT NULL,
-  `perizinan` varchar(100) DEFAULT NULL,
-  `pbb` varchar(100) DEFAULT NULL,
-  `rpm` varchar(100) DEFAULT NULL,
-  `comcase` varchar(100) DEFAULT NULL,
-  `detail_pbb` varchar(100) DEFAULT NULL,
-  `detail_rpm` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `nomor_surat`
---
-
-INSERT INTO `nomor_surat` (`no`, `data_sites`, `perpanjangan`, `monitoring`, `perizinan`, `pbb`, `rpm`, `comcase`, `detail_pbb`, `detail_rpm`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD///99999/2017'),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD//1/99999/2017'),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD/1/2/99999/2017'),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD/1/3/99999/2017'),
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD///99999/2017'),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD//1/99999/2017'),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD/1/2/99999/2017'),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'SKRD/1/3/99999/2017');
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `pbb`
 --
 
@@ -354,18 +321,6 @@ CREATE TABLE `pbb` (
 INSERT INTO `pbb` (`no`, `nop`, `sites_id`, `nilai_pbb_site`, `tanggal_mulai`, `tanggal_jatuh_tempo`, `status`, `njop_tanah`, `njop_bangunan`, `surat_pbb`, `koef_pbb`, `pbb_mitra`, `pbb_denda`, `pbb_fee`) VALUES
 (6, '35.05.020.008.000.2961.7', 'BLR061', 473430, '2016-08-02', '2017-08-02', 0x50616964, 2730000, 470700000, 'PBB1500600326.', 1.1, 0x2d, 0, 0),
 (7, '46.16.131.119.111.3072.8', 'MLG069', 548360, '2016-12-20', '2017-12-20', 0x42656c756d204c756e6173, 3850000, 254000000, 'PBB1500603914.', 0.2, 0x4a6f737320576865646f6e, 150000, 1);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `rpm`
---
-
-CREATE TABLE `rpm` (
-  `no` int(11) NOT NULL,
-  `no_surat` int(11) NOT NULL,
-  `nama` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
