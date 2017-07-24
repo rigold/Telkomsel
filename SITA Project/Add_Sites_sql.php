@@ -10,9 +10,9 @@
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 
 	$target_dir = "File/";
-	$target_file = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
+	$target_file = $target_dir . "DT" . $newfilename . basename ($_FILES["Denah_Tanah"]["name"]);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file);
-	if ($_FILES["Denah_Tanah"]["size"] == 0)
+	if ($_FILES["Denah_Tanah"]["name"] == "")
 	{
 	    $Denah_Tanah = "-";
 	}
@@ -23,7 +23,7 @@
 
 	$target_file = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
 	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file);
-	if ($_FILES["Peta_Lokasi_Radius_Tower"]["size"] == 0)
+	if ($_FILES["Peta_Lokasi_Radius_Tower"]["name"] == "")
 	{
 	    $Peta_Lokasi_Radius_Tower = "-";
 	}
@@ -34,7 +34,7 @@
 
 	$target_file = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file);
-	if ($_FILES["Sketsa_Batas_Lahan"]["size"] == 0)
+	if ($_FILES["Sketsa_Batas_Lahan"]["name"] == "")
 	{
 	    $Sketsa_Batas_Lahan = "-";
 	}
@@ -45,7 +45,7 @@
 
 	$target_file = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
 	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file);
-	if ($_FILES["Comcase_File"]["size"] == 0)
+	if ($_FILES["Comcase_File"]["name"] == "")
 	{
 	    $Comcase_File = "-";
 	}
@@ -56,7 +56,7 @@
 
 	$target_file = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
 	move_uploaded_file($_FILES["Surat_PBB"]["tmp_name"], $target_file);
-	if ($_FILES["Surat_PBB"]["size"] == 0)
+	if ($_FILES["Surat_PBB"]["name"] == "")
 	{
 	    $Surat_PBB = "-";
 	}
@@ -67,7 +67,7 @@
 
 	$target_file = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file);
-	if ($_FILES["Surat_SKRD"]["size"] == 0)
+	if ($_FILES["Surat_SKRD"]["name"] == "")
 	{
 	    $Surat_SKRD = "-";
 	}
