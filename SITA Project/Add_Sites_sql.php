@@ -12,27 +12,69 @@
 	$target_dir = "File/";
 	$target_file = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file);
-	$Denah_Tanah="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+	if ($_FILES["Denah_Tanah"]["size"] == 0)
+	{
+	    $Denah_Tanah = "-";
+	}
+	else
+	{
+		$Denah_Tanah="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+	}
 
 	$target_file = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
 	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file);
-	$Peta_Lokasi_Radius_Tower="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+	if ($_FILES["Peta_Lokasi_Radius_Tower"]["size"] == 0)
+	{
+	    $Peta_Lokasi_Radius_Tower = "-";
+	}
+	else
+	{
+		$Peta_Lokasi_Radius_Tower="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+	}
 
 	$target_file = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file);
-	$Sketsa_Batas_Lahan="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+	if ($_FILES["Sketsa_Batas_Lahan"]["size"] == 0)
+	{
+	    $Sketsa_Batas_Lahan = "-";
+	}
+	else
+	{
+		$Sketsa_Batas_Lahan="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+	}
 
 	$target_file = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
 	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file);
-	$Comcase_File="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+	if ($_FILES["Comcase_File"]["size"] == 0)
+	{
+	    $Comcase_File = "-";
+	}
+	else
+	{
+		$Comcase_File="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+	}
 
 	$target_file = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
 	move_uploaded_file($_FILES["Surat_PBB"]["tmp_name"], $target_file);
-	$Surat_PBB="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+	if ($_FILES["Surat_PBB"]["size"] == 0)
+	{
+	    $Surat_PBB = "-";
+	}
+	else
+	{
+		$Surat_PBB="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+	}
 
 	$target_file = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file);
-	$Surat_SKRD="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+	if ($_FILES["Surat_SKRD"]["size"] == 0)
+	{
+	    $Surat_SKRD = "-";
+	}
+	else
+	{
+		$Surat_SKRD="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+	}
 	
 //sites	
 	$Site_ID=$_POST['Site_ID'];
