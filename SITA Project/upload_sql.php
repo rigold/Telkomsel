@@ -1,14 +1,17 @@
 <?php
-//load the database configuration file
-include 'connect.php';
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "sita";
 
-if(isset($_POST['submit'])){
-    
-    //validate whether uploaded file is a csv file
-    $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$csvMimes)){
-        if(is_uploaded_file($_FILES['file']['tmp_name'])){
+if(isset($_POST['submit']))
+{
+    if(!empty($_FILES['file']['name']))
+    {
+        if(is_uploaded_file($_FILES['file']['tmp_name']))
+        {
             
             //open uploaded csv file with read only mode
             $csvFile = fopen($_FILES['file']['tmp_name'], 'r');
@@ -19,29 +22,44 @@ if(isset($_POST['submit'])){
             fgetcsv($csvFile);
             
             //parse data from csv file line by line
-            while(($line = fgetcsv($csvFile)) !== FALSE){
+            while(($line = fgetcsv($csvFile)) !== FALSE)
+            {
                 //check whether member already exists in database with same email
-                $prevQuery = "SELECT id FROM members WHERE email = '".$line[1]."'";
-                $prevResult = $db->query($prevQuery);
-                if($prevResult->num_rows > 0){
+                $prevQuery = "SELECT sites_id FROM site WHERE sites_id = '".$line[0]."'";
+                $prevResult = $conn->query($prevQuery);
+                if($prevResult->num_rows > 0)
+                {
                     //update member data
-                    $db->query("UPDATE members SET name = '".$line[0]."', phone = '".$line[2]."', created = '".$line[3]."', modified = '".$line[3]."', status = '".$line[4]."' WHERE email = '".$line[1]."'");
-                }else{
+                    $conn->query("UPDATE site SET sites_kota_kabupaten = '".$line[0]."'");
+                    echo "update";
+                }
+                else{
                     //insert member data into database
-                    $db->query("INSERT INTO members (name, email, phone, created, modified, status) VALUES ('".$line[0]."','".$line[1]."','".$line[2]."','".$line[3]."','".$line[3]."','".$line[4]."')");
+                    //$conn->query("INSERT INTO site (sites_id) VALUES ('".$line[1]."')");
+
+                    echo "<br> insert";
+                    echo $line[0];
+                    //echo $line[1];
+                    //echo $line[2];
                 }
             }
-            
             //close opened csv file
             fclose($csvFile);
 
             $qstring = '?status=succ';
-        }else{
+            echo "IF 3";
+        }
+        else
+        {
             $qstring = '?status=err';
         }
-    }else{
+        echo "IF 2";
+    }
+    else
+    {
         $qstring = '?status=invalid_file';
     }
+    echo "IF 1";
 }
 
 //redirect to the listing page

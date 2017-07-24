@@ -86,12 +86,8 @@
 		</div>
 
 		<div id="background">
-
 			<div class="page">
-
 				<div class="body2">
-					
-
 					<h1>Upload File Ke DATABASE</a></h1>
 					<p>
 						1. Download Template ms.excel berikut ini, lalu isi data anda sesuai dengan urutan header tabel <br>
@@ -104,12 +100,12 @@
 						<br>
 
 					</p>
-					<form action="upload_sql.php">
+					<form action="upload_sql.php" method="post" enctype="multipart/form-data">
 							<input type="file" name="file" size="50" style="margin-left: 50px;"> 
 							<br>
 							<br>
-						 	<input type="submit" value="Submit">
-						</form>
+						 	<input type="submit" value="Submit" name="submit">
+					</form>
 											
 					
 				</div>
