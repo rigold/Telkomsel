@@ -346,14 +346,14 @@
 		$result5 = mysqli_query($conn, "
 			UPDATE ijin_prinsip 
 			SET
-				ijin_genset_nomor='$Nomor_Genset' ,
+				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
 				ijin_prinsip_start='$Tanggal_Awal_Ijin_Prinsip' ,
 				ijin_prinsip_finish='$Tanggal_Akhir_Ijin_Prinsip'
 			WHERE sites_id='$sites_id' ");
 		$result6 = mysqli_query($conn, "
 			UPDATE ijin_ptt 
 			SET
-				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
+				ijin_ptt_nomor='$Nomor_Ijin_Pendirian' ,
 				ijin_ptt_start='$Tanggal_Awal_Ijin_Pendirian' ,
 				ijin_ptt_finish='$Tanggal_Akhir_Ijin_Pendirian'
 			WHERE sites_id='$sites_id' ");
@@ -371,8 +371,8 @@
 		$result8 = mysqli_query($conn, "
 			UPDATE imtu 
 			SET
-				ijin_imtu_nomor,='$Nomor_Ijin_imtu', 
-				ijin_imtu_start,='$Tanggal_Awal_Ijin_imtu', 
+				ijin_imtu_nomor='$Nomor_Ijin_imtu', 
+				ijin_imtu_start='$Tanggal_Awal_Ijin_imtu', 
 				ijin_imtu_finish='$Tanggal_Akhir_Ijin_imtu'
 			WHERE sites_id='$sites_id' ");
 		$result9 = mysqli_query($conn, "
@@ -583,14 +583,14 @@
 		$result5 = mysqli_query($conn, "
 			UPDATE ijin_prinsip 
 			SET
-				ijin_genset_nomor='$Nomor_Genset' ,
+				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
 				ijin_prinsip_start='$Tanggal_Awal_Ijin_Prinsip' ,
 				ijin_prinsip_finish='$Tanggal_Akhir_Ijin_Prinsip'
 			WHERE sites_id='$sites_id' ");
 		$result6 = mysqli_query($conn, "
 			UPDATE ijin_ptt 
 			SET
-				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
+				ijin_ptt_nomor='$Nomor_Ijin_Pendirian' ,
 				ijin_ptt_start='$Tanggal_Awal_Ijin_Pendirian' ,
 				ijin_ptt_finish='$Tanggal_Akhir_Ijin_Pendirian'
 			WHERE sites_id='$sites_id' ");

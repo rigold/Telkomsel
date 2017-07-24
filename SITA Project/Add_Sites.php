@@ -194,8 +194,9 @@
 										<p>
 											<label >Status Tower</label>   
 											<select name="Satus_Tower">
+											    <option value="-">-	</option>
 											    <option value="Beli">Beli	</option>
-											    <option value="Pinjam">Pinjam</option>
+											    <option value="Sewa">Pinjam</option>
 											</select>
 										</p>
 										<p>
@@ -418,6 +419,7 @@
 										</p>
 										<p>
 											<label >Surat Persetujuan Keluarga</label><select name="Surat_Persetujuan_Keluarga">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -434,6 +436,7 @@
 										<p>
 											<label >Surat Pernyataan</label>   
 											<select name="SP">
+											    <option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -441,6 +444,7 @@
 										<p>
 											<label >Surat Pernyataan Ahli Waris</label>   
 											<select name="SP_Ahli_Waris">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -448,6 +452,7 @@
 										<p>
 											<label >Surat Pernyataan Janda:</label>   
 											<select name="SP_Janda">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -455,6 +460,7 @@
 										<p>
 											<label >Surat Pernyataan Kepemilikan Tanah</label>   
 											<select name="SP_Kepemilikan_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -462,6 +468,7 @@
 										<p>
 											<label >Surat Pernyataan Pelepasan Hak</label>   
 											<select name="SP_Pelepasan_Hak">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -469,6 +476,7 @@
 										<p>
 											<label >Surat Pernyataan Pembayaran:</label>   
 											<select name="SP_Pembayaran">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -476,6 +484,7 @@
 										<p>
 											<label >Surat Pernyataan Penguasaan Fisik Tanah:</label>   
 											<select name="SP_Penguasaan_Fisik_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -483,6 +492,7 @@
 										<p>
 											<label >Surat Pernyataan Peralihan Atas Pekarangan</label>   
 											<select name="SP_Peralihan_Atas_Pekarangan">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -490,6 +500,7 @@
 										<p>
 											<label >Surat Pernyataan Persetujuan Kepala Desa</label>   
 											<select name="SP_Persetujuan_Kepala_Desa">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -497,6 +508,7 @@
 										<p>
 											<label >Surat Pernyataan Tanah Pemohon</label>   
 											<select name="SP_Tanah_Pemohon">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -504,6 +516,7 @@
 										<p>
 											<label >Surat Pernyataan Tidak Keberatan Jalan Pribadi</label>   
 											<select name="SP_Tidak_Keberatan_Jalan_Pribadi">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -511,6 +524,7 @@
 										<p>
 											<label >Surat Pernyataan Tidak Keberatan Jalan Umum</label>   
 											<select name="SP_Tidak_Keberatan_Jalan_Umum">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -575,6 +589,7 @@
 										<p>
 											<label >Surat Keterangan Akses Lahan Jalan</label>   
 											<select name="SK_Akses_Lahan_Jalan">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -582,6 +597,7 @@
 										<p>
 											<label >Surat Keterangan Asal Tanah</label>   
 											<select name="SK_Asal_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -589,6 +605,7 @@
 										<p>
 											<label >Surat Keterangan Beda Luas Tanah</label>   
 											<select name="SK_Beda_Luas_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -596,6 +613,7 @@
 										<p>
 											<label >Surat Keterangan Beda Nama</label>   
 											<select name="SK_Beda_Nama">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -603,6 +621,7 @@
 										<p>
 											<label >Surat Keterangan Fatwa Waris</label>   
 											<select name="SK_Fatwa_Waris">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -610,6 +629,7 @@
 										<p>
 											<label >Surat Keterangan Kematian</label>   
 											<select name="SK_Kematian">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -617,6 +637,7 @@
 										<p>
 											<label >Surat Keterangan Penduduk</label>   
 											<select name="SK_Penduduk">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -624,6 +645,7 @@
 										<p>
 											<label >Surat Keterangan Permohonan IMB, HO, dan IP</label>   
 											<select name="SK_Permohonan_IMB_dll">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -631,6 +653,7 @@
 										<p>
 											<label >Surat Keterangan Persetujuan Sewa Lahan</label>   
 											<select name="SK_Persetujuan_Sewa_Lahan">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -638,6 +661,7 @@
 										<p>
 											<label >Surat Keterangan Riwayat Tanah</label>   
 											<select name="SK_Riwayat_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -645,6 +669,7 @@
 										<p>
 											<label >Surat Keterangan Suami Istri</label>   
 											<select name="SK_Suami_Istri">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -652,6 +677,7 @@
 										<p>
 											<label >Surat Keterangan Tanah</label>   
 											<select name="SK_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -659,6 +685,7 @@
 										<p>
 											<label >Surat Keterangan Tidak Sengketa</label>   
 											<select name="SK_Tidak_Sengketa">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -666,6 +693,7 @@
 										<p>
 											<label >Surat Keterangan Tidak Keberatan Didirikan</label>   
 											<select name="SK_Tidak_Keberatan_Didirikan">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -685,6 +713,7 @@
 										<p>
 											<label >Surat Kuasa</label>   
 											<select name="Surat_Kuasa">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -692,6 +721,7 @@
 										<p>
 											<label >Surat Kuasa Pengambilan Jaminan Asli</label>   
 											<select name="Surat_Kuasa_Pengambilan_Jaminan_Asli">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -699,6 +729,7 @@
 										<p>
 											<label >Surat Kuasa Jaminan Hukum</label>   
 											<select name="Surat_Jaminan_Hukum">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -706,6 +737,7 @@
 										<p>
 											<label >Surat Perjanjian Sewa Tanah</label>   
 											<select name="Surat_Perjanjian_Sewa_Tanah">
+												<option value="-">-</option>
 											    <option value="Ada">Ada</option>
 											    <option value="Tidak">Tidak</option>
 											</select>
@@ -792,7 +824,7 @@
 											<label >Nomor IMB</label> <input placeholder="Masukkan Nomor IMB" type="text" name="Nomor_IMB" size="50" >
 										</p>
 										<p>
-											<label >Mitra Pengurusa IMB</label> <input placeholder="Masukkan Nama Mitra Pengurus IMB" type="text" name="Mitra_Pengurus_IMB" size="50">
+											<label >Mitra Pengurusan IMB</label> <input placeholder="Masukkan Nama Mitra Pengurus IMB" type="text" name="Mitra_Pengurus_IMB" size="50">
 										</p>
 										<p>
 											<label >Daftar Ulang IMB</label> <input type="date" id="Daftar_Ulang_IMB" name="Daftar_Ulang_IMB" >

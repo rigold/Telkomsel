@@ -283,7 +283,7 @@
 								echo "
 								<tr><th>Pagu</th><td>Rp." . $row2["perpanjangan_pagu"]."</td></tr> 
 								<tr><th>PIC</th><td>" .$row2["perpanjangan_pic"]."</td></tr> 
-								<tr><th>SPPH</th><td>" .$row2["perpanjangan_spph"]."</td></tr> 
+								<tr><th>SPPH</th><td>Rp." .$row2["perpanjangan_spph"]."</td></tr> 
 								<tr><th>Vendor</th><td>" .$row2["perpanjangan_vendor_list"]."</td></tr> 
 								<tr><th>Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr> 
 								";
