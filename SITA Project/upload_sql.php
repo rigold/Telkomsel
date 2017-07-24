@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
             fgetcsv($csvFile);
             
             //parse data from csv file line by line
-            while(($line = fgetcsv($csvFile)) !== FALSE)
+            while(($line = fgetcsv($csvFile,0,";")) !== FALSE)
             {
                 //check whether member already exists in database with same email
                 $prevQuery = "SELECT sites_id FROM site WHERE sites_id = '".$line[0]."'";
@@ -35,10 +35,15 @@ if(isset($_POST['submit']))
                 }
                 else{
                     //insert member data into database
-                    //$conn->query("INSERT INTO site (sites_id) VALUES ('".$line[1]."')");
+                     mysqli_query($conn,
+                    "INSERT INTO y (b)
+                    VALUES('$line[1]')");
+                    mysqli_query($conn,
+                    "INSERT INTO x (a,b)
+                    VALUES('$line[0]','$line[1]'))");
 
-                    echo "<br> insert";
-                    echo $line[0];
+                    echo "<br> insert->";
+                    echo $line[0]; echo $line[1];
                     //echo $line[1];
                     //echo $line[2];
                 }
