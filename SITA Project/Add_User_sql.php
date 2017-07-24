@@ -9,7 +9,8 @@
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 
 	$target_dir = "upload/";
-	$target_file = $target_dir . $newfilename . basename($_FILES["fileToUpload"]["name"]);
+	$target_file2 = $target_dir . $newfilename . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -45,7 +46,8 @@
 	}
 	else
 	{
-		$image=$newfilename . $_FILES["fileToUpload"]["name"];
+		$image2=$newfilename . $_FILES["fileToUpload"]["name"];
+		$image = preg_replace("/ /", "-", $image2);
 	}
 
 	$Nama=$_POST['Nama'];
