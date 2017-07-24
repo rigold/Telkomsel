@@ -14,8 +14,11 @@
 	$temp = explode(".", $_FILES["fileToUpload"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	$target_dir = "upload/";
-	$target_file = $target_dir . $newfilename . basename($_FILES["fileToUpload"]["name"]);
-	$image=$newfilename . $_FILES["fileToUpload"]["name"];
+	$target_file2 = $target_dir . $newfilename . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
+
+	$image2=$newfilename . $_FILES["fileToUpload"]["name"];
+	$image = preg_replace("/ /", "-", $image2);
 	move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
 	$nama=$_POST["Nama"];
