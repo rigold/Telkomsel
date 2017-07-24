@@ -63,29 +63,41 @@
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	$target_dir = "File/";
 
-	$target_file1 = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
+	$target_file11 = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
+	$target_file1 = preg_replace("/ /", "-", $target_file11);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file1);
-	$file1="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+	$file11="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+	$file1 = preg_replace("/ /", "-", $file11);
 
-	$target_file2 = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
+	$target_file21 = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
+	$target_file2 = preg_replace("/ /", "-", $target_file21);
 	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file2);
-	$file2="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+	$file21="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+	$file2 = preg_replace("/ /", "-", $file21);
 
-	$target_file3 = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
+	$target_file31 = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
+	$target_file3 = preg_replace("/ /", "-", $target_file31);
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file3);
-	$file3="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+	$file31="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+	$file3 = preg_replace("/ /", "-", $file31);
 
-	$target_file6 = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
+	$target_file61 = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
+	$target_file6 = preg_replace("/ /", "-", $target_file61);
 	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file6);
-	$file6="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+	$file61="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+	$file6 = preg_replace("/ /", "-", $file61);
 
-	$target_file4 = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
+	$target_file41 = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
+	$target_file4 = preg_replace("/ /", "-", $target_file41);
 	move_uploaded_file($_FILES["Surat_PBB"]["tmp_name"], $target_file4);
-	$file4="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+	$file41="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+	$file4 = preg_replace("/ /", "-", $file41);
 
-	$target_file5 = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
+	$target_file51 = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
+	$target_file5 = preg_replace("/ /", "-", $target_file51);
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file5);
-	$file5="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+	$file51="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+	$file5 = preg_replace("/ /", "-", $file51);
 
 //sites	
 	$Site_ID=$_POST['Site_ID']; 

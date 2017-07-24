@@ -10,18 +10,22 @@
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 
 	$target_dir = "File/";
-	$target_file = $target_dir . "DT" . $newfilename . basename ($_FILES["Denah_Tanah"]["name"]);
+	$target_file2 = $target_dir . "DT" . $newfilename . basename ($_FILES["Denah_Tanah"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file);
+	
 	if ($_FILES["Denah_Tanah"]["name"] == "")
 	{
 	    $Denah_Tanah = "-";
 	}
 	else
 	{
-		$Denah_Tanah="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+		$Denah_Tanah2="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+		$Denah_Tanah = preg_replace("/ /", "-", $Denah_Tanah2);
 	}
 
-	$target_file = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
+	$target_file2 = $target_dir . "PL" . $newfilename . basename($_FILES ["Peta_Lokasi_Radius_Tower"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file);
 	if ($_FILES["Peta_Lokasi_Radius_Tower"]["name"] == "")
 	{
@@ -29,10 +33,12 @@
 	}
 	else
 	{
-		$Peta_Lokasi_Radius_Tower="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+		$Peta_Lokasi_Radius_Tower2="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+		$Peta_Lokasi_Radius_Tower = preg_replace("/ /", "-", $Peta_Lokasi_Radius_Tower2);
 	}
 
-	$target_file = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
+	$target_file2 = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file);
 	if ($_FILES["Sketsa_Batas_Lahan"]["name"] == "")
 	{
@@ -40,10 +46,12 @@
 	}
 	else
 	{
-		$Sketsa_Batas_Lahan="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+		$Sketsa_Batas_Lahan2="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+		$Sketsa_Batas_Lahan = preg_replace("/ /", "-", $Sketsa_Batas_Lahan2);
 	}
 
-	$target_file = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
+	$target_file2 = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file);
 	if ($_FILES["Comcase_File"]["name"] == "")
 	{
@@ -51,10 +59,12 @@
 	}
 	else
 	{
-		$Comcase_File="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+		$Comcase_File2="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+		$Comcase_File = preg_replace("/ /", "-", $Comcase_File2);
 	}
 
-	$target_file = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
+	$target_file2 = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	move_uploaded_file($_FILES["Surat_PBB"]["tmp_name"], $target_file);
 	if ($_FILES["Surat_PBB"]["name"] == "")
 	{
@@ -62,10 +72,12 @@
 	}
 	else
 	{
-		$Surat_PBB="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+		$Surat_PBB2="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+		$Surat_PBB = preg_replace("/ /", "-", $Surat_PBB2);
 	}
 
-	$target_file = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
+	$target_file2 = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
+	$target_file = preg_replace("/ /", "-", $target_file2);
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file);
 	if ($_FILES["Surat_SKRD"]["name"] == "")
 	{
@@ -73,7 +85,8 @@
 	}
 	else
 	{
-		$Surat_SKRD="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+		$Surat_SKRD2="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+		$Surat_SKRD = preg_replace("/ /", "-", $Surat_SKRD2);
 	}
 	
 //sites	
