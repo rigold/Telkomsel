@@ -66,11 +66,11 @@ if(isset($_POST['submit']))
                             bak_tanggal = '".$line[32]."',
                             bak_harga = '".$line[33]."',
                             bak_status = '".$line[34]."',
-                            comcase_tanggal = '".$line[132]."',
-                            comcase_keterangan = '".$line[133]."',
-                            comcase_status = '".$line[134]."',
-                            comcase_solusi = '".$line[135]."',
-                            comcase_mitra = '".$line[136]."'
+                            comcase_tanggal = '".$line[131]."',
+                            comcase_keterangan = '".$line[132]."',
+                            comcase_status = '".$line[133]."',
+                            comcase_solusi = '".$line[134]."',
+                            comcase_mitra = '".$line[135]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -141,62 +141,62 @@ if(isset($_POST['submit']))
 
                         $conn->query("UPDATE ijin_dephub
                         SET
-                            ijin_dephub_nomor = '".$line[116]."',
-                            ijin_dephub_start = '".$line[117]."',
-                            ijin_dephub_finish = '".$line[118]."'
+                            ijin_dephub_nomor = '".$line[115]."',
+                            ijin_dephub_start = '".$line[116]."',
+                            ijin_dephub_finish = '".$line[117]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ijin_genset
                         SET
-                            ijin_genset_nomor = '".$line[128]."',
-                            ijin_genset_status = '".$line[129]."',
-                            ijin_genset_start = '".$line[130]."',
-                            ijin_genset_finish = '".$line[131]."'
+                            ijin_genset_nomor = '".$line[127]."',
+                            ijin_genset_status = '".$line[128]."',
+                            ijin_genset_start = '".$line[129]."',
+                            ijin_genset_finish = '".$line[130]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ijin_prinsip
                         SET
-                            ijin_prinsip_nomor = '".$line[125]."',
-                            ijin_prinsip_start = '".$line[126]."',
-                            ijin_prinsip_finish = '".$line[127]."'
+                            ijin_prinsip_nomor = '".$line[124]."',
+                            ijin_prinsip_start = '".$line[125]."',
+                            ijin_prinsip_finish = '".$line[126]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ijin_ptt
                         SET
-                            ijin_ptt_nomor = '".$line[119]."',
-                            ijin_ptt_start = '".$line[120]."',
-                            ijin_ptt_finish = '".$line[121]."'
+                            ijin_ptt_nomor = '".$line[118]."',
+                            ijin_ptt_start = '".$line[119]."',
+                            ijin_ptt_finish = '".$line[120]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE imb
                         SET
-                            imb_nomor = '".$line[106]."',
-                            imb_mitra_pengurus = '".$line[107]."',
-                            imb_daftar_ulang = '".$line[108]."',
-                            imb_start = '".$line[109]."',
-                            imb_finish = '".$line[110]."',
-                            imb_status_kepengurusan = '".$line[111]."',
-                            imb_status = '".$line[112]."'
+                            imb_nomor = '".$line[105]."',
+                            imb_mitra_pengurus = '".$line[106]."',
+                            imb_daftar_ulang = '".$line[107]."',
+                            imb_start = '".$line[108]."',
+                            imb_finish = '".$line[109]."',
+                            imb_status_kepengurusan = '".$line[110]."',
+                            imb_status = '".$line[111]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE imtu
                         SET
-                            ijin_imtu_nomor = '".$line[113]."',
-                            ijin_imtu_start = '".$line[114]."',
-                            ijin_imtu_finish = '".$line[115]."'
+                            ijin_imtu_nomor = '".$line[112]."',
+                            ijin_imtu_start = '".$line[113]."',
+                            ijin_imtu_finish = '".$line[114]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ipb
                         SET
-                            ijin_ipb_nomor = '".$line[122]."',
-                            ijin_ipb_start = '".$line[123]."',
-                            ijin_ipb_finish = '".$line[124]."'
+                            ijin_ipb_nomor = '".$line[121]."',
+                            ijin_ipb_start = '".$line[122]."',
+                            ijin_ipb_finish = '".$line[123]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -212,6 +212,16 @@ if(isset($_POST['submit']))
                             njop_bangunan = '".$line[97]."',
                             koef_pbb = '".$line[98]."',
                             pbb_mitra = '".$line[99]."'
+                        WHERE sites_id = '".$line[0]."'
+                        ");
+
+                        $conn->query("UPDATE skrd_rpm
+                        SET
+                            no_skrd = '".$line[100]."',
+                            harga_skrd = '".$line[101]."',
+                            tanggal_jatuh_tempo = '".$line[102]."',
+                            koef_skrd = '".$line[103]."',
+                            status = '".$line[104]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -313,11 +323,11 @@ if(isset($_POST['submit']))
                         '$line[33]',
                         '$line[34]',
 
+                        '$line[131]',
                         '$line[132]',
                         '$line[133]',
                         '$line[134]',
-                        '$line[135]',
-                        '$line[136]'
+                        '$line[135]'
 
                         )
                     ");
@@ -504,8 +514,7 @@ if(isset($_POST['submit']))
                         harga_skrd,
                         tanggal_jatuh_tempo,
                         koef_skrd,
-                        status,
-                        surat_skrd
+                        status
                         )
                         VALUES(
 
@@ -514,9 +523,7 @@ if(isset($_POST['submit']))
                         '$line[101]',
                         '$line[102]',
                         '$line[103]',
-                        '$line[104]',
-                        '$line[105]'
-
+                        '$line[104]'
                         )
                     ");
 
@@ -533,14 +540,14 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[106]',
+                        '$line[105]',
                         '$line[0]',
+                        '$line[106]',
                         '$line[107]',
                         '$line[108]',
                         '$line[109]',
                         '$line[110]',
-                        '$line[111]',
-                        '$line[112]'
+                        '$line[111]'
 
                         )
                     ");
@@ -554,10 +561,10 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[113]',
+                        '$line[112]',
                         '$line[0]',
-                        '$line[114]',
-                        '$line[115]'
+                        '$line[113]',
+                        '$line[114]'
 
                         )
                     ");
@@ -571,10 +578,10 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[116]',
+                        '$line[115]',
                         '$line[0]',
-                        '$line[117]',
-                        '$line[118]'
+                        '$line[116]',
+                        '$line[117]'
 
                         )
                     ");
@@ -588,10 +595,10 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[119]',
+                        '$line[118]',
                         '$line[0]',
-                        '$line[120]',
-                        '$line[121]'
+                        '$line[119]',
+                        '$line[120]'
 
                         )
                     ");
@@ -605,10 +612,10 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[122]',
+                        '$line[121]',
                         '$line[0]',
-                        '$line[123]',
-                        '$line[124]'
+                        '$line[122]',
+                        '$line[123]'
 
                         )
                     ");
@@ -622,10 +629,10 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[125]',
+                        '$line[124]',
                         '$line[0]',
-                        '$line[126]',
-                        '$line[127]'
+                        '$line[125]',
+                        '$line[126]'
 
                         )
                     ");
@@ -640,11 +647,11 @@ if(isset($_POST['submit']))
                         )
                         VALUES(
 
-                        '$line[128]',
+                        '$line[127]',
                         '$line[0]',
+                        '$line[128]',
                         '$line[129]',
-                        '$line[130]',
-                        '$line[131]'
+                        '$line[130]'
 
                         )
                     ");
