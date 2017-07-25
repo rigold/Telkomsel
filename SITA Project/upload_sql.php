@@ -337,8 +337,8 @@ if(isset($_POST['submit']))
                         '$line[19]',
                         '$line[20]',
                         '$line[21]',
-                        '$line[22]',
-                        '$line[23]',
+                        '$date2',
+                        '$date3',
                         '$line[24]',
                         '$line[25]',
 
@@ -346,14 +346,14 @@ if(isset($_POST['submit']))
                         '$line[27]',
                         '$line[28]',
                         '$line[29]',
-                        '$line[30]',
+                        '$date4',
 
                         '$line[31]',
-                        '$line[32]',
+                        '$date5',
                         '$line[33]',
                         '$line[34]',
 
-                        '$line[131]',
+                        '$date26',
                         '$line[132]',
                         '$line[133]',
                         '$line[134]',
@@ -375,9 +375,9 @@ if(isset($_POST['submit']))
 
                         '$line[35]',
                         '$line[0]',
-                        '$line[36]',
-                        '$line[37]',
-                        '$line[38]',
+                        '$date6',
+                        '$date7',
+                        '$date8',
                         '$line[39]'
  
                         )
@@ -525,7 +525,7 @@ if(isset($_POST['submit']))
                         '$line[90]',
                         '$line[0]',
                         '$line[91]',
-                        '$line[94]',
+                        '$date9',
                         '$line[95]',
                         '$line[96]',
                         '$line[97]',
@@ -551,7 +551,7 @@ if(isset($_POST['submit']))
                         '$line[100]',
                         '$line[0]',
                         '$line[101]',
-                        '$line[102]',
+                        '$date10',
                         '$line[103]',
                         '$line[104]'
                         )
@@ -573,9 +573,9 @@ if(isset($_POST['submit']))
                         '$line[105]',
                         '$line[0]',
                         '$line[106]',
-                        '$line[107]',
-                        '$line[108]',
-                        '$line[109]',
+                        '$date11',
+                        '$date12',
+                        '$date13',
                         '$line[110]',
                         '$line[111]'
 
@@ -593,8 +593,8 @@ if(isset($_POST['submit']))
 
                         '$line[112]',
                         '$line[0]',
-                        '$line[113]',
-                        '$line[114]'
+                        '$date14',
+                        '$date15'
 
                         )
                     ");
@@ -610,8 +610,8 @@ if(isset($_POST['submit']))
 
                         '$line[115]',
                         '$line[0]',
-                        '$line[116]',
-                        '$line[117]'
+                        '$date16',
+                        '$date17'
 
                         )
                     ");
@@ -627,8 +627,8 @@ if(isset($_POST['submit']))
 
                         '$line[118]',
                         '$line[0]',
-                        '$line[119]',
-                        '$line[120]'
+                        '$date18',
+                        '$date19'
 
                         )
                     ");
@@ -644,8 +644,8 @@ if(isset($_POST['submit']))
 
                         '$line[121]',
                         '$line[0]',
-                        '$line[122]',
-                        '$line[123]'
+                        '$date20',
+                        '$date21'
 
                         )
                     ");
@@ -661,8 +661,8 @@ if(isset($_POST['submit']))
 
                         '$line[124]',
                         '$line[0]',
-                        '$line[125]',
-                        '$line[126]'
+                        '$date22',
+                        '$date23'
 
                         )
                     ");
@@ -680,8 +680,8 @@ if(isset($_POST['submit']))
                         '$line[127]',
                         '$line[0]',
                         '$line[128]',
-                        '$line[129]',
-                        '$line[130]'
+                        '$date24',
+                        '$date25'
 
                         )
                     ");
