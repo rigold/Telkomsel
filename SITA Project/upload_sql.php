@@ -654,22 +654,17 @@ if(isset($_POST['submit']))
             }
             //close opened csv file
             fclose($csvFile);
-
-            $qstring = '?status=succ';
-            echo "IF 3";
         }
         else
         {
             $qstring = '?status=err';
         }
-        echo "IF 2";
     }
     else
     {
         $qstring = '?status=invalid_file';
     }
-    echo "IF 1";
 }
 
 //redirect to the listing page
-//header("Location: List_Sites.php".$qstring);
+header("Location: List_Sites.php".$qstring);
