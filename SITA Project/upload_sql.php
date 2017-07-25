@@ -252,7 +252,7 @@ if(isset($_POST['submit']))
                         WHERE sites_id = '".$line[0]."'
                         ");
 
-                    echo "update";
+                    //echo "update";
                 }
                 else{
                     //insert member data into database
@@ -686,8 +686,7 @@ if(isset($_POST['submit']))
                         )
                     ");
 
-                    echo $date1."<br>";
-                    echo $line[12];
+                    
                 }
             }
             //close opened csv file
@@ -705,4 +704,4 @@ if(isset($_POST['submit']))
 }
 
 //redirect to the listing page
-//header("Location: List_Sites.php".$qstring);
+header("Location: List_Sites.php".$qstring);
