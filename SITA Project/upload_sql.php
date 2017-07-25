@@ -229,6 +229,9 @@ if(isset($_POST['submit']))
                 }
                 else{
                     //insert member data into database
+
+                    $date1 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
+
                     mysqli_query($conn,"
                         INSERT INTO daerah (
                         kota_kabupaten
@@ -297,7 +300,7 @@ if(isset($_POST['submit']))
                         '$line[9]',
                         '$line[10]',
                         '$line[11]',
-                        '$line[12]',
+                        '$date1',
                         '$line[13]',
                         '$line[14]',
                         '$line[15]',
@@ -656,7 +659,8 @@ if(isset($_POST['submit']))
                         )
                     ");
 
-                    echo "<br> insert->Sukses";
+                    echo $date1."<br>";
+                    echo $line[12];
                 }
             }
             //close opened csv file
@@ -674,4 +678,4 @@ if(isset($_POST['submit']))
 }
 
 //redirect to the listing page
-header("Location: List_Sites.php".$qstring);
+//header("Location: List_Sites.php".$qstring);

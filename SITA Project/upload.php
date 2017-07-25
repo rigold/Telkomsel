@@ -1,4 +1,26 @@
 
+<?php
+	if(empty($_SESSION))
+		session_start();
+
+	if(!isset($_SESSION['login_user'])) {
+   		header("Location: Index.php");
+   		}
+
+   	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "sita";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+   
+?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
@@ -109,10 +131,11 @@
 											
 					
 				</div>
-				
+
 			</div>
 
 			
 		</div>
+		
 	</body>
 </html>

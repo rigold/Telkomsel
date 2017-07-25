@@ -1429,10 +1429,12 @@ button {
     float: left;
     right: 0px;
     left: 0px;
-    height: 100%;
+    height: 85%;
     position: absolute;
     margin-top: 100px;
+    background: url(../images/bgx.png) repeat-x left bottom;
     background-color: white;
+    background-size: 250px;
 }
 .body2 h1 {
 	font-family: helvetica, arial;
@@ -1441,7 +1443,7 @@ button {
 	clear: both;
 	text-transform: uppercase;
 	font-weight: bold;
-	padding: 20px 0 0;
+	padding: 60px 0 0;
 	text-align: center;
 }
 

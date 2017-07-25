@@ -152,6 +152,7 @@
 				</div>
 				<div class="body">
 					<h1>Formulir Input Site</h1>
+					<h3><a href="upload.php" style="text-decoration: none;font-family: arial;color: red;text-transform: uppercase;text-align: right;font-size: 15px;">Klik untuk add site dengan UPLOAD FILE</a></h3>
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'Sites')">INFORMASI SITES</button>
 						<button class="tablinks" onclick="openTabs(event, 'Perpanjangan')">PERPANJANGAN</button>
