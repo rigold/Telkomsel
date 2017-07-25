@@ -29,31 +29,31 @@ if(isset($_POST['submit']))
                 $prevResult = $conn->query($prevQuery);
 
                 $date1 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date2 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date3 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date4 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date5 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date6 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date7 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date8 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date9 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date10 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date11 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date12 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date13 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date14 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date15 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date16 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date17 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date18 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date19 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date20 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date21 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date22 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date23 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date24 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date25 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                $date26 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
+                $date2 = date("Y-m-d", strtotime(substr($line[22], -4) . "-" . substr($line[22], 3, 2) . "-" . substr($line[22], 0, 2)));
+                $date3 = date("Y-m-d", strtotime(substr($line[23], -4) . "-" . substr($line[23], 3, 2) . "-" . substr($line[23], 0, 2)));
+                $date4 = date("Y-m-d", strtotime(substr($line[30], -4) . "-" . substr($line[30], 3, 2) . "-" . substr($line[30], 0, 2)));
+                $date5 = date("Y-m-d", strtotime(substr($line[32], -4) . "-" . substr($line[32], 3, 2) . "-" . substr($line[32], 0, 2)));
+                $date6 = date("Y-m-d", strtotime(substr($line[36], -4) . "-" . substr($line[36], 3, 2) . "-" . substr($line[36], 0, 2)));
+                $date7 = date("Y-m-d", strtotime(substr($line[37], -4) . "-" . substr($line[37], 3, 2) . "-" . substr($line[37], 0, 2)));
+                $date8 = date("Y-m-d", strtotime(substr($line[38], -4) . "-" . substr($line[38], 3, 2) . "-" . substr($line[38], 0, 2)));
+                $date9 = date("Y-m-d", strtotime(substr($line[94], -4) . "-" . substr($line[94], 3, 2) . "-" . substr($line[94], 0, 2)));
+                $date10 = date("Y-m-d", strtotime(substr($line[102], -4) . "-" . substr($line[102], 3, 2) . "-" . substr($line[102], 0, 2)));
+                $date11 = date("Y-m-d", strtotime(substr($line[107], -4) . "-" . substr($line[107], 3, 2) . "-" . substr($line[107], 0, 2)));
+                $date12 = date("Y-m-d", strtotime(substr($line[108], -4) . "-" . substr($line[108], 3, 2) . "-" . substr($line[108], 0, 2)));
+                $date13 = date("Y-m-d", strtotime(substr($line[109], -4) . "-" . substr($line[109], 3, 2) . "-" . substr($line[109], 0, 2)));
+                $date14 = date("Y-m-d", strtotime(substr($line[113], -4) . "-" . substr($line[113], 3, 2) . "-" . substr($line[113], 0, 2)));
+                $date15 = date("Y-m-d", strtotime(substr($line[114], -4) . "-" . substr($line[114], 3, 2) . "-" . substr($line[114], 0, 2)));
+                $date16 = date("Y-m-d", strtotime(substr($line[116], -4) . "-" . substr($line[116], 3, 2) . "-" . substr($line[116], 0, 2)));
+                $date17 = date("Y-m-d", strtotime(substr($line[117], -4) . "-" . substr($line[117], 3, 2) . "-" . substr($line[117], 0, 2)));
+                $date18 = date("Y-m-d", strtotime(substr($line[119], -4) . "-" . substr($line[119], 3, 2) . "-" . substr($line[119], 0, 2)));
+                $date19 = date("Y-m-d", strtotime(substr($line[120], -4) . "-" . substr($line[120], 3, 2) . "-" . substr($line[120], 0, 2)));
+                $date20 = date("Y-m-d", strtotime(substr($line[122], -4) . "-" . substr($line[122], 3, 2) . "-" . substr($line[122], 0, 2)));
+                $date21 = date("Y-m-d", strtotime(substr($line[123], -4) . "-" . substr($line[123], 3, 2) . "-" . substr($line[123], 0, 2)));
+                $date22 = date("Y-m-d", strtotime(substr($line[125], -4) . "-" . substr($line[125], 3, 2) . "-" . substr($line[125], 0, 2)));
+                $date23 = date("Y-m-d", strtotime(substr($line[126], -4) . "-" . substr($line[126], 3, 2) . "-" . substr($line[126], 0, 2)));
+                $date24 = date("Y-m-d", strtotime(substr($line[129], -4) . "-" . substr($line[129], 3, 2) . "-" . substr($line[129], 0, 2)));
+                $date25 = date("Y-m-d", strtotime(substr($line[130], -4) . "-" . substr($line[130], 3, 2) . "-" . substr($line[130], 0, 2)));
+                $date26 = date("Y-m-d", strtotime(substr($line[131], -4) . "-" . substr($line[131], 3, 2) . "-" . substr($line[131], 0, 2)));
                 if($prevResult->num_rows > 0)
                 {
                     //update member data
