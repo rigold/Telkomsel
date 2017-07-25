@@ -70,7 +70,7 @@ if(isset($_POST['submit']))
                             sites_branch = '".$line[9]."',
                             sites_long = '".$line[10]."',
                             sites_lat = '".$line[11]."',
-                            sites_on_air_date = '".$line[12]."',
+                            sites_on_air_date = '".$date1."',
                             sites_colocated_site = '".$line[13]."',
                             sites_type_bts = '".$line[14]."',
                             sites_type_site = '".$line[15]."',
@@ -80,20 +80,20 @@ if(isset($_POST['submit']))
                             sites_shelter_size = '".$line[19]."',
                             sites_luas_lahan = '".$line[20]."',
                             sites_luas_jalan_akses = '".$line[21]."',
-                            sites_tanggal_start = '".$line[22]."',
-                            sites_tanggal_finish = '".$line[23]."',
+                            sites_tanggal_start = '".$date2."',
+                            sites_tanggal_finish = '".$date3."',
                             sites_harga_per_tahun = '".$line[24]."',
                             sites_remark = '".$line[25]."',
                             perpanjangan_pagu = '".$line[26]."',
                             perpanjangan_pic = '".$line[27]."',
                             perpanjangan_spph = '".$line[28]."',
                             perpanjangan_vendor_list = '".$line[29]."',
-                            perpanjangan_invoice = '".$line[30]."',
+                            perpanjangan_invoice = '".$date4."',
                             bak_nomor = '".$line[31]."',
-                            bak_tanggal = '".$line[32]."',
+                            bak_tanggal = '".$date5."',
                             bak_harga = '".$line[33]."',
                             bak_status = '".$line[34]."',
-                            comcase_tanggal = '".$line[131]."',
+                            comcase_tanggal = '".$date26."',
                             comcase_keterangan = '".$line[132]."',
                             comcase_status = '".$line[133]."',
                             comcase_solusi = '".$line[134]."',
@@ -104,9 +104,9 @@ if(isset($_POST['submit']))
                         $conn->query("UPDATE ho
                         SET
                             ho_nomor = '".$line[35]."',
-                            ho_daftar_ulang = '".$line[36]."',
-                            ho_start = '".$line[37]."',
-                            ho_finish = '".$line[38]."',
+                            ho_daftar_ulang = '".$date6."',
+                            ho_start = '".$date7."',
+                            ho_finish = '".$date8."',
                             ho_status = '".$line[39]."',
                         WHERE sites_id = '".$line[0]."'
                         ");
@@ -169,8 +169,8 @@ if(isset($_POST['submit']))
                         $conn->query("UPDATE ijin_dephub
                         SET
                             ijin_dephub_nomor = '".$line[115]."',
-                            ijin_dephub_start = '".$line[116]."',
-                            ijin_dephub_finish = '".$line[117]."'
+                            ijin_dephub_start = '".$date16."',
+                            ijin_dephub_finish = '".$date17."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -178,24 +178,24 @@ if(isset($_POST['submit']))
                         SET
                             ijin_genset_nomor = '".$line[127]."',
                             ijin_genset_status = '".$line[128]."',
-                            ijin_genset_start = '".$line[129]."',
-                            ijin_genset_finish = '".$line[130]."'
+                            ijin_genset_start = '".$date24."',
+                            ijin_genset_finish = '".$date25."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ijin_prinsip
                         SET
                             ijin_prinsip_nomor = '".$line[124]."',
-                            ijin_prinsip_start = '".$line[125]."',
-                            ijin_prinsip_finish = '".$line[126]."'
+                            ijin_prinsip_start = '".$date22."',
+                            ijin_prinsip_finish = '".$date23."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ijin_ptt
                         SET
                             ijin_ptt_nomor = '".$line[118]."',
-                            ijin_ptt_start = '".$line[119]."',
-                            ijin_ptt_finish = '".$line[120]."'
+                            ijin_ptt_start = '".$date18."',
+                            ijin_ptt_finish = '".$date19."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -203,9 +203,9 @@ if(isset($_POST['submit']))
                         SET
                             imb_nomor = '".$line[105]."',
                             imb_mitra_pengurus = '".$line[106]."',
-                            imb_daftar_ulang = '".$line[107]."',
-                            imb_start = '".$line[108]."',
-                            imb_finish = '".$line[109]."',
+                            imb_daftar_ulang = '".$date11."',
+                            imb_start = '".$date12."',
+                            imb_finish = '".$date13."',
                             imb_status_kepengurusan = '".$line[110]."',
                             imb_status = '".$line[111]."'
                         WHERE sites_id = '".$line[0]."'
@@ -214,16 +214,16 @@ if(isset($_POST['submit']))
                         $conn->query("UPDATE imtu
                         SET
                             ijin_imtu_nomor = '".$line[112]."',
-                            ijin_imtu_start = '".$line[113]."',
-                            ijin_imtu_finish = '".$line[114]."'
+                            ijin_imtu_start = '".$date14."',
+                            ijin_imtu_finish = '".$date15."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
                         $conn->query("UPDATE ipb
                         SET
                             ijin_ipb_nomor = '".$line[121]."',
-                            ijin_ipb_start = '".$line[122]."',
-                            ijin_ipb_finish = '".$line[123]."'
+                            ijin_ipb_start = '".$date20."',
+                            ijin_ipb_finish = '".$date21."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -233,7 +233,7 @@ if(isset($_POST['submit']))
                             nilai_pbb_site = '".$line[91]."',
                             pbb_denda = '".$line[92]."',
                             pbb_fee = '".$line[93]."',
-                            tanggal_jatuh_tempo = '".$line[94]."',
+                            tanggal_jatuh_tempo = '".$date9."',
                             status = '".$line[95]."',
                             njop_tanah = '".$line[96]."',
                             njop_bangunan = '".$line[97]."',
@@ -246,7 +246,7 @@ if(isset($_POST['submit']))
                         SET
                             no_skrd = '".$line[100]."',
                             harga_skrd = '".$line[101]."',
-                            tanggal_jatuh_tempo = '".$line[102]."',
+                            tanggal_jatuh_tempo = '".$date10."',
                             koef_skrd = '".$line[103]."',
                             status = '".$line[104]."'
                         WHERE sites_id = '".$line[0]."'
