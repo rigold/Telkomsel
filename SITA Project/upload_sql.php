@@ -255,6 +255,9 @@ if(isset($_POST['submit']))
                     //echo "update";
                 }
                 else{
+                    if(!empty($line[0]))
+                    {
+                        
                     //insert member data into database
 
                    
@@ -685,7 +688,7 @@ if(isset($_POST['submit']))
 
                         )
                     ");
-
+                    }
                     
                 }
             }
