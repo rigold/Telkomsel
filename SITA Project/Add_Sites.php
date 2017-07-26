@@ -156,7 +156,6 @@
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'Sites')">INFORMASI SITES</button>
 						<button class="tablinks" onclick="openTabs(event, 'Perpanjangan')">PERPANJANGAN</button>
-						<button class="tablinks" onclick="openTabs(event, 'BAK')">BAK</button>
 						<button class="tablinks" onclick="openTabs(event, 'THO')">HO</button>
 						<button class="tablinks" onclick="openTabs(event, 'IPL')">ID PEMILIK LAHAN</button>
 						<button class="tablinks" onclick="openTabs(event, 'SP')">SURAT PERNYATAAN</button>
@@ -311,10 +310,10 @@
 											<label >Tanggal Akhir Sewa</label> <input type="date" id="Tanggal_Akhir_Sewa" name="Tanggal_Akhir_Sewa" >
 										</p>
 										<p>
-											<label >Penawaran Pemilik</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Penawaran_Pemilik" size="50">
+											<label >Harga per Tahun</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Harga_Per_Tahun" size="50">
 										</p>
 										<p>
-											<label >Harga per Tahun</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Harga_Per_Tahun" size="50">
+											<label >Penawaran Pemilik Lahan</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Penawaran_Pemilik" size="50">
 										</p>
 										<p>
 											<label >Remark</label> <input placeholder="Masukkan Detail Tentang Site" type="text" name="Remark" size="50">
@@ -341,13 +340,22 @@
 											<label >Tanggal SPPH</label> <input type="date" id="Tanggal_SPPH" name="Tanggal_SPPH" >
 										</p>
 										<p>
-											<label >Vendor</label> <input placeholder="Masukkan Nama Vendor"type="text" name="Vendor_List" size="50">
+											<label >No BAK</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nomor BAK"type="text" name="Nomor_BAK" size="50" >
+										</p>
+										<p>
+											<label >Harga BAK</label> <input placeholder="Masukkan Harga BAK"type="text" name="Harga_BAK" name="Harga_BAK" size="50">
+										</p>
+										<p>
+											<label >Tanggal BAK</label> <input type="date" id="Tanggal_BAK" name="Tanggal_BAK" >
+										</p>
+										<p>
+											<label >No. Invoice</label> <input placeholder="Masukkan Nomor Invoice"type="text" name="No_Invoice" size="50">
 										</p>
 										<p>
 											<label >Tanggal Ttd Invoice</label> <input type="date" id="Invoice" name="Invoice" >
 										</p>
 										<p>
-											<label >No. Invoice</label> <input placeholder="Masukkan Nomor Invoice"type="text" name="No_Invoice" size="50">
+											<label >Surat Ijin PKS</label> <input placeholder="Masukkan Nomor Surat Ijin PKS" type="text" name="Surat_Ijin_PKS" size="50">
 										</p>
 										<p>
 											<label >Tanggal Masuk PKS</label> <input type="date" id="Tanggal_Masuk_PKS" name="Tanggal_Masuk_PKS" >
@@ -355,23 +363,8 @@
 										<p>
 											<label >Tanggal Keluar PKS</label> <input type="date" id="Tanggal_Keluar_PKS" name="Tanggal_Keluar_PKS" >
 										</p>
-									</a>
-								</table>
-							</div>
-						</div>
-						<div id="site">
-							<div id="BAK" class="tabcontent">
-								<table border="0">
-									<h2>Berita Acara Kesepakatan</h2>
-									<a id="detail">
 										<p>
-											<label >No BAK</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nomor BAK"type="text" name="Nomor_BAK" size="50" >
-										</p>
-										<p>
-											<label >Tanggal BAK</label> <input type="date" id="Tanggal_BAK" name="Tanggal_BAK" >
-										</p>
-										<p>
-											<label >Harga BAK</label> <input placeholder="Masukkan Harga BAK"type="text" name="Harga_BAK" name="Harga_BAK" size="50">
+											<label >Vendor</label> <input placeholder="Masukkan Nama Vendor"type="text" name="Vendor_List" size="50">
 										</p>
 										<p>
 											<label >Status</label> <input placeholder="Masukkan Status Terkini"type="text" name="Status" size="50">
@@ -723,9 +716,6 @@
 								<table border="0">
 									<h2>Surat Lain</h2>
 									<a id="detail">
-										<p>
-											<label >Surat Ijin PKS</label> <input placeholder="Masukkan Nomor Surat Ijin PKS" type="text" name="Surat_Ijin_PKS" size="50">
-										</p>
 										<p>
 											<label >Surat Kuasa</label>   
 											<select name="Surat_Kuasa">

@@ -302,6 +302,9 @@
 											<label >Harga/Tahun :</label> <input type="text" name="Harga_Per_Tahun" value="<?php echo $row11['sites_harga_per_tahun'];?>" size="50">
 										</p>
 										<p>
+											<label >Penawaran Pemilik Lahan :</label> <input type="text" name="Penawaran_Pemilik" value="<?php echo $row11['sites_penawaran_pemilik_lahan'];?>" size="50">
+										</p>
+										<p>
 											<label >Remark :</label> <input type="text" name="Remark" value="<?php echo $row11['sites_remark'];?>" size="50">
 										</p>
 									</a>
@@ -323,10 +326,22 @@
 											<label >SPPH :</label> <input type="text" name="SPPH" value="<?php echo $row11['perpanjangan_spph'];?>" size="50">
 										</p>
 										<p>
+											<label >Tanggal SPPH :</label> <input type="date" id="Tanggal_SPPH" value="<?php echo $row11['perpanjangan_spph_tanggal'];?>" name="Tanggal_SPPH" >
+										</p>
+										<p>
 											<label >Vendor List :</label> <input type="text" name="Vendor_List" value="<?php echo $row11['perpanjangan_vendor_list'];?>" size="50">
 										</p>
 										<p>
-											<label >Invoice :</label> <input type="date" id="Invoice" name="Invoice" value="<?php echo $row11['perpanjangan_invoice'];?>" >
+											<label >Tanggal Ttd Invoice :</label> <input type="date" id="Invoice" name="Invoice" value="<?php echo $row11['perpanjangan_invoice'];?>" >
+										</p>
+										<p>
+											<label >No. Invoice :</label> <input type="text" name="No_Invoice" value="<?php echo $row11['perpanjangan_invoice_nomor'];?>" size="50">
+										</p>
+										<p>
+											<label >Tanggal Masuk PKS :</label> <input type="date" id="Tanggal_Masuk_PKS" name="Tanggal_Masuk_PKS" value="<?php echo $row11['tanggal_masuk_pks'];?>" >
+										</p>
+										<p>
+											<label >Tanggal Keluar PKS :</label> <input type="date" id="Tanggal_Keluar_PKS" name="Tanggal_Keluar_PKS" value="<?php echo $row11['tanggal_keluar_pks'];?>" >
 										</p>
 									</a>
 								</table>

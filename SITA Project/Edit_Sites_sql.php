@@ -124,15 +124,20 @@
 	$Luas_Jalan_Akses=$_POST['Luas_Jalan_Akses']; 
 	$Tanggal_Mulai_Sewa=$_POST['Tanggal_Mulai_Sewa']; 
 	$Tanggal_Akhir_Sewa=$_POST['Tanggal_Akhir_Sewa']; 
-	$Harga_Per_Tahun=$_POST['Harga_Per_Tahun']; 
+	$Harga_Per_Tahun=$_POST['Harga_Per_Tahun'];
+	$Penawaran_Pemilik=$_POST['Penawaran_Pemilik']; 
 	$Remark=$_POST['Remark']; 
 
 //perpanjangan
 	$Pagu=$_POST['Pagu']; 
 	$PIC=$_POST['PIC']; 
 	$SPPH=$_POST['SPPH']; 
+	$Tanggal_SPPH=$_POST['Tanggal_SPPH'];
 	$Vendor_List=$_POST['Vendor_List']; 
-	$Invoice=$_POST['Invoice']; 
+	$Invoice=$_POST['Invoice'];
+	$No_Invoice=$_POST['No_Invoice'];
+	$Tanggal_Masuk_PKS=$_POST['Tanggal_Masuk_PKS'];
+	$Tanggal_Keluar_PKS=$_POST['Tanggal_Keluar_PKS'];
 
 //bak
 	$Nomor_BAK=$_POST['Nomor_BAK']; 
@@ -436,12 +441,17 @@
 				sites_tanggal_start='$Tanggal_Mulai_Sewa' ,
 				sites_tanggal_finish='$Tanggal_Akhir_Sewa' ,
 				sites_harga_per_tahun='$Harga_Per_Tahun' ,
+				sites_penawaran_pemilik_lahan='$Penawaran_Pemilik' ,
 				sites_remark='$Remark' ,
 				perpanjangan_pagu='$Pagu' ,
 				perpanjangan_pic='$PIC' ,
 				perpanjangan_spph='$SPPH' ,
+				perpanjangan_spph_tanggal='$Tanggal_SPPH' ,
 				perpanjangan_vendor_list='$Vendor_List' ,
 				perpanjangan_invoice='$Invoice' ,
+				perpanjangan_invoice_nomor='$No_Invoice' ,
+				tanggal_masuk_pks='$Tanggal_Masuk_PKS',
+				tanggal_keluar_pks='$Tanggal_Keluar_PKS',
 				bak_nomor='$Nomor_BAK' ,
 				bak_tanggal='$Tanggal_BAK' ,
 				bak_harga='$Harga_BAK' ,
@@ -674,12 +684,17 @@
 				sites_tanggal_start='$Tanggal_Mulai_Sewa' ,
 				sites_tanggal_finish='$Tanggal_Akhir_Sewa' ,
 				sites_harga_per_tahun='$Harga_Per_Tahun' ,
+				sites_penawaran_pemilik_lahan='$Penawaran_Pemilik' ,
 				sites_remark='$Remark' ,
 				perpanjangan_pagu='$Pagu' ,
 				perpanjangan_pic='$PIC' ,
 				perpanjangan_spph='$SPPH' ,
+				perpanjangan_spph_tanggal='$Tanggal_SPPH' ,
 				perpanjangan_vendor_list='$Vendor_List' ,
 				perpanjangan_invoice='$Invoice' ,
+				perpanjangan_invoice_nomor='$No_Invoice' ,
+				tanggal_masuk_pks='$Tanggal_Masuk_PKS',
+				tanggal_keluar_pks='$Tanggal_Keluar_PKS',
 				bak_nomor='$Nomor_BAK' ,
 				bak_tanggal='$Tanggal_BAK' ,
 				bak_harga='$Harga_BAK' ,
