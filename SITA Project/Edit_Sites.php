@@ -189,7 +189,6 @@
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'Sites')">INFORMASI SITES</button>
 						<button class="tablinks" onclick="openTabs(event, 'Perpanjangan')">PERPANJANGAN</button>
-						<button class="tablinks" onclick="openTabs(event, 'BAK')">BAK</button>
 						<button class="tablinks" onclick="openTabs(event, 'THO')">HO</button>
 						<button class="tablinks" onclick="openTabs(event, 'IPL')">ID PEMILIK LAHAN</button>
 						<button class="tablinks" onclick="openTabs(event, 'SP')">SURAT PERNYATAAN</button>
@@ -329,37 +328,29 @@
 											<label >Tanggal SPPH :</label> <input type="date" id="Tanggal_SPPH" value="<?php echo $row11['perpanjangan_spph_tanggal'];?>" name="Tanggal_SPPH" >
 										</p>
 										<p>
-											<label >Vendor List :</label> <input type="text" name="Vendor_List" value="<?php echo $row11['perpanjangan_vendor_list'];?>" size="50">
+											<label >No BAK :</label> <input type="text"  value="<?php echo $row11['bak_nomor'];?>" name="Nomor_BAK" size="50">
 										</p>
 										<p>
-											<label >Tanggal Ttd Invoice :</label> <input type="date" id="Invoice" name="Invoice" value="<?php echo $row11['perpanjangan_invoice'];?>" >
+											<label >Harga BAK :</label> <input type="text" value="<?php echo $row11['bak_harga'];?>" name="Harga_BAK" size="50">
+										</p>
+										<p>
+											<label >Tanggal BAK :</label> <input type="date" id="Tanggal_BAK"  value="<?php echo $row11['bak_tanggal'];?>" name="Tanggal_BAK" >
 										</p>
 										<p>
 											<label >No. Invoice :</label> <input type="text" name="No_Invoice" value="<?php echo $row11['perpanjangan_invoice_nomor'];?>" size="50">
 										</p>
+										<p>
+											<label >Tanggal Ttd Invoice :</label> <input type="date" id="Invoice" name="Invoice" value="<?php echo $row11['perpanjangan_invoice'];?>" >
+										</p>
+										<p><label >Surat Ijin PKS :</label> <input type="text"  value="<?php echo $row2['sl_pks'];?>" name="Surat_Ijin_PKS" size="50"></p>
 										<p>
 											<label >Tanggal Masuk PKS :</label> <input type="date" id="Tanggal_Masuk_PKS" name="Tanggal_Masuk_PKS" value="<?php echo $row11['tanggal_masuk_pks'];?>" >
 										</p>
 										<p>
 											<label >Tanggal Keluar PKS :</label> <input type="date" id="Tanggal_Keluar_PKS" name="Tanggal_Keluar_PKS" value="<?php echo $row11['tanggal_keluar_pks'];?>" >
 										</p>
-									</a>
-								</table>
-							</div>
-						</div>
-						<div id="site">
-							<div id="BAK" class="tabcontent">
-								<table border="0">
-									<h2>Berita Acara Kesepakatan</h2>
-									<a id="detail">
 										<p>
-											<label >No BAK :</label> <input type="text"  value="<?php echo $row11['bak_nomor'];?>" name="Nomor_BAK" size="50">
-										</p>
-										<p>
-											<label >Tanggal BAK :</label> <input type="date" id="Tanggal_BAK"  value="<?php echo $row11['bak_tanggal'];?>" name="Tanggal_BAK" >
-										</p>
-										<p>
-											<label >Harga BAK :</label> <input type="text" value="<?php echo $row11['bak_harga'];?>" name="Harga_BAK" size="50">
+											<label >Vendor List :</label> <input type="text" name="Vendor_List" value="<?php echo $row11['perpanjangan_vendor_list'];?>" size="50">
 										</p>
 										<p>
 											<label >Status :</label> <input type="text"  value="<?php echo $row11['bak_status'];?>" name="Status" size="50">
@@ -525,7 +516,6 @@
 								<table border="0">
 									<h2>Surat Lain</h2>
 									<a id="detail">
-										<p><label >Surat Ijin PKS :</label> <input type="text"  value="<?php echo $row2['sl_pks'];?>" name="Surat_Ijin_PKS" size="50"></p>
 										<p><label >Surat Kuasa :</label> <input type="text"  value="<?php echo $row2['sl_sk_pengambilan_jaminan_asli'];?>" name="Surat_Kuasa" size="50"></p>
 										<p><label >Surat Kuasa Pengambilan Jaminan Asli :</label> <input type="text"  value="<?php echo $row2['sl_surat_jaminan_hukum'];?>" name="Surat_Kuasa_Pengambilan_Jaminan_Asli" size="50"></p>
 										<p><label >Surat Kuasa Jaminan Hukum :</label> <input type="text"  value="<?php echo $row2['sl_sk'];?>" name="Surat_Jaminan_Hukum" size="50"></p>

@@ -156,7 +156,6 @@
 					<div class="tab">
 						<button class="tablinks" onclick="openTabs(event, 'INFORMASI SITES')">INFORMASI SITES</button>
 						<button class="tablinks" onclick="openTabs(event, 'PERPANJANGAN')">PERPANJANGAN</button>
-						<button class="tablinks" onclick="openTabs(event, 'BAK')">BAK</button>
 						<button class="tablinks" onclick="openTabs(event, 'HO')">HO</button>
 						<button class="tablinks" onclick="openTabs(event, 'ID PEMILIK LAHAN')">ID PEMILIK LAHAN</button>
 						<button class="tablinks" onclick="openTabs(event, 'SURAT PERNYATAAN')">SURAT PERNYATAAN</button>
@@ -271,17 +270,22 @@
 								<?php
 								$sites_id = $_GET['sites_id'];
 								$sql2 = "SELECT
-									perpanjangan_pagu,
-									perpanjangan_pic,
-									perpanjangan_spph,
-									perpanjangan_spph_tanggal,
-									perpanjangan_vendor_list,
-									perpanjangan_invoice,
-									perpanjangan_invoice_nomor,
-									tanggal_masuk_pks,
-									tanggal_keluar_pks
-									FROM site
-									WHERE sites_id='$sites_id'
+									site.perpanjangan_pagu,
+									site.perpanjangan_pic,
+									site.perpanjangan_spph,
+									site.perpanjangan_spph_tanggal,
+									site.perpanjangan_vendor_list,
+									site.perpanjangan_invoice,
+									site.perpanjangan_invoice_nomor,
+									site.tanggal_masuk_pks,
+									site.tanggal_keluar_pks,
+									site.bak_nomor,
+									site.bak_tanggal,
+									site.bak_harga,
+									site.bak_status,
+									identitas_pemilik.sl_pks
+									FROM site, identitas_pemilik
+									WHERE site.sites_id='$sites_id' && identitas_pemilik.sites_id='$sites_id'
 									";
 								$result2 = $conn->query($sql2);
 								$row2 = $result2->fetch_assoc();
@@ -291,37 +295,16 @@
 								<tr><th>PIC</th><td>" .$row2["perpanjangan_pic"]."</td></tr> 
 								<tr><th>SPPH</th><td>Rp." .$row2["perpanjangan_spph"]."</td></tr>
 								<tr><th>Tanggal SPPH</th><td>" .$row2["perpanjangan_spph_tanggal"]."</td></tr> 
-								<tr><th>Vendor</th><td>" .$row2["perpanjangan_vendor_list"]."</td></tr> 
-								<tr><th>Tanggal Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr>
+								<tr><th>Nomor BAK</th><td>" . $row2["bak_nomor"]."</td></tr> 
+								<tr><th>Harga BAK</th><td>Rp." .$row2["bak_harga"]."</td></tr>
+								<tr><th>Tanggal BAK</th><td>" .$row2["bak_tanggal"]."</td></tr> 
 								<tr><th>No. Invoice</th><td>" .$row2["perpanjangan_invoice_nomor"]."</td></tr>
+								<tr><th>Tanggal Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr>
+								<tr><th>Surat Ijin PKS</th><td>" .$row2["sl_pks"]."</td></tr>
 								<tr><th>Tanggal Masuk PKS</th><td>" .$row2["tanggal_masuk_pks"]."</td></tr>
 								<tr><th>Tanggal Keluar PKS</th><td>" .$row2["tanggal_keluar_pks"]."</td></tr>
-								";
-								?>
-							</a>
-						</table>
-					</div>
-					<div id="BAK" class="tabcontent">
-						<table border="0">
-							<a id="detail">
-								<?php
-								$sites_id = $_GET['sites_id'];
-								$sql3 = "SELECT
-									bak_nomor,
-									bak_tanggal,
-									bak_harga,
-									bak_status
-									FROM site
-									WHERE sites_id='$sites_id'
-									";
-								$result3 = $conn->query($sql3);
-								$row3 = $result3->fetch_assoc();
-
-								echo "
-								<tr><th>Nomor BAK</th><td>" . $row3["bak_nomor"]."</td></tr> 
-								<tr><th>Tanggal BAK</th><td>" .$row3["bak_tanggal"]."</td></tr> 
-								<tr><th>Harga BAK</th><td>Rp." .$row3["bak_harga"]."</td></tr> 
-								<tr><th>Status</th><td>" .$row3["bak_status"]."</td></tr>
+								<tr><th>Vendor</th><td>" .$row2["perpanjangan_vendor_list"]."</td></tr>  
+								<tr><th>Status</th><td>" .$row2["bak_status"]."</td></tr>
 								";
 								?>
 							</a>
@@ -544,7 +527,6 @@
 									sl_sk,
 									sl_sk_pengambilan_jaminan_asli,
 									sl_surat_jaminan_hukum,
-									sl_pks,
 									sl_surat_perjanjian_sewa_tanah
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
@@ -556,7 +538,6 @@
 								<tr><th>Surat Kuasa</th><td>" . $row0["sl_sk"]."</td></tr> 
 								<tr><th>Surat Kuasa Pengambilan Jaminan Asli</th><td>" .$row0["sl_sk_pengambilan_jaminan_asli"]."</td></tr> 
 								<tr><th>Surat Jaminan Hukum</th><td>" .$row0["sl_surat_jaminan_hukum"]."</td></tr> 
-								<tr><th>Surat Ijin PKS</th><td>" .$row0["sl_pks"]."</td></tr>
 								<tr><th>Surat Perjanjian Sewa Tanah</th><td>" .$row0["sl_surat_perjanjian_sewa_tanah"]."</td></tr>
 								";
 								?>

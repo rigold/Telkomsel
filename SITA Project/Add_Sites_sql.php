@@ -126,10 +126,9 @@
 	$Vendor_List = empty($_POST['Vendor_List']) ? "-" : $_POST['Vendor_List'];
 	$Invoice = empty($_POST['Invoice']) ?  : $_POST['Invoice'];
 	$No_Invoice = empty($_POST['No_Invoice']) ? "-" : $_POST['No_Invoice'];
+	$Surat_Ijin_PKS = empty($_POST['Surat_Ijin_PKS']) ? "-" : $_POST['Surat_Ijin_PKS']; 
 	$Tanggal_Masuk_PKS = $_POST['Tanggal_Masuk_PKS'];
 	$Tanggal_Keluar_PKS = $_POST['Tanggal_Keluar_PKS'];
-
-//bak
 	$Nomor_BAK = empty($_POST['Nomor_BAK']) ? "-" : $_POST['Nomor_BAK'];
 	$Tanggal_BAK = empty($_POST['Tanggal_BAK']) ?  : $_POST['Tanggal_BAK'];
 	$Harga_BAK = empty($_POST['Harga_BAK']) ? "0" : $_POST['Harga_BAK'];
@@ -201,7 +200,6 @@
 	$Surat_Kuasa =$_POST['Surat_Kuasa'];
 	$Surat_Kuasa_Pengambilan_Jaminan_Asli=$_POST['Surat_Kuasa_Pengambilan_Jaminan_Asli']; 
 	$Surat_Jaminan_Hukum=$_POST['Surat_Jaminan_Hukum'];
-	$Surat_Ijin_PKS = empty($_POST['Surat_Ijin_PKS']) ? "-" : $_POST['Surat_Ijin_PKS']; 
 	$Surat_Perjanjian_Sewa_Tanah=$_POST['Surat_Perjanjian_Sewa_Tanah']; 
 
 //pbb
