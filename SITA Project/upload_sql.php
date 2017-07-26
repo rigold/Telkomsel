@@ -98,7 +98,6 @@ if(isset($_POST['submit']))
                             bak_harga = '".$line[33]."',
                             perpanjangan_invoice_nomor = '".$line[34]."',
                             perpanjangan_invoice = '".$date4."',
-                            sl_pks = '".$line[36]."',
                             tanggal_masuk_pks = '".$date27."',
                             tanggal_keluar_pks = '".$date28."',
                             perpanjangan_vendor_list = '".$line[39]."',
@@ -168,6 +167,7 @@ if(isset($_POST['submit']))
                             sket_tanah = '".$line[88]."',
                             sket_tidak_sengketa = '".$line[89]."',
                             sket_keberatan = '".$line[90]."',
+                            sl_pks = '".$line[36]."',
                             sl_sk = '".$line[91]."',
                             sl_sk_pengambilan_jaminan_asli = '".$line[92]."',
                             sl_surat_jaminan_hukum = '".$line[93]."',
@@ -268,9 +268,6 @@ if(isset($_POST['submit']))
                     {
                         
                     //insert member data into database
-
-                   
-
                     mysqli_query($conn,"
                         INSERT INTO daerah (
                         kota_kabupaten
@@ -309,29 +306,28 @@ if(isset($_POST['submit']))
                         sites_harga_per_tahun,
                         sites_penawaran_pemilik_lahan,
                         sites_remark,
-
                         perpanjangan_pagu,
                         perpanjangan_pic,
                         perpanjangan_spph,
                         perpanjangan_spph_tanggal,
+                        perpanjangan_vendor_list,
+                        perpanjangan_invoice,
+                        perpanjangan_invoice_nomor,
                         bak_nomor,
                         bak_tanggal,
                         bak_harga,
-                        perpanjangan_invoice_nomor,
-                        perpanjangan_invoice,
-                        sl_pks,
-                        tanggal_masuk_pks,
-                        tanggal_keluar_pks
-                        perpanjangan_vendor_list,
                         bak_status,
-
                         comcase_tanggal,
                         comcase_keterangan,
                         comcase_status,
                         comcase_solusi,
-                        comcase_mitra
+                        comcase_mitra,
+                        tanggal_masuk_pks,
+                        tanggal_keluar_pks
+                       
                         )
                         VALUES(
+
                         '$line[0]',
                         '$line[1]',
                         '$line[2]',
@@ -359,30 +355,27 @@ if(isset($_POST['submit']))
                         '$line[24]',
                         '$line[25]',
                         '$line[26]',
-
                         '$line[27]',
                         '$line[28]',
                         '$line[29]',
                         '$date29',
+                        '$line[39]',
+                        '$date4',
+                        '$line[34]',
                         '$line[31]',
                         '$date5',
                         '$line[33]',
-                        '$line[34]',
-                        '$date4',
-                        '$line[36]',
-                        '$date27',
-                        '$date28',
-                        '$line[39]',
                         '$line[40]',
-
                         '$date26',
                         '$line[137]',
                         '$line[138]',
                         '$line[139]',
-                        '$line[140]'
-
+                        '$line[140]',
+                        '$date27',
+                        '$date28'
                         )
                     ");
+                    //echo "'$line[0]'";
 
                     mysqli_query($conn,"
                         INSERT INTO ho(
@@ -459,6 +452,7 @@ if(isset($_POST['submit']))
                         sket_tidak_sengketa,
                         sket_keberatan,
 
+                        sl_pks,
                         sl_sk,
                         sl_sk_pengambilan_jaminan_asli,
                         sl_surat_jaminan_hukum,
@@ -518,6 +512,7 @@ if(isset($_POST['submit']))
                         '$line[89]',
                         '$line[90]',
 
+                        '$line[36]',
                         '$line[91]',
                         '$line[92]',
                         '$line[93]',
@@ -706,6 +701,7 @@ if(isset($_POST['submit']))
                         )
                     ");
                     }
+                    //echo "input";
                     
                 }
             }
