@@ -20,6 +20,7 @@ if(isset($_POST['submit']))
             fgetcsv($csvFile);
             fgetcsv($csvFile);
             fgetcsv($csvFile);
+            fgetcsv($csvFile);
             
             //parse data from csv file line by line
             while(($line = fgetcsv($csvFile,0,";")) !== FALSE)
