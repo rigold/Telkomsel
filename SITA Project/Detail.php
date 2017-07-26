@@ -209,6 +209,7 @@
 									sites_tanggal_start,
 									sites_tanggal_finish,
 									sites_harga_per_tahun,
+									sites_penawaran_pemilik_lahan,
 									sites_remark 
 									FROM site
 									WHERE sites_id = '$sites_id'
@@ -253,7 +254,8 @@
 								<tr><th>Sketsa Batas Lahan</th><td><a href=".$cloc.">".$c."</a></td></tr> 
 								<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
 								<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
-								<tr><th>Harga/Tahun</th><td>Rp." .$row["sites_harga_per_tahun"]."</td></tr> 
+								<tr><th>Harga/Tahun</th><td>Rp." .$row["sites_harga_per_tahun"]."</td></tr>
+								<tr><th>Penawaran Pemilik Lahan</th><td>Rp." .$row["sites_penawaran_pemilik_lahan"]."</td></tr> 
 								<tr><th>Lokasi</th><td><a target='_blank' href=\"$link\">" .$row["sites_long"]. "," .$row["sites_lat"]."</a></td></tr>
 								<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr>
 								";
@@ -272,8 +274,12 @@
 									perpanjangan_pagu,
 									perpanjangan_pic,
 									perpanjangan_spph,
+									perpanjangan_spph_tanggal,
 									perpanjangan_vendor_list,
-									perpanjangan_invoice
+									perpanjangan_invoice,
+									perpanjangan_invoice_nomor,
+									tanggal_masuk_pks,
+									tanggal_keluar_pks
 									FROM site
 									WHERE sites_id='$sites_id'
 									";
@@ -283,9 +289,13 @@
 								echo "
 								<tr><th>Pagu</th><td>Rp." . $row2["perpanjangan_pagu"]."</td></tr> 
 								<tr><th>PIC</th><td>" .$row2["perpanjangan_pic"]."</td></tr> 
-								<tr><th>SPPH</th><td>Rp." .$row2["perpanjangan_spph"]."</td></tr> 
+								<tr><th>SPPH</th><td>Rp." .$row2["perpanjangan_spph"]."</td></tr>
+								<tr><th>Tanggal SPPH</th><td>" .$row2["perpanjangan_spph_tanggal"]."</td></tr> 
 								<tr><th>Vendor</th><td>" .$row2["perpanjangan_vendor_list"]."</td></tr> 
-								<tr><th>Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr> 
+								<tr><th>Tanggal Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr>
+								<tr><th>No. Invoice</th><td>" .$row2["perpanjangan_invoice_nomor"]."</td></tr>
+								<tr><th>Tanggal Masuk PKS</th><td>" .$row2["tanggal_masuk_pks"]."</td></tr>
+								<tr><th>Tanggal Keluar PKS</th><td>" .$row2["tanggal_keluar_pks"]."</td></tr>
 								";
 								?>
 							</a>

@@ -311,6 +311,9 @@
 											<label >Tanggal Akhir Sewa</label> <input type="date" id="Tanggal_Akhir_Sewa" name="Tanggal_Akhir_Sewa" >
 										</p>
 										<p>
+											<label >Penawaran Pemilik</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Penawaran_Pemilik" size="50">
+										</p>
+										<p>
 											<label >Harga per Tahun</label> <input placeholder="!! HANYA ANGKA SAJA"type="text" name="Harga_Per_Tahun" size="50">
 										</p>
 										<p>
@@ -335,10 +338,22 @@
 											<label >SPPH</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan SPPH"type="text" name="SPPH" size="50">
 										</p>
 										<p>
+											<label >Tanggal SPPH</label> <input type="date" id="Tanggal_SPPH" name="Tanggal_SPPH" >
+										</p>
+										<p>
 											<label >Vendor</label> <input placeholder="Masukkan Nama Vendor"type="text" name="Vendor_List" size="50">
 										</p>
 										<p>
-											<label >Invoice</label> <input type="date" id="Invoice" name="Invoice" >
+											<label >Tanggal Ttd Invoice</label> <input type="date" id="Invoice" name="Invoice" >
+										</p>
+										<p>
+											<label >No. Invoice</label> <input placeholder="Masukkan Nomor Invoice"type="text" name="No_Invoice" size="50">
+										</p>
+										<p>
+											<label >Tanggal Masuk PKS</label> <input type="date" id="Tanggal_Masuk_PKS" name="Tanggal_Masuk_PKS" >
+										</p>
+										<p>
+											<label >Tanggal Keluar PKS</label> <input type="date" id="Tanggal_Keluar_PKS" name="Tanggal_Keluar_PKS" >
 										</p>
 									</a>
 								</table>

@@ -115,14 +115,19 @@
 	$Tanggal_Mulai_Sewa=$_POST['Tanggal_Mulai_Sewa']; 
 	$Tanggal_Akhir_Sewa=$_POST['Tanggal_Akhir_Sewa']; 
 	$Harga_Per_Tahun = empty($_POST['Harga_Per_Tahun']) ? "0" : $_POST['Harga_Per_Tahun'];
+	$Penawaran_Pemilik = empty($_POST['Penawaran_Pemilik']) ? "0" : $_POST['Penawaran_Pemilik'];
 	$Remark = empty($_POST['Remark']) ? "-" : $_POST['Remark'];
 
 //perpanjangan
 	$Pagu = empty($_POST['Pagu']) ? "0" : $_POST['Pagu'];
 	$PIC = empty($_POST['PIC']) ? "-" : $_POST['PIC'];
 	$SPPH = empty($_POST['SPPH']) ? "0" : $_POST['SPPH'];
+	$Tanggal_SPPH = $_POST['Tanggal_SPPH'];
 	$Vendor_List = empty($_POST['Vendor_List']) ? "-" : $_POST['Vendor_List'];
 	$Invoice = empty($_POST['Invoice']) ?  : $_POST['Invoice'];
+	$No_Invoice = empty($_POST['No_Invoice']) ? "-" : $_POST['No_Invoice'];
+	$Tanggal_Masuk_PKS = $_POST['Tanggal_Masuk_PKS'];
+	$Tanggal_Keluar_PKS = $_POST['Tanggal_Keluar_PKS'];
 
 //bak
 	$Nomor_BAK = empty($_POST['Nomor_BAK']) ? "-" : $_POST['Nomor_BAK'];
@@ -306,12 +311,15 @@
 		sites_tanggal_start,
 		sites_tanggal_finish,
 		sites_harga_per_tahun,
+		sites_penawaran_pemilik_lahan,
 		sites_remark,
 		perpanjangan_pagu,
 		perpanjangan_pic,
 		perpanjangan_spph,
+		perpanjangan_spph_tanggal,
 		perpanjangan_vendor_list,
 		perpanjangan_invoice,
+		perpanjangan_invoice_nomor,
 		bak_nomor,
 		bak_tanggal,
 		bak_harga,
@@ -321,7 +329,9 @@
 		comcase_status,
 		comcase_solusi,
 		comcase_file,
-		comcase_mitra
+		comcase_mitra,
+		tanggal_masuk_pks,
+		tanggal_keluar_pks
 		)
 		VALUES(
 		'$Site_ID',
@@ -352,12 +362,15 @@
 		'$Tanggal_Mulai_Sewa',
 		'$Tanggal_Akhir_Sewa',
 		'$Harga_Per_Tahun',
+		'$Penawaran_Pemilik',
 		'$Remark',
 		'$Pagu',
 		'$PIC',
 		'$SPPH',
+		'$Tanggal_SPPH',
 		'$Vendor_List',
 		'$Invoice',
+		'$No_Invoice',
 		'$Nomor_BAK',
 		'$Tanggal_BAK',
 		'$Harga_BAK',
@@ -367,7 +380,9 @@
 		'$Comcase_Status',
 		'$Comcase_Solusi',
 		'$Comcase_File',
-		'$Comcase_Mitra'
+		'$Comcase_Mitra',
+		'$Tanggal_Masuk_PKS',
+		'$Tanggal_Keluar_PKS'
 		)
 		");
 
