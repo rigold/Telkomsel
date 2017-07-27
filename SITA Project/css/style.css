@@ -1343,6 +1343,8 @@ button {
     border-style: outset;
     border-color: buttonface;
     border-image: initial;
+    float: left;
+    margin-bottom: 75px;
 }
 
 /*-----------upload-----------------*/
