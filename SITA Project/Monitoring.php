@@ -182,7 +182,7 @@
 												<th>Vendor List</th>
 												<th>Invoice</th>
 												<th>Paid</th>
-												<th>To Date</th>
+												<th onclick='sortTable(3)'>To Date</th>
 												<th>Status</th>
 								    		</tr>";
 								    // output data of each row
