@@ -154,7 +154,7 @@
 						<div>
 
 								<?php
-								$sql = "SELECT site.sites_id, site.sites_tanggal_finish, pbb.tanggal_jatuh_tempo as tjt1, skrd_rpm.tanggal_jatuh_tempo as tjt2, DATEDIFF(pbb.tanggal_jatuh_tempo, CURRENT_DATE()) as datediff1, DATEDIFF(skrd_rpm.tanggal_jatuh_tempo, CURRENT_DATE()) as datediff2, DATEDIFF(site.sites_tanggal_finish, CURRENT_DATE()) as datediff3 FROM site, pbb,skrd_rpm WHERE site.sites_id = pbb.sites_id && site.sites_id = skrd_rpm.sites_id && (DATEDIFF(pbb.tanggal_jatuh_tempo, 0 < CURRENT_DATE()) <= 180 OR DATEDIFF(skrd_rpm.tanggal_jatuh_tempo, 0 < CURRENT_DATE()) <= 180 OR DATEDIFF(site.sites_tanggal_finish, 0 < CURRENT_DATE()) <= 180 ) ";
+								$sql = "SELECT site.sites_id, site.sites_tanggal_finish, pbb.tanggal_jatuh_tempo as tjt1, skrd_rpm.tanggal_jatuh_tempo as tjt2, DATEDIFF(pbb.tanggal_jatuh_tempo, CURRENT_DATE()) as datediff1, DATEDIFF(skrd_rpm.tanggal_jatuh_tempo, CURRENT_DATE()) as datediff2, DATEDIFF(site.sites_tanggal_finish, CURRENT_DATE()) as datediff3 FROM site, pbb,skrd_rpm WHERE site.sites_id = pbb.sites_id && site.sites_id = skrd_rpm.sites_id && (DATEDIFF(pbb.tanggal_jatuh_tempo, CURRENT_DATE()) <= 180 OR DATEDIFF(skrd_rpm.tanggal_jatuh_tempo, CURRENT_DATE()) <= 180 OR DATEDIFF(site.sites_tanggal_finish, CURRENT_DATE()) <= 180 ) ";
 								$result = $conn->query($sql);
 								
 								$no = 1;
