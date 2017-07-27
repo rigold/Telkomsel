@@ -5,6 +5,7 @@
     $dbname = "sita";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
+    set_time_limit(300);
 
 if(isset($_POST['submit']))
 {
