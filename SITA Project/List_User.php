@@ -160,6 +160,7 @@
 					<h1>List User</h1>
 					<br>
 					<div class="line-separator"></div>
+					<br>
 								<?php
 
 								$sql = "SELECT * FROM user";
