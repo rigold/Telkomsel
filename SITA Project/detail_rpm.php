@@ -174,12 +174,20 @@
 					<div id="featured">
 						<div>
 							<br>
+							<?php
+								$kota_kab=$_REQUEST['kota_kab'];
+								$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+								$result = $conn->query($sql);
+								$row = $result->fetch_assoc();
+							?>
 							<h5><?php echo $row2['sites_kota_kabupaten'];?>
 							</h5>
 						</div>
 						<div>
 							<?php
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, skrd_rpm.harga_skrd, (SELECT SUM(skrd_rpm.harga_skrd) FROM skrd_rpm,site WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_skrd' FROM site,skrd_rpm WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
+									$result = $conn->query($sql);
+									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
@@ -195,7 +203,7 @@
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									                    <td>" . $no++ . "</td>
+									                    <td>" . $no++. "</td>
 									                    <td>" . $row["sites_id"] . "</td>
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
