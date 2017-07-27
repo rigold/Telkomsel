@@ -28,7 +28,7 @@ body{
     left: 0px;
     top: 0px;
     width: 280px;
-    z-index: -1;
+    z-index: 2;
 }
 .abs2-img{
 	height: 250px;
@@ -65,6 +65,8 @@ body{
     width: 200px;
     height: 100%;
     margin-top: 100px;
+    position: fixed;
+    z-index: 10;
 }
 .sidebar .featured{
 	width: 218px;
@@ -1143,7 +1145,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 69%;
 }
 
 td, th {

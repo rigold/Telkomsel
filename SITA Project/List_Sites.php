@@ -153,6 +153,7 @@
 					<h1>List Sites</h1>
 					<br>
 					<div class="line-separator"></div>
+					<br>
 								<?php
 
 								$sql = "SELECT sites_denah_tanah,sites_peta_lrt,sites_sketsa_bt,sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";

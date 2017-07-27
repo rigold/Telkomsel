@@ -161,6 +161,7 @@
 					</h6>
 					<br>
 					<div class="line-separator"></div>
+					<br>
 					<div id="featured">
 						<div>
 

@@ -159,11 +159,12 @@
 					</h6>
 					<br>
 					<div class="line-separator"></div>
+					<br>
 					<div id="featured">
 						<div>
 
 								<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, (SELECT CAST(AVG(perpanjangan_pagu) AS DECIMAL(10,0)) FROM site) AS 'AVG_pagu' FROM site, daerah WHERE site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
+									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_penawaran_pemilik_lahan, site.perpanjangan_spph, site.perpanjangan_spph_tanggal, site.tanggal_masuk_pks, site.tanggal_keluar_pks, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, site.perpanjangan_invoice_nomor, site.bak_status, identitas_pemilik.sl_pks, (SELECT CAST(AVG(perpanjangan_pagu) AS DECIMAL(10,0)) FROM site) AS 'AVG_pagu' FROM site, daerah, identitas_pemilik WHERE site.sites_id = identitas_pemilik.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
 									$result = $conn->query($sql);
 									$no = 1;
 									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
@@ -177,9 +178,17 @@
 									                        <th onclick='sortTable(4)'>Kab.Kota</th>
 									                        <th onclick='sortTable(5)'>Pagu</th>
 									                        <th>Harga Rata Rata</th>
+									                        <th>Penawaran Pemilik Lahan</th>
 									                        <th>Awal Kontrak</th>
 									                        <th>Akhir Kontrak</th>
-									                        <th>Invoice</th>
+									                        <th>Harga SPPH</th>
+									                        <th>Tanggal SPPH</th>
+									                        <th>No. Invoice</th>
+									                        <th>Tangga Ttd Invoice</th>
+									                        <th>Surat PKS</th>
+									                        <th>Tanggal Masuk Surat PKS</th>
+									                        <th>Tangal Keluar Surat PKS</th>
+									                        <th>Status</th>
 									        </tr>";
 									    //  output data of each row
 									    //  $rows = array(); // This is not actually required
@@ -194,9 +203,17 @@
 									                    <td>" . $row["kota_kabupaten"] . "</td>
 									                    <td>Rp." . $row["perpanjangan_pagu"] . "</td>
 									                    <td>Rp." . $row["AVG_pagu"] . "</td>
+									                    <td>Rp." . $row["sites_penawaran_pemilik_lahan"] . "</td>
 									                    <td>" . $row["sites_tanggal_start"] . "</td>
 									                    <td>" . $row["sites_tanggal_finish"] . "</td>
+									                    <td>Rp." . $row["perpanjangan_spph"] . "</td>
+									                    <td>" . $row["perpanjangan_spph_tanggal"] . "</td>
+									                    <td>" . $row["perpanjangan_invoice_nomor"] . "</td>
 									                    <td>" . $row["perpanjangan_invoice"] . "</td>
+									                    <td>" . $row["sl_pks"] . "</td>
+									                    <td>" . $row["tanggal_masuk_pks"] . "</td>
+									                    <td>" . $row["tanggal_keluar_pks"] . "</td>
+									                    <td>" . $row["bak_status"] . "</td>
 									            </tr>";
 									    }
 
