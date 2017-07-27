@@ -169,7 +169,7 @@
 						$row4 = $result4->fetch_assoc();
 					?>
 					<h1><a href="Home.php">Data Site</a></h1>
-					<h6>DATASITES/<?php echo $row5['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row4['nik'];?>/<?php echo date("Y");
+					<h6>DATASITES/<?php echo $siteloc;?>/<?php echo $row3['no'];?>/<?php echo $row4['nik'];?>/<?php echo date("Y");
 						?>	 
 					</h6>
 					<br>
