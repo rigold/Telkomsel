@@ -240,8 +240,6 @@
 			</div>
 		</div>
 
-<!-----------------------------------------Java Sorting---------------------------------------------->
-
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -299,7 +297,6 @@
 		}
 		</script>
 
-<!-----------------------------------------END Java Sorting------------------------------------------->
 
 	</body>
 </html>
