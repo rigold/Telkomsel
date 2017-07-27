@@ -159,10 +159,6 @@
 					<div class="line-separator"></div>
 					<br>
 					<div id="featured">
-						<form1 action="Search.php" id="search">
-							<input type="text">
-							<input type="submit" onclick="location.href='Search.php';" value="" id="submit">
-						</form1>
 						<div>
 								<?php
 								$sql = "SELECT sites_id, sites_nama, comcase_tanggal, comcase_keterangan, comcase_status, comcase_solusi, comcase_file, comcase_mitra FROM site";
