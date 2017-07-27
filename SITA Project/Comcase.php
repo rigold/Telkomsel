@@ -147,7 +147,6 @@
 								";
 						?>
 					</div>
-					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
 					<?php

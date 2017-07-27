@@ -182,7 +182,6 @@
 							<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
 						</p>
 					</div>
-					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
 					<h1>Formulir Edit Site</h1>
