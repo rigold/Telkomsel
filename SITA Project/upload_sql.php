@@ -30,7 +30,12 @@ if(isset($_POST['submit']))
                 $prevQuery = "SELECT sites_id FROM site WHERE sites_id = '".$line[0]."'";
                 $prevResult = $conn->query($prevQuery);
 
+
                 $date1 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
+                if($date1<"1971-01-01")
+                {
+                    $date1="0000-00-00";
+                }
                 $date2 = date("Y-m-d", strtotime(substr($line[22], -4) . "-" . substr($line[22], 3, 2) . "-" . substr($line[22], 0, 2)));
                 $date3 = date("Y-m-d", strtotime(substr($line[23], -4) . "-" . substr($line[23], 3, 2) . "-" . substr($line[23], 0, 2)));
                 $date4 = date("Y-m-d", strtotime(substr($line[35], -4) . "-" . substr($line[35], 3, 2) . "-" . substr($line[35], 0, 2)));
@@ -722,3 +727,5 @@ if(isset($_POST['submit']))
 
 //redirect to the listing page
 header("Location: List_Sites.php".$qstring);
+
+?>
