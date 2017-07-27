@@ -32,38 +32,64 @@ if(isset($_POST['submit']))
 
 
                 $date1 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
-                if($date1<"1971-01-01")
-                {
-                    $date1="0000-00-00";
-                }
+                if($date1<"1971-01-01"){$date1="0000-00-00";}
                 $date2 = date("Y-m-d", strtotime(substr($line[22], -4) . "-" . substr($line[22], 3, 2) . "-" . substr($line[22], 0, 2)));
+                if($date2<"1971-01-01"){$date2="0000-00-00";}
                 $date3 = date("Y-m-d", strtotime(substr($line[23], -4) . "-" . substr($line[23], 3, 2) . "-" . substr($line[23], 0, 2)));
+                if($date3<"1971-01-01"){$date3="0000-00-00";}
                 $date4 = date("Y-m-d", strtotime(substr($line[35], -4) . "-" . substr($line[35], 3, 2) . "-" . substr($line[35], 0, 2)));
+                if($date4<"1971-01-01"){$date4="0000-00-00";}
                 $date5 = date("Y-m-d", strtotime(substr($line[32], -4) . "-" . substr($line[32], 3, 2) . "-" . substr($line[32], 0, 2)));
+                if($date5<"1971-01-01"){$date5="0000-00-00";}
                 $date6 = date("Y-m-d", strtotime(substr($line[42], -4) . "-" . substr($line[42], 3, 2) . "-" . substr($line[42], 0, 2)));
+                if($date6<"1971-01-01"){$date6="0000-00-00";}
                 $date7 = date("Y-m-d", strtotime(substr($line[43], -4) . "-" . substr($line[43], 3, 2) . "-" . substr($line[43], 0, 2)));
+                if($date7<"1971-01-01"){$date7="0000-00-00";}
                 $date8 = date("Y-m-d", strtotime(substr($line[44], -4) . "-" . substr($line[44], 3, 2) . "-" . substr($line[44], 0, 2)));
+                if($date8<"1971-01-01"){$date8="0000-00-00";}
                 $date9 = date("Y-m-d", strtotime(substr($line[99], -4) . "-" . substr($line[99], 3, 2) . "-" . substr($line[99], 0, 2)));
+                if($date9<"1971-01-01"){$date9="0000-00-00";}
                 $date10 = date("Y-m-d", strtotime(substr($line[107], -4) . "-" . substr($line[107], 3, 2) . "-" . substr($line[107], 0, 2)));
+                if($date10<"1971-01-01"){$date10="0000-00-00";}
                 $date11 = date("Y-m-d", strtotime(substr($line[112], -4) . "-" . substr($line[112], 3, 2) . "-" . substr($line[112], 0, 2)));
+                if($date11<"1971-01-01"){$date11="0000-00-00";}
                 $date12 = date("Y-m-d", strtotime(substr($line[113], -4) . "-" . substr($line[113], 3, 2) . "-" . substr($line[113], 0, 2)));
+                if($date12<"1971-01-01"){$date12="0000-00-00";}
                 $date13 = date("Y-m-d", strtotime(substr($line[114], -4) . "-" . substr($line[114], 3, 2) . "-" . substr($line[114], 0, 2)));
+                if($date13<"1971-01-01"){$date13="0000-00-00";}
                 $date14 = date("Y-m-d", strtotime(substr($line[118], -4) . "-" . substr($line[118], 3, 2) . "-" . substr($line[118], 0, 2)));
+                if($date14<"1971-01-01"){$date14="0000-00-00";}
                 $date15 = date("Y-m-d", strtotime(substr($line[119], -4) . "-" . substr($line[119], 3, 2) . "-" . substr($line[119], 0, 2)));
+                if($date15<"1971-01-01"){$date15="0000-00-00";}
                 $date16 = date("Y-m-d", strtotime(substr($line[121], -4) . "-" . substr($line[121], 3, 2) . "-" . substr($line[121], 0, 2)));
+                if($date16<"1971-01-01"){$date16="0000-00-00";}
                 $date17 = date("Y-m-d", strtotime(substr($line[122], -4) . "-" . substr($line[122], 3, 2) . "-" . substr($line[122], 0, 2)));
+                if($date17<"1971-01-01"){$date17="0000-00-00";}
                 $date18 = date("Y-m-d", strtotime(substr($line[124], -4) . "-" . substr($line[124], 3, 2) . "-" . substr($line[124], 0, 2)));
+                if($date18<"1971-01-01"){$date18="0000-00-00";}
                 $date19 = date("Y-m-d", strtotime(substr($line[125], -4) . "-" . substr($line[125], 3, 2) . "-" . substr($line[125], 0, 2)));
+                if($date19<"1971-01-01"){$date19="0000-00-00";}
                 $date20 = date("Y-m-d", strtotime(substr($line[127], -4) . "-" . substr($line[127], 3, 2) . "-" . substr($line[127], 0, 2)));
+                if($date20<"1971-01-01"){$date20="0000-00-00";}
                 $date21 = date("Y-m-d", strtotime(substr($line[128], -4) . "-" . substr($line[128], 3, 2) . "-" . substr($line[128], 0, 2)));
+                if($date21<"1971-01-01"){$date21="0000-00-00";}
                 $date22 = date("Y-m-d", strtotime(substr($line[130], -4) . "-" . substr($line[130], 3, 2) . "-" . substr($line[130], 0, 2)));
+                if($date22<"1971-01-01"){$date22="0000-00-00";}
                 $date23 = date("Y-m-d", strtotime(substr($line[131], -4) . "-" . substr($line[131], 3, 2) . "-" . substr($line[131], 0, 2)));
+                if($date23<"1971-01-01"){$date23="0000-00-00";}
                 $date24 = date("Y-m-d", strtotime(substr($line[134], -4) . "-" . substr($line[134], 3, 2) . "-" . substr($line[134], 0, 2)));
+                if($date24<"1971-01-01"){$date24="0000-00-00";}
                 $date25 = date("Y-m-d", strtotime(substr($line[135], -4) . "-" . substr($line[135], 3, 2) . "-" . substr($line[135], 0, 2)));
+                if($date25<"1971-01-01"){$date25="0000-00-00";}
                 $date26 = date("Y-m-d", strtotime(substr($line[136], -4) . "-" . substr($line[136], 3, 2) . "-" . substr($line[136], 0, 2)));
+                if($date26<"1971-01-01"){$date26="0000-00-00";}
                 $date27 = date("Y-m-d", strtotime(substr($line[37], -4) . "-" . substr($line[37], 3, 2) . "-" . substr($line[37], 0, 2)));
+                if($date27<"1971-01-01"){$date27="0000-00-00";}
                 $date28 = date("Y-m-d", strtotime(substr($line[38], -4) . "-" . substr($line[38], 3, 2) . "-" . substr($line[38], 0, 2)));
+                if($date28<"1971-01-01"){$date28="0000-00-00";}
                 $date29 = date("Y-m-d", strtotime(substr($line[30], -4) . "-" . substr($line[30], 3, 2) . "-" . substr($line[30], 0, 2)));
+                if($date29<"1971-01-01"){$date29="0000-00-00";}
+
                 if($prevResult->num_rows > 0)
                 {
                     //update member data
