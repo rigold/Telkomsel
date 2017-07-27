@@ -12,9 +12,11 @@
 	$dbname = "sita";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
+
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	} 
+
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$rowz = $result->fetch_assoc();
@@ -22,6 +24,7 @@
    
    	if($rowz['admin']=="User"){header("Location: Home.php");}
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -169,36 +172,29 @@
 						<table border="0">
 							<a id="detail">
 							<?php
-									$sql = "SELECT no,no_surat,nama FROM z_datasites WHERE no > 1 ";
+								$sql = "SELECT no,no_surat,nama FROM z_datasites WHERE no > 1 ";
 
-									$result = $conn->query($sql);
-									$no = 1;
-									if ($result->num_rows > 0) {
-									    echo "<table id= 'myTable'>
-									        <tr>
-									        	<th onclick='sortTable(0)'>No.</th>
-									            <th onclick='sortTable(1)'>No. Surat</th>
-												<th onclick='sortTable(2)'>Nama User</th>
-									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
-									        echo "
-									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
-									            </tr>";
-									    }
-
-									    echo "</table>";
-									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
-								?>
+								$result = $conn->query($sql);
+								$no = 1;
+								if ($result->num_rows > 0) {
+								    echo "<table id= 'myTable'>
+								        <tr>
+								        	<th onclick='sortTable(0)'>No.</th>
+								            <th onclick='sortTable(1)'>No. Surat</th>
+											<th onclick='sortTable(2)'>Nama User</th>
+								        </tr>";
+								    while ($row = $result->fetch_assoc()) {
+								        echo "
+								            <tr>
+							            		<td>" . $no++ . "</td>
+							                    <td>" . $row["no_surat"] . "</td>
+							                    <td>" . $row["nama"] . "</td>
+								            </tr>";
+								    }
+								echo "</table>";
+								}
+							?>
 							</a>
-
 						</table>
 					</div>
 					<div id="LIST PANJANG" class="tabcontent">
@@ -217,22 +213,16 @@
 												<th>Nama User</th>
 									        </tr>";
 									    while ($rowa = $resulta->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $rowa["no_surat"] . "</td>
-									                    <td>" . $rowa["nama"] . "</td>
-
-									            </tr>";
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $rowa["no_surat"] . "</td>
+								                    <td>" . $rowa["nama"] . "</td>
+									            </tr>
+									        ";
 									    }
-
-									    echo "</table>";
+									echo "</table>";
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -252,27 +242,19 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
-									            </tr>";
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
+									            </tr>
+									        ";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -292,27 +274,18 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
 									            </tr>";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -332,27 +305,19 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
-									            </tr>";
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
+									            </tr>
+									        ";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -372,27 +337,19 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
-									            </tr>";
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
+									            </tr>
+									        ";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -412,27 +369,18 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
 									            </tr>";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -452,27 +400,18 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
 									            </tr>";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>
@@ -492,27 +431,18 @@
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
 									            <tr>
-									            		<td>" . $no++ . "</td>
-									                    <td>" . $row["no_surat"] . "</td>
-									                    <td>" . $row["nama"] . "</td>
-
+								            		<td>" . $no++ . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
 									            </tr>";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
 									}
-									else {
-									    //echo "No records found!";
-									}
-									//$conn->close();
 								?>
 							</a>
 						</table>

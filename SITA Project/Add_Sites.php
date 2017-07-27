@@ -21,8 +21,8 @@
    
    if($row['admin']=="User"){header("Location: Home.php");}
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -76,7 +76,6 @@
 						<a href="Site_Daerah.php?siteloc=Trenggalek">Trenggalek</a> 
 						<a href="Site_Daerah.php?siteloc=Tuban">Tuban</a> 
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
-
 				    </div>
 				</li>
 
@@ -111,7 +110,6 @@
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -137,6 +135,7 @@
 								";
 							}
 							else
+							{
 								echo "
 									<p>
 									<a >> ADD USER<br></a>
@@ -146,6 +145,7 @@
 									<a ><br>> RIWAYAT CETAK<br></a>
 								</p>
 								";
+							}
 						?>
 					</div>
 				</div>
@@ -180,7 +180,6 @@
 								<table border="0">
 									<h2>Informasi Sites</h2>
 									<a id="detail">
-										
 										<p>
 											<label >Site ID</label> <input placeholder="Masukkan Id Site" type="text" name="Site_ID" size="50" required pattern="{6}" title="Input hanya boleh 6 Karakter!">
 										</p>
@@ -1004,7 +1003,6 @@
 								</table>
 							</div>
 						</div>
-						
 					</form>
 				</div>
 			</div>
@@ -1013,18 +1011,18 @@
 </html>
 <!-- - - - - - - - - - JavaScript - - - - - - - - - -->
 <script>
-document.getElementsByClassName('tablinks')[0].click()
-function openTabs(evt, TabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(TabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+	document.getElementsByClassName('tablinks')[0].click()
+	function openTabs(evt, TabName){
+	    var i, tabcontent, tablinks;
+	    tabcontent = document.getElementsByClassName("tabcontent");
+	    for (i = 0; i < tabcontent.length; i++) {
+	        tabcontent[i].style.display = "none";
+	    }
+	    tablinks = document.getElementsByClassName("tablinks");
+	    for (i = 0; i < tablinks.length; i++) {
+	        tablinks[i].className = tablinks[i].className.replace(" active", "");
+	    }
+	    document.getElementById(TabName).style.display = "block";
+	    evt.currentTarget.className += " active";
+	}
 </script>

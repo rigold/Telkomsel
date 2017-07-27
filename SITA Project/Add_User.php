@@ -12,17 +12,19 @@
 	$dbname = "sita";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
+	
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
-	} 
+	}
+
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
    
    	if($row['admin']=="User"){header("Location: Home.php");}
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
