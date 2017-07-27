@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jul 2017 pada 04.45
+-- Generation Time: 27 Jul 2017 pada 04.03
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -30,16 +30,6 @@ CREATE TABLE `daerah` (
   `kota_kabupaten` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `daerah`
---
-
-INSERT INTO `daerah` (`kota_kabupaten`) VALUES
-('Bangkalan'),
-('Blitar Kab.'),
-('Malang Kota'),
-('Surabaya');
-
 -- --------------------------------------------------------
 
 --
@@ -53,16 +43,8 @@ CREATE TABLE `ho` (
   `ho_daftar_ulang` date NOT NULL,
   `ho_start` date NOT NULL,
   `ho_finish` date NOT NULL,
-  `ho_status` varbinary(50) NOT NULL
+  `ho_status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `ho`
---
-
-INSERT INTO `ho` (`no`, `ho_nomor`, `sites_id`, `ho_daftar_ulang`, `ho_start`, `ho_finish`, `ho_status`) VALUES
-(1, '123', 'BLR061', '2017-07-30', '2016-08-02', '2017-08-02', 0x4265726d6173616c6168),
-(2, '770', 'MLG069', '2017-07-25', '2016-07-30', '2017-07-30', 0x4265726d6173616c6168);
 
 -- --------------------------------------------------------
 
@@ -125,14 +107,6 @@ CREATE TABLE `identitas_pemilik` (
   `sl_surat_perjanjian_sewa_tanah` char(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `identitas_pemilik`
---
-
-INSERT INTO `identitas_pemilik` (`no`, `identitas_pemilik_ktp`, `sites_id`, `identitas_pemilik_kk`, `identitas_pemilik_lahan`, `identitas_pemilik_kuasa`, `identitas_pemilik_alamat`, `identitas_pemilik_telepon`, `identitas_pemilik_hp`, `identitas_pemilik_email`, `identitas_pemilik_sp_keluarga`, `sp`, `sp_ahli_waris`, `sp_janda`, `sp_kepemilikan_tanah`, `sp_pelepasan_hak`, `sp_pembayaran`, `sp_penguasaan_fisik_tanah`, `sp_peralihan_atas_pekarangan`, `sp_persetujuan_kepala_desa`, `sp_tanah_pemohon`, `sp_tidak_keberatan_jalan_pribadi`, `sp_tidak_keberatan_jalan_umum`, `akta_hibah`, `akta_jualbeli_sewa`, `akta_hak_bersama`, `akta_warisan`, `akta_pemisahan`, `akta_nikah`, `ijin_ippt`, `ijin_warga`, `ijin_ukl_upl`, `ijin_sertifikat_tanah`, `sket_beda_nama`, `sket_akses_lahan_jalan`, `sket_asal_tanah`, `sket_beda_luas_tanah`, `sket_fatwa_waris`, `sket_kematian`, `sket_penduduk`, `sket_permohonan_imb_ho_ip`, `sket_persetujuan_sewa_lahan`, `sket_riwayat_tanah`, `sket_suami_istri`, `sket_tanah`, `sket_tidak_sengketa`, `sket_keberatan`, `sl_sk`, `sl_sk_pengambilan_jaminan_asli`, `sl_surat_jaminan_hukum`, `sl_pks`, `sl_surat_perjanjian_sewa_tanah`) VALUES
-(1, '2147483647', 'BLR061', '2147483647', 'Sumiran', '-', 'Jalan Kusuma Bangsa No.60, Kanigoro, Blitar, Jawa Timur 66171, Indonesia', '13641648', '0812641649', 'CoolSumiran@gmail.com', 'Ada', 'Tidak', 'Ada', 'Tidak', 'Ada', 'Tidak', 'Ada', 'Tidak', 'Tidak', 'Ada', 'Tidak', 'Ada', 'Ada', 'hibah/0.12.345.6789/XIX', 'jbs/9.87.765.43210/IXI', 'hb/1.02.938.4756/XXX', '-', '-', '-', '-', 'warga/1234.567.89.0/VII', '-', 'st/0987.654.32.1/IVV', 'Tidak', 'Ada', 'Tidak', 'Ada', 'Ada', 'Tidak', 'Ada', 'Tidak', 'Ada', 'Ada', 'Tidak', 'Ada', 'Ada', 'Tidak', 'Ada', 'Tidak', 'Ada', '-', 'Ada'),
-(2, '2147483647', 'MLG069', '2147483647', 'Sumanto', 'Suminto', 'Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Klojen, Kota Malang, Jawa Timur 65119, Indonesia', '62341325644', '08446523143', '2Sum_intoanto@rocketmail.com', 'Ada', 'Tidak', 'Ada', 'Ada', 'Ada', 'Ada', 'Tidak', 'Ada', 'Ada', 'Ada', 'Ada', 'Tidak', 'Ada', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Tidak', 'Ada', 'Ada', 'Ada', 'Tidak', 'Ada', 'Ada', 'Ada', 'Tidak', 'Ada', 'Ada', 'Ada', 'Tidak', 'Tidak', 'Ada', 'Tidak', 'Ada', '1.35.7911.2468', 'Ada');
-
 -- --------------------------------------------------------
 
 --
@@ -146,14 +120,6 @@ CREATE TABLE `ijin_dephub` (
   `ijin_dephub_start` date NOT NULL,
   `ijin_dephub_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `ijin_dephub`
---
-
-INSERT INTO `ijin_dephub` (`no`, `ijin_dephub_nomor`, `sites_id`, `ijin_dephub_start`, `ijin_dephub_finish`) VALUES
-(1, '456789', 'BLR061', '0000-00-00', '0000-00-00'),
-(2, 'ijin/30.08.2017', 'MLG069', '2016-08-12', '2017-08-12');
 
 -- --------------------------------------------------------
 
@@ -170,14 +136,6 @@ CREATE TABLE `ijin_genset` (
   `ijin_genset_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `ijin_genset`
---
-
-INSERT INTO `ijin_genset` (`no`, `ijin_genset_nomor`, `sites_id`, `ijin_genset_status`, `ijin_genset_start`, `ijin_genset_finish`) VALUES
-(1, 'Genset/4120.321.22.11.1938', 'BLR061', 'Ada', '2007-07-30', '2017-07-30'),
-(2, 'Genset/5231.432.33.22.2006', 'MLG069', 'Ada', '2008-07-13', '2018-07-13');
-
 -- --------------------------------------------------------
 
 --
@@ -192,14 +150,6 @@ CREATE TABLE `ijin_prinsip` (
   `ijin_prinsip_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `ijin_prinsip`
---
-
-INSERT INTO `ijin_prinsip` (`no`, `ijin_prinsip_nomor`, `sites_id`, `ijin_prinsip_start`, `ijin_prinsip_finish`) VALUES
-(1, '1', 'BLR061', '0000-00-00', '0000-00-00'),
-(2, '-', 'MLG069', '0000-00-00', '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -213,14 +163,6 @@ CREATE TABLE `ijin_ptt` (
   `ijin_ptt_start` date NOT NULL,
   `ijin_ptt_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `ijin_ptt`
---
-
-INSERT INTO `ijin_ptt` (`no`, `ijin_ptt_nomor`, `sites_id`, `ijin_ptt_start`, `ijin_ptt_finish`) VALUES
-(1, '1', 'BLR061', '0000-00-00', '0000-00-00'),
-(2, 'iptt/4120/21/07/2017', 'MLG069', '2016-08-30', '2017-08-30');
 
 -- --------------------------------------------------------
 
@@ -240,14 +182,6 @@ CREATE TABLE `imb` (
   `imb_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `imb`
---
-
-INSERT INTO `imb` (`no`, `imb_nomor`, `sites_id`, `imb_mitra_pengurus`, `imb_status_kepengurusan`, `imb_status`, `imb_daftar_ulang`, `imb_start`, `imb_finish`) VALUES
-(6, '647.503/23/409.103/2007', 'BLR061', 0x2d, 0x416d616e, 0x494d42204c656e676b6170, '2017-10-12', '2016-10-12', '2017-10-12'),
-(7, 'imb/ 234567/ 18/ 3128', 'MLG069', 0x4672616e6b204d696c6c6572, 0x2d, 0x42656c756d204c756e6173, '2017-08-12', '2016-08-20', '2017-08-20');
-
 -- --------------------------------------------------------
 
 --
@@ -262,14 +196,6 @@ CREATE TABLE `imtu` (
   `ijin_imtu_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `imtu`
---
-
-INSERT INTO `imtu` (`no`, `ijin_imtu_nomor`, `sites_id`, `ijin_imtu_start`, `ijin_imtu_finish`) VALUES
-(1, '1', 'BLR061', '0000-00-00', '0000-00-00'),
-(2, '-', 'MLG069', '0000-00-00', '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -282,14 +208,6 @@ CREATE TABLE `ipb` (
   `ijin_ipb_start` date NOT NULL,
   `ijin_ipb_finish` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `ipb`
---
-
-INSERT INTO `ipb` (`ijin_ipb_nomor`, `sites_id`, `ijin_ipb_start`, `ijin_ipb_finish`) VALUES
-('-', 'MLG069', '0000-00-00', '0000-00-00'),
-('0214.7102.70.99', 'BLR061', '2016-10-30', '2017-10-30');
 
 -- --------------------------------------------------------
 
@@ -314,14 +232,6 @@ CREATE TABLE `pbb` (
   `pbb_fee` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `pbb`
---
-
-INSERT INTO `pbb` (`no`, `nop`, `sites_id`, `nilai_pbb_site`, `tanggal_mulai`, `tanggal_jatuh_tempo`, `status`, `njop_tanah`, `njop_bangunan`, `surat_pbb`, `koef_pbb`, `pbb_mitra`, `pbb_denda`, `pbb_fee`) VALUES
-(6, '35.05.020.008.000.2961.7', 'BLR061', 473430, '2016-08-02', '2017-08-02', 0x50616964, 2730000, 470700000, 'PBB1500600326.', 1.1, 0x2d, 0, 0),
-(7, '46.16.131.119.111.3072.8', 'MLG069', 548360, '2016-12-20', '2017-12-20', 0x42656c756d204c756e6173, 3850000, 254000000, 'PBB1500603914.', 0.2, 0x4a6f737320576865646f6e, 150000, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -345,7 +255,7 @@ CREATE TABLE `site` (
   `sites_colocated_site` varchar(30) NOT NULL,
   `sites_type_bts` varchar(10) NOT NULL,
   `sites_type_site` varchar(15) NOT NULL,
-  `sites_tower_height` int(5) NOT NULL,
+  `sites_tower_height` varchar(5) NOT NULL,
   `sites_tower_type` varchar(10) NOT NULL,
   `sites_shelter_type` varchar(10) NOT NULL,
   `sites_shelter_size` varchar(10) NOT NULL,
@@ -357,12 +267,15 @@ CREATE TABLE `site` (
   `sites_tanggal_start` date NOT NULL,
   `sites_tanggal_finish` date NOT NULL,
   `sites_harga_per_tahun` int(11) NOT NULL,
+  `sites_penawaran_pemilik_lahan` int(12) NOT NULL,
   `sites_remark` varchar(200) NOT NULL,
   `perpanjangan_pagu` int(11) NOT NULL,
   `perpanjangan_pic` varchar(30) NOT NULL,
   `perpanjangan_spph` int(11) NOT NULL,
+  `perpanjangan_spph_tanggal` date NOT NULL,
   `perpanjangan_vendor_list` varbinary(30) NOT NULL,
   `perpanjangan_invoice` date NOT NULL,
+  `perpanjangan_invoice_nomor` varchar(50) NOT NULL,
   `bak_nomor` varchar(50) NOT NULL,
   `bak_tanggal` date NOT NULL,
   `bak_harga` int(11) NOT NULL,
@@ -372,16 +285,10 @@ CREATE TABLE `site` (
   `comcase_status` varbinary(50) NOT NULL,
   `comcase_solusi` varbinary(50) NOT NULL,
   `comcase_file` varchar(100) NOT NULL,
-  `comcase_mitra` varbinary(30) NOT NULL
+  `comcase_mitra` varbinary(30) NOT NULL,
+  `tanggal_masuk_pks` date NOT NULL,
+  `tanggal_keluar_pks` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `site`
---
-
-INSERT INTO `site` (`sites_id`, `sites_nama`, `sites_status_lahan`, `sites_status_tower`, `sites_pemilik_tower`, `sites_alamat`, `sites_kota_kabupaten`, `sites_kontraktor_utama`, `sites_penyedia_menara`, `sites_branch`, `sites_long`, `sites_lat`, `sites_on_air_date`, `sites_colocated_site`, `sites_type_bts`, `sites_type_site`, `sites_tower_height`, `sites_tower_type`, `sites_shelter_type`, `sites_shelter_size`, `sites_luas_lahan`, `sites_luas_jalan_akses`, `sites_denah_tanah`, `sites_peta_lrt`, `sites_sketsa_bt`, `sites_tanggal_start`, `sites_tanggal_finish`, `sites_harga_per_tahun`, `sites_remark`, `perpanjangan_pagu`, `perpanjangan_pic`, `perpanjangan_spph`, `perpanjangan_vendor_list`, `perpanjangan_invoice`, `bak_nomor`, `bak_tanggal`, `bak_harga`, `bak_status`, `comcase_tanggal`, `comcase_keterangan`, `comcase_status`, `comcase_solusi`, `comcase_file`, `comcase_mitra`) VALUES
-('BLR061', 'Wonotirto', 0x53657761, 0x42656c69, 0x54656c6b6f6d73656c, 'Dsn Wungu Kerep RT/RW 001/005, Ds Wonotirto, Kec. Wonotirto, Kab. Blitar', 'Blitar Kab.', 0x50542e20546f74616c, 0x54656c6b6f6d73656c, 'Blitar Kab.', -8.22275, 112.154, '2007-01-30', 'site 1, site 2', 'cpm', 'Greenfield', 72, 'SST 72', 'type 1', '120', '49', '50', 'DT1500600326.', 'PL1500600326.', 'SBL1500600326.', '2007-08-05', '2017-08-04', 6000000, 'Kekurangan Surat tanah letter C. Sirkulasi tanda tangan ke Mgr. NS Madiun tgl. 11 Jan 2017 (16 Jan 2017) TTD NS Madiun done, dikirim kembali ke Surabaya tgl 20 Jan 2017', 500000, 'Greg Capullo', 350000, 0x53616d73756e672c205669766f2c204f70706f, '2017-07-30', '44444444', '2016-12-28', 40000000, 0x50616964, '2017-02-20', 0x2d202020202020202020202020202020202020202020, 0x2d, 0x2d, 'Cs1500600326.', 0x2d),
-('MLG069', 'Plaza Araya', 0x53657761, 0x42656c69, 0x54656c6b6f6d73656c, 'Jl. Panji Suroso, Purwodadi, Blimbing, Kota Malang, Jawa Timur 65126, Indonesia', 'Malang Kota', 0x505420546f7765722053656e746f7361, 0x54656c6b6f6d73656c, 'Malang Kota', -7.93639, 112.65, '2004-10-18', '-', '-', 'Rooftop', 3, 'Pole', '-', '-', '-', '-', 'DT1500603914.', 'PL1500603914.', 'SBL1500603914.', '2014-09-07', '2019-09-06', 13000000, '-', 1500000, 'Donald', 345000, 0x53616d73756e672c205869616f6d69, '2017-08-30', '4120.22.11.1995', '2017-07-29', 350000, 0x50616964, '2016-09-12', 0x546f77657220526f626f68206b6172656e6120616e67696e2020202020, 0x53656c65736169, 0x50656d62616e67756e616e20556c616e67, 'Cs1500603914.', 0x53636f747420536e79646572);
 
 -- --------------------------------------------------------
 
@@ -398,15 +305,7 @@ CREATE TABLE `skrd_rpm` (
   `harga_skrd` int(11) NOT NULL,
   `koef_skrd` double NOT NULL,
   `tanggal_jatuh_tempo` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `skrd_rpm`
---
-
-INSERT INTO `skrd_rpm` (`no`, `no_skrd`, `sites_id`, `status`, `surat_skrd`, `harga_skrd`, `koef_skrd`, `tanggal_jatuh_tempo`) VALUES
-(6, '21.07.2017.4120', 'BLR061', 0x4265726d6173616c6168, 'RPM1500600326.', 2281000, 1.1, '2017-07-30'),
-(7, '57.27.242.220.222.4183.9', 'MLG069', 0x4c756e6173, 'RPM1500603914.', 2387000, 1.2, '2017-08-30');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
@@ -428,8 +327,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`nik`, `password`, `nama_user`, `link_profile_pic`, `jabatan`, `admin`) VALUES
-(54321, '54321', 'Neji Hyuga', '1500598898.pngNeji.png', 'Staff Senior', 'User'),
-(99999, 'admin', 'Admin 1', '1500598869.jpgsaitamacut.jpg', 'Administrator Web', 'Admin');
+(54321, '54321', 'Neji Hyuga', '1501120959.pngNeji-Hyuga.png', 'Staff Junior', 'User'),
+(99999, 'admin', 'Admin 1', '1501120968.pngOK-saitama-one-punch-man-39439986-1920-1080-copy.png', 'Administrator Web', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -454,14 +353,6 @@ CREATE TABLE `z_datasites` (
   `no_surat` varchar(100) NOT NULL,
   `nama` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `z_datasites`
---
-
-INSERT INTO `z_datasites` (`no`, `no_surat`, `nama`) VALUES
-(1, 'DATASITE/Malang Kota//99999/2017', 'Admin 1'),
-(2, 'DATASITE/Malang Kota/1/99999/2017', 'Admin 1');
 
 -- --------------------------------------------------------
 
@@ -709,52 +600,52 @@ ALTER TABLE `z_rpm`
 -- AUTO_INCREMENT for table `ho`
 --
 ALTER TABLE `ho`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `identitas_pemilik`
 --
 ALTER TABLE `identitas_pemilik`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ijin_dephub`
 --
 ALTER TABLE `ijin_dephub`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ijin_genset`
 --
 ALTER TABLE `ijin_genset`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ijin_prinsip`
 --
 ALTER TABLE `ijin_prinsip`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ijin_ptt`
 --
 ALTER TABLE `ijin_ptt`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `imb`
 --
 ALTER TABLE `imb`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `imtu`
 --
 ALTER TABLE `imtu`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `pbb`
 --
 ALTER TABLE `pbb`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 --
 -- AUTO_INCREMENT for table `skrd_rpm`
 --
 ALTER TABLE `skrd_rpm`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 --
 -- AUTO_INCREMENT for table `z_comcase`
 --
@@ -779,12 +670,12 @@ ALTER TABLE `z_detail_rpm`
 -- AUTO_INCREMENT for table `z_monitoring`
 --
 ALTER TABLE `z_monitoring`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `z_pbb`
 --
 ALTER TABLE `z_pbb`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `z_perizinan`
 --
@@ -794,7 +685,7 @@ ALTER TABLE `z_perizinan`
 -- AUTO_INCREMENT for table `z_perpanjangan`
 --
 ALTER TABLE `z_perpanjangan`
-  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `z_rpm`
 --
