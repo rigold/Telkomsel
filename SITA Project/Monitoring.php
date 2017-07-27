@@ -20,8 +20,9 @@
 	$row = $result->fetch_assoc();
    
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -78,7 +79,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -110,7 +110,6 @@
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -148,7 +147,6 @@
 						?>
 					</div>
 				</div>
-
 				<div class="body">
 					<?php
 						$sql3 = "SELECT * FROM z_monitoring ORDER BY no DESC LIMIT 1";
@@ -164,7 +162,6 @@
 					<br>
 					<div id="featured">
 						<div>
-
 								<?php
 								$sql = "SELECT site.sites_id, site.sites_nama, site.perpanjangan_pic, site.perpanjangan_spph, site.bak_nomor, site.bak_harga, site.perpanjangan_vendor_list, site.perpanjangan_invoice, site.sites_tanggal_start, DATEDIFF(CURRENT_DATE(), site.sites_tanggal_start) as datediff, site.sites_status_lahan, identitas_pemilik.sl_pks FROM site, identitas_pemilik WHERE site.sites_id = identitas_pemilik.sites_id";
 								$result = $conn->query($sql);
@@ -218,7 +215,6 @@
 								$conn->close();
 								?>
 						</div>
-						
 					</div>
 					<?php
 					$link="in_monitoring.php";
@@ -234,6 +230,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -290,5 +289,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+
 	</body>
 </html>

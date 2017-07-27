@@ -17,11 +17,11 @@
 	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
-   
+	$row = $result->fetch_assoc(); 
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -29,7 +29,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -78,7 +77,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -110,7 +108,6 @@
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -180,8 +177,6 @@
 									Nama Seseorang - Nomor Handphone - Email@email.com
 								</p>
 							</h4>
-
-							
 						</div>
 					</div>
 				</div>

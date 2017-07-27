@@ -20,16 +20,16 @@
 	$row = $result->fetch_assoc();
    
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>SITA Project</title>
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
-	</head>
-	
+	</head>	
 	<body>
 		<div class=navi>
 			<ul>
@@ -110,7 +110,6 @@
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -224,6 +223,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -280,5 +282,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+		
 	</body>
 </html>

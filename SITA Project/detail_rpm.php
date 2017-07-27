@@ -28,10 +28,10 @@
 	$sql3 = "SELECT * FROM z_detail_rpm ORDER BY no DESC LIMIT 1";
 	$result3 = $conn->query($sql3);
 	$row3 = $result3->fetch_assoc();
-   
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -39,7 +39,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -88,7 +87,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -113,16 +111,13 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -183,16 +178,8 @@
 							</h5>
 						</div>
 						<div>
-
 							<?php
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, skrd_rpm.harga_skrd, (SELECT SUM(skrd_rpm.harga_skrd) FROM skrd_rpm,site WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_skrd' FROM site,skrd_rpm WHERE site.sites_id = skrd_rpm.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
-
-									//
-
-									//$totpbb = "SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site WHERE site.sites_id = pbb.sites_id";
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
-									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
 									        <tr>
@@ -204,8 +191,6 @@
 												<th onclick='sortTable(4)'>Tinggi Tower</th>
 												<th onclick='sortTable(5)'>Nilai SKRD</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
 									    while ($row = $result->fetch_assoc()) {
 									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
 									        echo "
@@ -220,7 +205,6 @@
 
 									            </tr>";
 									    }
-
 									    echo "</table>";
 									    $result = $conn->query($sql);
 									    $row = $result->fetch_assoc();
@@ -246,9 +230,6 @@
 									    echo "<br><br>";
 									    echo "
 									    ";
-									}
-									else {
-									    //echo "No records found!";
 									}
 									$conn->close();
 								?>
@@ -307,7 +288,6 @@
 									</tr>
 								</table>
 						</div>
-						
 					</div>
 					<?php
 					$link="in_detail_rpm.php?kota_kab=".$kota_kab;
@@ -323,6 +303,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -379,5 +362,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+		
 	</body>
 </html>

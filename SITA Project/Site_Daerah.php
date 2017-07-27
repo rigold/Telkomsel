@@ -12,16 +12,18 @@
 	$dbname = "sita";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
+	
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	} 
+
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
-   
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -90,14 +92,11 @@
 				</li>
 				<li><a href="About.php">About</a></li>
 				<li><a href="Index.php">Log out</a></li>
-				
 					<h1>
 					<?php
 					echo " " . date("Y/m/d") ;
 					?>
 					</h1>
-				
-				
 				<form action="Search.php" id="search" method="GET">
 					<input type="text" name="cari" />
 					<input type="submit" value="" id="submit"/>
@@ -111,7 +110,6 @@
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -149,7 +147,6 @@
 						?>
 					</div>
 				</div>
-
 				<div class="body">
 					<?php
 						$siteloc=$_REQUEST['siteloc'];
@@ -214,12 +211,7 @@
 									    //echo "No records found!";
 									}
 									$conn->close();
-								?>
-							<table>
-							  <tr>
-							  	
-							  </tr>
-							</table>
+							?>
 						</div>
 					</div>
 					<?php
@@ -236,6 +228,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -292,5 +287,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+
 	</body>
 </html>

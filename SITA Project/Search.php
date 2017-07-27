@@ -18,10 +18,10 @@
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
-   
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -77,7 +77,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -164,56 +163,56 @@
 							</h5>
 						</div>
 						<div>
-								<?php
-									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site, daerah, pbb, skrd_rpm, imb WHERE site.sites_id = imb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten && pbb.sites_id = site.sites_id && skrd_rpm.sites_id = site.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_nama LIKE '%".$cari."%' OR daerah.kota_kabupaten LIKE '%".$cari."%' OR site.sites_alamat LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%') " ;
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
-									$no = 1;
-									if ($result->num_rows > 0) {
-									    echo "<table id= 'myTable'>
-									        <tr>
-											  	<th onclick='sortTable(0)'>No.</th>
-											  	<th onclick='sortTable(1)'>Site ID</th>
-												<th onclick='sortTable(2)'>Site Name</th>
-												<th onclick='sortTable(3)'>Daerah</th>
-												<th>Alamat</th>
-												<th>No.PBB</th>
-												<th>No.RPM</th>
-												<th>No.IMB</th>
-												<th>Action</th>
-									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
-									        echo "
-									            <tr>
-									                    <td>" . $no++ . "</td>
-									                    <td>" . $row["sites_id"] . "</td>
-									                    <td>" . $row["sites_nama"] . "</td>
-									                    <td>" . $row["kota_kabupaten"] . "</td>
-									                    <td>" . $row["sites_alamat"] . "</td>
-									                    <td>" . $row["nop"] . "</td>
-									                    <td>" . $row["no_skrd"] . "</td>
-									                    <td>" . $row["imb_nomor"] . "</td>
-									                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
-									            </tr>";
-									    }
+							<?php
+								$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, daerah.kota_kabupaten, pbb.nop, skrd_rpm.no_skrd, imb.imb_nomor FROM site, daerah, pbb, skrd_rpm, imb WHERE site.sites_id = imb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten && pbb.sites_id = site.sites_id && skrd_rpm.sites_id = site.sites_id && (site.sites_id LIKE '%".$cari."%' OR site.sites_nama LIKE '%".$cari."%' OR daerah.kota_kabupaten LIKE '%".$cari."%' OR site.sites_alamat LIKE '%".$cari."%' OR pbb.nop LIKE '%".$cari."%' OR skrd_rpm.no_skrd LIKE '%".$cari."%' OR imb.imb_nomor LIKE '%".$cari."%') " ;
+								$result = $conn->query($sql);
+								//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+								$no = 1;
+								if ($result->num_rows > 0) {
+								    echo "<table id= 'myTable'>
+								        <tr>
+										  	<th onclick='sortTable(0)'>No.</th>
+										  	<th onclick='sortTable(1)'>Site ID</th>
+											<th onclick='sortTable(2)'>Site Name</th>
+											<th onclick='sortTable(3)'>Daerah</th>
+											<th>Alamat</th>
+											<th>No.PBB</th>
+											<th>No.RPM</th>
+											<th>No.IMB</th>
+											<th>Action</th>
+								        </tr>";
+								    //  output data of each row
+								    //  $rows = array(); // This is not actually required
+								    while ($row = $result->fetch_assoc()) {
+								        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+								        echo "
+								            <tr>
+								                    <td>" . $no++ . "</td>
+								                    <td>" . $row["sites_id"] . "</td>
+								                    <td>" . $row["sites_nama"] . "</td>
+								                    <td>" . $row["kota_kabupaten"] . "</td>
+								                    <td>" . $row["sites_alamat"] . "</td>
+								                    <td>" . $row["nop"] . "</td>
+								                    <td>" . $row["no_skrd"] . "</td>
+								                    <td>" . $row["imb_nomor"] . "</td>
+								                    <td><button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button></td>
+								            </tr>";
+								    }
 
-									    echo "</table>";
-									}
-									else {
-									    echo "
-									    <h4>
-											Data tidak ditemukan!
-										</h4>
-										<h4>
-											<a href='Home.php'>KEMBALI KE HALAMAN UTAMA?</a>
-										</h4>
-												    ";
-												}
-									$conn->close();
-								?>
+								    echo "</table>";
+								}
+								else {
+								    echo "
+								    <h4>
+										Data tidak ditemukan!
+									</h4>
+									<h4>
+										<a href='Home.php'>KEMBALI KE HALAMAN UTAMA?</a>
+									</h4>
+											    ";
+											}
+								$conn->close();
+							?>
 						</div>
 					</div>
 					<button onclick="myFunction() ">Print Halaman</button>
@@ -225,6 +224,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -281,5 +283,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+		
 	</body>
 </html>

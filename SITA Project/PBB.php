@@ -17,10 +17,11 @@
 	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
-   
+	$row = $result->fetch_assoc();  
 ?>
+
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -28,7 +29,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -77,7 +77,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -102,7 +101,6 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
 
@@ -209,7 +207,6 @@
 									$conn->close();
 								?>
 						</div>
-						
 					</div>
 					<?php
 					$link="in_pbb.php";
@@ -225,6 +222,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -281,5 +281,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+		
 	</body>
 </html>

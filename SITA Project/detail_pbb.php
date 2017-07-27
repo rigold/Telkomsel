@@ -20,10 +20,10 @@
 	$result1 = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$row1 = $result1->fetch_assoc();
-   
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -31,7 +31,6 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
@@ -80,7 +79,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a>
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -105,16 +103,13 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -182,7 +177,6 @@
 							</h5>
 						</div>
 						<div>
-
 							<?php
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, pbb.njop_tanah, pbb.njop_bangunan, pbb.nilai_pbb_site, (SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_pbb', ijin_ptt.ijin_ptt_nomor FROM site,pbb,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
 
@@ -310,7 +304,6 @@
 									</tr>
 								</table>
 						</div>
-						
 					</div>
 					<?php
 					$link="in_detail_pbb.php?kota_kab=".$kota_kab;
@@ -326,6 +319,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -382,5 +378,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+		
 	</body>
 </html>

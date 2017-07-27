@@ -12,16 +12,19 @@
 	$dbname = "sita";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
+	
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
-	} 
+	}
+
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
    
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -30,13 +33,11 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
 	</head>
-	
 	<body>
 		<div class=navi>
 			<ul>
 				<img src="images/bgnav.png" alt="">
 				<li><a href="Home.php">Home</a></li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Data Site</a>
 					<div class="dropdown-content">
@@ -80,7 +81,6 @@
 							<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -105,17 +105,13 @@
 				</form>
 			</ul>	
 		</div>
-
 		<div id="background">
 			<img src="images/bg1.jpg" alt="abs-img" class="abs-img" />
-
 			<div class="page">
 				<div class="sidebar">
-
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -153,12 +149,8 @@
 						?>
 					</div>
 				</div>
-
 				<div class="body">
-					
-
 					<h1><a href="About.php">Selamat Datang Di SITA Project</a></h1>
-
 					<ul class="navigation">
 						<li><a href="Warning.php">Berita</a></li>
 						<li><a href="PBB.php">RAB PBB</a></li>
@@ -166,7 +158,6 @@
 						<li><a href="Izin.php">Perizinan</a></li>
 						<li><a href="List_Panjang.php">Perpanjangan</a></li>
 					</ul>
-
 					<div id="featured">
 						<div>
 							<h3>Pengenalan Terhadap Web ini :
@@ -197,14 +188,9 @@
 								</p>
 							</h3>
 						</div>
-					</div>
-					
-					
+					</div>	
 				</div>
-				
 			</div>
-
-			
 		</div>
 	</body>
 </html>

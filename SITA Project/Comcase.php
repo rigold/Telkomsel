@@ -18,18 +18,17 @@
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
-   
 ?>
+
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>SITA Project</title>
 		<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 		<link rel="icon" href="images/favicon.png">
-	</head>
-	
+	</head>	
 	<body>
 		<div class=navi>
 			<ul>
@@ -78,7 +77,6 @@
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
 				    </div>
 				</li>
-
 				<li class="dropdown">
 					<a class="dropbtn">Administrasi</a>
 					<div class="dropdown-content">
@@ -110,7 +108,6 @@
 					<div class="featured">						
 						<a href="upload/<?php echo $row['link_profile_pic'];?>" class="figure"><img src="upload/<?php echo $row['link_profile_pic'];?>" alt=""/></a>		
 					</div>
-
 					</h1>
 					<div id="tweets">
 						<h3><?php echo $row['jabatan'];?></h3>
@@ -163,7 +160,6 @@
 					<br>
 					<div id="featured">
 						<div>
-
 								<?php
 								$sql = "SELECT sites_id, sites_nama, comcase_tanggal, comcase_keterangan, comcase_status, comcase_solusi, comcase_file, comcase_mitra FROM site";
 								$result = $conn->query($sql);
@@ -199,21 +195,15 @@
 									        <td>".$row["comcase_status"]."</td>
 									        <td>".$row["comcase_solusi"]."</td>
 									        <td><a href=".$loc.">".$file."</a></h1></td>
-									        
 									        <td>".$row["comcase_mitra"]."</td>
 								        </tr>";
 								    } 
 
 								    echo "</table>";
 								}
-								else 
-								{
-								    //echo "0 results";
-								}
 								$conn->close();
 								?>
 						</div>
-						
 					</div>
 					<?php
 					$link="in_comcase.php";
@@ -229,6 +219,9 @@
 				</div>
 			</div>
 		</div>
+
+<!-----------------------------------------Java Sorting---------------------------------------------->
+
 		<script>
 		function sortTable(n) {
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -285,5 +278,8 @@
 		  }
 		}
 		</script>
+
+<!-----------------------------------------END Java Sorting------------------------------------------->
+
 	</body>
 </html>
