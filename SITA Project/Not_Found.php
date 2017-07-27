@@ -132,8 +132,6 @@
 							<a href="List_Sites.php"><br>> LIST SITES<br></a>
 						</p>
 					</div>
-					
-					<p>&#169; Copyright 2017. Created by Rigold Nainggolan & Tomson Pangaribuan</p>
 				</div>
 				<div class="body">
 					<h1><a href="About.php">HALAMAN TIDAK DITEMUKAN !</a></h1>
