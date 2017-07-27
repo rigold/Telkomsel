@@ -114,9 +114,10 @@
 				<div class="body2">
 					<h1>Upload File Ke DATABASE</a></h1>
 					<p>
-						1. Download Template ms.excel berikut ini, lalu isi data anda sesuai dengan urutan header tabel <br>
-						2. Simpan Document Excel kedalam format .csv / .csv (coma delimited)<br>
-						3. Upload file anda !<br>
+						1. Download Template ms.excel berikut ini, lalu isi data anda sesuai dengan urutan header tabel. <br>
+						2. Isi Tabel dengan data yang mengikuti format yang disarankan. <br>
+						3. Simpan Document Excel kedalam format .csv / .csv (coma delimited).<br>
+						4. Upload file anda !<br>
 						<br>
 						<br>
 						<a href="File/file.xlsx">DOWNLOAD FILE</a>
