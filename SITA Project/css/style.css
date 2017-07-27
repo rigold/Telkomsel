@@ -503,7 +503,6 @@ body{
 }
 .body div#featured{
 	height: auto;
-	overflow: hidden;
 	width: auto;
 }
 .body div#featured div{
