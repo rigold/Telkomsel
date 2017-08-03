@@ -161,7 +161,7 @@
 					<div id="featured">
 						<div>
 								<?php
-								$sql = "SELECT sites_id, sites_nama, comcase_tanggal, comcase_keterangan, comcase_status, comcase_solusi, comcase_file, comcase_mitra FROM site";
+								$sql = "SELECT * FROM site";
 								$result = $conn->query($sql);
 								$no = 1;
 								
@@ -178,6 +178,10 @@
 												<th>Solusi</th>
 												<th>File</th>
 												<th>Mitra</th>
+												<th>No. FPP</th>
+												<th>Kelengkapan Dokumen</th>
+												<th>Total Biaya</th>
+												<th>Status Pembayaran</th>
 								    		</tr>";
 								    // output data of each row
 								    while($row = $result->fetch_assoc())
@@ -196,6 +200,10 @@
 									        <td>".$row["comcase_solusi"]."</td>
 									        <td><a href=".$loc.">".$file."</a></h1></td>
 									        <td>".$row["comcase_mitra"]."</td>
+									        <td>".$row["comcase_no_fpp"]."</td>
+									        <td>".$row["comcase_keldok"]."</td>
+									        <td>".$row["comcase_biaya"]."</td>
+									        <td>".$row["comcase_status_bayar"]."</td>
 								        </tr>";
 								    } 
 
@@ -283,7 +291,7 @@
 		}
 		</script>
 
-<!-----------------------------------------END Java Sorting------------------------------------------->
+<!-----------------------------------------END Java Sorting-------------------------------------------->
 
 	</body>
 </html>

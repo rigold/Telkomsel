@@ -138,7 +138,11 @@ if(isset($_POST['submit']))
                             comcase_keterangan = '".$line[137]."',
                             comcase_status = '".$line[138]."',
                             comcase_solusi = '".$line[139]."',
-                            comcase_mitra = '".$line[140]."'
+                            comcase_mitra = '".$line[140]."',
+                            comcase_no_fpp = '".$line[141]."',
+                            comcase_keldok = '".$line[142]."',
+                            comcase_biaya = '".$line[143]."',
+                            comcase_status_bayar = '".$line[144]."'
                         WHERE sites_id = '".$line[0]."'
                         ");
 
@@ -355,7 +359,11 @@ if(isset($_POST['submit']))
                         comcase_solusi,
                         comcase_mitra,
                         tanggal_masuk_pks,
-                        tanggal_keluar_pks
+                        tanggal_keluar_pks,
+                        comcase_no_fpp,
+                        comcase_keldok,
+                        comcase_biaya,
+                        comcase_status_bayar
                        
                         )
                         VALUES(
@@ -404,7 +412,11 @@ if(isset($_POST['submit']))
                         '$line[139]',
                         '$line[140]',
                         '$date27',
-                        '$date28'
+                        '$date28',
+                        '$line[141]',
+                        '$line[142]',
+                        '$line[143]',
+                        '$line[144]'
                         )
                     ");
                     //echo "'$line[0]'";
