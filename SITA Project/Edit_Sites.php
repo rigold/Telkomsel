@@ -742,7 +742,19 @@
 											<label >Comcase Tanggal :</label> <input type="date" id="Comcase_Tanggal"  value="<?php echo $row11['comcase_tanggal'];?>" name="Comcase_Tanggal" >
 										</p>
 										<p>
+											<label >Nomor FPP :</label> <input type="text"  value="<?php echo $row11['comcase_no_fpp'];?>" name="Comcase_No_FPP" size="50">
+										</p>
+										<p>
 											<label >Comcase Keterangan :</label> <input type="text"  value="<?php echo $row11['comcase_keterangan'];?>" name="Comcase_Keterangan" size="50">
+										</p>
+										<p>
+											<label >Total Biaya :</label> <input type="text"  value="<?php echo $row11['comcase_biaya'];?>" name="Comcase_Biaya" size="50">
+										</p>
+										<p>
+											<label >Kelengkapan Dokumen :</label> <input type="text"  value="<?php echo $row11['comcase_keldok'];?>" name="Comcase_Keldok" size="50">
+										</p>
+										<p>
+											<label >Status Pembayaran :</label> <input type="text"  value="<?php echo $row11['comcase_status_bayar'];?>" name="Comcase_Status_Bayar" size="50">
 										</p>
 										<p>
 											<label >Comcase Status :</label> <input type="text"  value="<?php echo $row11['comcase_status'];?>" name="Comcase_Status" size="50">

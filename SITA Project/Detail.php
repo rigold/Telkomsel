@@ -805,7 +805,11 @@
 									comcase_status,
 									comcase_solusi,
 									comcase_file,
-									comcase_mitra
+									comcase_mitra,
+									comcase_no_fpp,
+									comcase_keldok,
+									comcase_biaya,
+									comcase_status_bayar
 									FROM site
 									WHERE sites_id='$sites_id'
 									";
@@ -814,8 +818,12 @@
 								$a=$row20["comcase_file"]; 
 								$aloc="File/".$a;
 								echo "
-								<tr><th>Comcase Tanggal</th><td>" . $row20["comcase_tanggal"]."</td></tr> 
-								<tr><th>Comcase Keterangan</th><td>" .$row20["comcase_keterangan"]."</td></tr> 
+								<tr><th>Comcase Tanggal</th><td>" . $row20["comcase_tanggal"]."</td></tr>
+								<tr><th>Nomor FPP</th><td>" . $row20["comcase_no_fpp"]."</td></tr> 
+								<tr><th>Comcase Keterangan</th><td>" .$row20["comcase_keterangan"]."</td></tr>
+								<tr><th>Total Biaya</th><td>" . $row20["comcase_biaya"]."</td></tr> 
+								<tr><th>Kelengkapan Dokumen</th><td>" . $row20["comcase_keldok"]."</td></tr>
+								<tr><th>Status Pembayaran</th><td>" . $row20["comcase_status_bayar"]."</td></tr>
 								<tr><th>Comcase Status</th><td>" .$row20["comcase_status"]."</td></tr> 
 								<tr><th>Comcase Solusi</th><td>" .$row20["comcase_solusi"]."</td></tr>
 								<tr><th>Comcase File</th><td><a href=".$aloc.">".$a."</a></td></tr> 
