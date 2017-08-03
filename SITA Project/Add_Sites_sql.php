@@ -267,6 +267,10 @@
 	$Comcase_Status = empty($_POST['Comcase_Status']) ? "-" : $_POST['Comcase_Status'];
 	$Comcase_Solusi = empty($_POST['Comcase_Solusi']) ? "-" : $_POST['Comcase_Solusi'];
 	$Comcase_Mitra = empty($_POST['Comcase_Mitra']) ? "-" : $_POST['Comcase_Mitra'];
+	$Comcase_No_FPP = empty($_POST['Comcase_No_FPP']) ? "-" : $_POST['Comcase_No_FPP'];
+	$Comcase_Biaya = empty($_POST['Comcase_Biaya']) ? "-" : $_POST['Comcase_Biaya'];
+	$Comcase_Keldok = empty($_POST['Comcase_Keldok']) ? "-" : $_POST['Comcase_Keldok'];
+	$Comcase_Status_Bayar = empty($_POST['Comcase_Status_Bayar']) ? "-" : $_POST['Comcase_Status_Bayar'];
 
 //perintah post
 
@@ -329,7 +333,11 @@
 		comcase_file,
 		comcase_mitra,
 		tanggal_masuk_pks,
-		tanggal_keluar_pks
+		tanggal_keluar_pks,
+		comcase_no_fpp,
+		comcase_keldok,
+		comcase_biaya,
+		comcase_status_bayar
 		)
 		VALUES(
 		'$Site_ID',
@@ -380,7 +388,12 @@
 		'$Comcase_File',
 		'$Comcase_Mitra',
 		'$Tanggal_Masuk_PKS',
-		'$Tanggal_Keluar_PKS'
+		'$Tanggal_Keluar_PKS',
+		'$Comcase_No_FPP',
+		'$Comcase_Keldok',
+		'$Comcase_Biaya',
+		'$Comcase_Status_Bayar'
+
 		)
 		");
 

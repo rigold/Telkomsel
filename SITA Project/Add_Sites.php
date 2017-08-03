@@ -969,7 +969,19 @@
 											<label >Comcase Tanggal</label> <input type="date" id="Comcase_Tanggal" name="Comcase_Tanggal" >
 										</p>
 										<p>
+											<label >Nomor FPP</label> <input placeholder="Masukkan Nomor FPP" type="text" name="Comcase_No_FPP" size="50">
+										</p>
+										<p>
 											<label >Comcase Keterangan</label> <input placeholder="Masukkan Keterangan Masalah Site" type="text" name="Comcase_Keterangan" size="50">
+										</p>
+										<p>
+											<label >Total Biaya</label> <input placeholder="Masukkan Biaya Comcase" type="text" name="Comcase_Biaya" size="50">
+										</p>
+										<p>
+											<label >Kelengkapan Dokumen</label> <input placeholder="Masukkan Status Kelengkapan Dokumen" type="text" name="Comcase_Keldok" size="50">
+										</p>
+										<p>
+											<label >Status Pembayaran</label> <input placeholder="Masukkan Status Pembayaran" type="text" name="Comcase_Status_Bayar" size="50">
 										</p>
 										<p>
 											<label >Comcase Status</label> <input placeholder="Masukkan Status Terkini Site" type="text" name="Comcase_Status" size="50">
