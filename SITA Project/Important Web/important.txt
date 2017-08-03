@@ -1,1 +1,0 @@
-http://davalign.com/articles/import-excel-data-into-mysql-using-phpmyadmin/
