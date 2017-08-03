@@ -279,6 +279,10 @@
 	$Comcase_Status=$_POST['Comcase_Status']; 
 	$Comcase_Solusi=$_POST['Comcase_Solusi']; 
 	$Comcase_Mitra=$_POST['Comcase_Mitra']; 
+	$Comcase_No_FPP=$_POST['Comcase_No_FPP']; 
+	$Comcase_Biaya=$_POST['Comcase_Biaya']; 
+	$Comcase_Keldok=$_POST['Comcase_Keldok']; 
+	$Comcase_Status_Bayar=$_POST['Comcase_Status_Bayar']; 
 
 	if(empty($_FILES["Denah_Tanah"]["name"])&&empty($_FILES["Peta_Lokasi_Radius_Tower"]["name"])&&empty($_FILES["Sketsa_Batas_Lahan"]["name"])&&empty($_FILES["Comcase_File"]["name"])&&empty($_FILES["Surat_PBB"]["name"])&&empty($_FILES["Surat_SKRD"]["name"]))
 	{
@@ -460,7 +464,11 @@
 				comcase_keterangan='$Comcase_Keterangan ' ,
 				comcase_status='$Comcase_Status' ,
 				comcase_solusi='$Comcase_Solusi' ,
-				comcase_mitra='$Comcase_Mitra' 
+				comcase_mitra='$Comcase_Mitra' ,
+				comcase_no_fpp='$Comcase_No_FPP' ,
+				comcase_biaya='$Comcase_Biaya' ,
+				comcase_keldok='$Comcase_Keldok' ,
+				comcase_status_bayar='$Comcase_Status_Bayar'
 			WHERE sites_id='$sites_id' ");
 		$result12 = mysqli_query($conn, "
 			UPDATE skrd_rpm 
