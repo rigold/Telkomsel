@@ -704,7 +704,6 @@
 		)
 	");
 
-
 	if(!$conn) {
 		echo "failed";
 		die("Connection failed: " . mysqli_connect_error());	
