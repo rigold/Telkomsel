@@ -9,6 +9,7 @@
 	$target_file = preg_replace("/ /", "-", $target_file2);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
 	if(isset($_POST["submit"])) {
 	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 	    if($check !== false) {
@@ -47,13 +48,12 @@
 	$Password=$_POST['Password'];
 	$Jabatan=$_POST['Jabatan'];
 	
-	mysqli_query($conn,
-		"INSERT INTO user (nama_user,nik,password,jabatan,link_profile_pic,admin)
-		VALUES('$Nama','$NIK','$Password','$Jabatan','$image','User')");
+	mysql_query("INSERT INTO user (nama_user,nik,password,jabatan,link_profile_pic,admin)
+		VALUES('$Nama','$NIK','$Password','$Jabatan','$image','User')", $conn);
 
 	if(!$conn) {
 		echo "failed";
-		die("Connection failed: " . mysqli_connect_error());	
+		die("Connection failed: " . mysql_connect_error());	
 	}
 	else {
 		echo "success";

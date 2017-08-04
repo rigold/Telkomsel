@@ -8,8 +8,13 @@
 
    	include("connect.php");
 
-   	$result = mysql_query("SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'",$conn);
-   	$row = mysql_fetch_row($result);
+   	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
+
+	/*$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();*/
    
    	if($row['admin']=="User"){header("Location: Home.php");}
 ?>
@@ -68,7 +73,6 @@
 						<a href="Site_Daerah.php?siteloc=Trenggalek">Trenggalek</a> 
 						<a href="Site_Daerah.php?siteloc=Tuban">Tuban</a> 
 						<a href="Site_Daerah.php?siteloc=Tulungagung">Tulungagung</a> 
-
 				    </div>
 				</li>
 
@@ -169,3 +173,5 @@
 		</div>
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>

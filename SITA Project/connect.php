@@ -6,11 +6,11 @@ $password = "";
 $database = "sita";
 
 $conn=mysql_connect($servername,$username,$password);
-mysql_select_db($database);
+$a=mysql_select_db($database, $conn);
 
 if(!$conn) {
 	echo "failed";
-	die("Connection failed: " . mysql_connect_error());	
+	die("Connection failed: " . mysql_error());	
 }
 
 ?>
