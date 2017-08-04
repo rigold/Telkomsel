@@ -8,7 +8,7 @@
 
    	include("connect.php");
 
-   	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+   	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
 	$result = mysql_query($sql, $conn);
 	$row = mysql_fetch_assoc($result);
 
