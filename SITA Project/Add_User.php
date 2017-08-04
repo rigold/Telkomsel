@@ -8,9 +8,8 @@
 
    	include("connect.php");
 
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+   	$result = mysql_query("SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'",$conn);
+   	$row = mysql_fetch_row($result);
    
    	if($row['admin']=="User"){header("Location: Home.php");}
 ?>
