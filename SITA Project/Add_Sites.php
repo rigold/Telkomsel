@@ -7,12 +7,12 @@
    		}
 
 	include("connect.php");
-	
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+
+   	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
    
-   if($row['admin']=="User"){header("Location: Home.php");}
+   	if($row['admin']=="User"){header("Location: Home.php");}
 ?>
 
 <!DOCTYPE html>
@@ -1014,7 +1014,7 @@
 		</div>
 	</body>
 </html>
-<!-- - - - - - - - - - JavaScript - - - - - - - - - -->
+
 <script>
 	document.getElementsByClassName('tablinks')[0].click()
 	function openTabs(evt, TabName){
@@ -1031,3 +1031,5 @@
 	    evt.currentTarget.className += " active";
 	}
 </script>
+
+<?php mysql_close($conn); ?>
