@@ -1,14 +1,16 @@
 <?php
+
 $servername ="localhost";
 $username = "root";
 $password = "";
 $database = "sita";
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn=mysql_connect($servername,$username,$password);
+mysql_select_db($database);
 
 if(!$conn) {
 	echo "failed";
-	die("Connection failed: " . mysqli_connect_error());	
+	die("Connection failed: " . mysql_connect_error());	
 }
 
 ?>
