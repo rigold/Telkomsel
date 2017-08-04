@@ -1,0 +1,23 @@
+
+harus?
+-msqli ke mysql
+-rapikan conn.php
+-atur type file upload dan ukuran
+-download file --> ke download template
+-time out
+-ganti password ke bintang bintang
+-connection die
+
+bisa? 3-4 hari?
+-hilangkan menu admin untuk user
+-user ganti password sendiri
+-nomor surat tambah tanggal dan bulan
+
+mungkin? 3-4 hari?
+-multiple file upload comcase ---> solusi mungkin di zip
+-berikan pemisahan untuk uang ??
+-detail orang di bawah pbb& rpm ganti jadi dinamis
+
+buat next version?	1-2 minggu?
+-site per history
+-log untuk view per user
