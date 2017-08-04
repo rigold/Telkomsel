@@ -9,8 +9,8 @@
    	include("connect.php");
 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -142,22 +142,22 @@
 					<?php
 						$siteloc=$_REQUEST['siteloc'];
 						$sql = "SELECT * from daerah where kota_kabupaten = '".$siteloc."'";;
-						$result = $conn->query($sql);
-						$row = $result->fetch_assoc();
+						$result = mysql_query($sql, $conn);
+						$row = mysql_fetch_assoc($result);
 					?>
 					<?php
 						$siteloc=$_REQUEST['siteloc'];
 						$sql5 = "SELECT * from site where sites_kota_kabupaten='".$siteloc."'";;
-						$result5 = $conn->query($sql5);
-						$row5 = $result5->fetch_assoc();
+						$result5 = mysql_query($sql, $conn);
+						$row5 = mysql_fetch_assoc($result5);
 
 						$sql3 = "SELECT * FROM z_datasites ORDER BY no DESC LIMIT 1";
-						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
+						$result3 = mysql_query($sql, $conn);
+						$row3 = mysql_fetch_assoc($result3);
 
 						$sql4 = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-						$result4 = $conn->query($sql4);
-						$row4 = $result4->fetch_assoc();
+						$result4 = mysql_query($sql, $conn);
+						$row4 = mysql_fetch_assoc($result4);
 					?>
 					<h1><a href="Home.php">Data Site</a></h1>
 					<h6>DATASITES/<?php echo $siteloc;?>/<?php echo $row3['no'];?>/<?php echo $row4['nik'];?>/<?php echo date("Y");
@@ -169,8 +169,7 @@
 						<div>
 							<?php
 									$sql = "SELECT sites_id, sites_nama, sites_alamat FROM site WHERE sites_kota_kabupaten LIKE '%".$siteloc."%'";
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$result = mysql_query($sql, $conn);
 									$no = 1;
 									if ($result->num_rows > 0) {
 									    echo "<table id= 'myTable'>
