@@ -1,10 +1,5 @@
 <?php 
-
-	$servername ="localhost";
-	$username = "root";
-	$password = "";
-	$database = "sita";
-	$conn = mysqli_connect($servername, $username, $password, $database);
+	include("connect.php");
 
 	$temp = explode(".", $_FILES["file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
