@@ -53,10 +53,12 @@
 
 	if(!$conn) {
 		echo "failed";
-		die("Connection failed: " . mysql_connect_error());	
+		die("Connection failed: " . mysql_error());	
 	}
 	else {
 		echo "success";
 		header("Location: List_User.php");
 	}
 ?>
+
+<?php mysql_close($conn); ?>
