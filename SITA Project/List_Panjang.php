@@ -6,19 +6,11 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
-   
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -149,8 +141,8 @@
 				<div class="body">
 					<?php
 						$sql3 = "SELECT * FROM z_perpanjangan ORDER BY no DESC LIMIT 1";
-						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
+						$result3 = mysql_query($sql3, $conn);
+						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">LIST PERPANJANGAN</a></h1>
 					<h6>PERPANJANGAN/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
@@ -163,10 +155,9 @@
 						<div>
 								<?php
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_penawaran_pemilik_lahan, site.perpanjangan_spph, site.perpanjangan_spph_tanggal, site.tanggal_masuk_pks, site.tanggal_keluar_pks, daerah.kota_kabupaten, site.perpanjangan_pagu, site.sites_tanggal_start, site.sites_tanggal_finish, site.perpanjangan_invoice, site.perpanjangan_invoice_nomor, site.bak_status, identitas_pemilik.sl_pks, (SELECT CAST(AVG(perpanjangan_pagu) AS DECIMAL(10,0)) FROM site) AS 'AVG_pagu' FROM site, daerah, identitas_pemilik WHERE site.sites_id = identitas_pemilik.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_id";
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
-									if ($result->num_rows > 0) {
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        				<th onclick='sortTable(1)'>No.</th>
@@ -188,10 +179,7 @@
 									                        <th>Tangal Keluar Surat PKS</th>
 									                        <th>Status</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 									                    <td>" . $no++ . "</td>
@@ -217,10 +205,6 @@
 
 									    echo "</table>";
 									}
-									else {
-									    //echo "No records found!";
-									}
-									$conn->close();
 								?>
 						</div>
 					</div>
@@ -300,3 +284,5 @@
 
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>

@@ -148,15 +148,15 @@
 					<?php
 						$siteloc=$_REQUEST['siteloc'];
 						$sql5 = "SELECT * from site where sites_kota_kabupaten='".$siteloc."'";;
-						$result5 = mysql_query($sql, $conn);
+						$result5 = mysql_query($sql5, $conn);
 						$row5 = mysql_fetch_assoc($result5);
 
 						$sql3 = "SELECT * FROM z_datasites ORDER BY no DESC LIMIT 1";
-						$result3 = mysql_query($sql, $conn);
+						$result3 = mysql_query($sql3, $conn);
 						$row3 = mysql_fetch_assoc($result3);
 
 						$sql4 = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-						$result4 = mysql_query($sql, $conn);
+						$result4 = mysql_query($sql4, $conn);
 						$row4 = mysql_fetch_assoc($result4);
 					?>
 					<h1><a href="Home.php">Data Site</a></h1>
@@ -171,7 +171,7 @@
 									$sql = "SELECT sites_id, sites_nama, sites_alamat FROM site WHERE sites_kota_kabupaten LIKE '%".$siteloc."%'";
 									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 											  	<th onclick='sortTable(0)'>No</th>
@@ -180,10 +180,7 @@
 												<th>Alamat</th>
 												<th>Detail</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 									            		<td>" . $no++ . "</td>
@@ -200,7 +197,6 @@
 									else {
 									    //echo "No records found!";
 									}
-									$conn->close();
 							?>
 						</div>
 					</div>
@@ -282,3 +278,5 @@
 
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>
