@@ -1,9 +1,5 @@
 <?php
-	$servername ="localhost";
-	$username = "root";
-	$password = "";
-	$database = "sita";
-	$conn = mysqli_connect($servername, $username, $password, $database);
+	include("connect.php");
 
 	$temp = explode(".", $_FILES["file"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
@@ -13,7 +9,6 @@
 	$target_file = preg_replace("/ /", "-", $target_file2);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-	// Check if image file is a actual image or fake image
 	if(isset($_POST["submit"])) {
 	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 	    if($check !== false) {
@@ -23,16 +18,13 @@
 	        $uploadOk = 0;
 	    }
 	}
-	// Check if file already exists
 	if (file_exists($target_file)) {
 	    echo "Maaf, ada file yang sama.";
 	    $uploadOk = 0;
 	}
 	
-	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
 	    echo "Maaf, file tidak dapat di upload.";
-	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	    } else {
