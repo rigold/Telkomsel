@@ -7,12 +7,15 @@
    		}
 
    	include("connect.php");
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
+
+	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$rowz = mysql_fetch_assoc($result);
+
    	if($rowz['admin']=="User"){header("Location: Home.php");}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -150,10 +153,11 @@
 					<br>
 					<?php
 						$sql = "SELECT * FROM user";
-						$result = $conn->query($sql);
+						$result = mysql_query($sql, $conn);
 						
 						$no = 1;
-						if ($result->num_rows > 0) 
+
+						if (!empty($result)) 
 						{
 						    echo "
 						    <table id= 'myTable'>
@@ -168,7 +172,7 @@
 						    		<th>Action</th>
 						    	</tr>";
 						    	
-						    while($row = $result->fetch_assoc())
+						    while($row = mysql_fetch_assoc($result))
 						    {
 						    	$image=$row["link_profile_pic"]; 
 								$img="upload/".$image;
@@ -190,7 +194,6 @@
 
 						    echo "</table>";
 						}
-						$conn->close();
 					?>
 				</div>
 			</div>
