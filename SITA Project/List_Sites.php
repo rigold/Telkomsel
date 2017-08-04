@@ -147,68 +147,65 @@
 					<br>
 					<div class="line-separator"></div>
 					<br>
-								<?php
+						<?php
+						$sql = "SELECT sites_denah_tanah,sites_peta_lrt,sites_sketsa_bt,sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";
+						$sql2 = "SELECT surat_pbb FROM pbb";
+						$sql3 = "SELECT surat_skrd FROM skrd_rpm";
+						$sql4 = "SELECT comcase_file FROM site";
 
-								$sql = "SELECT sites_denah_tanah,sites_peta_lrt,sites_sketsa_bt,sites_id, sites_nama, sites_kota_kabupaten, sites_alamat FROM site";
-								$sql2 = "SELECT surat_pbb FROM pbb";
-								$sql3 = "SELECT surat_skrd FROM skrd_rpm";
-								$sql4 = "SELECT comcase_file FROM site";
+						$result = $conn->query($sql);
+						$result1 = $conn->query($sql2);
+						$result2 = $conn->query($sql3);
+						$result3 = $conn->query($sql4);
+						
+						$no = 1;
+						if ($result->num_rows > 0) 
+						{
+						    echo "<table id= 'myTable'>
+						    <tr>
+						    	<th onclick='sortTable(0)'>No.</th>
+						    	<th onclick='sortTable(1)'>Site ID</th>
+						    	<th onclick='sortTable(2)'>Nama Site</th>
+						    	<th onclick='sortTable(3)'>Kota/Kab </th>
+						    	<th>Alamat</th>
+						    	<th>Action</th>
+						    </tr>";
+						    while($row = $result->fetch_assoc())
+						    {
+						    	$frow1=$row["sites_denah_tanah"]; 
+								$file1="File/".$frow1;
+								$frow2=$row["sites_peta_lrt"]; 
+								$file2="File/".$frow2;
+								$frow3=$row["sites_sketsa_bt"]; 
+								$file3="File/".$frow3;
 
-								$result = $conn->query($sql);
-								$result1 = $conn->query($sql2);
-								$result2 = $conn->query($sql3);
-								$result3 = $conn->query($sql4);
-								
-								$no = 1;
-								if ($result->num_rows > 0) 
-								{
-								    echo "<table id= 'myTable'>
-								    <tr>
-								    	<th onclick='sortTable(0)'>No.</th>
-								    	<th onclick='sortTable(1)'>Site ID</th>
-								    	<th onclick='sortTable(2)'>Nama Site</th>
-								    	<th onclick='sortTable(3)'>Kota/Kab </th>
-								    	<th>Alamat</th>
-								    	<th>Action</th>
-								    </tr>";
-								    while($row = $result->fetch_assoc())
-								    {
-								    	$frow1=$row["sites_denah_tanah"]; 
-										$file1="File/".$frow1;
-										$frow2=$row["sites_peta_lrt"]; 
-										$file2="File/".$frow2;
-										$frow3=$row["sites_sketsa_bt"]; 
-										$file3="File/".$frow3;
+								$row1 = $result1->fetch_assoc();
+								$row2 = $result2->fetch_assoc();
+								$row3 = $result3->fetch_assoc();
 
-										$row1 = $result1->fetch_assoc();
-										$row2 = $result2->fetch_assoc();
-										$row3 = $result3->fetch_assoc();
+								$frow4=$row1["surat_pbb"];
+								$file4="File/".$frow4;
+								$frow5=$row2["surat_skrd"];
+								$file5="File/".$frow5;
+								$frow6=$row3["comcase_file"];
+								$file6="File/".$frow6;
 
-										$frow4=$row1["surat_pbb"];
-										$file4="File/".$frow4;
-										$frow5=$row2["surat_skrd"];
-										$file5="File/".$frow5;
-										$frow6=$row3["comcase_file"];
-										$file6="File/".$frow6;
+						        echo "
+						        <tr>
+						        	<td>".$no++."</td>
+						        	<td>".$row["sites_id"]."</td>
+							        <td>".$row["sites_nama"]."</td>
+							        <td>".$row["sites_kota_kabupaten"]."</td>
+							        <td>".$row["sites_alamat"]."</td>
+							        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
+							        	<button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button>
+							        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]&file1=$file1&file2=$file2&file3=$file3&file4=$file4&file5=$file5&file6=$file6'\">Delete</button>
+						        </tr>";
+						    } 
 
-								        echo "
-								        <tr>
-								        	<td>".$no++."</td>
-								        	<td>".$row["sites_id"]."</td>
-									        <td>".$row["sites_nama"]."</td>
-									        <td>".$row["sites_kota_kabupaten"]."</td>
-									        <td>".$row["sites_alamat"]."</td>
-									        <td><button onclick= \"location.href='Edit_Sites.php?sites_id=$row[sites_id]'\">Edit</button>
-									        	<button onclick= \"location.href='Detail.php?sites_id=$row[sites_id]'\">Detail</button>
-									        	<button onclick= \"location.href='Delete_Sites.php?sites_id=$row[sites_id]&file1=$file1&file2=$file2&file3=$file3&file4=$file4&file5=$file5&file6=$file6'\">Delete</button>
-								        </tr>";
-								    } 
-
-								    echo "</table>";
-								}
-								$conn->close();
-								?>
-
+						    echo "</table>";
+						}
+						?>
 				</div>
 			</div>
 		</div>
@@ -262,4 +259,7 @@
 		}
 		</script>
 	</body>
+	<?php
+	mysql_close($conn);
+	?>
 </html>
