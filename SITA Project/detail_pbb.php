@@ -6,20 +6,13 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$result1 = $conn->query($sql);
-	$row = $result->fetch_assoc();
-	$row1 = $result1->fetch_assoc();
+	$result = mysql_query($sql, $conn);
+	$result1 = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
+	$row1 = mysql_fetch_assoc($result1);
 ?>
 
 <!DOCTYPE html>
@@ -151,12 +144,12 @@
 					<?php
 						$kota_kab=$_REQUEST['kota_kab'];
 						$sql2 = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
-						$result2 = $conn->query($sql2);
-						$row2 = $result2->fetch_assoc();
+						$result2 = mysql_query($sql2, $conn);
+						$row2 = mysql_fetch_assoc($result2);
 
 						$sql3 = "SELECT * FROM z_detail_pbb ORDER BY no DESC LIMIT 1";
-						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
+						$result3 = mysql_query($sql3, $conn);
+						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">DETAIL PBB</a></h1>
 					<h6>PBB/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("Y");
@@ -170,8 +163,8 @@
 							<?php
 								$kota_kab=$_REQUEST['kota_kab'];
 								$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+								$result = mysql_query($sql, $conn);
+								$row = mysql_fetch_assoc($result);
 							?>
 							<h5><?php echo $row['sites_kota_kabupaten'];?>
 							</h5>
@@ -180,11 +173,10 @@
 							<?php
 									$sql = "SELECT site.sites_id, site.sites_nama, site.sites_alamat, site.sites_luas_lahan, site.sites_tower_height, pbb.njop_tanah, pbb.njop_bangunan, pbb.nilai_pbb_site, (SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."') AS 'jl_pbb', ijin_ptt.ijin_ptt_nomor FROM site,pbb,ijin_ptt WHERE site.sites_id = pbb.sites_id && site.sites_id = ijin_ptt.sites_id && site.sites_kota_kabupaten = '".$kota_kab."'";
 
-									//$totpbb = "SELECT SUM(pbb.nilai_pbb_site) FROM pbb,site WHERE site.sites_id = pbb.sites_id";
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+									if (!empty($result))
+									{
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
@@ -198,10 +190,8 @@
 												<th onclick='sortTable(6)'>Tinggi Tower</th>
 												<th onclick='sortTable(7)'>Nilai PBB</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									    while ($row = mysql_fetch_assoc($result))
+									    {
 									        echo "
 									            <tr>
 									            		<td>" . $no++ . "</td>
@@ -209,18 +199,18 @@
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
 									                    <td>" . $row["ijin_ptt_nomor"] . "</td>
-									                    <td>Rp." . $row["njop_tanah"] . "</td>
-									                    <td>Rp." . $row["njop_bangunan"] . "</td>
+									                    <td>Rp." .number_format($row["njop_tanah"]). "</td>
+									                    <td>Rp." .number_format($row["njop_bangunan"]). "</td>
 									                    <td>" . $row["sites_luas_lahan"] . "m<sup>2</sup></td>
 									                    <td>" . $row["sites_tower_height"] . " m</td>
-									                    <td>Rp." . $row["nilai_pbb_site"] . "</td>
+									                    <td>Rp." .number_format($row["nilai_pbb_site"]). "</td>
 
 									            </tr>";
 									    }
 
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
+									    $result = mysql_query($sql, $conn);
+										$row = mysql_fetch_assoc($result);
 									    echo "
 									    <table>
 									    	<tr>
@@ -228,7 +218,7 @@
 									    			Total PBB
 									    		</td>
 									    		<td>
-									    			Rp." . $row["jl_pbb"] . "
+									    			Rp." . number_format($row["jl_pbb"]) . "
 									    		</td>
 									    	</tr>
 									    	<tr>
@@ -244,10 +234,6 @@
 									    echo "
 									    ";
 									}
-									else {
-									    //echo "No records found!";
-									}
-									$conn->close();
 								?>
 								<table>
 									<tr>
@@ -327,49 +313,31 @@
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
 		  table = document.getElementById("myTable");
 		  switching = true;
-		  //Set the sorting direction to ascending:
 		  dir = "asc"; 
-		  /*Make a loop that will continue until
-		  no switching has been done:*/
 		  while (switching) {
-		    //start by saying: no switching is done:
 		    switching = false;
 		    rows = table.getElementsByTagName("TR");
-		    /*Loop through all table rows (except the
-		    first, which contains table headers):*/
 		    for (i = 1; i < (rows.length - 1); i++) {
-		      //start by saying there should be no switching:
 		      shouldSwitch = false;
-		      /*Get the two elements you want to compare,
-		      one from current row and one from the next:*/
 		      x = rows[i].getElementsByTagName("TD")[n];
 		      y = rows[i + 1].getElementsByTagName("TD")[n];
-		      /*check if the two rows should switch place,
-		      based on the direction, asc or desc:*/
 		      if (dir == "asc") {
 		        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
 		          shouldSwitch= true;
 		          break;
 		        }
 		      } else if (dir == "desc") {
 		        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
 		          shouldSwitch= true;
 		          break;
 		        }
 		      }
 		    }
 		    if (shouldSwitch) {
-		      /*If a switch has been marked, make the switch
-		      and mark that a switch has been done:*/
 		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
 		      switching = true;
-		      //Each time a switch is done, increase this count by 1:
 		      switchcount ++;      
 		    } else {
-		      /*If no switching has been done AND the direction is "asc",
-		      set the direction to "desc" and run the while loop again.*/
 		      if (switchcount == 0 && dir == "asc") {
 		        dir = "desc";
 		        switching = true;
@@ -380,6 +348,8 @@
 		</script>
 
 <!-----------------------------------------END Java Sorting-------------------------------------------->
-		
+
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>

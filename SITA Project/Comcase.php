@@ -6,18 +6,11 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -148,8 +141,8 @@
 				<div class="body">
 					<?php
 						$sql3 = "SELECT * FROM z_comcase ORDER BY no DESC LIMIT 1";
-						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
+						$result3 = mysql_query($sql3, $conn);
+						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">COMCASE</a></h1>
 					<h6>COMCASE/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
@@ -161,11 +154,11 @@
 					<div id="featured">
 						<div>
 								<?php
-								$sql = "SELECT * FROM site";
-								$result = $conn->query($sql);
+								$sql = "SELECT sites_id, sites_nama, comcase_tanggal, comcase_keterangan, comcase_status, comcase_solusi, comcase_mitra, comcase_no_fpp, comcase_keldok, comcase_biaya, comcase_file, comcase_status_bayar FROM site";
+								$result = mysql_query($sql, $conn);
 								$no = 1;
 								
-								if ($result->num_rows > 0) 
+								if (!empty($result))
 								{
 								    echo "<table id= 'myTable'>
 								    		<tr>
@@ -183,8 +176,7 @@
 												<th>Total Biaya</th>
 												<th>Status Pembayaran</th>
 								    		</tr>";
-								    // output data of each row
-								    while($row = $result->fetch_assoc())
+								    while ($row = mysql_fetch_assoc($result))
 								    {
 										$file=$row["comcase_file"]; 
 										$loc="File/".$file;
@@ -202,14 +194,13 @@
 									        <td>".$row["comcase_mitra"]."</td>
 									        <td>".$row["comcase_no_fpp"]."</td>
 									        <td>".$row["comcase_keldok"]."</td>
-									        <td>".$row["comcase_biaya"]."</td>
+									        <td>Rp." .number_format($row["comcase_biaya"]). "</td>
 									        <td>".$row["comcase_status_bayar"]."</td>
 								        </tr>";
 								    } 
 
 								    echo "</table>";
 								}
-								$conn->close();
 								?>
 						</div>
 					</div>
@@ -239,49 +230,31 @@
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
 		  table = document.getElementById("myTable");
 		  switching = true;
-		  //Set the sorting direction to ascending:
 		  dir = "asc"; 
-		  /*Make a loop that will continue until
-		  no switching has been done:*/
 		  while (switching) {
-		    //start by saying: no switching is done:
 		    switching = false;
 		    rows = table.getElementsByTagName("TR");
-		    /*Loop through all table rows (except the
-		    first, which contains table headers):*/
 		    for (i = 1; i < (rows.length - 1); i++) {
-		      //start by saying there should be no switching:
 		      shouldSwitch = false;
-		      /*Get the two elements you want to compare,
-		      one from current row and one from the next:*/
 		      x = rows[i].getElementsByTagName("TD")[n];
 		      y = rows[i + 1].getElementsByTagName("TD")[n];
-		      /*check if the two rows should switch place,
-		      based on the direction, asc or desc:*/
 		      if (dir == "asc") {
 		        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
 		          shouldSwitch= true;
 		          break;
 		        }
 		      } else if (dir == "desc") {
 		        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
 		          shouldSwitch= true;
 		          break;
 		        }
 		      }
 		    }
 		    if (shouldSwitch) {
-		      /*If a switch has been marked, make the switch
-		      and mark that a switch has been done:*/
 		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
 		      switching = true;
-		      //Each time a switch is done, increase this count by 1:
 		      switchcount ++;      
 		    } else {
-		      /*If no switching has been done AND the direction is "asc",
-		      set the direction to "desc" and run the while loop again.*/
 		      if (switchcount == 0 && dir == "asc") {
 		        dir = "desc";
 		        switching = true;
@@ -295,3 +268,5 @@
 
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>

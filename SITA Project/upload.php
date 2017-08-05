@@ -7,18 +7,11 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 
 	if($row['admin']=="User"){header("Location: Home.php");}
    
@@ -116,11 +109,12 @@
 					<p>
 						1. Download Template ms.excel berikut ini, lalu isi data anda sesuai dengan urutan header tabel. <br>
 						2. Isi Tabel dengan data yang mengikuti format yang disarankan. <br>
-						3. Simpan Document Excel kedalam format .csv / .csv (coma delimited).<br>
-						4. Upload file anda !<br>
+						3. Simpan Dokumen Excel kedalam format .csv / .csv (coma delimited).<br>
+						4. Untuk Upload, Klik Choose File dan pilih File .csv yang sudah fix.<br>
+						4. Upload file anda dengan menekan tombol Submit !<br>
 						<br>
 						<br>
-						<a href="File/file.xlsx">DOWNLOAD FILE</a>
+						<a href="File/file.xlsx">DOWNLOAD TEMPLATE</a>
 						<br>
 						<br>
 

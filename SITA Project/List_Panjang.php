@@ -160,12 +160,12 @@
 									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
-									        				<th onclick='sortTable(1)'>No.</th>
-									                        <th onclick='sortTable(2)'>Site ID</th>
-									                        <th onclick='sortTable(3)'>Site Name</th>
+									        				<th>No.</th>
+									                        <th onclick='sortTable(0)'>Site ID</th>
+									                        <th onclick='sortTable(1)'>Site Name</th>
 									                        <th>Alamat</th>
-									                        <th onclick='sortTable(4)'>Kab.Kota</th>
-									                        <th onclick='sortTable(5)'>Pagu</th>
+									                        <th onclick='sortTable(2)'>Kab.Kota</th>
+									                        <th onclick='sortTable(3)'>Pagu</th>
 									                        <th>Harga Rata Rata</th>
 									                        <th>Penawaran Pemilik Lahan</th>
 									                        <th>Awal Kontrak</th>
@@ -187,12 +187,12 @@
 									                    <td>" . $row["sites_nama"] . "</td>
 									                    <td>" . $row["sites_alamat"] . "</td>
 									                    <td>" . $row["kota_kabupaten"] . "</td>
-									                    <td>Rp." . $row["perpanjangan_pagu"] . "</td>
-									                    <td>Rp." . $row["AVG_pagu"] . "</td>
-									                    <td>Rp." . $row["sites_penawaran_pemilik_lahan"] . "</td>
+									                    <td>Rp." .number_format($row["perpanjangan_pagu"]). "</td>
+									                    <td>Rp." .number_format($row["AVG_pagu"]). "</td>
+									                    <td>Rp." .number_format($row["sites_penawaran_pemilik_lahan"]). "</td>
 									                    <td>" . $row["sites_tanggal_start"] . "</td>
 									                    <td>" . $row["sites_tanggal_finish"] . "</td>
-									                    <td>Rp." . $row["perpanjangan_spph"] . "</td>
+									                    <td>Rp." .number_format($row["perpanjangan_spph"]). "</td>
 									                    <td>" . $row["perpanjangan_spph_tanggal"] . "</td>
 									                    <td>" . $row["perpanjangan_invoice_nomor"] . "</td>
 									                    <td>" . $row["perpanjangan_invoice"] . "</td>

@@ -6,18 +6,11 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc(); 
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>

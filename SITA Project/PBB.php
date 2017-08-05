@@ -6,18 +6,11 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();  
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -150,8 +143,8 @@
 				<div class="body">
 					<?php
 						$sql3 = "SELECT * FROM z_pbb ORDER BY no DESC LIMIT 1";
-						$result3 = $conn->query($sql3);
-						$row3 = $result3->fetch_assoc();
+						$result3 = mysql_query($sql3, $conn);
+						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">PAJAK BUMI BANGUNAN</a></h1>
 					<h6>PBB/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
@@ -165,10 +158,10 @@
 
 							<?php
 									$sql = "SELECT daerah.kota_kabupaten,pbb.koef_pbb,pbb.status,site.sites_id, site.sites_kota_kabupaten, COUNT(site.sites_kota_kabupaten) AS 'jl_site', pbb.tanggal_jatuh_tempo, SUM(pbb.nilai_pbb_site) AS 'jl_pbb' FROM site,pbb,daerah WHERE site.sites_id = pbb.sites_id && site.sites_kota_kabupaten = daerah.kota_kabupaten GROUP BY site.sites_kota_kabupaten";
-									$result = $conn->query($sql);
-									//  AVG_pagu has the AVG value of all columns of `perpanjangan_pagu` in table `site`
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+									if (!empty($result))
+									{
 									    echo "<table id= 'myTable'>
 									        <tr>
 									            <th onclick='sortTable(0)'>No.</th>
@@ -181,17 +174,15 @@
 												<th>Status</th>
 												<th>Action</th>
 									        </tr>";
-									    //  output data of each row
-									    //  $rows = array(); // This is not actually required
-									    while ($row = $result->fetch_assoc()) {
-									        //$rows[] = $row["AVG_pagu"]; // This is not actually required
+									    while ($row = mysql_fetch_assoc($result))
+									    {
 									        echo "
 									            <tr>
 									                    <td>" . $no++ . "</td>
 									                    <td>" . $row["sites_kota_kabupaten"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
 									                    <td>" . $row["jl_site"] . "</td>
-									                    <td>Rp." . $row["jl_pbb"] . "</td>
+									                    <td>Rp." .number_format($row["jl_pbb"]). "</td>
 									                    <td>" . $row["koef_pbb"] . "</td>
 									                    <td>" . $row["tanggal_jatuh_tempo"] . "</td>
 									                    <td>" . $row["status"] . "</td>
@@ -201,10 +192,6 @@
 
 									    echo "</table>";
 									}
-									else {
-									    //echo "No records found!";
-									}
-									$conn->close();
 								?>
 						</div>
 					</div>
@@ -230,49 +217,31 @@
 		  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
 		  table = document.getElementById("myTable");
 		  switching = true;
-		  //Set the sorting direction to ascending:
 		  dir = "asc"; 
-		  /*Make a loop that will continue until
-		  no switching has been done:*/
 		  while (switching) {
-		    //start by saying: no switching is done:
 		    switching = false;
 		    rows = table.getElementsByTagName("TR");
-		    /*Loop through all table rows (except the
-		    first, which contains table headers):*/
 		    for (i = 1; i < (rows.length - 1); i++) {
-		      //start by saying there should be no switching:
 		      shouldSwitch = false;
-		      /*Get the two elements you want to compare,
-		      one from current row and one from the next:*/
 		      x = rows[i].getElementsByTagName("TD")[n];
 		      y = rows[i + 1].getElementsByTagName("TD")[n];
-		      /*check if the two rows should switch place,
-		      based on the direction, asc or desc:*/
 		      if (dir == "asc") {
 		        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
 		          shouldSwitch= true;
 		          break;
 		        }
 		      } else if (dir == "desc") {
 		        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-		          //if so, mark as a switch and break the loop:
 		          shouldSwitch= true;
 		          break;
 		        }
 		      }
 		    }
 		    if (shouldSwitch) {
-		      /*If a switch has been marked, make the switch
-		      and mark that a switch has been done:*/
 		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
 		      switching = true;
-		      //Each time a switch is done, increase this count by 1:
 		      switchcount ++;      
 		    } else {
-		      /*If no switching has been done AND the direction is "asc",
-		      set the direction to "desc" and run the while loop again.*/
 		      if (switchcount == 0 && dir == "asc") {
 		        dir = "desc";
 		        switching = true;
@@ -282,7 +251,9 @@
 		}
 		</script>
 
-<!-----------------------------------------END Java Sorting------------------------------------------->
-		
+<!-----------------------------------------END Java Sorting-------------------------------------------->
+
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>
