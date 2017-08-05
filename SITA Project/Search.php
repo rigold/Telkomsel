@@ -112,11 +112,11 @@
 						</p>
 					</div>
 					<div id="article">
-						<h3>MENU ADMIN</h3>
 						<?php
 							if($row['admin']=="Admin")
 							{
 								echo "
+								<h3>MENU ADMIN</h3>
 								<p>
 									<a href='Add_User.php'>> ADD USER<br></a>
 									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
@@ -127,15 +127,7 @@
 								";
 							}
 							else
-								echo "
-									<p>
-									<a >> ADD USER<br></a>
-									<a ><br>> ADD SITE<br></a>
-									<a ><br>> LIST USER<br></a>
-									<a ><br>> LIST SITES<br></a>
-									<a ><br>> RIWAYAT CETAK<br></a>
-								</p>
-								";
+								echo "";
 						?>
 					</div>
 				</div>

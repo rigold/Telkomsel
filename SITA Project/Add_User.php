@@ -152,7 +152,7 @@
 							<label>NIK(ID):</label> <input type="text" name="NIK" size="50" required pattern="[0-9]{1,5}" placeholder="Masukan NIK Pegawai">
 							</p>
 							<p>
-							<label>Password:</label> <input type="text" name="Password" size="50" required placeholder="Masukkan Password Pegawai">
+							<label>Password:</label> <input type="Password" name="Password" size="50" required placeholder="Masukkan Password Pegawai">
 							</p>
 							<p>
 							<label>Jabatan:</label> <input type="text" name="Jabatan" size="50" placeholder="Masukkan Jabatan Pegawai">
