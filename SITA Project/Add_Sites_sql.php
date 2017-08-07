@@ -269,7 +269,7 @@
 
 //perintah post
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO daerah (
 		kota_kabupaten
 		)
@@ -278,7 +278,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO site (
 		sites_id,
 		sites_nama,
@@ -392,7 +392,7 @@
 		)
 		");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO ho(
 		ho_nomor,
 		sites_id,
@@ -411,7 +411,7 @@
 		)
 		");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO identitas_pemilik (
 		identitas_pemilik_ktp,
 		sites_id,
@@ -532,7 +532,7 @@
 		)
 		");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO pbb (
 		nop,
 		sites_id,
@@ -563,7 +563,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO skrd_rpm (
 		no_skrd,
 		sites_id,
@@ -584,7 +584,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO imb (
 		imb_nomor,
 		sites_id,
@@ -607,7 +607,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO imtu (
 		ijin_imtu_nomor,
 		sites_id,
@@ -622,7 +622,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO ijin_dephub (
 		ijin_dephub_nomor,
 		sites_id,
@@ -637,7 +637,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO ijin_ptt (
 		ijin_ptt_nomor,
 		sites_id,
@@ -652,7 +652,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO ipb (
 		ijin_ipb_nomor,
 		sites_id,
@@ -667,7 +667,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO ijin_prinsip (
 		ijin_prinsip_nomor,
 		sites_id,
@@ -682,7 +682,7 @@
 		)
 	");
 
-	mysqli_query($conn,"
+	mysql_query($conn,"
 		INSERT INTO ijin_genset (
 		ijin_genset_nomor,
 		sites_id,
@@ -701,10 +701,12 @@
 
 	if(!$conn) {
 		echo "failed";
-		die("Connection failed: " . mysqli_connect_error());	
+		//die("Connection failed: " . mysql_connect_error());	
 	}
 	else {
 		echo "success";
-		header("Location: List_Sites.php");
+		//header("Location: List_Sites.php");
 	}
 ?>
+
+<?php mysql_close($conn); ?>
