@@ -1,4 +1,3 @@
-
 <?php
 	if (session_status() == PHP_SESSION_NONE) {
 	    session_start();
@@ -17,6 +16,7 @@
 	if($row['admin']=="User"){header("Location: Home.php");}
    
 ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -137,3 +137,5 @@
 		
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>
