@@ -7,8 +7,6 @@
         <link rel="icon" href="images/favicon.png">
 
         <style>
-            @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
-            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
             body{
                 margin: 0;
@@ -165,8 +163,9 @@
                                 if (isset($_POST['submit']))
                                 {     
                                     include("connect.php");
-                                    session_start();
-
+                                    if (session_status() == PHP_SESSION_NONE) {
+                                        session_start();
+                                    }
                                     $nik=$_POST['NIK'];
                                     $password=$_POST['password'];
                                     $_SESSION['login_user']=$nik; 
@@ -174,10 +173,8 @@
 
                                      if (mysql_num_rows($query) != 0)
                                     {
-                                        if(empty($_SESSION)){
-                                            session_start();
-                                        }
-                                        echo "<script language='javascript' type='text/javascript'> location.href='Home.php' </script>";   
+                                        echo "<script language='javascript' type='text/javascript'> location.href='Home.php' </script>";
+                                        exit; 
                                     }
 
                                     else

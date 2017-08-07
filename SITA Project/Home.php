@@ -1,10 +1,11 @@
 <?php
-	if(empty($_SESSION))
-		session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
-   		}
+   	}
 
    	include("connect.php");
 
@@ -12,7 +13,6 @@
 	$result = mysql_query($sql, $conn);
 	$row = mysql_fetch_assoc($result);
 
-	if($row['admin']=="User"){header("Location: Home.php");}
 ?>
 
 <!DOCTYPE html>
