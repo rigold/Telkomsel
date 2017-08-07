@@ -5,31 +5,24 @@
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
-   		}
+   	}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
-	$sqlz = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$resultz = $conn->query($sqlz);
-	$rowz = $resultz->fetch_assoc();
-   
+	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$rowz = mysql_fetch_assoc($result);
+
    	if($rowz['admin']=="User"){header("Location: Home.php");}
+
+   	$nik=$_REQUEST['nik'];
+   	$sql2    = "SELECT * from user where nik='".$nik."'";
+	$result2 = mysql_query($sql2, $conn);
+	$row = mysql_fetch_assoc($result2);
+
 ?>
+
 <!DOCTYPE html>
-<?php
-	$con = mysqli_connect("localhost","root","","sita");
-	$nik=$_REQUEST['nik'];
-	$query = "SELECT * from user where nik='".$nik."'"; 
-	$result = mysqli_query($con, $query) or die ( mysqli_error());
-	$row = mysqli_fetch_assoc($result);
-?>
 
 <html>
 	<head>
@@ -169,3 +162,5 @@
 		</div>
 	</body>
 </html>
+
+<?php mysql_close($conn); ?>

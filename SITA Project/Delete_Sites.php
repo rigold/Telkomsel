@@ -1,14 +1,9 @@
 <?php
-	$databaseHost = 'localhost';
-	$databaseName = 'sita';
-	$databaseUsername = 'root';
-	$databasePassword = '';
-	 
-	$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
+	
+	include("connect.php");
 
 	$sites_id = $_GET['sites_id'];
-	$result = mysqli_query($conn, "DELETE FROM site WHERE sites_id='$sites_id'");
+	$result = mysql_query("DELETE FROM site WHERE sites_id='$sites_id'",$conn);
 	 
 	$file1 = $_GET['file1'];
 	unlink($file1);
@@ -25,3 +20,5 @@
 
 	header("Location:List_Sites.php");
 ?>
+
+<?php mysql_close($conn); ?>

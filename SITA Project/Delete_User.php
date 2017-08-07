@@ -1,29 +1,27 @@
 <?php
-$databaseHost = 'localhost';
-$databaseName = 'sita';
-$databaseUsername = 'root';
-$databasePassword = '';
- 
-$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+	
+	include("connect.php");
 
-$nik = $_GET['nik'];
+	$nik = $_GET['nik'];
 
-$sql = "SELECT * FROM user WHERE nik=$nik";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
+	$sql    = "SELECT * FROM user WHERE nik=$nik";
+	$result = mysql_query($sql, $conn);
+	$row = mysql_fetch_assoc($result);
 
-$result = mysqli_query($conn, "DELETE FROM user WHERE nik=$nik");
+	mysql_query("DELETE FROM user WHERE nik=$nik",$conn);
 
-if("no_img.jpg"==$row['link_profile_pic'])
-{
-	header("Location:List_User.php");
-}
-else
-{
-	echo $row['link_profile_pic'];
-	$file = $_GET['img'];
-	unlink($file);
-	header("Location:List_User.php");
-}
+	if("no_img.jpg"==$row['link_profile_pic'])
+	{
+		header("Location:List_User.php");
+	}
+	else
+	{
+		echo $row['link_profile_pic'];
+		$file = $_GET['img'];
+		unlink($file);
+		header("Location:List_User.php");
+	}
 
 ?>
+
+<?php mysql_close($conn); ?>

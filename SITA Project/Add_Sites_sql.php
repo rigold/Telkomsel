@@ -1,7 +1,7 @@
 <?php 
 	include("connect.php");
 
-	$temp = explode(".", $_FILES["file"]["name"]);
+	$temp = explode(".", $_FILES["Denah_Tanah"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 
 	$target_dir = "File/";
@@ -269,16 +269,16 @@
 
 //perintah post
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO daerah (
 		kota_kabupaten
 		)
 		VALUES(
 		'$Kota_Kabupaten'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO site (
 		sites_id,
 		sites_nama,
@@ -390,9 +390,9 @@
 		'$Comcase_Status_Bayar'
 
 		)
-		");
+		",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO ho(
 		ho_nomor,
 		sites_id,
@@ -409,9 +409,9 @@
 		'$Tanggal_Finish_HO',
 		'$Status_HO' 
 		)
-		");
+		",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO identitas_pemilik (
 		identitas_pemilik_ktp,
 		sites_id,
@@ -530,9 +530,9 @@
 		'$Surat_Ijin_PKS',
 		'$Surat_Perjanjian_Sewa_Tanah'
 		)
-		");
+		",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO pbb (
 		nop,
 		sites_id,
@@ -561,9 +561,9 @@
 		'$Denda_PBB',
 		'$Fee_PBB'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO skrd_rpm (
 		no_skrd,
 		sites_id,
@@ -582,9 +582,9 @@
 		'$Status_SKRD',
 		'$Surat_SKRD' 
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO imb (
 		imb_nomor,
 		sites_id,
@@ -605,9 +605,9 @@
 		'$Status_Kepengurusan_IMB',
 		'$Status_IMB'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO imtu (
 		ijin_imtu_nomor,
 		sites_id,
@@ -620,9 +620,9 @@
 		'$Tanggal_Awal_Ijin_imtu',
 		'$Tanggal_Akhir_Ijin_imtu'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO ijin_dephub (
 		ijin_dephub_nomor,
 		sites_id,
@@ -635,9 +635,9 @@
 		'$Tanggal_Mulai_Ijin',
 		'$Tanggal_Akhir_Ijin' 
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO ijin_ptt (
 		ijin_ptt_nomor,
 		sites_id,
@@ -650,9 +650,9 @@
 		'$Tanggal_Awal_Ijin_Pendirian', 
 		'$Tanggal_Akhir_Ijin_Pendirian'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO ipb (
 		ijin_ipb_nomor,
 		sites_id,
@@ -660,14 +660,14 @@
 		ijin_ipb_finish
 		)
 		VALUES(
-		'$Nomor_IPB',
+		'$Ijin_IPB_Nomor',
 		'$Site_ID',
 		'$Ijin_IPB_Start',
 		'$Ijin_IPB_Finish'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO ijin_prinsip (
 		ijin_prinsip_nomor,
 		sites_id,
@@ -680,9 +680,9 @@
 		'$Tanggal_Awal_Ijin_Prinsip',
 		'$Tanggal_Akhir_Ijin_Prinsip'
 		)
-	");
+	",$conn);
 
-	mysql_query($conn,"
+	mysql_query("
 		INSERT INTO ijin_genset (
 		ijin_genset_nomor,
 		sites_id,
@@ -697,15 +697,15 @@
 		'$Tanggal_Start',
 		'$Tanggal_Finish'
 		)
-	");
+	",$conn);
 
 	if(!$conn) {
 		echo "failed";
-		//die("Connection failed: " . mysql_connect_error());	
+		die("Connection failed: " . mysql_error());	
 	}
 	else {
 		echo "success";
-		//header("Location: List_Sites.php");
+		header("Location: List_Sites.php");
 	}
 ?>
 

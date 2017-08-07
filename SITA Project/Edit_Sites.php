@@ -5,34 +5,22 @@
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
-   		}
+   	}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
-   
+	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$rowz = mysql_fetch_assoc($result);
+
    	if($rowz['admin']=="User"){header("Location: Home.php");}
 ?>
+
 <!DOCTYPE html>
 
 <?php
 
-	$conn = mysqli_connect("localhost","root","","sita");
-
 	$sites_id=$_REQUEST['sites_id'];
-	//$file1=$_REQUEST['file1'];
-	//$file2=$_REQUEST['file2'];
-	//$file3=$_REQUEST['file3'];
-	//$file4=$_REQUEST['file4'];
 	
 	$query1 = "SELECT * from ho where sites_id='".$sites_id."'";
 	$query2 = "SELECT * from identitas_pemilik where sites_id='".$sites_id."'";
@@ -47,18 +35,18 @@
 	$query11 = "SELECT * from site where sites_id='".$sites_id."'";
 	$query12 = "SELECT * from skrd_rpm where sites_id='".$sites_id."'";
 
-	$result1 = mysqli_query($conn, $query1);
-	$result2= mysqli_query($conn, $query2);
-	$result3 = mysqli_query($conn, $query3);
-	$result4 = mysqli_query($conn, $query4);
-	$result5 = mysqli_query($conn, $query5);
-	$result6 = mysqli_query($conn, $query6);
-	$result7 = mysqli_query($conn, $query7);
-	$result8 = mysqli_query($conn, $query8);
-	$result9 = mysqli_query($conn, $query9);
-	$result10 = mysqli_query($conn, $query10);
-	$result11 = mysqli_query($conn, $query11);
-	$result12 = mysqli_query($conn, $query12);
+	$result1 = mysql_query($query1,$conn);
+	$result2= mysql_query($query1,$conn);
+	$result3 = mysql_query($query1,$conn);
+	$result4 = mysql_query($query1,$conn);
+	$result5 = mysql_query($query1,$conn);
+	$result6 = mysql_query($query1,$conn);
+	$result7 = mysql_query($query1,$conn);
+	$result8 = mysql_query($query1,$conn);
+	$result9 = mysql_query($query1,$conn);
+	$result10 = mysql_query($query1,$conn);
+	$result11 = mysql_query($query1,$conn);
+	$result12 = mysql_query($query1,$conn);
 
 	$row1 = mysqli_fetch_assoc($result1);
 	$row2 = mysqli_fetch_assoc($result2);
@@ -796,7 +784,7 @@
 		</div>
 	</body>
 </html>
-<!-- - - - - - - - - - JavaScript - - - - - - - - - -->
+
 <script>
 document.getElementsByClassName('tablinks')[0].click()
 function openTabs(evt, TabName) {
@@ -813,3 +801,5 @@ function openTabs(evt, TabName) {
     evt.currentTarget.className += " active";
 }
 </script>
+
+<?php mysql_close($conn); ?>
