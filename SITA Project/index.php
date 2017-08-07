@@ -1,3 +1,9 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 
 <html >
@@ -163,9 +169,7 @@
                                 if (isset($_POST['submit']))
                                 {     
                                     include("connect.php");
-                                    if (session_status() == PHP_SESSION_NONE) {
-                                        session_start();
-                                    }
+
                                     $nik=$_POST['NIK'];
                                     $password=$_POST['password'];
                                     $_SESSION['login_user']=$nik; 
