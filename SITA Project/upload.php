@@ -129,12 +129,13 @@
 						<a href="File/file.xlsx">DOWNLOAD TEMPLATE</a>
 						<br>
 						<br>
-
+						<br>
 					</p>
 					<form action="upload_sql.php" method="post" enctype="multipart/form-data">
 							<input type="file" name="file" size="50" style="margin-left: 50px;"> 
-							<br>
-							<br>
+							<br><br>
+							Tipe File = .csv ; Max File Size = 2 MB; ~ 500 Baris Data; Max Upload Time = 5 Menit;
+							<br><br>
 						 	<input type="submit" value="Submit" name="submit">
 					</form>
 											

@@ -288,13 +288,13 @@
 											<label >Luas Jalan Akses</label> <input placeholder="Masukkan Luas Jalan Akses" type="text" name="Luas_Jalan_Akses" size="50">
 										</p>
 										<p>
-											<label >Denah Tanah</label> <input type="file" name="Denah_Tanah" id="Denah_Tanah" size="50"><br>
+											<label >Denah Tanah<br>----- MAX 2MB; Ext jpg,jpeg,png</label> <input type="file" name="Denah_Tanah" id="Denah_Tanah" size="50"><br>
 										</p>
 										<p>
-											<label >Peta Radius Tower</label> <input type="file" name="Peta_Lokasi_Radius_Tower" id="Peta_Lokasi_Radius_Tower" size="50"><br>
+											<label >Peta Radius Tower<br>----- MAX 2MB; Ext jpg,jpeg,png</label> <input type="file" name="Peta_Lokasi_Radius_Tower" id="Peta_Lokasi_Radius_Tower" size="50"><br>
 										</p>
 										<p>
-											<label >Sketsa Batas Lahan</label> <input type="file" name="Sketsa_Batas_Lahan" id="Sketsa_Batas_Lahan" size="50"><br>
+											<label >Sketsa Batas Lahan<br>----- MAX 2MB; Ext jpg,jpeg,png</label> <input type="file" name="Sketsa_Batas_Lahan" id="Sketsa_Batas_Lahan" size="50"><br>
 										</p>
 										<p>
 											<label >Tanggal Mulai Sewa</label> <input type="date" id="Tanggal_Mulai_Sewa" name="Tanggal_Mulai_Sewa" >
@@ -775,7 +775,7 @@
 											<label >NJOP Bangunan</label> <input placeholder="!! HANYA ANGKA SAJA, Masukkan Nilai Jual Objek Pajak Bangunan" type="text" name="NJOP_Bangunan" size="50">
 										</p>
 										<p>
-											<label >Surat PBB</label> <input type="file" name="Surat_PBB" id="Surat_PBB" size="50"><br>
+											<label >Surat PBB<br>----- MAX 2MB; Ext jpg,jpeg,png,pdf</label> <input type="file" name="Surat_PBB" id="Surat_PBB" size="50"><br>
 										</p>
 										<p>
 											<label >Koefisien PBB</label> <input placeholder="Masukkan Koefisien PBB,CONTOH : 0.1 (Koma memakai titik)" type="text" name="Koef_PBB" size="50">
@@ -808,7 +808,7 @@
 											<label >Status</label> <input placeholder="Masukkan Status RPM Site Terkini" type="text" name="Status_SKRD" size="50">
 										</p>
 										<p>
-											<label >Surat RPM</label> <input type="file" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
+											<label >Surat RPM<br>----- MAX 2MB; Ext jpg,jpeg,png,pdf</label> <input type="file" name="Surat_SKRD" id="Surat_SKRD" size="50"><br>	
 										</p>
 									</a>
 								</table>
@@ -985,7 +985,7 @@
 											<label >Comcase Solusi</label> <input placeholder="Masukkan Solusi Terkini Site" type="text" name="Comcase_Solusi" size="50">
 										</p>
 										<p>
-											<label >Comcase File</label> <input type="file" name="Comcase_File" id="Comcase_File" size="50"><br>
+											<label >Comcase File<br>----- MAX 10 MB; Ext doc,docx,rar,zip</label> <input type="file" name="Comcase_File" id="Comcase_File" size="50"><br>
 										</p>
 										<p>
 											<label >Comcase Mitra</label> <input placeholder="Masukkan Mitra Yang membantu mengurus Comcase" type="text" name="Comcase_Mitra" size="50">

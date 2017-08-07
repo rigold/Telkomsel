@@ -152,7 +152,7 @@
 									<br>
 									Nama Project : SITA Project
 									<br>
-									Juni - Juli,2017
+									Juni - Agustus,2017
 								</p>
 							</h4>
 							<h4>Pembimbing Lapangan
@@ -171,7 +171,7 @@
 							</h4>
 							<h4>Admin Website
 								<p>
-									Nama Seseorang - Nomor Handphone - Email@email.com
+									Immanuel R Atmaja - 08111881674 - immanuel_r_atmaja@telkomsel.co.id
 								</p>
 							</h4>
 						</div>

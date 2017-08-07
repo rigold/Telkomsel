@@ -159,9 +159,14 @@
 								<p>
 									Web ini adalah tempat penampungan dan pengolahan data site untuk kemudian data dapat dipilah sesuai dengan kebutuhan pengguna, web ini juga menyediakan fitur untuk melakukan print tabel kedalam bentuk dokumen.
 									<br>Ada dua hak akses pada web ini :<br> 
-									<br>1. Admin (Hampir dapat melakukan semua perubahan pada web)
-									<br>2. User (Pengguna akhir yang hanya dapat melakukan fungsi view, search dan print).
-									
+									<br>1. Admin (Isert,Edit,Delete,Upload + View,Search,Print)
+									<br>2. User (View,Search,Print).
+									<br>
+									<br>- Web Mempunyai fungsi log-out otomatis bila pengguna idle selama 1 jam
+									<br>- Maximum Upload Image (extensi = jpg,jpeg,png) = 2 MB
+									<br>- Maximum Upload File Dokumen (extensi = doc,docx,pdf) = 2 MB
+									<br>- Maximum Upload File Lain (extensi = zip,rar) = 10 MB
+									<br>- Maximum Upload File Data Base (Data Sites,Disarankan  MAX = 500 Baris data) (extensi = csv, csv (Coma Deliminated)) =  2 MB , 5 Menit Waktu Upload
 									<br><br>
 									Bila ada pertanyaan yang ingin diajukan, segera hubungi kami melalui link berikut ini. 
 									<a href="About.php">Hubungi kami !</a>
@@ -178,8 +183,7 @@
 									<br>3.Siapa saja yang bisa melakukan insert / delete data site dan data lain pada web ini?
 									<br>Admin
 									<br>
-									<br>4.Web ini menolong sekali dan bertampilan bagus, apa yang dapat saya berikan?
-									<br>Tolong Kami dikasih Nilai A . :)
+									
 								</p>
 							</h3>
 						</div>
