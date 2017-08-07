@@ -1,23 +1,23 @@
 
 harus?
--msqli ke mysql
--rapikan conn.php
--atur type file upload dan ukuran
--download file --> ke download template
--time out
--ganti password ke bintang bintang
--connection die
+-msqli ke mysql 						x
+-rapikan conn.php 						x
+-atur type file upload dan ukuran				x progress
+-download file --> ke download template				x
+-time out							x
+-ganti password ke bintang bintang				x
+-connection die							x
 
 bisa? 3-4 hari?
--hilangkan menu admin untuk user
--user ganti password sendiri
--nomor surat tambah tanggal dan bulan
+-hilangkan menu admin untuk user				x
+-nomor surat tambah tanggal dan bulan				x
 
 mungkin? 3-4 hari?
--multiple file upload comcase ---> solusi mungkin di zip
--berikan pemisahan untuk uang ??
--detail orang di bawah pbb& rpm ganti jadi dinamis
+-multiple file upload comcase ---> solusi mungkin di zip	x progress
+-berikan pemisahan untuk uang ??				x
 
 buat next version?	1-2 minggu?
--site per history
--log untuk view per user
+-site per history						-
+-log untuk view per user					-
+-user ganti password sendiri					-
+-detail orang di bawah pbb& rpm ganti jadi dinamis		-

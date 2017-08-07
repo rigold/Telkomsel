@@ -7,27 +7,21 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
-
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	}
+   	include("connect.php");
 
 	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result1 = $conn->query($sql);
-	$row1 = $result1->fetch_assoc();
+	$result1 = mysql_query($sql, $conn);
+	$row1 = mysql_fetch_assoc($result1);
 
 	$sql3 = "SELECT * FROM z_monitoring ORDER BY no DESC LIMIT 1";
-	$result3 = $conn->query($sql3);
-	$row3 = $result3->fetch_assoc();
+	$result3 = mysql_query($sql3, $conn);
+	$row3 = mysql_fetch_assoc($result3);
 
 	$masuk2=$row1['nama_user'];
-	$masuk="Monitoring/".$row3['no']."/".$row1['nik']."/".date("Y");
-	mysqli_query($conn,"INSERT INTO z_monitoring (no_surat,nama) VALUES ('$masuk','$masuk2');");
+	$masuk="Monitoring/".$row3['no']."/".$row1['nik']."/".date("d-m-Y");
+	mysql_query("INSERT INTO z_monitoring (no_surat,nama) VALUES ('$masuk','$masuk2')",$conn);
 
 	header("Location: Monitoring.php");
 ?>
+
+<?php mysql_close($conn); ?>
