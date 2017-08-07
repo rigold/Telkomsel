@@ -20,7 +20,7 @@
 	$row3 = mysql_fetch_assoc($result3);
 
 	$masuk2=$row1['nama_user'];
-	$masuk="DATASITE/".$siteloc."/".$row3['no']."/".$row1['nik']."/".date("Y");
+	$masuk="DATASITE/".$siteloc."/".$row3['no']."/".$row1['nik']."/".date("d-m-Y");
 	mysql_query("INSERT INTO z_datasites (no_surat,nama) VALUES ('$masuk','$masuk2')",$conn);
 
 	header("Location: Site_Daerah.php?siteloc=".$siteloc);

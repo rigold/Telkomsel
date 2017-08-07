@@ -4,8 +4,8 @@ harus?
 -rapikan conn.php 						x
 -atur type file upload dan ukuran				x progress
 -download file --> ke download template				x
--time out							x progress
--ganti password ke bintang bintang				x progress
+-time out							x
+-ganti password ke bintang bintang				x
 -connection die							x
 
 bisa? 3-4 hari?

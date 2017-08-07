@@ -20,7 +20,7 @@
 	$row3 = mysql_fetch_assoc($result3);
 
 	$masuk2=$row1['nama_user'];
-	$masuk="PBB/".$kota_kab."/".$row3['no']."/".$row1['nik']."/".date("Y");
+	$masuk="PBB/".$kota_kab."/".$row3['no']."/".$row1['nik']."/".date("d-m-Y");
 	mysql_query("INSERT INTO z_detail_pbb (no_surat,nama) VALUES ('$masuk','$masuk2')",$conn);
 
 	header("Location: detail_pbb.php?kota_kab=".$kota_kab);

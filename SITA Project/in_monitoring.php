@@ -18,7 +18,7 @@
 	$row3 = mysql_fetch_assoc($result3);
 
 	$masuk2=$row1['nama_user'];
-	$masuk="Monitoring/".$row3['no']."/".$row1['nik']."/".date("Y");
+	$masuk="Monitoring/".$row3['no']."/".$row1['nik']."/".date("d-m-Y");
 	mysql_query("INSERT INTO z_monitoring (no_surat,nama) VALUES ('$masuk','$masuk2')",$conn);
 
 	header("Location: Monitoring.php");
