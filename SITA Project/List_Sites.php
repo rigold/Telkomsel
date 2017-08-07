@@ -7,6 +7,10 @@
 	    session_start();
 	}
 >>>>>>> 5b4479d1651e350d766d22db411c80fcd8f83f4c
+=======
+	    session_start();
+	}
+>>>>>>> 5b4479d1651e350d766d22db411c80fcd8f83f4c
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
