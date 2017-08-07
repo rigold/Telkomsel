@@ -145,7 +145,7 @@
 							<label for="b">NIK(ID):</label> <input type="text" name="NIK" value="<?php echo $row['nik'];?>" size="50">
 							</p>
 							<p>
-							<label for="c">Password:</label> <input type="text" name="Password" value="<?php echo $row['password'];?>" size="50">
+							<label for="c">Password:</label> <input type="Password" name="Password" value="<?php echo $row['password'];?>" size="50">
 							</p>
 							<p>
 							<label for="d">Jabatan:</label> <input type="text" name="Jabatan" value="<?php echo $row['jabatan'];?>" size="50">
