@@ -113,29 +113,22 @@
 						</p>
 					</div>
 					<div id="article">
-						<h3>MENU ADMIN</h3>
 						<?php
-							if($rowz['admin']=="Admin")
+							if($row['admin']=="Admin")
 							{
 								echo "
+								<h3>MENU ADMIN</h3>
 								<p>
 									<a href='Add_User.php'>> ADD USER<br></a>
 									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
 									<a href='List_User.php'><br>> LIST USER<br></a>
 									<a href='List_Sites.php'><br>> LIST SITES<br></a>
-									<a href='riwayat_print.php'><br>> RIWAYAT PRINT<br></a>
+									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
 								</p>
 								";
 							}
 							else
-								echo "
-									<p>
-									<a >> ADD USER<br></a>
-									<a ><br>> ADD SITE<br></a>
-									<a ><br>> LIST USER<br></a>
-									<a ><br>> LIST SITES<br></a>
-								</p>
-								";
+								echo "";
 						?>
 					</div>
 				</div>
