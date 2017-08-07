@@ -8,12 +8,15 @@
    		}
 
    	include("connect.php");
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
+
+	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$rowz = mysql_fetch_assoc($result);
    
 ?>
+
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -114,23 +117,14 @@
 						</p>
 					</div>
 					<div id="article">
-						<?php
-							if($row['admin']=="Admin")
-							{
-								echo "
-								<h3>MENU ADMIN</h3>
-								<p>
-									<a href='Add_User.php'>> ADD USER<br></a>
-									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
-									<a href='List_User.php'><br>> LIST USER<br></a>
-									<a href='List_Sites.php'><br>> LIST SITES<br></a>
-									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
-								</p>
-								";
-							}
-							else
-								echo "";
-						?>
+						<h3>MENU ADMIN</h3>
+						<p>
+							<a href='Add_User.php'>> ADD USER<br></a>
+							<a href='Add_Sites.php'><br>> ADD SITE<br></a>
+							<a href='List_User.php'><br>> LIST USER<br></a>
+							<a href='List_Sites.php'><br>> LIST SITES<br></a>
+							<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
+						</p>
 					</div>
 				</div>
 				<div class="body">
@@ -197,8 +191,9 @@
 									FROM site
 									WHERE sites_id = '$sites_id'
 									";
-								$result = $conn->query($sql);
-								$row = $result->fetch_assoc();
+
+								$result = mysql_query($sql, $conn);
+								$row = mysql_fetch_assoc($result);
 
 								$a=$row["sites_denah_tanah"]; 
 								$aloc="File/".$a;
@@ -271,8 +266,9 @@
 									FROM site, identitas_pemilik
 									WHERE site.sites_id='$sites_id' && identitas_pemilik.sites_id='$sites_id'
 									";
-								$result2 = $conn->query($sql2);
-								$row2 = $result2->fetch_assoc();
+
+								$result2 = mysql_query($sql2, $conn);
+								$row2 = mysql_fetch_assoc($result2);
 
 								echo "
 								<tr><th>Pagu</th><td>Rp." . $row2["perpanjangan_pagu"]."</td></tr> 
@@ -308,8 +304,9 @@
 									FROM ho
 									WHERE sites_id='$sites_id'
 									";
-								$result4 = $conn->query($sql4);
-								$row4 = $result4->fetch_assoc();
+
+								$result4 = mysql_query($sql4, $conn);
+								$row4 = mysql_fetch_assoc($result4);
 
 								echo "
 								<tr><th>Nomor HO</th><td>" . $row4["ho_nomor"]."</td></tr>
@@ -340,8 +337,9 @@
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
 									";
-								$result5 = $conn->query($sql5);
-								$row5 = $result5->fetch_assoc();
+
+								$result5 = mysql_query($sql5, $conn);
+								$row5 = mysql_fetch_assoc($result5);
 
 								echo "
 								<tr><th>KTP Pemilik</th><td>" . $row5["identitas_pemilik_ktp"]."</td></tr>
@@ -379,8 +377,9 @@
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
 									";
-								$result6 = $conn->query($sql6);
-								$row6 = $result6->fetch_assoc();
+
+								$result6 = mysql_query($sql6, $conn);
+								$row6 = mysql_fetch_assoc($result6);
 
 								echo "
 									<tr><th>Surat Pernyataan</th><td>" . $row6["sp"]."</td></tr>
@@ -415,8 +414,9 @@
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
 									";
-								$result7 = $conn->query($sql7);
-								$row7 = $result7->fetch_assoc();
+
+								$result7 = mysql_query($sql7, $conn);
+								$row7 = mysql_fetch_assoc($result7);
 
 								echo "
 								<tr><th>Akta Hibah</th><td>" . $row7["akta_hibah"]."</td></tr> 
@@ -443,8 +443,9 @@
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
 									";
-								$result8 = $conn->query($sql8);
-								$row8 = $result8->fetch_assoc();
+
+								$result8 = mysql_query($sql8, $conn);
+								$row8 = mysql_fetch_assoc($result8);
 
 								echo "
 								<tr><th>Ijin Perubahan Pengguna Tanah</th><td>" . $row8["ijin_ippt"]."</td></tr> 
@@ -479,8 +480,9 @@
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
 									";
-								$result9 = $conn->query($sql9);
-								$row9 = $result9->fetch_assoc();
+
+								$result9 = mysql_query($sql9, $conn);
+								$row9 = mysql_fetch_assoc($result9);
 
 								echo "
 								<tr><th>Surat Keterangan Akses Lahan Jalan</th><td>" . $row9["sket_akses_lahan_jalan"]."</td></tr> 
@@ -507,7 +509,7 @@
 							<a id="detail">
 								<?php
 								$sites_id = $_GET['sites_id'];
-								$sql0 = "SELECT
+								$sql10 = "SELECT
 									sl_sk,
 									sl_sk_pengambilan_jaminan_asli,
 									sl_surat_jaminan_hukum,
@@ -515,14 +517,15 @@
 									FROM identitas_pemilik
 									WHERE sites_id='$sites_id'
 									";
-								$result0 = $conn->query($sql0);
-								$row0 = $result0->fetch_assoc();
+
+								$result10 = mysql_query($sql10, $conn);
+								$row10 = mysql_fetch_assoc($result10);
 
 								echo "
-								<tr><th>Surat Kuasa</th><td>" . $row0["sl_sk"]."</td></tr> 
-								<tr><th>Surat Kuasa Pengambilan Jaminan Asli</th><td>" .$row0["sl_sk_pengambilan_jaminan_asli"]."</td></tr> 
-								<tr><th>Surat Jaminan Hukum</th><td>" .$row0["sl_surat_jaminan_hukum"]."</td></tr> 
-								<tr><th>Surat Perjanjian Sewa Tanah</th><td>" .$row0["sl_surat_perjanjian_sewa_tanah"]."</td></tr>
+								<tr><th>Surat Kuasa</th><td>" . $row10["sl_sk"]."</td></tr> 
+								<tr><th>Surat Kuasa Pengambilan Jaminan Asli</th><td>" .$row10["sl_sk_pengambilan_jaminan_asli"]."</td></tr> 
+								<tr><th>Surat Jaminan Hukum</th><td>" .$row10["sl_surat_jaminan_hukum"]."</td></tr> 
+								<tr><th>Surat Perjanjian Sewa Tanah</th><td>" .$row10["sl_surat_perjanjian_sewa_tanah"]."</td></tr>
 								";
 								?>
 							</a>
@@ -548,8 +551,10 @@
 								FROM pbb
 								WHERE sites_id='$sites_id'
 								";
-							$result11 = $conn->query($sql11);
-							$row11 = $result11->fetch_assoc();
+
+							$result11 = mysql_query($sql11, $conn);
+							$row11 = mysql_fetch_assoc($result11);
+
 							$a=$row11["surat_pbb"]; 
 							$aloc="File/".$a;
 
@@ -585,8 +590,9 @@
 								FROM skrd_rpm
 								WHERE sites_id='$sites_id'
 								";
-							$result12 = $conn->query($sql12);
-							$row12 = $result12->fetch_assoc();
+
+							$result12 = mysql_query($sql12, $conn);
+							$row12 = mysql_fetch_assoc($result12);
 							$a=$row12["surat_skrd"]; 
 							$aloc="File/".$a;
 
@@ -618,8 +624,9 @@
 								FROM imb
 								WHERE sites_id='$sites_id'
 								";
-							$result13 = $conn->query($sql13);
-							$row13 = $result13->fetch_assoc();
+							
+							$result13 = mysql_query($sql13, $conn);
+							$row13 = mysql_fetch_assoc($result13);
 
 							echo "
 							<tr><th>Nomor IMB</th><td>" .$row13["imb_nomor"]."</td></tr> 
@@ -646,8 +653,9 @@
 									FROM imtu
 									WHERE sites_id='$sites_id'
 									";
-								$result14 = $conn->query($sql14);
-								$row14 = $result14->fetch_assoc();
+								
+								$result14 = mysql_query($sql14, $conn);
+								$row14 = mysql_fetch_assoc($result14);
 
 								echo "
 								<tr><th>Nomor Ijin</th><td>" .$row14["ijin_imtu_nomor"]."</td></tr> 
@@ -670,8 +678,9 @@
 									FROM ijin_dephub
 									WHERE sites_id='$sites_id'
 									";
-								$result15 = $conn->query($sql15);
-								$row15 = $result15->fetch_assoc();
+
+								$result15 = mysql_query($sql15, $conn);
+								$row15 = mysql_fetch_assoc($result15);
 
 								echo "
 								<tr><th>Nomor Ijin</th><td>" .$row15["ijin_dephub_nomor"]."</td></tr> 
@@ -694,8 +703,9 @@
 									FROM ijin_ptt
 									WHERE sites_id='$sites_id'
 									";
-								$result16 = $conn->query($sql16);
-								$row16 = $result16->fetch_assoc();
+
+								$result16 = mysql_query($sql16, $conn);
+								$row16 = mysql_fetch_assoc($result16);
 
 								echo "
 								<tr><th>Nomor Ijin Pendirian</th><td>" .$row16["ijin_ptt_nomor"]."</td></tr> 
@@ -718,8 +728,9 @@
 									FROM ipb
 									WHERE sites_id='$sites_id'
 									";
-								$result17 = $conn->query($sql17);
-								$row17 = $result17->fetch_assoc();
+								
+								$result17 = mysql_query($sql17, $conn);
+								$row17 = mysql_fetch_assoc($result17);
 
 								echo "
 								<tr><th>Nomor IPB</th><td>" .$row17["ijin_ipb_nomor"]."</td></tr> 
@@ -742,8 +753,9 @@
 									FROM ijin_prinsip
 									WHERE sites_id='$sites_id'
 									";
-								$result18 = $conn->query($sql18);
-								$row18 = $result18->fetch_assoc();
+								
+								$result18 = mysql_query($sql18, $conn);
+								$row18 = mysql_fetch_assoc($result18);
 
 								echo "
 								<tr><th>Nomor Ijin Prinsip</th><td>" .$row18["ijin_prinsip_nomor"]."</td></tr> 
@@ -767,8 +779,9 @@
 									FROM ijin_genset
 									WHERE sites_id='$sites_id'
 									";
-								$result19 = $conn->query($sql19);
-								$row19 = $result19->fetch_assoc();
+								
+								$result19 = mysql_query($sql19, $conn);
+								$row19 = mysql_fetch_assoc($result19);
 
 								echo "
 								<tr><th>Nomor</th><td>" .$row19["ijin_genset_nomor"]."</td></tr> 
@@ -799,8 +812,9 @@
 									FROM site
 									WHERE sites_id='$sites_id'
 									";
-								$result20 = $conn->query($sql20);
-								$row20 = $result20->fetch_assoc();
+								
+								$result20 = mysql_query($sql20, $conn);
+								$row20 = mysql_fetch_assoc($result20);
 								$a=$row20["comcase_file"]; 
 								$aloc="File/".$a;
 								echo "
@@ -832,7 +846,6 @@
 	</body>
 </html>
 
-<!-- - - - - - - - - - JavaScript untuk tab menu di class=page - - - - - - - - - -->
 <script>
 	document.getElementsByClassName('tablinks')[0].click()
 	function openTabs(evt, TabName) {
@@ -849,3 +862,5 @@
 	    evt.currentTarget.className += " active";
 	}
 </script>
+
+<?php mysql_close($conn); ?>
