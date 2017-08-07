@@ -171,7 +171,7 @@
 							</h4>
 							<h4>Admin Website
 								<p>
-									Nama Seseorang - Nomor Handphone - Email@email.com
+									Immanuel R Atmaja - 08111881674 - immanuel_r_atmaja@telkomsel.co.id
 								</p>
 							</h4>
 						</div>
