@@ -5,7 +5,18 @@
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
+   		exit;
    	}
+
+	if(time() - $_SESSION['timestamp'] > 60*60) {
+	    echo"<script>alert('1 Jam Sudah Berakhir!'); </script>";
+	    unset($_SESSION['username'], $_SESSION['password'], $_SESSION['timestamp']);
+	    $_SESSION['logged_in'] = false;
+	   	echo "<script language='javascript' type='text/javascript'> location.href='logout.php' </script>";
+	    exit;
+	} else {
+	    $_SESSION['timestamp'] = time();
+	}
 
    	include("connect.php");
 

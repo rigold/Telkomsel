@@ -179,8 +179,8 @@
 
                                      if (mysql_num_rows($query) != 0)
                                     {
+                                        $_SESSION['timestamp'] = time();
                                         echo "<script language='javascript' type='text/javascript'> location.href='Home.php' </script>";
-                                        exit; 
                                     }
 
                                     else
