@@ -7,26 +7,18 @@
    		header("Location: Index.php");
    		}
 
-   	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "sita";
+   	include("connect.php");
 
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$rowz = mysql_fetch_assoc($result);
+	$row = mysql_fetch_assoc($result);
 
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
-
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
-	$row = $result->fetch_assoc();
-   
    	if($rowz['admin']=="User"){header("Location: Home.php");}
 ?>
 
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -157,17 +149,17 @@
 							<a id="detail">
 							<?php
 								$sql = "SELECT no,no_surat,nama FROM z_datasites WHERE no > 1 ";
-
-								$result = $conn->query($sql);
+								$result = mysql_query($sql, $conn);
 								$no = 1;
-								if ($result->num_rows > 0) {
+								
+								if (!empty($result)) {
 								    echo "<table id= 'myTable'>
 								        <tr>
 								        	<th onclick='sortTable(0)'>No.</th>
 								            <th onclick='sortTable(1)'>No. Surat</th>
 											<th onclick='sortTable(2)'>Nama User</th>
 								        </tr>";
-								    while ($row = $result->fetch_assoc()) {
+								    while ($row = mysql_fetch_assoc($result)) {
 								        echo "
 								            <tr>
 							            		<td>" . $no++ . "</td>
@@ -185,23 +177,23 @@
 						<table border="0">
 							<a id="detail">
 								<?php
-									$sqla = "SELECT * FROM z_perpanjangan WHERE no > 1 ";
-
-									$resulta = $conn->query($sqla);
+									$sql    = "SELECT * FROM z_perpanjangan WHERE no > 1 ";
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($resulta->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th>No.</th>
 									            <th>No. Surat</th>
 												<th>Nama User</th>
 									        </tr>";
-									    while ($rowa = $resulta->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
-								                    <td>" . $rowa["no_surat"] . "</td>
-								                    <td>" . $rowa["nama"] . "</td>
+								                    <td>" . $row["no_surat"] . "</td>
+								                    <td>" . $row["nama"] . "</td>
 									            </tr>
 									        ";
 									    }
@@ -215,18 +207,18 @@
 						<table border="0">
 							<a id="detail">
 								<?php
-									$sql = "SELECT no,no_surat,nama FROM z_monitoring WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$sql    = "SELECT no,no_surat,nama FROM z_monitoring WHERE no > 1 ";
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -236,8 +228,6 @@
 									        ";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -248,17 +238,17 @@
 							<a id="detail">
 								<?php
 									$sql = "SELECT no,no_surat,nama FROM z_perizinan WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -267,8 +257,6 @@
 									            </tr>";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -279,17 +267,17 @@
 							<a id="detail">
 								<?php
 									$sql = "SELECT no,no_surat,nama FROM z_pbb WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -299,8 +287,6 @@
 									        ";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -311,17 +297,16 @@
 							<a id="detail">
 							<?php
 									$sql = "SELECT no,no_surat,nama FROM z_detail_pbb WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -331,8 +316,6 @@
 									        ";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -343,17 +326,17 @@
 							<a id="detail">
 								<?php
 									$sql = "SELECT no,no_surat,nama FROM z_rpm WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -362,8 +345,6 @@
 									            </tr>";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -374,17 +355,17 @@
 							<a id="detail">
 								<?php
 									$sql = "SELECT no,no_surat,nama FROM z_detail_rpm WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -393,8 +374,6 @@
 									            </tr>";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -405,17 +384,17 @@
 							<a id="detail">
 								<?php
 									$sql = "SELECT no,no_surat,nama FROM z_comcase WHERE no > 1 ";
-
-									$result = $conn->query($sql);
+									$result = mysql_query($sql, $conn);
 									$no = 1;
-									if ($result->num_rows > 0) {
+
+									if (!empty($result)) {
 									    echo "<table id= 'myTable'>
 									        <tr>
 									        	<th onclick='sortTable(0)'>No.</th>
 									            <th onclick='sortTable(1)'>No. Surat</th>
 												<th onclick='sortTable(2)'>Nama User</th>
 									        </tr>";
-									    while ($row = $result->fetch_assoc()) {
+									    while ($row = mysql_fetch_assoc($result)) {
 									        echo "
 									            <tr>
 								            		<td>" . $no++ . "</td>
@@ -424,8 +403,6 @@
 									            </tr>";
 									    }
 									    echo "</table>";
-									    $result = $conn->query($sql);
-									    $row = $result->fetch_assoc();
 									}
 								?>
 							</a>
@@ -444,7 +421,6 @@
 	</body>
 </html>
 
-<!-- - - - - - - - - - JavaScript untuk tab menu di class=page - - - - - - - - - -->
 <script>
 	document.getElementsByClassName('tablinks')[0].click()
 	function openTabs(evt, TabName) {
@@ -461,3 +437,5 @@
 	    evt.currentTarget.className += " active";
 	}
 </script>	
+
+<?php mysql_close($conn); ?>
