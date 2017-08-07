@@ -1,9 +1,6 @@
 <?php
-	$servername ="localhost";
-	$username = "root";
-	$password = "";
-	$database = "sita";
-	$conn = mysqli_connect($servername, $username, $password, $database);
+	
+	include("connect.php");
 
 	$sites_id=$_REQUEST['sites_id'];
 	$file1=$_REQUEST['file1'];//denah tanah
@@ -33,31 +30,31 @@
 	$query11 = "SELECT * from site where sites_id='".$sites_id."'";
 	$query12 = "SELECT * from skrd_rpm where sites_id='".$sites_id."'";
 
-	$result1 = mysqli_query($conn, $query1);
-	$result2 = mysqli_query($conn, $query2);
-	$result3 = mysqli_query($conn, $query3);
-	$result4 = mysqli_query($conn, $query4);
-	$result5 = mysqli_query($conn, $query5);
-	$result6 = mysqli_query($conn, $query6);
-	$result7 = mysqli_query($conn, $query7);
-	$result8 = mysqli_query($conn, $query8);
-	$result9 = mysqli_query($conn, $query9);
-	$result10 = mysqli_query($conn, $query10);
-	$result11 = mysqli_query($conn, $query11);
-	$result12 = mysqli_query($conn, $query12);
+	$result1 = mysql_query($query1,$conn);
+	$result2 = mysql_query($query2,$conn);
+	$result3 = mysql_query($query3,$conn);
+	$result4 = mysql_query($query4,$conn);
+	$result5 = mysql_query($query5,$conn);
+	$result6 = mysql_query($query6,$conn);
+	$result7 = mysql_query($query7,$conn);
+	$result8 = mysql_query($query8,$conn);
+	$result9 = mysql_query($query9,$conn);
+	$result10 = mysql_query($query10,$conn);
+	$result11 = mysql_query($query11,$conn);
+	$result12 = mysql_query($query12,$conn);
 
-	$row1 = mysqli_fetch_assoc($result1);
-	$row2 = mysqli_fetch_assoc($result2);
-	$row3 = mysqli_fetch_assoc($result3);
-	$row4 = mysqli_fetch_assoc($result4);
-	$row5 = mysqli_fetch_assoc($result5);
-	$row6 = mysqli_fetch_assoc($result6);
-	$row7 = mysqli_fetch_assoc($result7);
-	$row8 = mysqli_fetch_assoc($result8);
-	$row9 = mysqli_fetch_assoc($result9);
-	$row10 = mysqli_fetch_assoc($result10);
-	$row11 = mysqli_fetch_assoc($result11);
-	$row12 = mysqli_fetch_assoc($result12);
+	$row1 = mysql_fetch_assoc($result1);
+	$row2 = mysql_fetch_assoc($result2);
+	$row3 = mysql_fetch_assoc($result3);
+	$row4 = mysql_fetch_assoc($result4);
+	$row5 = mysql_fetch_assoc($result5);
+	$row6 = mysql_fetch_assoc($result6);
+	$row7 = mysql_fetch_assoc($result7);
+	$row8 = mysql_fetch_assoc($result8);
+	$row9 = mysql_fetch_assoc($result9);
+	$row10 = mysql_fetch_assoc($result10);
+	$row11 = mysql_fetch_assoc($result11);
+	$row12 = mysql_fetch_assoc($result12);
 
 	$temp = explode(".", $_FILES[""][""]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
@@ -286,7 +283,7 @@
 
 	if(empty($_FILES["Denah_Tanah"]["name"])&&empty($_FILES["Peta_Lokasi_Radius_Tower"]["name"])&&empty($_FILES["Sketsa_Batas_Lahan"]["name"])&&empty($_FILES["Comcase_File"]["name"])&&empty($_FILES["Surat_PBB"]["name"])&&empty($_FILES["Surat_SKRD"]["name"]))
 	{
-		$result1 = mysqli_query($conn, "
+		$result1 = mysql_query("
 			UPDATE ho 
 			SET ho_nomor='$Nomor_HO',
 				ho_daftar_ulang='$Daftar_Ulang_HO',
@@ -294,8 +291,8 @@
 				ho_finish='$Tanggal_Finish_HO',
 				ho_status='$Status_HO'
 			WHERE sites_id='$sites_id' 
-			");
-		$result2 = mysqli_query($conn, "
+			",$conn);
+		$result2 = mysql_query("
 			UPDATE identitas_pemilik 
 			SET
 				identitas_pemilik_ktp='$KTP_Pemilik' ,
@@ -348,37 +345,37 @@
 				sl_surat_jaminan_hukum='$Surat_Jaminan_Hukum' ,
 				sl_pks='$Surat_Ijin_PKS' ,
 				sl_surat_perjanjian_sewa_tanah='$Surat_Perjanjian_Sewa_Tanah'
-			WHERE sites_id='$sites_id' ");
-		$result3 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result3 = mysql_query("
 			UPDATE ijin_dephub 
 			SET
 				ijin_dephub_nomor='$Nomor_Ijin' ,
 				ijin_dephub_start='$Tanggal_Mulai_Ijin' ,
 				ijin_dephub_finish='$Tanggal_Akhir_Ijin'
-			WHERE sites_id='$sites_id' ");
-		$result4 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result4 = mysql_query("
 			UPDATE ijin_genset 
 			SET
 				ijin_genset_nomor='$Nomor_Genset' ,
 				ijin_genset_status='$Status_Genset' ,
 				ijin_genset_start='$Tanggal_Start' ,
 				ijin_genset_finish='$Tanggal_Finish'
-			WHERE sites_id='$sites_id' ");
-		$result5 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result5 = mysql_query("
 			UPDATE ijin_prinsip 
 			SET
 				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
 				ijin_prinsip_start='$Tanggal_Awal_Ijin_Prinsip' ,
 				ijin_prinsip_finish='$Tanggal_Akhir_Ijin_Prinsip'
-			WHERE sites_id='$sites_id' ");
-		$result6 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result6 = mysql_query("
 			UPDATE ijin_ptt 
 			SET
 				ijin_ptt_nomor='$Nomor_Ijin_Pendirian' ,
 				ijin_ptt_start='$Tanggal_Awal_Ijin_Pendirian' ,
 				ijin_ptt_finish='$Tanggal_Akhir_Ijin_Pendirian'
-			WHERE sites_id='$sites_id' ");
-		$result7 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result7 = mysql_query("
 			UPDATE imb 
 			SET
 				imb_nomor='$Nomor_IMB' ,
@@ -388,22 +385,22 @@
 				imb_finish='$Tanggal_Akhir_IMB' ,
 				imb_status_kepengurusan='$Status_Kepengurusan_IMB' ,
 				imb_status='$Status_IMB'
-			WHERE sites_id='$sites_id' ");
-		$result8 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result8 = mysql_query("
 			UPDATE imtu 
 			SET
 				ijin_imtu_nomor='$Nomor_Ijin_imtu', 
 				ijin_imtu_start='$Tanggal_Awal_Ijin_imtu', 
 				ijin_imtu_finish='$Tanggal_Akhir_Ijin_imtu'
-			WHERE sites_id='$sites_id' ");
-		$result9 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result9 = mysql_query("
 			UPDATE ipb 
 			SET
 				ijin_ipb_nomor='$Ijin_IPB_Nomor' ,
 				ijin_ipb_start='$Ijin_IPB_Start' ,
 				ijin_ipb_finish='$Ijin_IPB_Finish'
-			WHERE sites_id='$sites_id' ");
-		$result10 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result10 = mysql_query("
 			UPDATE pbb 
 			SET 
 				nop='$Nomor_Objek_Pajak' ,
@@ -416,8 +413,8 @@
 				njop_bangunan='$NJOP_Bangunan' ,
 				koef_pbb='$Koef_PBB' ,
 				pbb_mitra='$Mitra_PBB'
-			WHERE sites_id='$sites_id' ");
-		$result11 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result11 = mysql_query("
 			UPDATE site 
 			SET
 				sites_id='$Site_ID' ,
@@ -469,8 +466,8 @@
 				comcase_biaya='$Comcase_Biaya' ,
 				comcase_keldok='$Comcase_Keldok' ,
 				comcase_status_bayar='$Comcase_Status_Bayar'
-			WHERE sites_id='$sites_id' ");
-		$result12 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result12 = mysql_query("
 			UPDATE skrd_rpm 
 			SET
 				no_skrd='$No_SKRD' ,
@@ -479,7 +476,7 @@
 				tanggal_jatuh_tempo='$Tanggal_Jatuh_Tempo_RPM' ,
 				koef_skrd='$Koef_SKRD' ,
 				status='$Status_SKRD'
-			WHERE sites_id='$sites_id' ");
+			WHERE sites_id='$sites_id' ",$conn);
 	}
 	else
 	{
@@ -532,7 +529,7 @@
 			unlink($filehapus5);
 		}
 
-		$result1 = mysqli_query($conn, "
+		$result1 = mysql_query("
 			UPDATE ho 
 			SET 
 				ho_nomor='$Nomor_HO' ,
@@ -540,8 +537,8 @@
 				ho_start='$Tanggal_Start_HO' ,
 				ho_finish='$Tanggal_Finish_HO' ,
 				ho_status='$Status_HO'
-			WHERE sites_id='$sites_id' ");
-		$result2 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result2 = mysql_query("
 			UPDATE identitas_pemilik 
 			SET
 				identitas_pemilik_ktp='$KTP_Pemilik' ,
@@ -594,37 +591,37 @@
 				sl_surat_jaminan_hukum='$Surat_Jaminan_Hukum' ,
 				sl_pks='$Surat_Ijin_PKS' ,
 				sl_surat_perjanjian_sewa_tanah='$Surat_Perjanjian_Sewa_Tanah'
-			WHERE sites_id='$sites_id' ");
-		$result3 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result3 = mysql_query("
 			UPDATE ijin_dephub 
 			SET
 				ijin_dephub_nomor='$Nomor_Ijin' ,
 				ijin_dephub_start='$Tanggal_Mulai_Ijin' ,
 				ijin_dephub_finish='$Tanggal_Akhir_Ijin'
-			WHERE sites_id='$sites_id' ");
-		$result4 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result4 = mysql_query("
 			UPDATE ijin_genset 
 			SET
 				ijin_genset_nomor='$Nomor_Genset' ,
 				ijin_genset_status='$Status_Genset' ,
 				ijin_genset_start='$Tanggal_Start' ,
 				ijin_genset_finish='$Tanggal_Finish'
-			WHERE sites_id='$sites_id' ");
-		$result5 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result5 = mysql_query("
 			UPDATE ijin_prinsip 
 			SET
 				ijin_prinsip_nomor='$Nomor_Ijin_Prinsip' ,
 				ijin_prinsip_start='$Tanggal_Awal_Ijin_Prinsip' ,
 				ijin_prinsip_finish='$Tanggal_Akhir_Ijin_Prinsip'
-			WHERE sites_id='$sites_id' ");
-		$result6 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result6 = mysql_query("
 			UPDATE ijin_ptt 
 			SET
 				ijin_ptt_nomor='$Nomor_Ijin_Pendirian' ,
 				ijin_ptt_start='$Tanggal_Awal_Ijin_Pendirian' ,
 				ijin_ptt_finish='$Tanggal_Akhir_Ijin_Pendirian'
-			WHERE sites_id='$sites_id' ");
-		$result7 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result7 = mysql_query("
 			UPDATE imb 
 			SET
 				imb_nomor='$Nomor_IMB' ,
@@ -634,22 +631,22 @@
 				imb_finish='$Tanggal_Akhir_IMB' ,
 				imb_status_kepengurusan='$Status_Kepengurusan_IMB' ,
 				imb_status='$Status_IMB'
-			WHERE sites_id='$sites_id' ");
-		$result8 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result8 = mysql_query("
 			UPDATE imtu 
 			SET
 				ijin_imtu_nomor,='$Nomor_Ijin_imtu', 
 				ijin_imtu_start,='$Tanggal_Awal_Ijin_imtu', 
 				ijin_imtu_finish='$Tanggal_Akhir_Ijin_imtu'
-			WHERE sites_id='$sites_id' ");
-		$result9 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result9 = mysql_query("
 			UPDATE ipb 
 			SET
 				ijin_ipb_nomor='$Ijin_IPB_Nomor' ,
 				ijin_ipb_start='$Ijin_IPB_Start' ,
 				ijin_ipb_finish='$Ijin_IPB_Finish'
-			WHERE sites_id='$sites_id' ");
-		$result10 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result10 = mysql_query("
 			UPDATE pbb 
 			SET 
 				nop='$Nomor_Objek_Pajak' ,
@@ -660,8 +657,8 @@
 				njop_bangunan='$NJOP_Bangunan' ,
 				surat_pbb='$file4' ,
 				koef_pbb='$Koef_PBB'
-			WHERE sites_id='$sites_id' ");
-		$result11 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result11 = mysql_query("
 			UPDATE site 
 			SET
 				sites_id='$Site_ID' ,
@@ -713,8 +710,8 @@
 				comcase_solusi='$Comcase_Solusi' ,
 				comcase_file='$file6' ,
 				comcase_mitra='$Comcase_Mitra' 
-			WHERE sites_id='$sites_id' ");
-		$result12 = mysqli_query($conn, "
+			WHERE sites_id='$sites_id' ",$conn);
+		$result12 = mysql_query("
 			UPDATE skrd_rpm 
 			SET
 				no_skrd='$No_SKRD' ,
@@ -724,8 +721,10 @@
 				koef_skrd='$Koef_SKRD' ,
 				status='$Status_SKRD' ,
 				surat_skrd='$file5'
-			WHERE sites_id='$sites_id' ");
+			WHERE sites_id='$sites_id' ",$conn);
 
 	}
 	header("Location:List_Sites.php");
 ?>
+
+<?php mysql_close($conn); ?>

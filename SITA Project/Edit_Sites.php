@@ -36,30 +36,30 @@
 	$query12 = "SELECT * from skrd_rpm where sites_id='".$sites_id."'";
 
 	$result1 = mysql_query($query1,$conn);
-	$result2= mysql_query($query1,$conn);
-	$result3 = mysql_query($query1,$conn);
-	$result4 = mysql_query($query1,$conn);
-	$result5 = mysql_query($query1,$conn);
-	$result6 = mysql_query($query1,$conn);
-	$result7 = mysql_query($query1,$conn);
-	$result8 = mysql_query($query1,$conn);
-	$result9 = mysql_query($query1,$conn);
-	$result10 = mysql_query($query1,$conn);
-	$result11 = mysql_query($query1,$conn);
-	$result12 = mysql_query($query1,$conn);
+	$result2= mysql_query($query2,$conn);
+	$result3 = mysql_query($query3,$conn);
+	$result4 = mysql_query($query4,$conn);
+	$result5 = mysql_query($query5,$conn);
+	$result6 = mysql_query($query6,$conn);
+	$result7 = mysql_query($query7,$conn);
+	$result8 = mysql_query($query8,$conn);
+	$result9 = mysql_query($query9,$conn);
+	$result10 = mysql_query($query10,$conn);
+	$result11 = mysql_query($query11,$conn);
+	$result12 = mysql_query($query12,$conn);
 
-	$row1 = mysqli_fetch_assoc($result1);
-	$row2 = mysqli_fetch_assoc($result2);
-	$row3 = mysqli_fetch_assoc($result3);
-	$row4 = mysqli_fetch_assoc($result4);
-	$row5 = mysqli_fetch_assoc($result5);
-	$row6 = mysqli_fetch_assoc($result6);
-	$row7 = mysqli_fetch_assoc($result7);
-	$row8 = mysqli_fetch_assoc($result8);
-	$row9 = mysqli_fetch_assoc($result9);
-	$row10 = mysqli_fetch_assoc($result10);
-	$row11 = mysqli_fetch_assoc($result11);
-	$row12 = mysqli_fetch_assoc($result12);
+	$row1 = mysql_fetch_assoc($result1);
+	$row2 = mysql_fetch_assoc($result2);
+	$row3 = mysql_fetch_assoc($result3);
+	$row4 = mysql_fetch_assoc($result4);
+	$row5 = mysql_fetch_assoc($result5);
+	$row6 = mysql_fetch_assoc($result6);
+	$row7 = mysql_fetch_assoc($result7);
+	$row8 = mysql_fetch_assoc($result8);
+	$row9 = mysql_fetch_assoc($result9);
+	$row10 = mysql_fetch_assoc($result10);
+	$row11 = mysql_fetch_assoc($result11);
+	$row12 = mysql_fetch_assoc($result12);
 
 ?>
 
