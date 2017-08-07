@@ -16,14 +16,6 @@
 	$target_file = preg_replace("/ /", "-", $target_file2);
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
-	    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-	    $image="no_img.jpg";
-	    echo "<script type='text/javascript'>alert('Ekstensi Data tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
-	    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
-	}
-	else
-	{
 		$image2=$newfilename . $_FILES["fileToUpload"]["name"];
 		$image = preg_replace("/ /", "-", $image2);
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
@@ -39,11 +31,18 @@
 		}
 		else
 		{
-			$result = mysql_query("UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',link_profile_pic='$image' WHERE nik='$nik'",$conn);
-			unlink($file);
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg")
+			{			    
+			    echo "<script type='text/javascript'>alert('Ekstensi Data tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+			    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+			}
+			else
+			{
+				$result = mysql_query("UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',link_profile_pic='$image' WHERE nik='$nik'",$conn);
+				unlink($file);
+			}
 		}
 		echo "<script language='javascript' type='text/javascript'> location.href='List_User.php' </script>";
-	}
 ?>
 
 <?php mysql_close($conn); ?>
