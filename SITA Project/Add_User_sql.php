@@ -15,7 +15,6 @@
 	    $image="no_img.jpg";
 	    echo "<script type='text/javascript'>alert('Ekstensi Data tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
 	    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
-
 	}
 	else
 	{
@@ -68,7 +67,6 @@
 		}
 		else {
 			echo "success";
-			//header("Location: List_User.php");
 			echo "<script language='javascript' type='text/javascript'> location.href='List_User.php' </script>";
 		}
 	}

@@ -757,7 +757,7 @@ if(isset($_POST['submit']))
     {
         $qstring = '?status=invalid_file';
     }
-    echo "<script language='javascript' type='text/javascript'> location.href='List_Sites.php' </script>";
+    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
     exit;
 }
 
