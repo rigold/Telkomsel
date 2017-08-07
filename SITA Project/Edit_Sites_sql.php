@@ -62,6 +62,7 @@
 
 	$target_file11 = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
 	$target_file1 = preg_replace("/ /", "-", $target_file11);
+	$DTType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file1);
 	$file11="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
 	$file1 = preg_replace("/ /", "-", $file11);
