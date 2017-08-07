@@ -152,7 +152,7 @@
 						$row4 = mysql_fetch_assoc($result4);
 					?>
 					<h1><a href="Home.php">Data Site</a></h1>
-					<h6>DATASITES/<?php echo $siteloc;?>/<?php echo $row3['no'];?>/<?php echo $row4['nik'];?>/<?php echo date("Y");
+					<h6>DATASITES/<?php echo $siteloc;?>/<?php echo $row3['no'];?>/<?php echo $row4['nik'];?>/<?php echo date("d-m-Y");
 						?>	 
 					</h6>
 					<br>

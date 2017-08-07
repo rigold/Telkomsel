@@ -137,7 +137,7 @@
 						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">LIST PERPANJANGAN</a></h1>
-					<h6>PERPANJANGAN/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
+					<h6>PERPANJANGAN/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("d-m-Y");
 						?>
 					</h6>
 					<br>
