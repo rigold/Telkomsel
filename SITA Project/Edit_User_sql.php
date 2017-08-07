@@ -31,7 +31,7 @@
 		}
 		else
 		{
-			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg")
+			if($imageFileType != "jpg" AND $imageFileType != "png" AND $imageFileType != "jpeg")
 			{			    
 			    echo "<script type='text/javascript'>alert('Ekstensi Data tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
 			    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
