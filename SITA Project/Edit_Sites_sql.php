@@ -56,46 +56,178 @@
 	$row11 = mysql_fetch_assoc($result11);
 	$row12 = mysql_fetch_assoc($result12);
 
-	$temp = explode(".", $_FILES[""][""]);
+	$temp = explode(".", $_FILES["Denah_Tanah"]["name"]);
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	$target_dir = "File/";
 
 	$target_file11 = $target_dir . "DT" . $newfilename . basename($_FILES["Denah_Tanah"]["name"]);
 	$target_file1 = preg_replace("/ /", "-", $target_file11);
-	$DTType = pathinfo($target_file,PATHINFO_EXTENSION);
+	$DTType = pathinfo($target_file1,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file1);
-	$file11="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
-	$file1 = preg_replace("/ /", "-", $file11);
+	if(!empty($_FILES['Denah_Tanah']['name']))
+	{
+		if($DTType != "jpg" AND $DTType != "png" AND $DTType != "jpeg")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Denah Tanah tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Denah_Tanah"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Denah Tanah terlalu besar(Diatas 2MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$file11="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+				$file1 = preg_replace("/ /", "-", $file11);
+			}
+		}
+	}
 
 	$target_file21 = $target_dir . "PL" . $newfilename . basename($_FILES["Peta_Lokasi_Radius_Tower"]["name"]);
 	$target_file2 = preg_replace("/ /", "-", $target_file21);
+	$PLType = pathinfo($target_file2,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file2);
-	$file21="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
-	$file2 = preg_replace("/ /", "-", $file21);
+	if(!empty($_FILES['Peta_Lokasi_Radius_Tower']['name']))
+	{
+		if($PLType != "jpg" AND $PLType != "png" AND $PLType != "jpeg")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Peta Lokasi Radius Tower tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Denah_Tanah"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Peta Lokasi Radius Tower terlalu besar(Diatas 2MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$file21="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+				$file2 = preg_replace("/ /", "-", $file21);
+			}
+		}
+	}
 
 	$target_file31 = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
 	$target_file3 = preg_replace("/ /", "-", $target_file31);
+	$SBLType = pathinfo($target_file3,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file3);
-	$file31="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
-	$file3 = preg_replace("/ /", "-", $file31);
+	if(!empty($_FILES['Sketsa_Batas_Lahan']['name']))
+	{
+	if($SBLType != "jpg" AND $SBLType != "png" AND $SBLType != "jpeg")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Sketsa Batas Lahan tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Sketsa_Batas_Lahan"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Sketsa Batas Lahan terlalu besar(Diatas 2MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$file31="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+				$file3 = preg_replace("/ /", "-", $file31);
+			}
+		}
+	}
 
 	$target_file61 = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
 	$target_file6 = preg_replace("/ /", "-", $target_file61);
+	$CFType = pathinfo($target_file6,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file6);
-	$file61="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
-	$file6 = preg_replace("/ /", "-", $file61);
+	if(!empty($_FILES['Comcase_File']['name']))
+	{
+		if($CFType != "zip" AND $CFType != "rar" AND $CFType != "doc" AND $CFType != "docx")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Comcase File tidak sesuai(Bukan .zip/.rar/.doc/.docx)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Comcase_File"]["size"] > 10000000)
+			{
+				echo "<script type='text/javascript'>alert('File Comcase File terlalu besar(Diatas 10MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$file61="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+				$file6 = preg_replace("/ /", "-", $file61);
+			}
+		}
+	}
 
 	$target_file41 = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
 	$target_file4 = preg_replace("/ /", "-", $target_file41);
+	$SPBBType = pathinfo($target_file4,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Surat_PBB"]["tmp_name"], $target_file4);
-	$file41="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
-	$file4 = preg_replace("/ /", "-", $file41);
+	
+	if(!empty($_FILES['Surat_PBB']['name']))
+	{
+		if($SPPBType != "jpg" AND $SPPBType != "png" AND $SPPBType != "jpeg" AND $SPPBType != "pdf")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Surat PBB tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Surat_PBB"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Surat PBB terlalu besar(Diatas 2MB)!');</script>";
+    			echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+    			exit;
+			}
+			else
+			{
+				$file41="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+				$file4 = preg_replace("/ /", "-", $file41);
+			}
+		}
+	}
 
 	$target_file51 = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
 	$target_file5 = preg_replace("/ /", "-", $target_file51);
+	$SRPMType = pathinfo($target_file5,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file5);
-	$file51="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
-	$file5 = preg_replace("/ /", "-", $file51);
+	if(!empty($_FILES['Surat_SKRD']['name']))
+	{
+		if($SRPMType != "jpg" AND $SRPMType != "png" AND $SRPMType != "jpeg" AND $SRPMType != "pdf")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Surat RPM/SKRD tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Surat_SKRD"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Surat RPM/SKRD terlalu besar(Diatas 2MB)!');</script>";
+    			echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+    			exit;
+			}
+			else
+			{
+				$file51="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+				$file5 = preg_replace("/ /", "-", $file51);
+			}
+		}
+	}
 
 //sites	
 	$Site_ID=$_POST['Site_ID']; 
