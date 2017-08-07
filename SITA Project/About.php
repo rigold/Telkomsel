@@ -152,7 +152,7 @@
 									<br>
 									Nama Project : SITA Project
 									<br>
-									Juni - Juli,2017
+									Juni - Agustus,2017
 								</p>
 							</h4>
 							<h4>Pembimbing Lapangan
