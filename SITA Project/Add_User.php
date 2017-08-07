@@ -3,9 +3,9 @@
 	    session_start();
 	}
 
-	if(!isset($_SESSION['login_user'])) {
+	if(!isset($_SESSION['login_user'])){
    		header("Location: Index.php");
-   		}
+	}
 
    	include("connect.php");
 

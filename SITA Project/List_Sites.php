@@ -1,7 +1,17 @@
 <?php
 	if (session_status() == PHP_SESSION_NONE) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        session_start();
+    }
+=======
 	    session_start();
 	}
+>>>>>>> 5b4479d1651e350d766d22db411c80fcd8f83f4c
+=======
+	    session_start();
+	}
+>>>>>>> 5b4479d1651e350d766d22db411c80fcd8f83f4c
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
@@ -9,10 +19,10 @@
 
    	include("connect.php");
 
-	$sql = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
-	$result = $conn->query($sql);
-	$rowz = $result->fetch_assoc();
-   
+	$sql    = "SELECT * FROM user WHERE nik='".$_SESSION['login_user']."'";
+	$result = mysql_query($sql, $conn);
+	$rowz = mysql_fetch_assoc($result);
+
    	if($rowz['admin']=="User"){header("Location: Home.php");}
 ?>
 
@@ -116,23 +126,14 @@
 						</p>
 					</div>
 					<div id="article">
-						<?php
-							if($row['admin']=="Admin")
-							{
-								echo "
-								<h3>MENU ADMIN</h3>
-								<p>
-									<a href='Add_User.php'>> ADD USER<br></a>
-									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
-									<a href='List_User.php'><br>> LIST USER<br></a>
-									<a href='List_Sites.php'><br>> LIST SITES<br></a>
-									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
-								</p>
-								";
-							}
-							else
-								echo "";
-						?>
+						<h3>MENU ADMIN</h3>
+						<p>
+							<a href='Add_User.php'>> ADD USER<br></a>
+							<a href='Add_Sites.php'><br>> ADD SITE<br></a>
+							<a href='List_User.php'><br>> LIST USER<br></a>
+							<a href='List_Sites.php'><br>> LIST SITES<br></a>
+							<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
+						</p>
 					</div>
 				</div>
 				<div class="body">
@@ -146,13 +147,13 @@
 						$sql3 = "SELECT surat_skrd FROM skrd_rpm";
 						$sql4 = "SELECT comcase_file FROM site";
 
-						$result = $conn->query($sql);
-						$result1 = $conn->query($sql2);
-						$result2 = $conn->query($sql3);
-						$result3 = $conn->query($sql4);
+						$result = mysql_query($sql, $conn);
+						$result1 = mysql_query($sql2, $conn);
+						$result2 = mysql_query($sql3, $conn);
+						$result3 = mysql_query($sql4, $conn);
 						
 						$no = 1;
-						if ($result->num_rows > 0) 
+						if (!empty($result)) 
 						{
 						    echo "<table id= 'myTable'>
 						    <tr>
@@ -163,7 +164,7 @@
 						    	<th>Alamat</th>
 						    	<th>Action</th>
 						    </tr>";
-						    while($row = $result->fetch_assoc())
+						    while($row = mysql_fetch_assoc($result))
 						    {
 						    	$frow1=$row["sites_denah_tanah"]; 
 								$file1="File/".$frow1;
@@ -172,9 +173,9 @@
 								$frow3=$row["sites_sketsa_bt"]; 
 								$file3="File/".$frow3;
 
-								$row1 = $result1->fetch_assoc();
-								$row2 = $result2->fetch_assoc();
-								$row3 = $result3->fetch_assoc();
+								$row1 = mysql_fetch_assoc($result1);
+								$row2 = mysql_fetch_assoc($result2);
+								$row3 = mysql_fetch_assoc($result3);
 
 								$frow4=$row1["surat_pbb"];
 								$file4="File/".$frow4;
@@ -256,3 +257,5 @@
 	mysql_close($conn);
 	?>
 </html>
+
+<?php mysql_close($conn); ?>
