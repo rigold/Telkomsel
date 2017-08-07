@@ -151,7 +151,7 @@
 						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">DETAIL RPM/SKRD</a></h1>
-					<h6>RPM/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("Y");
+					<h6>RPM/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("d-m-Y");
 						?>	 
 					</h6>
 					<br>

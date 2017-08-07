@@ -138,7 +138,7 @@
 						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">MONITORING</a></h1>
-					<h6>MONITORING/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("Y");
+					<h6>MONITORING/<?php echo $row3['no'];?>/<?php echo $row['nik'];?>/<?php echo date("d-m-Y");
 						?>
 					</h6>
 					<br>

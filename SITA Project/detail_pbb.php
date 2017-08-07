@@ -135,7 +135,7 @@
 				<div class="body">
 					<?php
 						$kota_kab=$_REQUEST['kota_kab'];
-						$sql2 = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+						$sql2 = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";
 						$result2 = mysql_query($sql2, $conn);
 						$row2 = mysql_fetch_assoc($result2);
 
@@ -144,7 +144,7 @@
 						$row3 = mysql_fetch_assoc($result3);
 					?>
 					<h1><a href="Home.php">DETAIL PBB</a></h1>
-					<h6>PBB/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("Y");
+					<h6>PBB/<?php echo $row2['sites_kota_kabupaten'];?>/<?php echo $row3['no'];?>/<?php echo $row1['nik'];?>/<?php echo date("d-m-Y");
 						?>	 
 					</h6>
 					<br>
@@ -245,6 +245,12 @@
 									</tr>
 								</table>
 								<br><br><br>
+								<?php
+									$kota_kab=$_REQUEST['kota_kab'];
+									$sql = "SELECT * from site where sites_kota_kabupaten='".$kota_kab."'";;
+									$result = mysql_query($sql, $conn);
+									$row = mysql_fetch_assoc($result);
+								?>
 								<table>
 									<tr>
 									    <td style="border-top-width: 0px;border-right-width: 0px;border-left-width: 0px;border-bottom-width: 0px;">
