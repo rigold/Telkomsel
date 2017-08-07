@@ -232,8 +232,8 @@
 								<tr><th>Sketsa Batas Lahan</th><td><a href=".$cloc.">".$c."</a></td></tr> 
 								<tr><th>Tanggal Mulai Sewa</th><td>" .$row["sites_tanggal_start"]."</td></tr> 
 								<tr><th>Tanggal Akhir Sewa</th><td>" .$row["sites_tanggal_finish"]."</td></tr> 
-								<tr><th>Harga/Tahun</th><td>Rp." .$row["sites_harga_per_tahun"]."</td></tr>
-								<tr><th>Penawaran Pemilik Lahan</th><td>Rp." .$row["sites_penawaran_pemilik_lahan"]."</td></tr> 
+								<tr><th>Harga/Tahun</th><td>Rp." .number_format($row["sites_harga_per_tahun"])."</td></tr>
+								<tr><th>Penawaran Pemilik Lahan</th><td>Rp." .number_format($row["sites_penawaran_pemilik_lahan"])."</td></tr> 
 								<tr><th>Lokasi</th><td><a target='_blank' href=\"$link\">" .$row["sites_long"]. "," .$row["sites_lat"]."</a></td></tr>
 								<tr><th>Remark</th><td>" .$row["sites_remark"]."</td></tr>
 								";
@@ -271,9 +271,9 @@
 								$row2 = mysql_fetch_assoc($result2);
 
 								echo "
-								<tr><th>Pagu</th><td>Rp." . $row2["perpanjangan_pagu"]."</td></tr> 
+								<tr><th>Pagu</th><td>Rp." . number_format($row2["perpanjangan_pagu"])."</td></tr> 
 								<tr><th>PIC</th><td>" .$row2["perpanjangan_pic"]."</td></tr> 
-								<tr><th>SPPH</th><td>Rp." .$row2["perpanjangan_spph"]."</td></tr>
+								<tr><th>SPPH</th><td>Rp." .number_format($row2["perpanjangan_spph"])."</td></tr>
 								<tr><th>Tanggal SPPH</th><td>" .$row2["perpanjangan_spph_tanggal"]."</td></tr> 
 								<tr><th>Nomor BAK</th><td>" . $row2["bak_nomor"]."</td></tr> 
 								<tr><th>Harga BAK</th><td>Rp." .$row2["bak_harga"]."</td></tr>
@@ -560,14 +560,14 @@
 
 							echo "
 							<tr><th>Nomor Objek Pajak</th><td>" .$row11["nop"]."</td></tr> 
-							<tr><th>Nilai PBB</th><td>Rp." .$row11["nilai_pbb_site"]."</td></tr>
-							<tr><th>Denda PBB</th><td>Rp." .$row11["pbb_denda"]."</td></tr>
-							<tr><th>Fee PBB</th><td>Rp." .$row11["pbb_fee"]."</td></tr>
+							<tr><th>Nilai PBB</th><td>Rp." .number_format($row11["nilai_pbb_site"])."</td></tr>
+							<tr><th>Denda PBB</th><td>Rp." .number_format($row11["pbb_denda"])."</td></tr>
+							<tr><th>Fee PBB</th><td>Rp." .number_format($row11["pbb_fee"])."</td></tr>
 							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row11["tanggal_jatuh_tempo"]."</td></tr>
 							<tr><th>Status</th><td>" .$row11["status"]."</td></tr>
 							<tr><th>Koef. PBB</th><td>" .$row11["koef_pbb"]."</td></tr>
-							<tr><th>NJOP Tanah</th><td>Rp." .$row11["njop_tanah"]."</td></tr> 
-							<tr><th>NJOP Bangunan</th><td>Rp." .$row11["njop_bangunan"]."</td></tr>
+							<tr><th>NJOP Tanah</th><td>Rp." .number_format($row11["njop_tanah"])."</td></tr> 
+							<tr><th>NJOP Bangunan</th><td>Rp." .number_format($row11["njop_bangunan"])."</td></tr>
 							<tr><th>Surat PBB</th><td><a href=".$aloc.">".$a."</a></td></tr>
 							<tr><th>Mitra PBB</th><td>" .$row11["pbb_mitra"]."</td></tr>
 							";
@@ -598,7 +598,7 @@
 
 							echo "
 							<tr><th>No SKRD</th><td>" .$row12["no_skrd"]."</td></tr> 
-							<tr><th>Harga SKRD</th><td>Rp." .$row12["harga_skrd"]."</td></tr>
+							<tr><th>Harga SKRD</th><td>Rp." .number_format($row12["harga_skrd"])."</td></tr>
 							<tr><th>Tanggal Jatuh Tempo</th><td>" .$row12["tanggal_jatuh_tempo"]."</td></tr>
 							<tr><th>Koef SKRD</th><td>" .$row12["koef_skrd"]."</td></tr> 
 							<tr><th>Status</th><td>" .$row12["status"]."</td></tr>
@@ -821,7 +821,7 @@
 								<tr><th>Comcase Tanggal</th><td>" . $row20["comcase_tanggal"]."</td></tr>
 								<tr><th>Nomor FPP</th><td>" . $row20["comcase_no_fpp"]."</td></tr> 
 								<tr><th>Comcase Keterangan</th><td>" .$row20["comcase_keterangan"]."</td></tr>
-								<tr><th>Total Biaya</th><td>" . $row20["comcase_biaya"]."</td></tr> 
+								<tr><th>Total Biaya</th><td>Rp." . number_format($row20["comcase_biaya"])."</td></tr> 
 								<tr><th>Kelengkapan Dokumen</th><td>" . $row20["comcase_keldok"]."</td></tr>
 								<tr><th>Status Pembayaran</th><td>" . $row20["comcase_status_bayar"]."</td></tr>
 								<tr><th>Comcase Status</th><td>" .$row20["comcase_status"]."</td></tr> 
