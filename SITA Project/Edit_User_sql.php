@@ -38,8 +38,16 @@
 			}
 			else
 			{
-				$result = mysql_query("UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',link_profile_pic='$image' WHERE nik='$nik'",$conn);
-				unlink($file);
+				if ($_FILES["fileToUpload"]["size"] > 3000000)
+				{
+					echo "<script type='text/javascript'>alert('Data terlalu besar(Diatas 3MB)!');</script>";
+			    	echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				}
+				else
+				{
+					$result = mysql_query("UPDATE user SET nik='$nik',password='$password',nama_user='$nama',jabatan='$jabatan',link_profile_pic='$image' WHERE nik='$nik'",$conn);
+					unlink($file);
+				}
 			}
 		}
 		echo "<script language='javascript' type='text/javascript'> location.href='List_User.php' </script>";

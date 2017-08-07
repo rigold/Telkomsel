@@ -7,46 +7,107 @@
 	$target_dir = "File/";
 	$target_file2 = $target_dir . "DT" . $newfilename . basename ($_FILES["Denah_Tanah"]["name"]);
 	$target_file = preg_replace("/ /", "-", $target_file2);
+	$DTType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Denah_Tanah"]["tmp_name"], $target_file);
-	
+
 	if ($_FILES["Denah_Tanah"]["name"] == "")
 	{
 	    $Denah_Tanah = "-";
 	}
 	else
 	{
-		$Denah_Tanah2="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
-		$Denah_Tanah = preg_replace("/ /", "-", $Denah_Tanah2);
+		if($DTType != "jpg" AND $DTType != "png" AND $DTType != "jpeg")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Denah Tanah tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Denah_Tanah"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Denah Tanah terlalu besar(Diatas 2MB)!');</script>";
+    			echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+    			exit;
+			}
+			else
+			{
+				$Denah_Tanah2="DT" . $newfilename . $_FILES["Denah_Tanah"]["name"];
+				$Denah_Tanah = preg_replace("/ /", "-", $Denah_Tanah2);
+			}
+		}
 	}
 
 	$target_file2 = $target_dir . "PL" . $newfilename . basename($_FILES ["Peta_Lokasi_Radius_Tower"]["name"]);
 	$target_file = preg_replace("/ /", "-", $target_file2);
+	$PLType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Peta_Lokasi_Radius_Tower"]["tmp_name"], $target_file);
+
 	if ($_FILES["Peta_Lokasi_Radius_Tower"]["name"] == "")
 	{
 	    $Peta_Lokasi_Radius_Tower = "-";
 	}
 	else
 	{
-		$Peta_Lokasi_Radius_Tower2="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
-		$Peta_Lokasi_Radius_Tower = preg_replace("/ /", "-", $Peta_Lokasi_Radius_Tower2);
+		if($PLType != "jpg" AND $PLType != "png" AND $PLType != "jpeg")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Peta Lokasi Radius Tower tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Peta_Lokasi_Radius_Tower"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Peta Lokasi Radius Tower terlalu besar(Diatas 2MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$Peta_Lokasi_Radius_Tower2="PL" . $newfilename . $_FILES["Peta_Lokasi_Radius_Tower"]["name"];
+				$Peta_Lokasi_Radius_Tower = preg_replace("/ /", "-", $Peta_Lokasi_Radius_Tower2);
+			}
+		}
 	}
+	
 
 	$target_file2 = $target_dir . "SBL" . $newfilename . basename($_FILES["Sketsa_Batas_Lahan"]["name"]);
 	$target_file = preg_replace("/ /", "-", $target_file2);
+	$SBLType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Sketsa_Batas_Lahan"]["tmp_name"], $target_file);
+
 	if ($_FILES["Sketsa_Batas_Lahan"]["name"] == "")
 	{
 	    $Sketsa_Batas_Lahan = "-";
 	}
 	else
 	{
-		$Sketsa_Batas_Lahan2="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
-		$Sketsa_Batas_Lahan = preg_replace("/ /", "-", $Sketsa_Batas_Lahan2);
+		if($SBLType != "jpg" AND $SBLType != "png" AND $SBLType != "jpeg")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Sketsa Batas Lahan tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Sketsa_Batas_Lahan"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Sketsa Batas Lahan terlalu besar(Diatas 2MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$Sketsa_Batas_Lahan2="SBL" . $newfilename . $_FILES["Sketsa_Batas_Lahan"]["name"];
+				$Sketsa_Batas_Lahan = preg_replace("/ /", "-", $Sketsa_Batas_Lahan2);
+			}
+		}
 	}
 
 	$target_file2 = $target_dir . "Cs" . $newfilename . basename($_FILES["Comcase_File"]["name"]);
 	$target_file = preg_replace("/ /", "-", $target_file2);
+	$CFType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Comcase_File"]["tmp_name"], $target_file);
 	if ($_FILES["Comcase_File"]["name"] == "")
 	{
@@ -54,12 +115,31 @@
 	}
 	else
 	{
-		$Comcase_File2="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
-		$Comcase_File = preg_replace("/ /", "-", $Comcase_File2);
+		if($CFType != "zip" AND $CFType != "rar" AND $CFType != "doc" AND $CFType != "docx")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Comcase File tidak sesuai(Bukan .zip/.rar/.doc/.docx)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Comcase_File"]["size"] > 10000000)
+			{
+				echo "<script type='text/javascript'>alert('File Comcase File terlalu besar(Diatas 10MB)!');</script>";
+				echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+				exit;
+			}
+			else
+			{
+				$Comcase_File2="Cs" . $newfilename . $_FILES["Comcase_File"]["name"];
+				$Comcase_File = preg_replace("/ /", "-", $Comcase_File2);
+			}
+		}
 	}
 
 	$target_file2 = $target_dir . "PBB" . $newfilename . basename($_FILES["Surat_PBB"]["name"]);
 	$target_file = preg_replace("/ /", "-", $target_file2);
+	$SPBBType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Surat_PBB"]["tmp_name"], $target_file);
 	if ($_FILES["Surat_PBB"]["name"] == "")
 	{
@@ -67,12 +147,31 @@
 	}
 	else
 	{
-		$Surat_PBB2="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
-		$Surat_PBB = preg_replace("/ /", "-", $Surat_PBB2);
+		if($SPPBType != "jpg" AND $SPPBType != "png" AND $SPPBType != "jpeg" AND $SPPBType != "pdf")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Surat PBB tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Surat_PBB"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Surat PBB terlalu besar(Diatas 2MB)!');</script>";
+    			echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+    			exit;
+			}
+			else
+			{
+				$Surat_PBB2="PBB" . $newfilename . $_FILES["Surat_PBB"]["name"];
+				$Surat_PBB = preg_replace("/ /", "-", $Surat_PBB2);
+			}
+		}
 	}
 
 	$target_file2 = $target_dir . "RPM" . $newfilename . basename($_FILES["Surat_SKRD"]["name"]);
 	$target_file = preg_replace("/ /", "-", $target_file2);
+	$SRPMType = pathinfo($target_file,PATHINFO_EXTENSION);
 	move_uploaded_file($_FILES["Surat_SKRD"]["tmp_name"], $target_file);
 	if ($_FILES["Surat_SKRD"]["name"] == "")
 	{
@@ -80,8 +179,26 @@
 	}
 	else
 	{
-		$Surat_SKRD2="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
-		$Surat_SKRD = preg_replace("/ /", "-", $Surat_SKRD2);
+		if($SRPMType != "jpg" AND $SRPMType != "png" AND $SRPMType != "jpeg" AND $SRPMType != "pdf")
+		{
+			echo "<script type='text/javascript'>alert('Ekstensi Surat RPM/SKRD tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
+		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+		    exit;
+		}
+		else
+		{
+			if ($_FILES["Surat_SKRD"]["size"] > 2000000)
+			{
+				echo "<script type='text/javascript'>alert('File Surat RPM/SKRD terlalu besar(Diatas 2MB)!');</script>";
+    			echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+    			exit;
+			}
+			else
+			{
+				$Surat_SKRD2="RPM" . $newfilename . $_FILES["Surat_SKRD"]["name"];
+				$Surat_SKRD = preg_replace("/ /", "-", $Surat_SKRD2);
+			}
+		}
 	}
 	
 //sites	
