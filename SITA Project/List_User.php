@@ -1,10 +1,16 @@
 <?php
-	if(empty($_SESSION))
-		session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+<<<<<<< HEAD
+        session_start();
+    }
+=======
+	    session_start();
+	}
+>>>>>>> 5b4479d1651e350d766d22db411c80fcd8f83f4c
 
 	if(!isset($_SESSION['login_user'])) {
    		header("Location: Index.php");
-   		}
+   	}
 
    	include("connect.php");
 
@@ -118,23 +124,14 @@
 						</p>
 					</div>
 					<div id="article">
-						<?php
-							if($row['admin']=="Admin")
-							{
-								echo "
-								<h3>MENU ADMIN</h3>
-								<p>
-									<a href='Add_User.php'>> ADD USER<br></a>
-									<a href='Add_Sites.php'><br>> ADD SITE<br></a>
-									<a href='List_User.php'><br>> LIST USER<br></a>
-									<a href='List_Sites.php'><br>> LIST SITES<br></a>
-									<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
-								</p>
-								";
-							}
-							else
-								echo "";
-						?>
+						<h3>MENU ADMIN</h3>
+						<p>
+							<a href='Add_User.php'>> ADD USER<br></a>
+							<a href='Add_Sites.php'><br>> ADD SITE<br></a>
+							<a href='List_User.php'><br>> LIST USER<br></a>
+							<a href='List_Sites.php'><br>> LIST SITES<br></a>
+							<a href='riwayat_print.php'><br>> RIWAYAT CETAK<br></a>
+						</p>
 					</div>
 				</div>
 
