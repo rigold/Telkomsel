@@ -1,0 +1,90 @@
+Mysqli -> Mysql
+	Site Daerah -
+	List Panjang -
+	Monitoring -
+	Izin -
+	PBB -
+	detail_pbb -
+	RPM -
+	detail_rpm -
+	Comcase -
+	Search -
+	Warning -
+	About -
+	upload -
+
+Uang dengan pemisah ","
+	PBB -
+	detail_pbb -
+	RPM -
+	detail_rpm -
+	Comcase -
+	List Panjang -
+	Monitoring -
+
+Hilangkan Menu Admin di User biasa
+	Home -
+	Site_Daerah -
+	List_Panjang -
+	Monitoring -
+	Izin -
+	PBB -
+	detail_pbb -
+	RPM -
+	detail_rpm -
+	Comcase -
+	Search -
+	Warning -
+	About -
+	Add_User -
+	Add_Sites -
+	List_Sites -
+	List_User -
+	riwayat_print -
+	Detail -
+
+Session Fix
+	Site_Daerah -
+	Warning -
+	upload -
+	Search -
+	RPM -
+	riwayat_print -
+	PBB -
+	Monitoring -
+	List_User -
+	List_Sites -
+	List_Panjang -
+	Izin -
+	in_rpm -
+	in_perpanjangan -
+	in_perizinan -
+	in_pbb -
+	in_monitoring -
+	in_detail_rpm -
+	in_detail_pbb -
+	in_datasites -
+	in_comcase -
+	Home -
+	Edit_User -
+	Edit_Sites -
+	detail_rpm -
+	detail_pbb -
+	Detail -
+	Comcase -
+	Add_User -
+	Add_Sites -
+	About -
+
+Download File -> Download Template
+
+Password menjadi bentuk Asteriks/Bullet di Add User
+
+
+
+
+
+
+Error?
+- User biasa tidak bisa login
+- Ada error session ketika login
