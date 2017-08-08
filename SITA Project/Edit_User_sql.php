@@ -2,6 +2,7 @@
 
 	include("connect.php");
 
+	$nik=$_REQUEST['nik'];
 	$hapus=$_REQUEST['hapus'];
 	$file ="upload/" . $hapus;
 	

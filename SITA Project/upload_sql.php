@@ -2,7 +2,7 @@
     
     include("connect.php");
 
-    set_time_limit(300);
+    set_time_limit(420);
 
     if(isset($_POST['submit']))
     {
@@ -23,7 +23,7 @@
                     while(($line = fgetcsv($csvFile,0,";")) !== FALSE)
                     {
                         $prevQuery = "SELECT sites_id FROM site WHERE sites_id = '".$line[0]."'";
-                        $prevResult = $conn->query($prevQuery);
+                        $prevResult = mysql_query($prevQuery, $conn);
 
                         $date1 = date("Y-m-d", strtotime(substr($line[12], -4) . "-" . substr($line[12], 3, 2) . "-" . substr($line[12], 0, 2)));
                         if($date1<"1971-01-01"){$date1="0000-00-00";}
@@ -84,7 +84,7 @@
                         $date29 = date("Y-m-d", strtotime(substr($line[30], -4) . "-" . substr($line[30], 3, 2) . "-" . substr($line[30], 0, 2)));
                         if($date29<"1971-01-01"){$date29="0000-00-00";}
 
-                        if($prevResult->num_rows > 0)
+                        if(!empty(mysql_num_rows($prevResult)))
                         {
                             mysql_query("UPDATE site 
                                 SET
@@ -289,7 +289,6 @@
                                     status = '".$line[109]."'
                                 WHERE sites_id = '".$line[0]."'
                                 ",$conn);
-
                         }
                         else{
                             if(!empty($line[0]))
@@ -754,7 +753,7 @@
         {
             $qstring = '?status=invalid_file';
         }
-        echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
+        echo "<script language='javascript' type='text/javascript'> location.href='List_Sites.php' </script>";
         exit;
     }
 

@@ -147,7 +147,7 @@
 				</div>
 				<div class="body">
 					<h1>Formulir Edit User</h1>
-					<form <?php echo " action= \"Edit_User_sql.php?hapus=$row[link_profile_pic]\" ";?> method="post" enctype="multipart/form-data">
+					<form <?php echo " action= \"Edit_User_sql.php?hapus=$row[link_profile_pic]&nik=$row[nik]\" ";?> method="post" enctype="multipart/form-data">
 						<div id="tulis">
 							<p>
 							<label for="a">Nama User:</label> <input type="text" name="Nama" value="<?php echo $row['nama_user'];?>" size="50">
