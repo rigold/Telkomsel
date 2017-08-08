@@ -287,7 +287,7 @@
 								<tr><th>SPPH</th><td>Rp." .number_format($row2["perpanjangan_spph"])."</td></tr>
 								<tr><th>Tanggal SPPH</th><td>" .$row2["perpanjangan_spph_tanggal"]."</td></tr> 
 								<tr><th>Nomor BAK</th><td>" . $row2["bak_nomor"]."</td></tr> 
-								<tr><th>Harga BAK</th><td>Rp." .$row2["bak_harga"]."</td></tr>
+								<tr><th>Harga BAK</th><td>Rp." .number_format($row2["bak_harga"])."</td></tr>
 								<tr><th>Tanggal BAK</th><td>" .$row2["bak_tanggal"]."</td></tr> 
 								<tr><th>No. Invoice</th><td>" .$row2["perpanjangan_invoice_nomor"]."</td></tr>
 								<tr><th>Tanggal Invoice</th><td>" .$row2["perpanjangan_invoice"]."</td></tr>

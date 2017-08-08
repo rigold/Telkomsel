@@ -155,7 +155,7 @@
 					</ul>
 					<div id="featured">
 						<div>
-							<h3>Pengenalan Terhadap Web ini :
+							<h3>A. Pengenalan Terhadap Web ini :
 								<p>
 									Web ini adalah tempat penampungan dan pengolahan data site untuk kemudian data dapat dipilah sesuai dengan kebutuhan pengguna, web ini juga menyediakan fitur untuk melakukan print tabel kedalam bentuk dokumen.
 									<br>Ada dua hak akses pada web ini :<br> 
@@ -172,7 +172,47 @@
 									<a href="About.php">Hubungi kami !</a>
 								</p>
 							</h3>
-							<h3>Q & A (Pertanyaan Umum):
+							<h3>B. Ubah Format Excel Anda Sebelum Edit Template Upload:
+								<p>
+									Klik gambar untuk memperbesar !!<br><br>
+									1.Klik File
+									<br>
+									<a href="images/1.png"><img src="images/1.png" ></a>
+									<br><br>
+									<br>2.Klik Optioon
+									<br>
+									<a href="images/2.png"><img src="images/2.png"></a>
+									<br><br><br><br>
+									<br>3.Klik Advanced
+									<br>
+									<a href="images/3.png"><img src="images/3.png"></a>
+									<br><br><br>
+									<br>4.Pada Use system separator: ubah Decimal Separator menjadi titik "." dan Thousand Separator menjadi Koma "," (US Standard)
+									<br>
+									
+								</p>
+							</h3>
+							<h3>C. Bila TIdak Bisa Upload File .csv
+								<p>
+									Cek Apakah File .csv anda menjadi satu kolom !!,bila ya maka :<br><br>
+									1.Klick Data,Klik Text to colum
+									<br>
+									<a href="images/11.png"><img src="images/11.png" ></a>
+									<br><br><br>
+									<br>2.Pilih Deliminated dan Next
+									<br>
+									<a href="images/22.png"><img src="images/22.png"></a>
+									<br><br><br><br><br><br>
+									<br>3.Pilih Coma dan finish
+									<br>
+									<a href="images/33.png"><img src="images/33.png"></a>
+									<br><br><br><br><br><br>
+									<br>4.Lalu Isi ulang file excel anda dan simpan dalam format .csv lalu upload
+									<br>
+									
+								</p>
+							</h3>
+							<h3>D. Q & A (Pertanyaan Umum):
 								<p>
 									1.Saya Lupa Pasword / User Name saya, Apa yang dapat saya lakukan?
 									<br>Hubungi Admin secara langsung atau Klik Halaman "About" untuk melihat informasi kontak Admin.
