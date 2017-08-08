@@ -179,7 +179,7 @@
 	
 	if(!empty($_FILES['Surat_PBB']['name']))
 	{
-		if($SPPBType != "jpg" AND $SPPBType != "png" AND $SPPBType != "jpeg" AND $SPPBType != "pdf")
+		if($SPBBType != "jpg" AND $SPBBType != "png" AND $SPBBType != "jpeg" AND $SPBBType != "pdf")
 		{
 			echo "<script type='text/javascript'>alert('Ekstensi Surat PBB tidak sesuai(Bukan .jpg/.jpeg/.png)');</script>";
 		    echo "<script language='javascript' type='text/javascript'> location.href='javascript:history.go(-1)' </script>";
